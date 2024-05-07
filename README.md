@@ -1,1 +1,1 @@
-# Bitstream files for MiSTer QMTECH boards.
+# Raw binary files for MiSTer QMTECH boards.
