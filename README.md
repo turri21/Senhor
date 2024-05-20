@@ -1,1 +1,1 @@
-# Raw binary files for MiSTer QMTECH board.
+# Raw binary files for Senhor board.
