@@ -7,7 +7,7 @@ Requirements: A 32MB or higher SDRAM memory module compatible with MiSTer is req
 
 **WARNING: The memory module MUST BE connected to the inner slot, the one closer to the FPGA chip.**
 
-**The outward side should be facing as the word discribes, outwards. Please be extremely cautious about the correct orientation and proper placement of the memory module, otherwise you are risking to harm both the board and the module!!!**
+**The outward side should be facing as the word discribes, outwards. Please be extremely cautious about the correct orientation and proper installation of the memory module, otherwise you are risking to harm both the board and the module!!!**
 
 ![Clipboard01](https://github.com/user-attachments/assets/5d5292ab-acc2-4b75-9715-01001581ac89)
 
