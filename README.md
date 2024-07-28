@@ -1,4 +1,4 @@
-# Raw binary files for Senhor board.
+# Raw binary files for Senhor FPGA board.
 ![image](https://github.com/user-attachments/assets/d68bc8fa-f05c-4b33-9088-9814994d0155)
 
 **What is the Senhor board?**
