@@ -22,7 +22,7 @@ https://aliexpress.com/item/1005006584384421.html
 
 Absolutely not. We have bought our boards from Aliexpress for this purpose, to have a cheap MiSTer alternative.
 
-===============================================================================================================================================================
+======================================================================================================================================
 
 Requirements: A 32MB or higher SDRAM memory module compatible with MiSTer is required for most cores to work. (Recommended 128MB)
 
