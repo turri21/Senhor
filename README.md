@@ -11,4 +11,4 @@ Requirements: A 32MB or higher SDRAM memory module compatible with MiSTer is req
 
 ![Clipboard01](https://github.com/user-attachments/assets/5d5292ab-acc2-4b75-9715-01001581ac89)
 
-**WARNING #2: A fan AND a heatsink are required (mainly for the demanding cores such as the Minimig core and ao486).**
+**WARNING #2: A fan AND a heatsink are required (mainly for the demanding cores such as the Minimig, ao486 etc).**
