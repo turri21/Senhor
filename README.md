@@ -10,12 +10,18 @@ It is the first attempt of a MiSTer (DE10-Nano) clone by QMTECH released in 2024
 
 Yes and no! The pins where the memory module is connected are shuffled on this board, therefore a remapping is needed and 
 
-every core using the SDRAM module should be resynthesized in order to work. 
+every core using the SDRAM module should be resynthesized in order to work. Althought, quite often just a remap is not enough
+
+to get a stable core and more changes need to be made in the verilog code. That's where the Senhor team takes over, to fill that gap and convert this wonderful board into a cheap alternative
+
+MiSTer.
 
 
 **Where can I buy it?**
 
 https://aliexpress.com/item/1005006584384421.html
+
+At the time of writing there is a new QMTECH board which is 100% compatible to MiSTer, therefore if you are not willing to experiment with Senhor, it is better to buy the new board instead.
 
 
 **Are you related to QMTECH?**
