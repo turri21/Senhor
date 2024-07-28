@@ -1,21 +1,24 @@
 # Raw binary files for Senhor board.
 ![image](https://github.com/user-attachments/assets/d68bc8fa-f05c-4b33-9088-9814994d0155)
 
-What is the Senhor board?
+**What is the Senhor board?**
 
 It is the first attempt of a MiSTer (DE10-Nano) clone by QMTECH released in 2024.
 
-Is it fully compatible?
+
+**Is it fully compatible?**
 
 Yes and no! The pins where the memory module is connected are shuffled on this board, therefore a remapping is needed and 
 
 every core using the SDRAM module should be resynthesized in order to work. 
 
-Where can I buy it?
+
+**Where can I buy it?**
 
 https://aliexpress.com/item/1005006584384421.html
 
-Are you related to QMTECH?
+
+**Are you related to QMTECH?**
 
 Absolutely not. We have bought our boards from Aliexpress for this purpose, to have a cheap MiSTer alternative.
 
