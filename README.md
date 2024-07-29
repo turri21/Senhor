@@ -42,8 +42,8 @@ A 32MB or higher SDRAM memory module compatible with MiSTer is required for most
 
 **WARNING #2: A heatsink AND a fan are required (there are demanding cores such as the Minimig, ao486 etc where the chip is getting VERY hot).**
 
-A USB hub, so you can connect a keyboard, mouse and gamepad to the board's only USB port.
+A USB hub, so you can connect a keyboard, a mouse and a gamepad to the board's only USB port for peripherals.
 
-Finally, you are going to need a Micro SD card of minimum 2 GB and a custom Linux distribution flashed to it, such as [Mr. Fusion](https://github.com/MiSTer-devel/mr-fusion) in order to be able to boot the system, browse the menu and load cores.
+Finally, you are going to need a Micro SD card of minimum 2 GB and a custom Linux distribution flashed to it, such as [Mr. Fusion](https://github.com/MiSTer-devel/mr-fusion) in order to be able to boot the system, browse the menu and load the cores.
 
 Enjoy the ride!
