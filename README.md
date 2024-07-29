@@ -24,6 +24,9 @@ https://www.aliexpress.com/item/1005007370471764.html
 
 Another upcoming MiSTer clone is about to be released by [Taki Udon](https://twitter.com/takiudon_).
 
+**I want to modify the cores on my own. Where are the sources?**
+You can find all the forked sources on my repos having the CoreName_Senhor naming scheme. For example: Minimig_Senhor, N64_Senhor, Saturn_Senhor etc
+
 **Are you related to QMTECH?**
 
 Absolutely not! We have bought our boards from the QMTECH store on Aliexpress for this purpose (as a cheap alternative to MiSTer).
