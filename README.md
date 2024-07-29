@@ -18,7 +18,7 @@ Hardware wise, except of the SDRAM memory modules designed for MiSTer, none of t
 
 https://www.aliexpress.com/item/1005006584384421.html
 
-At the time of writing there is a new QMTECH board which is 100% compatible to MiSTer, therefore if you are not willing to experiment with Senhor, it is better to buy the new board instead.
+At the time of writing there is a new QMTECH board which is 100% core-compatible to MiSTer, therefore if you are not willing to experiment with Senhor, it is better to buy the new board instead.
 
 https://www.aliexpress.com/item/1005007370471764.html
 
