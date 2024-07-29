@@ -4,7 +4,7 @@
 **What is the Senhor board?**
 
 It is the first attempt of a MiSTer (DE10-Nano) clone by QMTECH released in 2024.
-We have named it "Senhor" as a joke, but it turned out to become project to port cores to it from the MiSTer project.
+We have named it "Senhor" as a joke, but it turned out to become a project to port cores to it from the MiSTer project.
 
 **Is it fully compatible?**
 
@@ -19,7 +19,7 @@ At the time of writing there is a new QMTECH board which is 100% compatible to M
 
 https://www.aliexpress.com/item/1005007370471764.html
 
-Another upcoming MiSTer clone is about to be released by [Taki Udon](https://twitter.com/takiudon_)
+Another upcoming MiSTer clone is about to be released by [Taki Udon](https://twitter.com/takiudon_).
 
 **Are you related to QMTECH?**
 
