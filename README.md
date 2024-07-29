@@ -3,8 +3,8 @@
 
 **What is the Senhor board?**
 
-It is the first attempt of a [MiSTer (DE10-Nano)](https://mister-devel.github.io/MkDocs_MiSTer/) clone by QMTECH released in 2024.
-We have named it "Senhor" as a joke, but it turned out to become a project to port cores to it from the MiSTer project.
+It is the first attempt of a MiSTer [(DE10-Nano)](https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&No=1046) clone by QMTECH released in 2024.
+We have named it "Senhor" as a joke, but it turned out to become a project to port cores to it from the [MiSTer project](https://mister-devel.github.io/MkDocs_MiSTer/).
 
 **Is it fully compatible?**
 
