@@ -13,7 +13,7 @@ every core using the SDRAM module should be resynthesized in order to work. Alth
 
 **Where can I buy it?**
 
-https://aliexpress.com/item/1005006584384421.html
+https://www.aliexpress.com/item/1005006584384421.html
 
 At the time of writing there is a new QMTECH board which is 100% compatible to MiSTer, therefore if you are not willing to experiment with Senhor, it is better to buy the new board instead.
 
