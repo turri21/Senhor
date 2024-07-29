@@ -8,7 +8,10 @@ We have named it "Senhor" as a joke, but it turned out to become a full project 
 
 **Is it fully compatible?**
 
-Yes and no! The pins where the memory module is connected are shuffled, therefore a remapping is needed and every core using the SDRAM module should be resynthesized in order to work. Althought, quite often just a remap is not enough to get a stable core and more changes need to be made in the verilog code. That's where the Senhor team takes over, to fill that gap and convert this wonderful board into a cheap alternative to MiSTer. 
+Yes and no! 
+
+The pins where the memory module is connected are shuffled, therefore a remapping is needed and every core using the SDRAM module should be resynthesized in order to work. Althought, quite often just a remap is not enough to get a stable core and more changes need to be made in the verilog code. That's where the Senhor team takes over, to fill that gap and convert this wonderful board into a cheap alternative to MiSTer. 
+
 Hardware wise, none of the existing MiSTer addons work on this board, since it has a different layout...
 
 **Where can I buy it?**
