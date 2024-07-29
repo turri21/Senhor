@@ -28,7 +28,7 @@ Another upcoming MiSTer clone is about to be released by [Taki Udon](https://twi
 
 Absolutely not! We have bought our boards from Aliexpress for this purpose (as a cheap alternative to MiSTer).
 
-==========================================================================================
+---
 
 **Requirements:** 
 
