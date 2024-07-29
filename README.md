@@ -3,13 +3,13 @@
 
 **What is the Senhor board?**
 
-It is the first attempt of a MiSTer [(DE10-Nano)](https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&No=1046) clone by [QMTECH](https://qmtechchina.aliexpress.com/store/4486047) released in 2024.
-We have named it "Senhor" as a joke, but it turned out to become a project to port cores to it from the [MiSTer project](https://mister-devel.github.io/MkDocs_MiSTer/).
+It is the first attempt of a MiSTer [(DE10-Nano)](https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&No=1046) FPGA board clone by [QMTECH](https://qmtechchina.aliexpress.com/store/4486047) released in 2024.
+We have named it "Senhor" as a joke, but it turned out to become a full project to port cores to it from the [MiSTer project](https://mister-devel.github.io/MkDocs_MiSTer/).
 
 **Is it fully compatible?**
 
 Yes and no! The pins where the memory module is connected are shuffled, therefore a remapping is needed and every core using the SDRAM module should be resynthesized in order to work. Althought, quite often just a remap is not enough to get a stable core and more changes need to be made in the verilog code. That's where the Senhor team takes over, to fill that gap and convert this wonderful board into a cheap alternative to MiSTer. 
-
+Hardware wise, none of the existing MiSTer addons work on this board, since it has a different layout...
 
 **Where can I buy it?**
 
