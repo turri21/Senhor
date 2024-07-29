@@ -26,7 +26,7 @@ Another upcoming MiSTer clone is about to be released by [Taki Udon](https://twi
 
 **I want to modify the cores on my own. Where are the sources?**
 
-You can find all the forked [sources](https://github.com/turri21?tab=repositories) having the CoreName_Senhor naming scheme. For example: Minimig_Senhor, N64_Senhor, Saturn_Senhor etc
+You can find all the forked [sources](https://github.com/turri21?tab=repositories) having the CoreName_Senhor naming scheme. For example: Minimig-AGA_Senhor, N64_Senhor, Saturn_Senhor etc
 
 **Are you related to QMTECH?**
 
