@@ -23,7 +23,7 @@ Another upcoming MiSTer clone is about to be released by [Taki Udon](https://twi
 
 **Are you related to QMTECH?**
 
-Absolutely not. We have bought our boards from Aliexpress for this purpose in order to have a cheap alternative to MiSTer.
+Absolutely not! We have bought our boards from Aliexpress for this purpose (as a cheap alternative to MiSTer).
 
 ==========================================================================================
 
