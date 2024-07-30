@@ -36,7 +36,9 @@ Absolutely not! We have bought our boards from the QMTECH store on Aliexpress fo
 
 **Requirements:** 
 
-A 32MB or higher SDRAM memory module compatible with MiSTer is required for most cores to work. (Recommended 128MB)
+A single 32MB or higher SDRAM memory module compatible with MiSTer is required for most cores to work. (Recommended 128MB)
+
+Dual SDRAM is not supported on Senhor (at least for the time being).
 
 **WARNING: The memory module MUST BE connected to the inner slot, the one closer to the FPGA chip.**
 
