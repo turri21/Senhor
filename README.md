@@ -4,7 +4,7 @@
 
 Updates: Atari2600, Arcade-BombJack, menu.rbf
 
-New Cores: EG2000
+New Cores: EG2000, ZX81
 
 # Raw binary files for Senhor FPGA board.
 ![image](https://github.com/user-attachments/assets/d68bc8fa-f05c-4b33-9088-9814994d0155)
