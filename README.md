@@ -1,6 +1,9 @@
 # News 
+
 11/8/2024
+
 Updates: Atari2600, Arcade-Bombjack, menu.rbf
+
 New Cores: eg2000
 
 # Raw binary files for Senhor FPGA board.
