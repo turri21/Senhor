@@ -2,7 +2,9 @@
 12/8/2024
 
 New Cores: Tatung Einstein
-----
+
+____
+
 11/8/2024
 
 Updates: Atari2600, Arcade-BombJack, menu.rbf
