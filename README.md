@@ -1,4 +1,10 @@
 # News
+
+13/8/2024
+
+New Cores: UK101
+____
+
 12/8/2024
 
 New Cores: Tatung Einstein
