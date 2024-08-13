@@ -1,5 +1,10 @@
 # News
 
+14/8/2024
+
+New Cores: Tomy Tutor
+____
+
 13/8/2024
 
 New Cores: UK101
