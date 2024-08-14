@@ -2,7 +2,7 @@
 
 14/8/2024
 
-New Cores: Tomy Tutor
+New Cores: Tomy Tutor, Casio_PV-2000
 ____
 
 13/8/2024
