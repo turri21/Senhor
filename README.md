@@ -1,5 +1,9 @@
 # News
 
+15/8/2024
+
+New Cores: Altair 8800
+
 14/8/2024
 
 New Cores: Tomy Tutor, Casio_PV-2000
