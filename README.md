@@ -1,7 +1,7 @@
 # News
 17/8/2024
 
-New Cores: The first Jotego core added: Outrun
+New Cores: The first Jotego core added! Outrun
 
 ____
 
