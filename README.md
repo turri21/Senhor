@@ -1,4 +1,11 @@
 # News
+
+18/8/2024
+
+New Cores: Jotego 1942
+
+____
+
 17/8/2024
 
 New Cores: The first Jotego core added! Outrun
@@ -8,30 +15,6 @@ ____
 15/8/2024
 
 New Cores: Altair 8800
-
-____
-
-14/8/2024
-
-New Cores: Tomy Tutor, Casio_PV-2000
-____
-
-13/8/2024
-
-New Cores: UK101
-____
-
-12/8/2024
-
-New Cores: Tatung Einstein
-
-____
-
-11/8/2024
-
-Updates: Atari2600, Arcade-BombJack, menu.rbf
-
-New Cores: EG2000, ZX81, Acorn Atom
 
 # Raw binary files for Senhor FPGA board.
 ![image](https://github.com/user-attachments/assets/d68bc8fa-f05c-4b33-9088-9814994d0155)
