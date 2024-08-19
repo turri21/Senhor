@@ -1,5 +1,11 @@
 # News
 
+19/8/2024
+
+New Cores: Jotego Bionic Commando
+
+____
+
 18/8/2024
 
 New Cores: Jotego 1942
