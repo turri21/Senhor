@@ -1,7 +1,7 @@
 # News
 22/8/2024
 
-New Core: Galaksija
+New Cores: Galaksija
 
 ____
 
