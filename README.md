@@ -1,4 +1,10 @@
 # News
+22/8/2024
+
+New Core: Galaksija
+
+____
+
 21/8/2024
 
 New menu.rbf
