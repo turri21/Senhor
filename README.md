@@ -1,4 +1,10 @@
 # News
+23/8/2024
+
+Update: Galaksija added loading .GTP tape files.
+
+____
+
 22/8/2024
 
 New Cores: Galaksija
