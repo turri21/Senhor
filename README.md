@@ -88,3 +88,5 @@ A USB hub, so you can connect a keyboard, a mouse and a gamepad to the board's o
 Finally, you are going to need a Micro SD card of minimum 2 GB and a custom Linux distribution flashed to it, such as [Mr. Fusion](https://github.com/MiSTer-devel/mr-fusion) in order to be able to boot the system, browse the menu and load the cores.
 
 Enjoy the ride!
+
+Join us on Telegram: https://t.me/+fmIT1ovaOGkwNDQ0
