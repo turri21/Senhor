@@ -1,4 +1,11 @@
 # News
+
+28/8/2024
+
+New Cores: ikacore_SuprLoco  (Super Locomotive)
+
+____
+
 23/8/2024
 
 Update: Galaksija added loading .GTP tape files.
