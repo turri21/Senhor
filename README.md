@@ -1,4 +1,9 @@
 # News
+29/8/2024
+
+New Cores: Psychic 5 
+
+____
 
 28/8/2024
 
