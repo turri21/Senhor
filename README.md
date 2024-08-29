@@ -17,40 +17,6 @@ Update: Galaksija added loading .GTP tape files.
 
 ____
 
-22/8/2024
-
-New Cores: Galaksija
-
-____
-
-21/8/2024
-
-New menu.rbf
-
-____
-
-19/8/2024
-
-New Cores: Jotego Bionic Commando
-
-____
-
-18/8/2024
-
-New Cores: Jotego 1942
-
-____
-
-17/8/2024
-
-New Cores: The first Jotego core added! Outrun
-
-____
-
-15/8/2024
-
-New Cores: Altair 8800
-
 # Raw binary files for Senhor FPGA board.
 ![image](https://github.com/user-attachments/assets/d68bc8fa-f05c-4b33-9088-9814994d0155)
 
