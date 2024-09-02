@@ -1,7 +1,7 @@
 # News
 2/9/2024
 
-Update: menu.rbf
+Update: menu.rbf, Galaksija_PLUS_ROMD
 ____
 
 29/8/2024
