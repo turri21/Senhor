@@ -1,7 +1,7 @@
 # News
 6/9/2024
 
-Update: Galaksija_PLUS_UnifiedRAM, jt1943
+Updates: Galaksija_PLUS_UnifiedRAM, jt1943
 ____
 
 2/9/2024
