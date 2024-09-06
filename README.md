@@ -1,7 +1,12 @@
 # News
+6/9/2024
+
+Update: Galaksija_PLUS_UnifiedRAM, jt1943
+____
+
 2/9/2024
 
-Update: menu.rbf, Galaksija_PLUS_ROMD
+Updates: menu.rbf, Galaksija_PLUS_ROMD
 ____
 
 29/8/2024
@@ -18,7 +23,7 @@ ____
 
 23/8/2024
 
-Update: Galaksija added loading .GTP tape files.
+Updates: Galaksija added loading .GTP tape files.
 
 ____
 
