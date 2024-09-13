@@ -1,4 +1,9 @@
 # News
+
+13/9/2024
+
+New Cores: Interact
+
 6/9/2024
 
 Updates: Galaksija_PLUS_UnifiedRAM, jt1943
@@ -18,12 +23,6 @@ ____
 28/8/2024
 
 New Cores: ikacore_SuprLoco  (Super Locomotive)
-
-____
-
-23/8/2024
-
-Updates: Galaksija added loading .GTP tape files.
 
 ____
 
