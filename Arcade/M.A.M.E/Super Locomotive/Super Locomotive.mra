@@ -6,7 +6,7 @@
     <year>1982</year>
     <manufacturer>Sega</manufacturer>
     <category>Labyrinth / Maze</category>
-    <rbf>ikacore_SuprLoco</rbf>
+    <rbf>Arcade-SuprLoco</rbf>
     <about author="Raki" twitter="@RCAVictorCo"></about>
     <resolution>15kHz</resolution>
     <rotation>Horizontal</rotation>
