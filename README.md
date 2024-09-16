@@ -2,34 +2,13 @@
 15/9/2024
 
 New Cores: Homelab
+
 Updates: Super Locomotive
 ____
 
 13/9/2024
 
 New Cores: Interact
-
-____
-
-6/9/2024
-
-Updates: Galaksija_PLUS_UnifiedRAM, jt1943
-____
-
-2/9/2024
-
-Updates: menu.rbf, Galaksija_PLUS_ROMD
-____
-
-29/8/2024
-
-New Cores: Psychic 5, BK0011M
-
-____
-
-28/8/2024
-
-New Cores: ikacore_SuprLoco  (Super Locomotive)
 
 ____
 
