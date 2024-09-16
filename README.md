@@ -1,4 +1,9 @@
 # News
+16/9/2024
+
+New Cores: Jotego Tiger Road
+____
+
 15/9/2024
 
 New Cores: Homelab
