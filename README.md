@@ -1,4 +1,8 @@
 # News
+17/9/2024
+
+New Cores: Jotego Bubble Bobble
+____
 16/9/2024
 
 New Cores: Jotego Tiger Road
