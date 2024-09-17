@@ -1,4 +1,8 @@
 # News
+18/9/2024
+
+New Cores: Jotego Black Tiger
+____
 17/9/2024
 
 New Cores: Jotego Bubble Bobble
@@ -7,7 +11,6 @@ ____
 
 New Cores: Jotego Tiger Road
 ____
-
 15/9/2024
 
 New Cores: Homelab
@@ -18,7 +21,6 @@ ____
 13/9/2024
 
 New Cores: Interact
-
 ____
 
 # Raw binary files for Senhor FPGA board.
