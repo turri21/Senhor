@@ -1,4 +1,8 @@
 # News
+20/9/2024
+
+New Cores: Jotego Toki
+____
 18/9/2024
 
 New Cores: Jotego Black Tiger
