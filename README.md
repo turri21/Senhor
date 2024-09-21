@@ -1,4 +1,9 @@
 # News
+22/9/2024
+
+New Cores: Jotego Pang
+
+____
 21/9/2024
 
 New Cores: Jotego Ghost'n'Goblins
