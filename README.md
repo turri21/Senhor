@@ -1,4 +1,8 @@
 # News
+21/9/2024
+New Cores: Jotego Ghost'n'Goblins
+
+____
 20/9/2024
 
 New Cores: Jotego Toki
