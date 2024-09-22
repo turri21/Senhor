@@ -1,7 +1,7 @@
 # News
 22/9/2024
 
-New Cores: Jotego Pang
+New Cores: Jotego Pang, Sord M5 
 
 ____
 21/9/2024
