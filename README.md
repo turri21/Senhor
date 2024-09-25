@@ -1,4 +1,9 @@
 # News
+25/9/2024
+
+New Cores: Jotego CPS1 (+33 new arcades)
+
+____
 22/9/2024
 
 New Cores: Jotego Pang, Sord M5 
