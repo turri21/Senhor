@@ -2,7 +2,7 @@
 25/9/2024
 
 New Cores: Jotego CPS1 (+33 new arcades)
-
+Updates: TSConf (artifacts fix)
 ____
 22/9/2024
 
