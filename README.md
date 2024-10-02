@@ -1,4 +1,9 @@
 # News
+3/10/2024
+
+Updates: SNES
+
+____
 25/9/2024
 
 New Cores: Jotego CPS1 (+33 new arcades)
