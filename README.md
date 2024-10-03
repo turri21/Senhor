@@ -1,7 +1,7 @@
 # News
 4/10/2024
 
-New Cores: Jotego CPS1 
+New Cores: Jotego CPS2
 
 ____
 3/10/2024
