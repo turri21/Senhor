@@ -1,4 +1,8 @@
 # News
+4/10/2024
+New Cores: Jotego CPS1 
+
+____
 3/10/2024
 
 Updates: SNES
@@ -31,21 +35,6 @@ ____
 17/9/2024
 
 New Cores: Jotego Bubble Bobble
-____
-16/9/2024
-
-New Cores: Jotego Tiger Road
-____
-15/9/2024
-
-New Cores: Homelab
-
-Updates: Super Locomotive
-____
-
-13/9/2024
-
-New Cores: Interact
 ____
 
 # Raw binary files for Senhor FPGA board.
