@@ -1,7 +1,7 @@
 # News
 4/10/2024
 
-New Cores: Jotego CPS2, Jotego Yie Ar Kung-Fu
+New Cores: Jotego CPS2, Jotego Yie Ar Kung-Fu, Jotego Vigilante
 
 ____
 3/10/2024
