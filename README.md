@@ -1,4 +1,9 @@
 # News
+9/10/2024
+
+Updates: Jotego Sly Spy (artifacts fix)
+
+____
 7/10/2024
 
 New Cores: Jotego Sly Spy
