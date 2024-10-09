@@ -1,7 +1,7 @@
 # News
 9/10/2024
 
-New Cores: Chip8, Jotego The Simpsons
+New Cores: Chip8, Jotego The Simpsons, Jotego Track'n'Field
 
 Updates: Jotego Sly Spy (artifacts fix)
 
