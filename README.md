@@ -1,6 +1,8 @@
 # News
 9/10/2024
 
+New Cores: Chip8
+
 Updates: Jotego Sly Spy (artifacts fix)
 
 ____
