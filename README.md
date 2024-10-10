@@ -1,4 +1,9 @@
 # News
+10/10/2024
+
+New Cores: Vector-06C
+
+____
 9/10/2024
 
 New Cores: Chip8, Jotego The Simpsons, Jotego Track & Field
