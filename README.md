@@ -1,7 +1,8 @@
 # News
 13/10/2024
 
-Updates: Tecmo (Silent update) Audio fix, Framebuffer is back, Artifacts fix
+Updates: Tecmo (Audio fix, Framebuffer is back, Artifacts fix)
+Version number is the same with the old one (Silent update), but please replace it.
 
 ____
 10/10/2024
