@@ -1,4 +1,9 @@
 # News
+13/10/2024
+
+Updates: Tecmo (Silent update) Audio fix, Framebuffer is back, Artifacts fix
+
+____
 10/10/2024
 
 New Cores: Vector-06C
