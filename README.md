@@ -2,7 +2,7 @@
 
 15/10/2024
 
-New Cores: MC1201
+New Cores: MC1201, MultiComp
 
 ____
 13/10/2024
