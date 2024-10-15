@@ -1,4 +1,10 @@
 # News
+
+15/10/2024
+
+New Cores: MC1201
+
+____
 13/10/2024
 
 Updates: Tecmo (Audio fix, Framebuffer is back, Artifacts fix)
