@@ -2,7 +2,7 @@
 
 15/10/2024
 
-New Cores: MC1201, MultiComp, Apogee
+New Cores: MC1201, MultiComp, Apogee, Laser 310
 
 ____
 13/10/2024
