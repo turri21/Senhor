@@ -29,44 +29,6 @@ ____
 New Cores: Jotego Sly Spy
 
 ____
-4/10/2024
-
-New Cores: Jotego CPS2, Jotego Yie Ar Kung-Fu, Jotego Vigilante
-
-____
-3/10/2024
-
-Updates: SNES
-
-____
-25/9/2024
-
-New Cores: Jotego CPS1 (+33 new arcades)
-
-Updates: TSConf (artifacts fix)
-____
-22/9/2024
-
-New Cores: Jotego Pang, Sord M5 
-
-____
-21/9/2024
-
-New Cores: Jotego Ghost'n'Goblins
-
-____
-20/9/2024
-
-New Cores: Jotego Toki
-____
-18/9/2024
-
-New Cores: Jotego Black Tiger
-____
-17/9/2024
-
-New Cores: Jotego Bubble Bobble
-____
 
 # Raw binary files for Senhor FPGA board.
 ![image](https://github.com/user-attachments/assets/d68bc8fa-f05c-4b33-9088-9814994d0155)
