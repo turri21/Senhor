@@ -1,5 +1,10 @@
 # News
 
+16/10/2024
+
+New Cores: Ondra SPO186 (requires a 2ndary SD card slot)
+
+____
 15/10/2024
 
 New Cores: MC1201, MultiComp, Apogee, Laser 310
