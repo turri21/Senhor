@@ -1,5 +1,9 @@
 # News
+18/10/2024
 
+Updates: SordM5
+
+____
 16/10/2024
 
 New Cores: Ondra SPO186 (requires a 2ndary SD card slot)
