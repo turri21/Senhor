@@ -1,4 +1,9 @@
 # News
+19/10/2024
+
+New Cores: Jotego Super Hang On
+
+____
 18/10/2024
 
 Updates: SordM5
