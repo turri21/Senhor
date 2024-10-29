@@ -1,4 +1,9 @@
 # News
+29/10/2024
+
+New Cores: Jotego Street Fighter, Specialist
+
+___
 19/10/2024
 
 New Cores: Jotego Super Hang On, Jotego Namco System 1 (Pacmania, Galaga '88 etc)
