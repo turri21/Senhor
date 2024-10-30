@@ -1,4 +1,8 @@
 # News
+30/10/2024
+New Cores: Jotego Section Z
+
+___
 29/10/2024
 
 New Cores: Jotego Street Fighter, Specialist
