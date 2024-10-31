@@ -1,4 +1,9 @@
 # News
+31/10/2024
+
+New Cores: Jotego Side Arms
+
+___
 30/10/2024
 
 New Cores: Jotego Section Z, Jotego Super Basketball, Salamander
@@ -7,50 +12,6 @@ ___
 29/10/2024
 
 New Cores: Jotego Street Fighter, Specialist
-
-___
-19/10/2024
-
-New Cores: Jotego Super Hang On, Jotego Namco System 1 (Pacmania, Galaga '88 etc)
-
-____
-18/10/2024
-
-Updates: SordM5
-
-____
-16/10/2024
-
-New Cores: Ondra SPO186 (requires a 2ndary SD card slot)
-
-____
-15/10/2024
-
-New Cores: MC1201, MultiComp, Apogee, Laser 310
-
-____
-13/10/2024
-
-Updates: Tecmo (Audio fix, Framebuffer is back, Artifacts fix)
-
-Version number is the same with the old one (silent update), but please replace it.
-
-____
-10/10/2024
-
-New Cores: Vector-06C
-
-____
-9/10/2024
-
-New Cores: Chip8, Jotego The Simpsons, Jotego Track & Field
-
-Updates: Jotego Sly Spy (artifacts fix)
-
-____
-7/10/2024
-
-New Cores: Jotego Sly Spy
 
 ____
 
