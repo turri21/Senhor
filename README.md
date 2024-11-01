@@ -1,4 +1,9 @@
 # News
+1/11/2024
+
+New Cores: PMD85
+
+___
 31/10/2024
 
 New Cores: Jotego Side Arms
