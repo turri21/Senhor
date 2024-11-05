@@ -1,4 +1,10 @@
 # News
+
+5/11/2024
+
+New Cores: Jotego SEGA System 16 (Shinobi, Wonder Boy and more)
+
+___
 1/11/2024
 
 New Cores: PMD85
