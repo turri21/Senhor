@@ -1,5 +1,10 @@
 # News
 
+6/11/2024
+
+New Cores: Jotego SEGA System 16B (Altered Beast, Golden Axe, Wonder Boy III and more) 
+
+___
 5/11/2024
 
 New Cores: Jotego SEGA System 16 (Shinobi, Wonder Boy and more)
