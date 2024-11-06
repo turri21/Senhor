@@ -2,7 +2,7 @@
 
 6/11/2024
 
-New Cores: Jotego SEGA System 16B (Altered Beast, Golden Axe, Wonder Boy III and more) 
+New Cores: Jotego SEGA System 16B (Altered Beast, Golden Axe, Wonder Boy III and more), TRS-80
 
 ___
 5/11/2024
