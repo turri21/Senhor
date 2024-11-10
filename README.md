@@ -1,5 +1,9 @@
 # News
+10/11/2024
 
+New Cores: IremM90 (Bomberman etc)
+
+___
 6/11/2024
 
 New Cores: Jotego SEGA System 16B (Altered Beast, Golden Axe, Wonder Boy III and more), TRS-80
