@@ -1,5 +1,5 @@
 # News
-10/11/2024
+11/11/2024
 
 New Cores: IremM90 (Bomberman)
 
