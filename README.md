@@ -3,6 +3,8 @@
 
 New Cores: IremM90 (Bomberman)
 
+Updates: TRS-80
+
 ___
 6/11/2024
 
