@@ -1,7 +1,7 @@
 # News
 12/11/2024
 
-New Cores: SegaVICZ80, SEGASYS1
+New Cores: SegaVICZ80, SEGASYS1, Phoenix
 
 Updates: TSConf (Silent update SYS)
 
