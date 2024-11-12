@@ -1,4 +1,9 @@
 # News
+12/11/2024
+
+Updates: TSConf (Silent update SYS)
+
+___
 11/11/2024
 
 New Cores: IremM90 (Bomberman)
