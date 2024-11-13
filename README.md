@@ -1,4 +1,9 @@
 # News
+13/11/2024
+
+New Cores: Zaxxon 
+
+___
 12/11/2024
 
 New Cores: SegaVICZ80, SEGASYS1, Phoenix
