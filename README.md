@@ -3,6 +3,7 @@
 
 New Cores: Gauntlet (Gauntlet I, II, Vindicators Part II)
 
+___
 13/11/2024
 
 New Cores: Zaxxon 
