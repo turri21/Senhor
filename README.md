@@ -1,4 +1,9 @@
 # News
+23/11/2024
+
+Updates: TRS-80
+
+___
 15/11/2024
 
 New Cores: Gauntlet (Gauntlet I, II, Vindicators Part II)
@@ -38,22 +43,6 @@ ___
 New Cores: PMD85
 
 ___
-31/10/2024
-
-New Cores: Jotego Side Arms
-
-___
-30/10/2024
-
-New Cores: Jotego Section Z, Jotego Super Basketball, Salamander
-
-___
-29/10/2024
-
-New Cores: Jotego Street Fighter, Specialist
-
-____
-
 # Raw binary files for Senhor FPGA board.
 ![image](https://github.com/user-attachments/assets/d68bc8fa-f05c-4b33-9088-9814994d0155)
 
