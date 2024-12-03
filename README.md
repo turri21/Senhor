@@ -1,4 +1,9 @@
 # News
+3/12/2024
+
+New Cores: Jotego The Speed Rumbler
+
+___
 23/11/2024
 
 Updates: TRS-80
