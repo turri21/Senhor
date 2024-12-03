@@ -1,7 +1,7 @@
 # News
 3/12/2024
 
-New Cores: Jotego The Speed Rumbler
+New Cores: Jotego The Speed Rumbler, Jotego Roc'n Rope 
 
 ___
 23/11/2024
