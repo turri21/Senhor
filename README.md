@@ -1,7 +1,7 @@
 # News
 4/12/2024
 
-New Cores: Jotego Road Fighter, Jotego Rastan
+New Cores: Jotego Road Fighter, Jotego Rastan, Jotego Ping Pong
 
 ___
 3/12/2024
