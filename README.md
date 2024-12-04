@@ -3,7 +3,7 @@
 
 New Cores: Jotego Road Fighter, Jotego Rastan, Jotego Ping Pong, Jotego Parodius
 
-Updates: Jotego Pang
+Updates: Jotego Pang, TRS-80
 
 ___
 3/12/2024
