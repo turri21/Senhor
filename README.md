@@ -3,6 +3,8 @@
 
 New Cores: Jotego Road Fighter, Jotego Rastan, Jotego Ping Pong, Jotego Parodius
 
+Updates: Jotego Pang
+
 ___
 3/12/2024
 
