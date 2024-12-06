@@ -1,4 +1,16 @@
 # News
+6/12/2024
+
+New Cores: Jotego Kiwi (New Zealand Story), Jotego Ninja (Dragon Ninja), 
+
+Updates: Jotego Street Fighter
+
+___
+5/12/2024
+
+New Cores: NeoGeoPocket (Jotego)
+
+___
 4/12/2024
 
 New Cores: Jotego Road Fighter, Jotego Rastan, Jotego Ping Pong, Jotego Parodius
