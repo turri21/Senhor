@@ -1,7 +1,7 @@
 # News
 6/12/2024
 
-New Cores: Jotego Kiwi (New Zealand Story), Jotego Ninja (Dragon Ninja), 
+New Cores: Jotego Kiwi (New Zealand Story), Jotego Ninja (Dragon Ninja), Jotego Mikie
 
 Updates: Jotego Street Fighter
 
