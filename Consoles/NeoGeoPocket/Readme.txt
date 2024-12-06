@@ -1,5 +1,5 @@
-NeoGeoPocket - Part of Jotego framework
----------------------------------------
+NeoGeoPocket by JOTEGO
+----------------------
 This core requires a ROM file!
 
 In case you had run the update all script (with roms enabled) there should be a ngp.zip in /media/fat/games/mame
