@@ -2,6 +2,7 @@
 7/12/2024
 
 New Cores: Philips CDi (Experimental)
+Updates: Sega Saturn (Silent update)
 
 ___
 6/12/2024
