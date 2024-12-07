@@ -1,4 +1,9 @@
 # News
+7/12/2024
+
+New Cores: Philips CDi (Experimental)
+
+___
 6/12/2024
 
 New Cores: Jotego Kiwi (New Zealand Story), Jotego Ninja (Dragon Ninja), Jotego Mikie
