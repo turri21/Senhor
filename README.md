@@ -1,4 +1,9 @@
 # News
+11/12/2024
+
+Update: TRS-80
+
+___
 7/12/2024
 
 New Cores: Philips CDi (Experimental)
