@@ -1,7 +1,7 @@
 # News
 14/12/2024
 
-Updates: TRS-80
+Update: TRS-80
 
 ___
 13/12/2024
@@ -26,67 +26,6 @@ ___
 New Cores: Jotego Kiwi (New Zealand Story), Jotego Ninja (Dragon Ninja), Jotego Mikie
 
 Updates: Jotego Street Fighter
-
-___
-5/12/2024
-
-New Cores: NeoGeoPocket (Jotego)
-
-___
-4/12/2024
-
-New Cores: Jotego Road Fighter, Jotego Rastan, Jotego Ping Pong, Jotego Parodius
-
-Updates: Jotego Pang, TRS-80
-
-___
-3/12/2024
-
-New Cores: Jotego The Speed Rumbler, Jotego Roc'n Rope 
-
-___
-23/11/2024
-
-Updates: TRS-80
-
-___
-15/11/2024
-
-New Cores: Gauntlet (Gauntlet I, II, Vindicators Part II)
-
-___
-13/11/2024
-
-New Cores: Zaxxon 
-
-___
-12/11/2024
-
-New Cores: SegaVICZ80, SEGASYS1, Phoenix
-
-Updates: TSConf (Silent update SYS)
-
-___
-11/11/2024
-
-New Cores: IremM90 (Bomberman)
-
-Updates: TRS-80
-
-___
-6/11/2024
-
-New Cores: Jotego SEGA System 16B (Altered Beast, Golden Axe, Wonder Boy III and more), TRS-80
-
-___
-5/11/2024
-
-New Cores: Jotego SEGA System 16 (Shinobi, Wonder Boy and more)
-
-___
-1/11/2024
-
-New Cores: PMD85
 
 ___
 # Raw binary files for Senhor FPGA board.
