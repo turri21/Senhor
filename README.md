@@ -1,4 +1,9 @@
 # News
+14/12/2024
+
+Updates: TRS-80
+
+___
 13/12/2024
 
 Updates: Sega Saturn (Silent update)
