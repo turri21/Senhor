@@ -1,4 +1,9 @@
 # News
+20/12/2024
+
+New Cores: Sonson
+
+___
 19/12/2024
 
 New Cores: Cosmic (Cosmic Alien, Devil Zone, Magical Spot, No Mans Land, Space Panic) -- Burning Rubber, Cosmic Guerilla -- Druaga (The Tower of Druaga, Super Pac-Man, Dig Dug II, Mappy, Motos, Pac & Pal, Grobda) -- Astrocade (Extra Bases, Space Zap,  Wizard of Wor, The Adventures of Robby Roto!, Gorf, Sea Wolf II)
