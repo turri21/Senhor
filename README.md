@@ -3,10 +3,12 @@
 
 New Cores: Cosmic (Cosmic Alien, Devil Zone, Magical Spot, No Mans Land, Space Panic), Burning Rubber, Cosmic Guerilla
 
+Updates: TRS-80
+
 ___
 14/12/2024
 
-Update: TRS-80
+Updates: TRS-80
 
 ___
 13/12/2024
