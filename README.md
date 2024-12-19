@@ -18,7 +18,7 @@ Updates: Sega Saturn (Silent update)
 ___
 11/12/2024
 
-Update: TRS-80
+Updates: TRS-80
 
 ___
 7/12/2024
