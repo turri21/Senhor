@@ -1,4 +1,9 @@
 # News
+19/12/2024
+
+New Cores: Cosmic
+
+___
 14/12/2024
 
 Update: TRS-80
