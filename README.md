@@ -1,7 +1,7 @@
 # News
 19/12/2024
 
-New Cores: Cosmic
+New Cores: Cosmic (Cosmic Alien, Devil Zone, Magical Spot, No Mans Land, Space Panic)
 
 ___
 14/12/2024
