@@ -1,7 +1,7 @@
 # News
 19/12/2024
 
-New Cores: Cosmic (Cosmic Alien, Devil Zone, Magical Spot, No Mans Land, Space Panic), Burning Rubber, Cosmic Guerilla, Druaga
+New Cores: Cosmic (Cosmic Alien, Devil Zone, Magical Spot, No Mans Land, Space Panic), Burning Rubber, Cosmic Guerilla, Druaga (The Tower of Druaga, Super Pac-Man, Dig Dug II, Mappy, Motos, Pac & Pal, Grobda)
 
 Updates: TRS-80
 
