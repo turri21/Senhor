@@ -3,7 +3,7 @@
 
 New Cores: Sonson
 
-Updates: Minimig
+Updates: Minimig, ao486
 
 ___
 19/12/2024
