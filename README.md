@@ -1,4 +1,10 @@
 # News
+
+23/12/2024
+
+Updates: PC88
+
+___
 20/12/2024
 
 New Cores: Sonson
