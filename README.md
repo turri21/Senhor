@@ -2,7 +2,7 @@
 
 23/12/2024
 
-Updates: PC88
+Updates: PC88, ZXNext
 
 ___
 20/12/2024
