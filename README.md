@@ -1,5 +1,9 @@
 # News
+27/12/2024
 
+New Cores: Bakraid (Updated), Batrider 
+
+___
 23/12/2024
 
 Updates: PC88, ZXNext
