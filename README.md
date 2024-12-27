@@ -1,4 +1,10 @@
 # News
+
+28/12/2024
+
+Updates: ao486
+
+___
 27/12/2024
 
 New Cores: Bakraid (Updated), Batrider 
