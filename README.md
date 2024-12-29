@@ -1,5 +1,10 @@
 # News
 
+29/12/2024
+
+Updates: CoCo2
+
+___
 28/12/2024
 
 Updates: ao486, ZXNext
