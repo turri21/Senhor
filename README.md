@@ -1,7 +1,7 @@
 # News
 30/12/2024
 
-New Cores: Arkanoid
+New Cores: Arkanoid, Exerion
 
 ___
 29/12/2024
