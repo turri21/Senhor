@@ -31,42 +31,6 @@ New Cores: Sonson
 Updates: Minimig, ao486
 
 ___
-19/12/2024
-
-New Cores: Cosmic (Cosmic Alien, Devil Zone, Magical Spot, No Mans Land, Space Panic) -- Burning Rubber, Cosmic Guerilla -- Druaga (The Tower of Druaga, Super Pac-Man, Dig Dug II, Mappy, Motos, Pac & Pal, Grobda) -- Astrocade (Extra Bases, Space Zap,  Wizard of Wor, The Adventures of Robby Roto!, Gorf, Sea Wolf II)
-
-Updates: TRS-80
-
-___
-14/12/2024
-
-Updates: TRS-80
-
-___
-13/12/2024
-
-Updates: Sega Saturn (Silent update)
-
-___
-11/12/2024
-
-Updates: TRS-80
-
-___
-7/12/2024
-
-New Cores: Philips CDi (Experimental)
-
-Updates: Sega Saturn (Silent update)
-
-___
-6/12/2024
-
-New Cores: Jotego Kiwi (New Zealand Story), Jotego Ninja (Dragon Ninja), Jotego Mikie
-
-Updates: Jotego Street Fighter
-
-___
 # Raw binary files for Senhor FPGA board.
 ![image](https://github.com/user-attachments/assets/d68bc8fa-f05c-4b33-9088-9814994d0155)
 
@@ -81,7 +45,7 @@ Yes and no!
 
 The pins where the memory module is connected are shuffled, therefore a remapping is needed and every core using the SDRAM module should be resynthesized in order to work. Although, quite often just a remap is not enough to get a stable core and more changes need to be made in the verilog code. That's where the Senhor team takes over, to fill that gap and convert this wonderful board into a cheap alternative to MiSTer. 
 
-Hardware wise, except of the SDRAM memory modules designed for MiSTer, none of the existing MiSTer addons work on this board, since it has a different layout.
+Hardware wise, except of the SDRAM memory modules designed for MiSTer, none of the existing MiSTer addons works on this board, since it has a different layout.
 
 **Where can I buy it?**
 
