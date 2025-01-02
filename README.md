@@ -91,9 +91,12 @@ Join us on Telegram: https://t.me/+fmIT1ovaOGkwNDQ0
 
 ___
 
--=(Notes for developers)=-
+-=(Extra notes)=-
 
-ToDo:
-Cores to improve: Exerion, Irem92
+Known issues:
+
+Exerion: It has some barely detected pixel edge artifacts and a few visual glitches in the options menu. Gameplay is not affected.
+
+IremM92: The rom checking results a not good "NG" message. Some games are stuck at the RAM/ROM verification screen such as R-Type Leo. 
 
 
