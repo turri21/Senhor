@@ -88,3 +88,12 @@ Finally, you are going to need a Micro SD card of minimum 2 GB and a custom Linu
 Enjoy the ride!
 
 Join us on Telegram: https://t.me/+fmIT1ovaOGkwNDQ0
+
+___
+
+-=(Notes for developers)=-
+
+ToDo:
+Cores to improve: Exerion, Irem92
+
+
