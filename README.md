@@ -1,4 +1,9 @@
 # News
+3/1/2025
+
+Updates: CoCo2
+
+___
 30/12/2024
 
 New Cores: Arkanoid, Exerion
