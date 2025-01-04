@@ -109,4 +109,6 @@ Exerion: It has some barely detected pixel edge artifacts and a few visual glitc
 
 IremM92: A not good "NG" message is displayed on the initial ROM checking. Some games are stuck at the RAM/ROM verification screen such as R-Type Leo. 
 
+On some cores the onboard buttons (OSD and RESET) have been disabled for stability purposes.
+
 
