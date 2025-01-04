@@ -1,4 +1,9 @@
 # News
+4/1/2025
+
+Updates: PSX, PC88
+
+___ 
 3/1/2025
 
 Updates: CoCo2
