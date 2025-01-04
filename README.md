@@ -1,7 +1,7 @@
 # News
 4/1/2025
 
-Updates: PSX, PC88
+Updates: PSX, PC88, ATARI7800
 
 ___ 
 3/1/2025
