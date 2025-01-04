@@ -1,6 +1,8 @@
 # News
 4/1/2025
 
+New Cores: BBCBridgeCompanion
+
 Updates: PSX, PC88, ATARI7800
 
 ___ 
