@@ -1,7 +1,7 @@
 # News
 5/1/2025
 
-New Cores: LunarLander, CrazyBalloon, CrazyClimber
+New Cores: LunarLander, CrazyBalloon, CrazyClimber, CrazyKong
 
 ___
 4/1/2025
