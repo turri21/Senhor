@@ -4,7 +4,7 @@
 
 New Cores: TimePilot84
 
-Updates: Blockade
+Updates: Blockade, Apple II
 
 ___
 5/1/2025
