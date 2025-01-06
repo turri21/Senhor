@@ -2,7 +2,7 @@
 
 6/1/2025
 
-New Cores: TimePilot84, DottoriKun, Garegga, RiverPatrol
+New Cores: TimePilot84, DottoriKun, Garegga, RiverPatrol, Robotron
 
 Updates: Blockade, Apple II, NeoGeo
 
