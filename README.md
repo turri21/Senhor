@@ -2,7 +2,7 @@
 
 6/1/2025
 
-New Cores: TimePilot84
+New Cores: TimePilot84, DottoriKun
 
 Updates: Blockade, Apple II
 
