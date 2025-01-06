@@ -122,7 +122,7 @@ Known issues:
 
 Exerion: It has some barely detected pixel edge artifacts and a few visual glitches in the options menu. Gameplay is not affected.
 
-IremM90: Bomber Man World - New Dyna Blaster - Global Quest - If ROM PO CHECK ERROR is displayed load the "Bomber Man - Dyna Blaster" first and then while it runs load the Global Quest afterwards.
+IremM90: Bomber Man World - New Dyna Blaster - Global Quest - If "ROM PO CHECK ERROR" is displayed load the "Bomber Man - Dyna Blaster" first and then while it runs load the "Bomber Man World - New Dyna Blaster - Global Quest" afterwards.
 Alternatively, you can try to reset the core several times until it passes the check.
 
 IremM92: A not good "NG" message is displayed on the initial ROM checking. Some games are stuck at the RAM/ROM verification screen such as R-Type Leo. Possible fix: Reset the core several times.
