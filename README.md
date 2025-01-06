@@ -4,7 +4,7 @@
 
 New Cores: TimePilot84, DottoriKun, Garegga
 
-Updates: Blockade, Apple II
+Updates: Blockade, Apple II, NeoGeo
 
 ___
 5/1/2025
