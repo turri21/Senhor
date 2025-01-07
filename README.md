@@ -1,5 +1,10 @@
 # News
 
+7/1/2025
+
+Updates: Astrocade
+
+___
 6/1/2025
 
 New Cores: TimePilot84, DottoriKun, Garegga, RiverPatrol, Robotron
