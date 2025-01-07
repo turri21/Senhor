@@ -1,8 +1,7 @@
 # News
-
 7/1/2025
 
-Updates: Astrocade
+Updates: Astrocade, Robotron
 
 ___
 6/1/2025
