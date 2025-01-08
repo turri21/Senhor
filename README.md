@@ -1,6 +1,8 @@
 # News
 8/1/2025
 
+New Cores: BubSys
+
 Updates: MultiComp, Altair8800
 
 ___
