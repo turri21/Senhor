@@ -1,4 +1,9 @@
 # News
+8/1/2025
+
+Updates: MultiComp
+
+___
 7/1/2025
 
 Updates: Astrocade, Robotron, Saturn
