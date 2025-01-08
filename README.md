@@ -1,7 +1,7 @@
 # News
 8/1/2025
 
-Updates: MultiComp
+Updates: MultiComp, Altair8800
 
 ___
 7/1/2025
