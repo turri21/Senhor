@@ -1,7 +1,7 @@
 # News
 9/1/2025
 
-New Cores: BubSysROM
+New Cores: BubSysROM, Rush'n Attack (Green Beret)
 
 ___
 8/1/2025
