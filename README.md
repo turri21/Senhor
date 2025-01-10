@@ -1,7 +1,7 @@
 # News
 10/1/2025
 
-New Cores: Scooter Shooter, Scramble, Silver Land
+New Cores: Scooter Shooter, Scramble, Silver Land, SNK_TripleZ80
 
 ___
 9/1/2025
