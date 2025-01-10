@@ -1,7 +1,7 @@
 # News
 10/1/2025
 
-New Cores: Scooter Shooter, Scramble, Silver Land, SNK_TripleZ80, SlapFight, Rally-X, Chameleon
+New Cores: Scooter Shooter, Scramble, Silver Land, SNK_TripleZ80, SlapFight, Rally-X, Chameleon, Galivan
 
 Updates: Gameboy
 
