@@ -1,4 +1,9 @@
 # News
+10/1/2025
+
+New Cores: Scooter Shooter
+
+___
 9/1/2025
 
 New Cores: BubSysROM, Rush'n Attack (Green Beret)
