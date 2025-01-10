@@ -3,6 +3,8 @@
 
 New Cores: Scooter Shooter, Scramble, Silver Land, SNK_TripleZ80
 
+Updates: Gameboy
+
 ___
 9/1/2025
 
