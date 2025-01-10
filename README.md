@@ -1,7 +1,7 @@
 # News
 10/1/2025
 
-New Cores: Scooter Shooter
+New Cores: Scooter Shooter, Scramble
 
 ___
 9/1/2025
