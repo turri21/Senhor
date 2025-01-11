@@ -1,4 +1,9 @@
 # News
+11/1/2025
+
+New Cores: Pooyan
+
+___
 10/1/2025
 
 New Cores: Scooter Shooter, Scramble, Silver Land, SNK_TripleZ80, SlapFight, Rally-X, Chameleon, Galivan, BankPanic, Express Raider
