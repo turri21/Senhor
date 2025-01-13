@@ -1,4 +1,9 @@
 # News
+14/1/2025
+
+New Cores: MysticMarathon
+
+___
 13/1/2025
 
 New Cores: Freeze, Pong, PolyPlay, VBall, Performan, Missile Command, MrDo, PenguinKunWars, Popeye
