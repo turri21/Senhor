@@ -1,7 +1,7 @@
 # News
 14/1/2025
 
-New Cores: MysticMarathon
+New Cores: MysticMarathon, Pengo
 
 ___
 13/1/2025
