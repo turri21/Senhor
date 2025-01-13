@@ -1,7 +1,7 @@
 # News
 13/1/2025
 
-New Cores: Freeze, Pong, PolyPlay, VBall, Performan, Missile Command, MrDo, PenguinKunWars
+New Cores: Freeze, Pong, PolyPlay, VBall, Performan, Missile Command, MrDo, PenguinKunWars, Popeye
 
 ___
 11/1/2025
