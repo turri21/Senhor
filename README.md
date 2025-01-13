@@ -1,7 +1,7 @@
 # News
 13/1/2025
 
-New Cores: Freeze
+New Cores: Freeze, Pong
 
 ___
 11/1/2025
