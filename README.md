@@ -1,7 +1,7 @@
 # News
 15/1/2025
 
-New Cores: SolomonsKey
+New Cores: SolomonsKey, TaitoSJ
 
 ___
 14/1/2025
