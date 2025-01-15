@@ -1,4 +1,9 @@
 # News
+15/1/2025
+
+New Cores: SolomonsKey
+
+___
 14/1/2025
 
 New Cores: MysticMarathon, Pengo, DonkeyKong
