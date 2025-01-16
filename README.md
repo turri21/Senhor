@@ -1,4 +1,9 @@
 # News
+16/1/2025
+
+New Cores: Space Race
+
+___
 15/1/2025
 
 New Cores: SolomonsKey, TaitoSJ
