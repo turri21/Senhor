@@ -1,7 +1,7 @@
 # News
 16/1/2025
 
-New Cores: Space Race, Iron Horse
+New Cores: Space Race, Iron Horse, Jackal
 
 ___
 15/1/2025
