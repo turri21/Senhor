@@ -1,7 +1,7 @@
 # News
 17/1/2025
 
-New Cores: Jaguar
+New Cores: Jaguar, Joust 2
 
 ___
 16/1/2025
