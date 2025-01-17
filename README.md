@@ -1,4 +1,9 @@
 # News
+17/1/2025
+
+New Cores: Jaguar
+
+___
 16/1/2025
 
 New Cores: Space Race, Iron Horse, Jackal
