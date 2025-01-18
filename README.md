@@ -84,38 +84,6 @@ ___
 Updates: CoCo2
 
 ___
-30/12/2024
-
-New Cores: Arkanoid, Exerion
-
-___
-29/12/2024
-
-Updates: CoCo2
-
-___
-28/12/2024
-
-Updates: ao486, ZXNext
-
-___
-27/12/2024
-
-New Cores: Bakraid (Updated), Batrider 
-
-___
-23/12/2024
-
-Updates: PC88, ZXNext
-
-___
-20/12/2024
-
-New Cores: Sonson
-
-Updates: Minimig, ao486
-
-___
 # Raw binary files for Senhor FPGA board.
 ![image](https://github.com/user-attachments/assets/d68bc8fa-f05c-4b33-9088-9814994d0155)
 
