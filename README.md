@@ -1,7 +1,7 @@
 # News
 18/1/2025
 
-Updates: MrDo
+Updates: MrDo, Saturn
 
 ___
 17/1/2025
