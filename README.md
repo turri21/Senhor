@@ -1,4 +1,9 @@
 # News
+18/1/2025
+
+Updates: MrDo
+
+___
 17/1/2025
 
 New Cores: Jaguar, Joust 2
