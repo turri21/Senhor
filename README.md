@@ -1,6 +1,8 @@
 # News
 19/1/2025
 
+New Cores: Moon Patrol
+
 Updates: PC88
 
 ___
