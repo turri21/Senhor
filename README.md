@@ -1,4 +1,9 @@
 # News
+21/1/2025
+
+New Cores: Inferno
+
+___
 20/1/2025
 
 New Cores: Galaxian, Finalizer, Frenzy, FoodFight, Gaplus
