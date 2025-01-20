@@ -1,4 +1,9 @@
 # News
+20/1/2025
+
+New Cores: Galaxian
+
+___
 19/1/2025
 
 New Cores: Moon Patrol
