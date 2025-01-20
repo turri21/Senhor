@@ -1,7 +1,7 @@
 # News
 20/1/2025
 
-New Cores: Galaxian, Finalizer
+New Cores: Galaxian, Finalizer, Frenzy
 
 ___
 19/1/2025
