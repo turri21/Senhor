@@ -1,7 +1,7 @@
 # News
 21/1/2025
 
-New Cores: Inferno, Gyruss, Sprint1, IremM62
+New Cores: Inferno, Gyruss, Sprint1, Sprint2, IremM62, Subs
 
 ___
 20/1/2025
