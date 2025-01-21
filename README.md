@@ -1,7 +1,7 @@
 # News
 21/1/2025
 
-New Cores: Inferno
+New Cores: Inferno, Gyruss
 
 ___
 20/1/2025
