@@ -1,6 +1,8 @@
 # News
 22/1/2025
 
+New Cores: Exidy2
+
 Updates: Minimig
 
 ___
