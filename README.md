@@ -1,4 +1,9 @@
 # News
+22/1/2025
+
+Updates: Minimig
+
+___
 21/1/2025
 
 New Cores: Inferno, Gyruss, Sprint1, Sprint2, IremM62, Subs
