@@ -1,7 +1,7 @@
 # News
 22/1/2025
 
-New Cores: Exidy2, DonkeyKongJunior, DonkeyKong3, Dominos. DigDug
+New Cores: Exidy2, DonkeyKongJunior, DonkeyKong3, Dominos. DigDug, Defender
 
 Updates: Minimig
 
