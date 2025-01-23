@@ -1,7 +1,7 @@
 # News
 23/1/2025
 
-New Cores: Congo Bongo
+New Cores: Congo Bongo, Computer Space
 
 ___
 22/1/2025
