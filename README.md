@@ -1,7 +1,7 @@
 # News
 23/1/2025
 
-New Cores: Congo Bongo, Computer Space, Centipede
+New Cores: Congo Bongo, Computer Space, Centipede, Crystal Castles
 
 ___
 22/1/2025
