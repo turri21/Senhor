@@ -1,7 +1,7 @@
 # News
 24/1/2025
 
-New Cores: Burger Time, Breakout
+New Cores: Burger Time, Breakout, NinjaKun
 
 Updates: Gyruss
 
