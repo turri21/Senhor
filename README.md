@@ -3,6 +3,8 @@
 
 New Cores: Burger Time, Breakout
 
+Updates: Gyruss
+
 ___
 23/1/2025
 
