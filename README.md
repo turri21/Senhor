@@ -1,4 +1,9 @@
 # News
+24/1/2025
+
+New Cores: Burger Time
+
+___
 23/1/2025
 
 New Cores: Congo Bongo, Computer Space, Centipede, Crystal Castles, Canyon Bomber
