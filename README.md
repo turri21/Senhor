@@ -1,7 +1,7 @@
 # News
 24/1/2025
 
-New Cores: Burger Time
+New Cores: Burger Time, Breakout
 
 ___
 23/1/2025
