@@ -1,4 +1,9 @@
 # News
+25/1/2025
+
+New Cores: Black Widow
+
+___
 24/1/2025
 
 New Cores: Burger Time, Breakout, NinjaKun
