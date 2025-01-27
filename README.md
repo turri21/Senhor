@@ -1,4 +1,9 @@
 # News
+27/1/2025
+
+New Cores: Tank Battalion
+
+___
 25/1/2025
 
 New Cores: Black Widow
