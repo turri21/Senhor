@@ -1,4 +1,9 @@
 # News
+28/1/2025
+
+New Cores: TIAMC1
+
+___
 27/1/2025
 
 New Cores: Tank Battalion
