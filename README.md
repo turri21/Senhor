@@ -1,7 +1,7 @@
 # News
 28/1/2025
 
-New Cores: TIAMC1, Time Pilot, IremM72
+New Cores: TIAMC1, Time Pilot, IremM72, MCR3Scroll
 
 ___
 27/1/2025
