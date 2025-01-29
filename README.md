@@ -1,7 +1,7 @@
 # News
 29/1/2025
 
-New Cores: Ultratank, BattleZone, ZigZag, Bagman
+New Cores: Ultratank, BattleZone, ZigZag, Bagman, Athena
 
 Updates: IremM72
 
