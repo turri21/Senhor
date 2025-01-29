@@ -1,6 +1,8 @@
 # News
 29/1/2025
 
+New Cores: Ultratank
+
 Updates: IremM72
 
 ___
