@@ -1,7 +1,7 @@
 # News
 29/1/2025
 
-New Cores: Ultratank, BattleZone, ZigZag, Bagman, Athena, Tetris
+New Cores: Ultratank, BattleZone, ZigZag, Bagman, Athena, AtariTetris
 
 Updates: IremM72
 
