@@ -1,7 +1,7 @@
 # News
 29/1/2025
 
-New Cores: Ultratank
+New Cores: Ultratank, BattleZone
 
 Updates: IremM72
 
