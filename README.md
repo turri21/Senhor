@@ -3,6 +3,8 @@
 
 New Cores: Sky Skipper, Tropical Angel, Turkey Shoot, Space Invaders, Asteroids
 
+Updates: ao486
+
 ___
 29/1/2025
 
