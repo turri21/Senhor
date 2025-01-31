@@ -1,7 +1,7 @@
 # News
 31/1/2025
 
-New Cores: Sky Skipper, Tropical Angel
+New Cores: Sky Skipper, Tropical Angel, Turkey Shoot
 
 ___
 29/1/2025
