@@ -1,7 +1,7 @@
 # News
 31/1/2025
 
-New Cores: Sky Skipper
+New Cores: Sky Skipper, Tropical Angel
 
 ___
 29/1/2025
