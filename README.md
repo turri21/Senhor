@@ -1,4 +1,9 @@
 # News
+1/2/2025
+
+Updates: NES
+
+___
 31/1/2025
 
 New Cores: Sky Skipper, Tropical Angel, Turkey Shoot, Space Invaders, Asteroids
@@ -76,76 +81,6 @@ ___
 16/1/2025
 
 New Cores: Space Race, Iron Horse, Jackal
-
-___
-15/1/2025
-
-New Cores: SolomonsKey, TaitoSJ
-
-___
-14/1/2025
-
-New Cores: MysticMarathon, Pengo, DonkeyKong
-
-Updates: Saturn
-
-___
-13/1/2025
-
-New Cores: Freeze, Pong, PolyPlay, VBall, Performan, Missile Command, MrDo, PenguinKunWars, Popeye
-
-___
-11/1/2025
-
-New Cores: Pooyan
-
-___
-10/1/2025
-
-New Cores: Scooter Shooter, Scramble, Silver Land, SNK_TripleZ80, SlapFight, Rally-X, Chameleon, Galivan, BankPanic, Express Raider
-
-Updates: Gameboy
-
-___
-9/1/2025
-
-New Cores: BubSysROM, Rush'n Attack (Green Beret)
-
-___
-8/1/2025
-
-New Cores: BubSys, PDP2011
-
-Updates: MultiComp, Altair8800
-
-___
-7/1/2025
-
-Updates: Astrocade, Robotron, Saturn
-
-___
-6/1/2025
-
-New Cores: TimePilot84, DottoriKun, Garegga, RiverPatrol, Robotron
-
-Updates: Blockade, Apple II, NeoGeo
-
-___
-5/1/2025
-
-New Cores: LunarLander, CrazyBalloon, CrazyClimber, CrazyKong, Bosconian, Jailbreak, LadyBug, Mr.Jong, TNKIII, Blockade, Pleiads
-
-___
-4/1/2025
-
-New Cores: BBCBridgeCompanion
-
-Updates: PSX, PC88, ATARI7800
-
-___ 
-3/1/2025
-
-Updates: CoCo2
 
 ___
 # Raw binary files for Senhor FPGA board.
