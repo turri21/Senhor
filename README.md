@@ -1,7 +1,7 @@
 # News
 1/2/2025
 
-Updates: NES
+Updates: NES, PCXT
 
 ___
 31/1/2025
