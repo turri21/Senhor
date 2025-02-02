@@ -1,4 +1,9 @@
 # News
+2/2/2025
+
+New Cores: Asteroids Deluxe
+
+___
 1/2/2025
 
 Updates: NES, PCXT
