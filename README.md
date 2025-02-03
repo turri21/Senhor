@@ -1,5 +1,5 @@
 # News
-2/3/2025
+3/2/2025
 
 New Cores: Traverse USA
 
