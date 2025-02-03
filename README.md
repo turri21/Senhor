@@ -1,4 +1,9 @@
 # News
+2/3/2025
+
+New Cores: Traverse USA
+
+___
 2/2/2025
 
 New Cores: Asteroids Deluxe
