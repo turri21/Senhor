@@ -1,4 +1,9 @@
 # News
+4/2/2025
+
+New Cores: BallyAstrocade
+
+___
 3/2/2025
 
 New Cores: Traverse USA
