@@ -3,6 +3,8 @@
 
 New Cores: BallyAstrocade
 
+Updates: CoCo2
+
 ___
 3/2/2025
 
