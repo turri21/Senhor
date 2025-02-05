@@ -1,4 +1,9 @@
 # News
+5/2/2025
+
+New Cores: AY-3-8500
+
+___
 4/2/2025
 
 New Cores: BallyAstrocade
