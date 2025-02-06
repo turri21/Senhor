@@ -1,4 +1,9 @@
 # News
+6/2/2025
+
+New Cores: Atari 5200
+
+___
 5/2/2025
 
 New Cores: AY-3-8500
