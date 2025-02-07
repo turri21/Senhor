@@ -1,6 +1,8 @@
 # News
 7/2/2025
 
+New Cores: Casio PV-1000
+
 Updates: Tecmo
 
 ___
