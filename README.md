@@ -1,4 +1,9 @@
 # News
+7/2/2025
+
+Updates: Tecmo
+
+___
 6/2/2025
 
 New Cores: Atari 5200
