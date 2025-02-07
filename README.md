@@ -3,7 +3,7 @@
 
 New Cores: Casio PV-1000
 
-Updates: Tecmo
+Updates: Tecmo, Menu
 
 ___
 6/2/2025
