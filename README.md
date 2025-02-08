@@ -1,7 +1,7 @@
 # News
 8/2/2025
 
-New Cores: Gamate
+New Cores: Gamate, AdventureVision
 
 ___
 7/2/2025
