@@ -1,4 +1,9 @@
 # News
+8/2/2025
+
+New Cores: Gamate
+
+___
 7/2/2025
 
 New Cores: Casio PV-1000, Intellivision
