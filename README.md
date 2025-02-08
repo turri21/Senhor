@@ -1,7 +1,7 @@
 # News
 7/2/2025
 
-New Cores: Casio PV-1000
+New Cores: Casio PV-1000, Intellivision
 
 Updates: Tecmo, Menu
 
