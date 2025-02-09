@@ -1,4 +1,9 @@
 # News
+9/2/2025
+
+New Cores: GenMidi
+
+___
 8/2/2025
 
 New Cores: Gamate, AdventureVision
