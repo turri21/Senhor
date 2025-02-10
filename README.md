@@ -1,7 +1,7 @@
 # News
 10/2/2025
 
-New Cores: Game Of Life, Slug Cross
+New Cores: Game Of Life, Slug Cross, Arduboy
 
 ___
 9/2/2025
