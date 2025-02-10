@@ -1,4 +1,9 @@
 # News
+10/2/2025
+
+New Cores: Game Of Life
+
+___
 9/2/2025
 
 New Cores: GenMidi
