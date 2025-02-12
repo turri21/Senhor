@@ -1,7 +1,7 @@
 # News
 12/2/2025
 
-New Cores: TomyScramble, GBMidi
+New Cores: TomyScramble, GBMidi, Chess
 
 ___
 10/2/2025
