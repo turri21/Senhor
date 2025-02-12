@@ -1,4 +1,9 @@
 # News
+12/2/2025
+
+New Cores: TomyScramble
+
+___
 10/2/2025
 
 New Cores: Game Of Life, Slug Cross, Arduboy
