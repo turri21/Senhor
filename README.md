@@ -1,4 +1,9 @@
 # News
+13/2/2025
+
+Updates: Gamate
+
+___
 12/2/2025
 
 New Cores: TomyScramble, GBMidi, Chess
