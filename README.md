@@ -1,4 +1,9 @@
 # News
+20/2/2025
+
+New Cores: Donut
+
+___
 13/2/2025
 
 Updates: Gamate
