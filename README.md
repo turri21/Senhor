@@ -2,7 +2,7 @@
 
 25/2/2025
 
-Updates: PCW
+Updates: PCW, SNES
 
 ___
 23/2/2025
