@@ -1,5 +1,9 @@
 # News
+26/2/2025
 
+New Cores: Epoch Galaxy II
+
+___
 25/2/2025
 
 Updates: PCW, SNES
