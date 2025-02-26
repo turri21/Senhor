@@ -1,7 +1,7 @@
 # News
 26/2/2025
 
-New Cores: Epoch Galaxy II
+New Cores: Epoch Galaxy II, Atari System-1
 
 ___
 25/2/2025
