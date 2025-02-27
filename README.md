@@ -3,7 +3,7 @@
 
 New Cores: N64-Turbo
 
-Updates: XSleena
+Updates: XSleena, PCW
 
 ___
 26/2/2025
