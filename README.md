@@ -1,7 +1,7 @@
 # News
 27/2/2025
 
-New Cores: N64-Turbo
+New Cores: N64-Turbo, Thomson MO6
 
 Updates: XSleena, PCW
 
