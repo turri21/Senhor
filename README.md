@@ -3,7 +3,7 @@
 
 New Cores: Epoch Galaxy II, Atari System-1
 
-Updates: Tecmo, Minimig
+Updates: Tecmo, Minimig, IremM72
 ___
 25/2/2025
 
