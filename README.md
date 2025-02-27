@@ -1,4 +1,9 @@
 # News
+27/2/2025
+
+Updates: XSleena
+
+___
 26/2/2025
 
 New Cores: Epoch Galaxy II, Atari System-1
