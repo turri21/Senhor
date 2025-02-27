@@ -1,6 +1,8 @@
 # News
 27/2/2025
 
+New Cores: N64-Turbo
+
 Updates: XSleena
 
 ___
