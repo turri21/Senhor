@@ -3,7 +3,7 @@
 
 New Cores: N64-Turbo, Thomson MO6, BasicMasterJr
 
-Updates: XSleena, PCW, Space Invaders, NES
+Updates: XSleena, PCW, Space Invaders, NES, S32X
 
 ___
 26/2/2025
