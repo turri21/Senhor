@@ -1,4 +1,9 @@
 # News
+1/3/2025
+
+Updates: PC88
+
+___
 28/2/2025
 
 New Cores: Rememotech
