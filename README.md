@@ -1,4 +1,14 @@
 # News
+3/3/2025
+
+Updates: NES
+
+___
+2/3/2025
+
+Updates: Garrega
+
+___
 1/3/2025
 
 Updates: PC88
