@@ -265,6 +265,4 @@ IremM92: A not good "NG" message is displayed on the initial ROM checking. Some 
          
 TimePilot84: Barely seen pixel artifacts on title screen. Gameplay is not affected.
 
-Garegga: It has minor pixel edge artifacts.
-
 On some cores the onboard buttons (OSD and RESET) have been disabled for stability purposes.
