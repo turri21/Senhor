@@ -1,7 +1,7 @@
 # News
 4/3/2025
 
-New Cores: IremM107
+New Cores: IremM107, Arcadia
 
 ___
 3/3/2025
