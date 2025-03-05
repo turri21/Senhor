@@ -1,4 +1,9 @@
 # News
+5/3/2025
+
+New Cores: CreatiVision
+
+___
 4/3/2025
 
 New Cores: IremM107, Arcadia, ChannelF, Pokemon Mini
