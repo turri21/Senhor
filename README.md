@@ -1,7 +1,7 @@
 # News
 5/3/2025
 
-New Cores: CreatiVision, GnW
+New Cores: CreatiVision, GnW, Tamagotchi
 
 ___
 4/3/2025
