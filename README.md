@@ -6,7 +6,7 @@ New Cores: Gameboy2P
 ___
 5/3/2025
 
-New Cores: CreatiVision, GnW, Tamagotchi, MyVision
+New Cores: CreatiVision, GnW, Tamagotchi, MyVision, GBA2P
 
 ___
 4/3/2025
