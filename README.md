@@ -1,7 +1,7 @@
 # News
 6/3/2025
 
-New Cores: Gameboy2P
+New Cores: Gameboy2P, GameAndWatch
 
 ___
 5/3/2025
