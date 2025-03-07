@@ -1,4 +1,9 @@
 # News
+7/3/2025
+
+Updates: Intellivision
+
+___
 6/3/2025
 
 New Cores: Gameboy2P, GameAndWatch, GBA, SNES
