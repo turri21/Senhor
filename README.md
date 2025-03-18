@@ -1,7 +1,9 @@
 # News
 18/3/2025
 
-New Cores: Jotego Haunted Castle
+New Cores: Jotego Haunted Castle, Jotego Karnov, Jotego Contra
+
+Updates: Jotego S16b
 
 ___
 15/3/2025
