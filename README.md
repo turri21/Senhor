@@ -1,4 +1,9 @@
 # News
+18/3/2025
+
+New Cores: Jotego Haunted Castle
+
+___
 15/3/2025
 
 Updates: ST-V, Saturn, TRS-80
