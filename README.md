@@ -1,4 +1,9 @@
 # News
+19/3/2025
+
+New Cores: Jotego WWF Superstars, Jotego Double Dragon
+
+___
 18/3/2025
 
 New Cores: Jotego Haunted Castle, Jotego Karnov, Jotego Contra
