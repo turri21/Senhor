@@ -1,7 +1,7 @@
 # News
 19/3/2025
 
-New Cores: Jotego WWF Superstars, Jotego Double Dragon, Jotego Double Dragon II, Jotego Circus Charlie, Jotego Commando, Jotego Combat School, Jotego Robocop, Jotego CPS1.5, Jotego Exed Exes, Jotego Fast Lane, Jotego Gun.Smoke, Jotego Trojan, Jotego Midnight Resistance, Jotego Kicker
+New Cores: Jotego WWF Superstars, Jotego Double Dragon, Jotego Double Dragon II, Jotego Circus Charlie, Jotego Commando, Jotego Combat School, Jotego Robocop, Jotego CPS1.5, Jotego Exed Exes, Jotego Fast Lane, Jotego Gun.Smoke, Jotego Trojan, Jotego Midnight Resistance, Jotego Kicker, Jotego MX5000
 
 ___
 18/3/2025
