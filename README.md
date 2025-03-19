@@ -1,7 +1,7 @@
 # News
 19/3/2025
 
-New Cores: Jotego WWF Superstars, Jotego Double Dragon
+New Cores: Jotego WWF Superstars, Jotego Double Dragon, Jotego Double Dragon II, Jotego Circus Charlie, Jotego Commando, Jotego Combat School
 
 ___
 18/3/2025
