@@ -1,4 +1,11 @@
 # News
+20/3/2025
+
+New Cores: Jotego Karate Champ, Jotego The Final Round, Jotego Renegade 
+
+Updates: CDi
+
+___
 19/3/2025
 
 New Cores: Jotego WWF Superstars, Jotego Double Dragon, Jotego Double Dragon II, Jotego Circus Charlie, Jotego Commando, Jotego Combat School, Jotego Robocop, Jotego CPS1.5, Jotego Exed Exes, Jotego Fast Lane, Jotego Gun.Smoke, Jotego Trojan, Jotego Midnight Resistance, Jotego Kicker, Jotego MX5000, Jotego Trick Trap (Labyrinth Runner)
