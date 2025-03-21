@@ -1,4 +1,9 @@
 # News
+22/2/2025
+
+Updates: Jaguar
+
+___
 20/3/2025
 
 New Cores: Jotego Karate Champ, Jotego The Final Round, Jotego Renegade 
