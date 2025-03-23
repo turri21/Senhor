@@ -1,4 +1,9 @@
 # News
+23/2/2025
+
+Updates: Rememotech
+
+___
 22/2/2025
 
 Updates: Jaguar
