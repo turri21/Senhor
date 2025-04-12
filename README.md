@@ -1,4 +1,10 @@
 # News
+
+12/4/2025
+
+New Cores: FM-7
+
+___
 8/4/2025
 
 Updates: SordM5
