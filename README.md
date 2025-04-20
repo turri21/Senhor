@@ -1,5 +1,10 @@
 # News
 
+20/4/2025
+
+New Cores: MCR2
+
+___
 12/4/2025
 
 New Cores: FM-7
