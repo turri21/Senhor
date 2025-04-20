@@ -2,7 +2,7 @@
 
 20/4/2025
 
-New Cores: MCR2
+New Cores: MCR2, MCR3
 
 ___
 12/4/2025
