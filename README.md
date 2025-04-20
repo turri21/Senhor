@@ -1,5 +1,10 @@
 # News
 
+21/4/2025
+
+New Cores: MCR1
+
+___
 20/4/2025
 
 New Cores: MCR2, MCR3, MCR3Mono
