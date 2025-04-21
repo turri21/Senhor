@@ -4,6 +4,8 @@
 
 New Cores: MCR1
 
+Updates: Exerion
+
 ___
 20/4/2025
 
