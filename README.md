@@ -1,5 +1,10 @@
 # News
 
+22/4/2025
+
+Updates: C128
+
+___
 21/4/2025
 
 New Cores: MCR1
