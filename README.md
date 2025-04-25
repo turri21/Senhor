@@ -2,7 +2,7 @@
 
 25/4/2025
 
-Updates: ColecoAdam
+Updates: ColecoAdam, TatungEinstein
 
 ___
 22/4/2025
