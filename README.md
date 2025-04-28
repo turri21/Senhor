@@ -1,4 +1,9 @@
 # News
+29/4/2025
+
+New Core: Segasys1and2
+
+___
 28/4/2025
 
 Updates: Gauntlet
