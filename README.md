@@ -1,5 +1,9 @@
 # News
+28/4/2025
 
+Updates: Gauntlet
+
+___
 25/4/2025
 
 Updates: ColecoAdam, TatungEinstein
