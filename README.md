@@ -1,4 +1,9 @@
 # News
+1/5/2025
+
+New Cores: Pipibibs, Teki Paki, Truxton 2
+
+___
 29/4/2025
 
 New Cores: Segasys1and2
