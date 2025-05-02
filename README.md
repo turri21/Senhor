@@ -1,4 +1,9 @@
 # News
+2/5/2025
+
+New Cores: Demon's World
+
+___
 1/5/2025
 
 New Cores: Pipibibs, Teki Paki, Truxton 2
