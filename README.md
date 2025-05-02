@@ -1,7 +1,7 @@
 # News
 2/5/2025
 
-New Cores: Demon's World
+New Cores: Demon's World, Snow Bros 2
 
 ___
 1/5/2025
