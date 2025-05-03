@@ -1,4 +1,9 @@
 # News
+3/5/2025
+
+New Cores: Naughty Boy
+
+___
 2/5/2025
 
 New Cores: Demon's World, Snow Bros 2
