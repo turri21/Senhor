@@ -1,7 +1,7 @@
 # News
 3/5/2025
 
-New Cores: Naughty Boy
+New Cores: Naughty Boy, Alpha68k
 
 Updates: C64, Jaguar, Minimig
 
