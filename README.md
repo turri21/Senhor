@@ -3,7 +3,7 @@
 
 New Cores: Naughty Boy
 
-Updates: C64
+Updates: C64, Jaguar
 
 ___
 2/5/2025
