@@ -1,7 +1,7 @@
 # News
 4/5/2025
 
-New Cores: Rallybike
+New Cores: Rallybike, Vimana
 
 ___
 3/5/2025
