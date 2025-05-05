@@ -1,7 +1,7 @@
 # News
 5/5/2025
 
-New Cores: Zerowing
+New Cores: Zerowing, AliceMC10
 
 ___
 4/5/2025
