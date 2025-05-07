@@ -1,4 +1,9 @@
 # News
+7/5/2025
+
+Updates: PET2001
+
+___
 5/5/2025
 
 New Cores: Zerowing, AliceMC10
