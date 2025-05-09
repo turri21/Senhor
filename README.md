@@ -1,4 +1,9 @@
 # News
+9/5/2025
+
+New Cores: MSX1-MSX2
+
+___
 7/5/2025
 
 Updates: PET2001
