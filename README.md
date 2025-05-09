@@ -1,7 +1,7 @@
 # News
 9/5/2025
 
-New Cores: MSX1-MSX2
+New Cores: MSX1-MSX2, MegaSys1_A
 
 ___
 7/5/2025
