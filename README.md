@@ -1,4 +1,9 @@
 # News
+10/5/2025
+
+New Cores: SNK68
+
+___
 9/5/2025
 
 New Cores: MSX1-MSX2, MegaSys1_A, Prehistoric Isle, Next Space
