@@ -1,4 +1,9 @@
 # News
+11/5/2025
+
+New Cores: Armed Force
+
+___
 10/5/2025
 
 New Cores: SNK68
