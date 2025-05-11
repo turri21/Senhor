@@ -1,7 +1,7 @@
 # News
 11/5/2025
 
-New Cores: Armed F
+New Cores: Armed F, Terra Cresta
 
 ___
 10/5/2025
