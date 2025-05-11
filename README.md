@@ -1,7 +1,7 @@
 # News
 11/5/2025
 
-New Cores: Armed Force
+New Cores: Armed F
 
 ___
 10/5/2025
