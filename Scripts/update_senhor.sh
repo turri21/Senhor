@@ -179,7 +179,7 @@ delete_old_versions() {
         local existing_version=$(echo "$existing_file" | cut -d'_' -f3 | cut -d'.' -f1)
 
         if [[ "$existing_version" < "$new_version" ]]; then
-            log "Deleting older version: $existing_file"
+            log "\e[31mDeleting older version: \e[0m\e[1;33m$existing_file\e[0m"
             rm -f "$existing"
         fi
     done
