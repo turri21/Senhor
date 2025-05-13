@@ -1,4 +1,9 @@
 # News
+13/5/2025
+
+New Cores: memtest
+
+___
 11/5/2025
 
 New Cores: Armed F, Terra Cresta, Demo68k
