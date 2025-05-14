@@ -1,4 +1,9 @@
 # News
+14/5/2025
+
+Updates: SharpMZ
+
+___
 13/5/2025
 
 New Cores: memtest
