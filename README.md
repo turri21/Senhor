@@ -1,7 +1,7 @@
 # News
 17/5/2025
 
-New Cores: VC4000
+New Cores: VC4000, Supervision
 
 ___
 16/5/2025
