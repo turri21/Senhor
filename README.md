@@ -1,4 +1,9 @@
 # News
+17/5/2025
+
+New Cores: VC4000
+
+___
 16/5/2025
 
 Updates: PCW
