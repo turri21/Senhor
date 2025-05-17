@@ -1,7 +1,7 @@
 # News
 17/5/2025
 
-New Cores: VC4000, Supervision, VT52
+New Cores: VC4000, Supervision, VT52, RX78
 
 ___
 16/5/2025
