@@ -1,7 +1,7 @@
 # News
 19/5/2025
 
-Updates: Saturn
+Updates: Saturn, ST-V
 
 ___
 17/5/2025
