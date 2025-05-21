@@ -1,7 +1,7 @@
 # News
 21/5/2025
 
-Updates: TOWNS
+Updates: TOWNS, Zet98
 
 ___
 19/5/2025
