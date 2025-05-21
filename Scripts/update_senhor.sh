@@ -75,12 +75,14 @@ BASE_URL="https://raw.githubusercontent.com/$REPO_OWNER/$REPO_NAME/main"
 
 declare -A FOLDERS=(
     ["_Arcade"]="/media/fat/_Arcade"
+    ["_Arcade/_ST-V"]="/media/fat/_Arcade/_ST-V"
+    ["_Arcade/_ST-V/_JP Bios"]="/media/fat/_Arcade/_ST-V/_JP Bios"
     ["_Arcade/cores"]="/media/fat/_Arcade/cores"
     ["_Computer"]="/media/fat/_Computer"
     ["_Console"]="/media/fat/_Console"
     ["_Other"]="/media/fat/_Other"
     ["_Other/cores"]="/media/fat/_Other/cores"
-    ["_Utility"]="/media/fat/_Utility"
+    ["_Utility"]="/media/fat/_Utility"    
 )
 
 FILE_LIST_EXT="file_list.txt"
