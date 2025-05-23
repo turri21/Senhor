@@ -1,4 +1,9 @@
 # News
+24/5/2025
+
+Updates: AtariTetris
+
+___
 21/5/2025
 
 New Cores: Zet98
