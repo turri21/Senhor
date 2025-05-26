@@ -1,9 +1,12 @@
 # News
 26/5/2025
 
-New Cores: SparcStation
-
 Updates: SVI328
+
+___
+25/5/2025
+
+New Cores: SparcStation
 
 ___
 24/5/2025
