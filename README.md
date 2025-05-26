@@ -1,4 +1,11 @@
 # News
+26/5/2025
+
+New Cores: SparcStation
+
+Updates: SVI328
+
+___
 24/5/2025
 
 Updates: AtariTetris
@@ -39,95 +46,6 @@ ___
 13/5/2025
 
 New Cores: memtest
-
-___
-11/5/2025
-
-New Cores: Armed F, Terra Cresta, Demo68k
-
-___
-10/5/2025
-
-New Cores: SNK68
-
-___
-9/5/2025
-
-New Cores: MSX1-MSX2, MegaSys1_A, Prehistoric Isle, Next Space
-
-___
-7/5/2025
-
-Updates: PET2001
-
-___
-5/5/2025
-
-New Cores: Zerowing, AliceMC10
-
-___
-4/5/2025
-
-New Cores: Rallybike, Vimana
-
-___
-3/5/2025
-
-New Cores: Naughty Boy, Alpha68k
-
-Updates: C64, Jaguar, Minimig
-
-___
-2/5/2025
-
-New Cores: Demon's World, Snow Bros 2
-
-___
-1/5/2025
-
-New Cores: Pipibibs, Teki Paki, Truxton 2
-
-___
-29/4/2025
-
-New Cores: Segasys1and2
-
-___
-28/4/2025
-
-Updates: Gauntlet
-
-___
-25/4/2025
-
-Updates: ColecoAdam, TatungEinstein
-
-___
-22/4/2025
-
-Updates: C128
-
-___
-21/4/2025
-
-New Cores: MCR1
-
-Updates: Exerion
-
-___
-20/4/2025
-
-New Cores: MCR2, MCR3, MCR3Mono
-
-___
-12/4/2025
-
-New Cores: FM-7
-
-___
-8/4/2025
-
-Updates: SordM5
 
 ___
 # Raw binary files for Senhor FPGA board.
