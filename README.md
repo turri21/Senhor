@@ -1,4 +1,9 @@
 # News
+27/5/2025
+
+New Cores: EDSAC
+
+___
 26/5/2025
 
 Updates: SVI328
