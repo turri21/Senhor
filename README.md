@@ -1,6 +1,8 @@
 # News
 28/5/2025
 
+New Cores: PDP1
+
 Update: EDSAC
 
 ___
