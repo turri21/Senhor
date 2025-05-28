@@ -1,4 +1,9 @@
 # News
+28/5/2025
+
+Update: EDSAC
+
+___
 27/5/2025
 
 New Cores: EDSAC
