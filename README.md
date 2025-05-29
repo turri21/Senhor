@@ -1,4 +1,9 @@
 # News
+30/5/2025
+
+New Cores: TaitoF2
+
+___
 29/5/2025
 
 Updates: Amstrad
