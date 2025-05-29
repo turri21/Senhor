@@ -1,4 +1,9 @@
 # News
+29/5/2025
+
+Updates: Amstrad
+
+___
 28/5/2025
 
 New Cores: PDP1, SCV
