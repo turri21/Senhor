@@ -1,4 +1,9 @@
 # News
+1/6/2025
+
+Updates: SVI328
+
+___
 30/5/2025
 
 New Cores: TaitoF2
