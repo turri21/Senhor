@@ -1,7 +1,7 @@
 # News
 4/6/2025
 
-New Core: Nemesis
+New Cores: Nemesis
 
 ___
 3/6/2025
