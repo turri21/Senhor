@@ -1,4 +1,9 @@
 # News
+4/6/2025
+
+New Core: Nemesis
+
+___
 3/6/2025
 
 Updates: ZX Spectrum
