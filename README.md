@@ -1,4 +1,9 @@
 # News
+10/6/2025
+
+Updates: Minimig
+
+___
 4/6/2025
 
 New Cores: Nemesis
