@@ -1,4 +1,9 @@
 # News
+12/6/2025
+
+New Cores: LM80C
+
+___
 10/6/2025
 
 Updates: Minimig
