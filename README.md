@@ -1,4 +1,9 @@
 # News
+15/6/2025
+
+Updates: SNES
+
+___
 12/6/2025
 
 New Cores: LM80C
