@@ -1,4 +1,9 @@
 # News
+21/6/2025
+
+Updates: Atari 800
+
+___
 15/6/2025
 
 Updates: SNES
