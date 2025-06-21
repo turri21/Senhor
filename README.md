@@ -1,7 +1,7 @@
 # News
 21/6/2025
 
-Updates: Atari 800
+Updates: Atari 800, Atari 5200
 
 ___
 15/6/2025
