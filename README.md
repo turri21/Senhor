@@ -1,4 +1,9 @@
 # News
+29/6/2025
+
+Updates: Genesis
+
+___
 21/6/2025
 
 Updates: Atari 800, Atari 5200
