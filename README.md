@@ -1,7 +1,7 @@
 # News
 2/7/2025
 
-Updates: C128, MegaDrive, CDi, PCW
+Updates: C128, MegaDrive, CDi, PCW, Amstrad CPC
 
 ___
 29/6/2025
