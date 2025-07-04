@@ -1,4 +1,9 @@
 # News
+4/7/2025
+
+Updates: CoCo2
+
+___
 2/7/2025
 
 Updates: C128, MegaDrive, CDi, PCW, Amstrad CPC
