@@ -1,7 +1,7 @@
 # News
 4/7/2025
 
-Updates: CoCo2
+Updates: CoCo2, CoCo3
 
 ___
 2/7/2025
