@@ -1,4 +1,9 @@
 # News
+7/7/2025
+
+Updates: TurboGrafx16
+
+___
 5/7/2025
 
 Updates: Apple II
