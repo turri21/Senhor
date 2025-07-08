@@ -1,4 +1,9 @@
 # News
+9/7/2025
+
+Updates: PSX
+
+___
 8/7/2025
 
 Updates: SNES
