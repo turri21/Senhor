@@ -1,4 +1,9 @@
 # News
+8/7/2025
+
+Updates: SNES
+
+___
 7/7/2025
 
 Updates: TurboGrafx16
