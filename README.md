@@ -1,4 +1,9 @@
 # News
+12/7/2025
+
+Updates: Jotego CPS1, Jotego CPS2
+
+___
 10/7/2025
 
 Updates: Saturn
