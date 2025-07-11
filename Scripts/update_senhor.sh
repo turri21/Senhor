@@ -77,6 +77,7 @@ declare -A FOLDERS=(
     ["_Arcade"]="/media/fat/_Arcade"
     ["_Arcade/_ST-V"]="/media/fat/_Arcade/_ST-V"
     ["_Arcade/_ST-V/_JP Bios"]="/media/fat/_Arcade/_ST-V/_JP Bios"
+    ["_Arcade/_jotego"]="/media/fat/_Arcade/_jotego"
     ["_Arcade/cores"]="/media/fat/_Arcade/cores"
     ["_Computer"]="/media/fat/_Computer"
     ["_Console"]="/media/fat/_Console"
