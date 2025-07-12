@@ -1,4 +1,9 @@
 # News
+13/7/2025
+
+Updates: SNES, MegaCD
+
+___
 12/7/2025
 
 Updates: Jotego CPS1, Jotego CPS2, PET2001, NeoGeo
