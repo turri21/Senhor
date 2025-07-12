@@ -1,7 +1,7 @@
 # News
 12/7/2025
 
-Updates: Jotego CPS1, Jotego CPS2, PET2001
+Updates: Jotego CPS1, Jotego CPS2, PET2001, NeoGeo
 
 ___
 10/7/2025
