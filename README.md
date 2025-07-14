@@ -106,7 +106,7 @@ Dual SDRAM is not supported on Senhor (at least for the time being).
 
 A USB hub, so you can connect a keyboard, a mouse and a gamepad to the board's only USB port for peripherals.
 
-Finally, you are going to need a Micro SD card of minimum 2 GB and a custom Linux distribution flashed to it, such as [Mr. Fusion](https://github.com/MiSTer-devel/mr-fusion) in order to be able to boot the system, browse the menu and load the cores.
+Finally, you are going to need a Micro SD card of minimum 2 GB and a custom Linux distribution flashed to it, such as [TWR Fusion](https://github.com/turri21/Senhor/tree/main/twr-Senhor) in order to be able to boot the system, browse the menu and load the cores.
 
 Enjoy the ride!
 
