@@ -1,4 +1,9 @@
 # News
+19/7/2025
+
+Updates: ZXNext
+
+___
 14/7/2025
 
 Updates: Atari800, Atari5200
