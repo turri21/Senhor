@@ -1,4 +1,9 @@
 # News
+21/7/2025
+
+Updates: Minimig
+
+___
 19/7/2025
 
 Updates: ZXNext
