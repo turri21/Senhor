@@ -1,4 +1,9 @@
 # News
+22/7/2025
+
+Updates: SVI328
+
+___
 21/7/2025
 
 Updates: Minimig
