@@ -3,6 +3,8 @@
 
 New Cores: Starforce
 
+Updates: Joust2
+
 ___
 22/7/2025
 
