@@ -1,4 +1,9 @@
 # News
+28/7/2025
+
+New Cores: Starforce
+
+___
 22/7/2025
 
 Updates: SVI328
