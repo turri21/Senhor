@@ -1,4 +1,9 @@
 # News
+29/7/2025
+
+Updates: C128, Jaguar
+
+___
 28/7/2025
 
 New Cores: Starforce
