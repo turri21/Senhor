@@ -1,4 +1,4 @@
-# This is a modified version of TWiSTer Fusion for Senhor FPGA
+# This is a modified version of TWiSTer Fusion for Senhor FPGA.
 
 # TWiSTer Fusion - Universal TWiSTer installation image.
 (c) 2024 Roman Stolyarov AKA Vortex.
