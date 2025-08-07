@@ -1,4 +1,9 @@
 # News
+8/8/2025
+
+New Cores: Jotego-Sunset Riders (BETA)
+
+___
 7/8/2025
 
 Updates: C128, Saturn, ST-V
