@@ -1,4 +1,9 @@
 # News
+7/8/2025
+
+Updates: C128
+
+___
 29/7/2025
 
 Updates: C128, Jaguar
