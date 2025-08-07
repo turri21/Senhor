@@ -1,7 +1,7 @@
 # News
 7/8/2025
 
-Updates: C128
+Updates: C128, Saturn
 
 ___
 29/7/2025
