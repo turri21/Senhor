@@ -3,7 +3,7 @@
 
 New Cores: Jotego Sunset Riders (BETA)
 
-Updates: Jotego Ghosts 'n Goblins, Jotego KIWI, Jotego Black Tiger, Jotego Bionic Commando, Jotego Bubble Bobble, Jotego 1942, Jotego 1943, Jotego Mikie, Jotego Outrun
+Updates: Jotego Ghosts 'n Goblins, Jotego KIWI, Jotego Black Tiger, Jotego Bionic Commando, Jotego Bubble Bobble, Jotego 1942, Jotego 1943, Jotego Mikie, Jotego Outrun, Jotego Ninja
 
 ___
 7/8/2025
