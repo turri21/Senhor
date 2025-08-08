@@ -1,4 +1,9 @@
 # News
+9/8/2025
+
+Updates: Jotego Pac Land
+
+___
 8/8/2025
 
 New Cores: Jotego Sunset Riders (BETA)
