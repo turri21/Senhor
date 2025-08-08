@@ -1196,10 +1196,11 @@ main() {
     fi
 
     rm -rf "$TEMP_DIR"
+    sync  # Sync to ensure all pending writes are flushed
     echo -e "\e[1;35m=================================================================\e[0m"
-    echo "Finished selected operations."
+    echo "All operations completed successfully. Safe to power off."
     echo -e "\e[1;35m=================================================================\e[0m"
-#    read -p "Press enter to continue..."
+#   read -p "Press enter to continue..."
 }
 
 main
