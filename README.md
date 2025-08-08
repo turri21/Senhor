@@ -3,6 +3,8 @@
 
 New Cores: Jotego-Sunset Riders (BETA)
 
+Updates: Jotego Ghosts 'n Goblins
+
 ___
 7/8/2025
 
