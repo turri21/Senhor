@@ -3,7 +3,7 @@
 
 New Cores: Jotego Sunset Riders (BETA)
 
-Updates: Jotego Ghosts 'n Goblins, Jotego KIWI
+Updates: Jotego Ghosts 'n Goblins, Jotego KIWI, Jotego Black Tiger
 
 ___
 7/8/2025
