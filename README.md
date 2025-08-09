@@ -1,7 +1,7 @@
 # News
 9/8/2025
 
-New Cores: Jotego Pac Land
+New Cores: Jotego Pac Land, Jotego S18
 
 Updates: Jotego Pang
 
