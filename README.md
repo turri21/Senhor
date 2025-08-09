@@ -1,7 +1,7 @@
 # News
 10/8/2025
 
-Updates: Jotego Tiger Road
+Updates: Jotego Tiger Road, Jotego Toki
 
 ___
 9/8/2025
