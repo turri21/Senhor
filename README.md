@@ -6,7 +6,7 @@ Updates: Jotego Tiger Road, Jotego Toki, Jotego TMNT
 ___
 9/8/2025
 
-New Cores: Jotego Pac Land, Jotego S18
+New Cores: Jotego Pac Land (BETA)  Jotego S18 (BETA)
 
 Updates: Jotego Pang, Jotego Konami's Ping Pong, Jotego Vigilante, Jotego Yiear, Jotego Track & Field
 
