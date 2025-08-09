@@ -3,7 +3,7 @@
 
 New Cores: Jotego Pac Land, Jotego S18
 
-Updates: Jotego Pang, Jotego Konami's Ping Pong, Jotego Vigilante, Jotego Yiear
+Updates: Jotego Pang, Jotego Konami's Ping Pong, Jotego Vigilante, Jotego Yiear, Jotego Track & Field
 
 ___
 8/8/2025
