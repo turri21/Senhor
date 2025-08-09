@@ -1,4 +1,9 @@
 # News
+10/8/2025
+
+Updates: Jotego Tiger Road
+
+___
 9/8/2025
 
 New Cores: Jotego Pac Land, Jotego S18
