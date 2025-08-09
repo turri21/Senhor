@@ -3,7 +3,7 @@
 
 New Cores: Jotego Pac Land, Jotego S18
 
-Updates: Jotego Pang
+Updates: Jotego Pang, Jotego Konami's Ping Pong
 
 ___
 8/8/2025
