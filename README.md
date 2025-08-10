@@ -1,7 +1,7 @@
 # News
 11/8/2025
 
-Updates: Jotego Splatter House, Jotego Super Hang On
+Updates: Jotego Splatter House, Jotego Super Hang On, Jotego Side Arms
 
 ___
 10/8/2025
