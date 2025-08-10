@@ -1,7 +1,7 @@
 # News
 10/8/2025
 
-Updates: Jotego Tiger Road, Jotego Toki, Jotego TMNT
+Updates: Jotego Tiger Road, Jotego Toki, Jotego TMNT, Jotego The Simpsons
 
 ___
 9/8/2025
