@@ -1,7 +1,7 @@
 # News
 10/8/2025
 
-Updates: Jotego Tiger Road, Jotego Toki, Jotego TMNT, Jotego The Simpsons, Jotego Sly Spy, Jotego Parodius, Jotego Street Fighter
+Updates: Jotego Tiger Road, Jotego Toki, Jotego TMNT, Jotego The Simpsons, Jotego Sly Spy, Jotego Parodius, Jotego Street Fighter, Jotego Section Z
 
 ___
 9/8/2025
