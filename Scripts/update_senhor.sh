@@ -38,6 +38,10 @@ echo
 ###############################################
 # Configuration
 ###############################################
+SCRIPT_NAME="update_senhor.sh"
+SCRIPT_URL="https://raw.githubusercontent.com/turri21/Senhor/main/Scripts/$SCRIPT_NAME"
+CURRENT_VERSION="1.0"  # Update this when you release new versions
+
 REPO_OWNER="turri21"
 REPO_NAME="Distribution_Senhor"
 BASE_URL="https://raw.githubusercontent.com/$REPO_OWNER/$REPO_NAME/main"
@@ -88,6 +92,44 @@ check_internet() {
         exit 1
     fi
     log "Internet connection is available."
+}
+
+check_for_updates() {
+    log "Checking for script updates..."
+    
+    # Download the latest version to compare
+    local temp_script="$TEMP_DIR/$SCRIPT_NAME.tmp"
+    if ! wget -q --tries=3 --timeout=15 "$SCRIPT_URL" -O "$temp_script"; then
+        log "Failed to check for updates. Continuing with current version."
+        return 1
+    fi
+
+    # Extract version from the downloaded script
+    local latest_version=$(grep -m1 '^CURRENT_VERSION=' "$temp_script" | cut -d'"' -f2)
+    
+    if [[ "$latest_version" != "$CURRENT_VERSION" ]]; then
+        log "New version available ($latest_version). Current version is $CURRENT_VERSION."
+        if whiptail --title "Update Available" --yesno "A new update_senhor version ($latest_version) is available. Update now?" 8 78; then
+            # Backup current script
+            cp "$0" "$0old"
+            
+            # Replace with new version
+            if mv "$temp_script" "$0" && chmod +x "$0"; then
+                log "Successfully updated to version $latest_version. Please restart the script."
+                exit 0
+            else
+                log "Update failed. Restoring backup."
+                mv "$0.bak" "$0"
+                return 1
+            fi
+        else
+            log "User chose not to update."
+            rm -f "$temp_script"
+        fi
+    else
+        log "Script is up to date (v$CURRENT_VERSION)."
+        rm -f "$temp_script"
+    fi
 }
 
 # Enhanced version check with dates
@@ -195,6 +237,7 @@ prompt_delete_mode() {
 
 fetch_file_list() {
     local folder="$1"
+    local file_type="$2"  # "rbf_mgl" or "mra"
     local list_file="$TEMP_DIR/${folder}_$FILE_LIST_EXT"
     local file_list_url="$BASE_URL/$folder/$FILE_LIST_EXT"
 
@@ -213,16 +256,22 @@ fetch_file_list() {
         line="${line%%#*}"
         line="${line##*/}"
         line="${line//[$'\t\r\n']}"
-        [[ "$line" =~ \.(rbf|mgl|mra)$ ]] && FILES+=("$line")
+        
+        # Filter based on requested file type
+        if [[ "$file_type" == "rbf_mgl" && "$line" =~ \.(rbf|mgl)$ ]]; then
+            FILES+=("$line")
+        elif [[ "$file_type" == "mra" && "$line" =~ \.mra$ ]]; then
+            FILES+=("$line")
+        fi
     done < "$list_file"
 
     local count=${#FILES[@]}
     if [ "$count" -eq 0 ]; then
-        log "WARNING: No valid files found in $folder list"
+        log "WARNING: No valid $file_type files found in $folder list"
         return 1
     fi
 
-    log "Found $count supported files in $folder"
+    log "Found $count $file_type files in $folder"
     return 0
 }
 
@@ -232,22 +281,47 @@ delete_old_versions() {
     local download_dir="${FOLDERS[$folder]}"
     local full_path_new="$download_dir/$new_file"
 
-    # Extract base (everything up to the 2nd underscore) and version (after 2nd underscore)
-    local base_prefix=$(echo "$new_file" | cut -d'_' -f1-2)
-    local new_version=$(echo "$new_file" | cut -d'_' -f3 | cut -d'.' -f1)
-    local ext="${new_file##*.}"
-
-    for existing in "$download_dir"/"$base_prefix"_*."$ext"; do
-        [[ ! -f "$existing" || "$existing" == "$full_path_new" ]] && continue
-
-        local existing_file=$(basename "$existing")
-        local existing_version=$(echo "$existing_file" | cut -d'_' -f3 | cut -d'.' -f1)
-
-        if [[ "$existing_version" < "$new_version" ]]; then
-            log "\e[31mDeleting older version: \e[0m\e[1;33m$existing_file\e[0m"
+    # For MRA files - delete any older files with same base name
+    if [[ "$new_file" == *.mra ]]; then
+        local base_name="${new_file%.*}"
+        # Find and log all files that will be deleted
+        find "$download_dir" -maxdepth 1 -name "${base_name}*.mra" ! -name "$new_file" | while read -r existing; do
+            existing_file=$(basename "$existing")
+            log "\e[31mDeleting older MRA: \e[0m\e[1;33m$existing_file\e[0m"
             rm -f "$existing"
-        fi
-    done
+        done
+        return $?
+    fi
+    
+    # Original MGL version handling
+    if [[ "$new_file" == *.mgl ]]; then
+        local base_prefix=$(echo "$new_file" | cut -d'_' -f1-2)
+        local new_version=$(echo "$new_file" | cut -d'_' -f3 | cut -d'.' -f1)
+        
+        find "$download_dir" -maxdepth 1 -name "${base_prefix}_*" | while read -r existing; do
+            existing_file=$(basename "$existing")
+            existing_version=$(echo "$existing_file" | cut -d'_' -f3 | cut -d'.' -f1)
+            if [[ "$existing_version" < "$new_version" ]]; then
+                log "\e[31mDeleting older version: \e[0m\e[1;33m$existing_file\e[0m"
+                rm -f "$existing"
+            fi
+        done
+    fi
+
+    # Original RBF version handling
+    if [[ "$new_file" == *.rbf ]]; then
+        local base_prefix=$(echo "$new_file" | cut -d'_' -f1-2)
+        local new_version=$(echo "$new_file" | cut -d'_' -f3 | cut -d'.' -f1)
+        
+        find "$download_dir" -maxdepth 1 -name "${base_prefix}_*" | while read -r existing; do
+            existing_file=$(basename "$existing")
+            existing_version=$(echo "$existing_file" | cut -d'_' -f3 | cut -d'.' -f1)
+            if [[ "$existing_version" < "$new_version" ]]; then
+                log "\e[31mDeleting older version: \e[0m\e[1;33m$existing_file\e[0m"
+                rm -f "$existing"
+            fi
+        done
+    fi
 }
 
 download_arcadealt() {
@@ -285,25 +359,51 @@ download_file() {
     local download_dir="${FOLDERS[$folder]}"
     local max_retries=3
     local retry_delay=2
+    local local_file="$download_dir/$file"
+    local temp_file="$TEMP_DIR/$file"
 
-    if [ -s "$download_dir/$file" ]; then
+    # Skip if file exists and we're not in delete mode
+    if [ ! "$DELETE_OLD_FILES" = true ] && [ -f "$local_file" ]; then
         log "Skipping existing file: $folder/$file"
         return 0
     fi
 
+    # Special handling for MRA files in delete mode
+    if [[ "$DELETE_OLD_FILES" = true && "$file" == *.mra && -f "$local_file" ]]; then
+        # Compare file sizes instead of timestamps
+        if remote_size=$(wget --spider --server-response "$BASE_URL/$folder/$file" 2>&1 | \
+           grep -E '^Length:' | awk '{print $2}'); then
+            local_size=$(stat -c %s "$local_file" 2>/dev/null || echo 0)
+            
+            if [[ "$remote_size" -eq "$local_size" ]]; then
+                log "MRA file sizes match, skipping download: $folder/$file"
+                return 0
+            fi
+        else
+            log "Couldn't verify remote MRA file, proceeding with download..."
+        fi
+    fi
+
+    # For RBF files, always respect the existing skip logic
+    if [[ "$file" == *.rbf && -f "$local_file" ]]; then
+        log "Skipping existing RBF file: $folder/$file"
+        return 0
+    fi
+
+    # Download with retry logic
     for ((i=1; i<=max_retries; i++)); do
         log "Download attempt $i for $folder/$file..."
-        if wget -q --tries=3 --timeout=15 "$BASE_URL/$folder/$file" -O "$TEMP_DIR/$file"; then
-            if [ -s "$TEMP_DIR/$file" ]; then
+        if wget -q --tries=3 --timeout=15 "$BASE_URL/$folder/$file" -O "$temp_file"; then
+            if [ -s "$temp_file" ]; then
                 if $DELETE_OLD_FILES; then
                     delete_old_versions "$folder" "$file"
                 fi
-                mv "$TEMP_DIR/$file" "$download_dir/"
+                mv "$temp_file" "$local_file"
                 log "Successfully downloaded: \e[1;32m$folder/$file\e[0m"
                 return 0
             else
                 log "Attempt $i: Downloaded empty file"
-                rm -f "$TEMP_DIR/$file"
+                rm -f "$temp_file"
             fi
         fi
         sleep $retry_delay
@@ -1004,6 +1104,7 @@ download_shadowmasks() {
 
 main() {
     check_internet
+    check_for_updates
     display_news
 
     # Check for version flags before showing menu
@@ -1011,10 +1112,11 @@ main() {
     
     prompt_delete_mode
 
-    # Menu using whiptail with update indicators
+     # Menu using whiptail with update indicators
     CHOICES=$(whiptail --title "Senhor Downloader" --checklist \
-        "Choose what you want to download (use space to select):" 23 74 16 \
-        "RBF" "Download RBF/MGL/MRA files$(show_update_info "RBF")" ON \
+        "Choose what you want to download (use space to select):" 25 74 18 \
+        "RBF_MGL" "Download RBF/MGL files$(show_update_info "RBF_MGL")" ON \
+        "MRA" "Download MRA files$(show_update_info "MRA")" ON \
         "Menu" "Download Menu$(show_update_info "Menu")" OFF \
         "MiSTer_binary" "Download MiSTer bin for Senhor$(show_update_info "MiSTer_binary")" OFF \
         "Alternatives" "Download Alternative MRA files$(show_update_info "Alternatives")" OFF \
@@ -1039,7 +1141,8 @@ main() {
     fi
 
     # Flags
-    run_rbf=false
+    run_rbf_mgl=false
+    run_mra=false
     run_menu=false
     run_mister_binary=false
     run_alternatives=false
@@ -1058,8 +1161,11 @@ main() {
 
     for choice in $CHOICES; do
         case $choice in
-            "\"RBF\"")
-                run_rbf=true
+            "\"RBF_MGL\"")
+                run_rbf_mgl=true
+                ;;
+            "\"MRA\"")
+                run_mra=true
                 ;;
             "\"Menu\"")
                 run_menu=true
@@ -1110,15 +1216,15 @@ main() {
     done
 
     # Execute choices
-    if $run_rbf; then
-        log "=== Starting RBF/MGL/MRA download ==="
+    if $run_rbf_mgl; then
+        log "=== Starting RBF/MGL download ==="
         local total_success=0
         local total_files=0
 
         for folder in "${!FOLDERS[@]}"; do
             log "Processing folder: \e[1;35m$folder\e[0m"
 
-            if fetch_file_list "$folder"; then
+            if fetch_file_list "$folder" "rbf_mgl"; then
                 ((total_files += ${#FILES[@]}))
             else
                 continue
@@ -1132,7 +1238,32 @@ main() {
             done
         done
 
-        log "RBF/MGL/MRA complete: \e[1;32m$total_success\e[0m of \e[1;33m$total_files\e[0m files"
+        log "RBF/MGL complete: \e[1;32m$total_success\e[0m of \e[1;33m$total_files\e[0m files"
+    fi
+    
+    if $run_mra; then
+        log "=== Starting MRA download ==="
+        local total_success=0
+        local total_files=0
+
+        for folder in "${!FOLDERS[@]}"; do
+            log "Processing folder: \e[1;35m$folder\e[0m"
+
+            if fetch_file_list "$folder" "mra"; then
+                ((total_files += ${#FILES[@]}))
+            else
+                continue
+            fi
+
+            for file in "${FILES[@]}"; do
+                [[ -z "$file" ]] && continue
+                if download_file "$folder" "$file"; then
+                    ((total_success++))
+                fi
+            done
+        done
+
+        log "MRA complete: \e[1;32m$total_success\e[0m of \e[1;33m$total_files\e[0m files"
     fi
     
     if $run_menu; then
