@@ -1,4 +1,9 @@
 # News
+12/8/2025
+
+Updates: ao486
+
+___
 11/8/2025
 
 Updates: Jotego Splatter House, Jotego Super Hang On, Jotego Side Arms, Jotego Super Basketball, Jotego Road Fighter, Jotego Roc'n Rope, Jotego The Speed Rumbler, N64
