@@ -38,8 +38,6 @@ echo
 ###############################################
 # Configuration
 ###############################################
-CURRENT_VERSION="1.1"  # Update this when you release new versions
-
 REPO_OWNER="turri21"
 REPO_NAME="Distribution_Senhor"
 BASE_URL="https://raw.githubusercontent.com/$REPO_OWNER/$REPO_NAME/main"
