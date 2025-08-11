@@ -1114,9 +1114,9 @@ main() {
 
      # Menu using whiptail with update indicators
     CHOICES=$(whiptail --title "Senhor Downloader" --checklist \
-        "Choose what you want to download (use space to select):" 25 74 18 \
+        "Choose what you want to download (use space to select):" 25 74 17 \
         "RBF_MGL" "Download RBF/MGL files$(show_update_info "RBF_MGL")" ON \
-        "MRA" "Download MRA files$(show_update_info "MRA")" ON \
+        "MRA" "Download MRA files$(show_update_info "MRA")" OFF \
         "Menu" "Download Menu$(show_update_info "Menu")" OFF \
         "MiSTer_binary" "Download MiSTer bin for Senhor$(show_update_info "MiSTer_binary")" OFF \
         "Alternatives" "Download Alternative MRA files$(show_update_info "Alternatives")" OFF \
