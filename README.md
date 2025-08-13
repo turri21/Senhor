@@ -1,7 +1,7 @@
 # News
 12/8/2025
 
-Updates: ao486, S32X, Starforce
+Updates: ao486, S32X, Starforce, GBA
 
 ___
 11/8/2025
