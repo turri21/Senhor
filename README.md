@@ -1,7 +1,7 @@
 # News
 12/8/2025
 
-Updates: ao486, S32X, Starforce, GBA
+Updates: ao486, S32X, Starforce, GBA, Atari 800
 
 ___
 11/8/2025
