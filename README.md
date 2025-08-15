@@ -1,7 +1,7 @@
 # News
 15/8/2025
 
-Updates: C64, PSX-2xCPU
+Updates: C64, PSX-2xCPU, N64-Turbo
 
 ___
 12/8/2025
