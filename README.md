@@ -1,4 +1,9 @@
 # News
+15/8/2025
+
+Updates: C64
+
+___
 12/8/2025
 
 Updates: ao486, S32X, Starforce, GBA, Atari 800
