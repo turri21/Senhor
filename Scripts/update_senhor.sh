@@ -40,7 +40,7 @@ echo
 ###############################################
 SCRIPT_NAME="update_senhor.sh"
 SCRIPT_URL="https://raw.githubusercontent.com/turri21/Senhor/main/Scripts/$SCRIPT_NAME"
-CURRENT_VERSION="1.0"  # Update this when you release new versions
+CURRENT_VERSION="1.1"  # Update this when you release new versions
 
 REPO_OWNER="turri21"
 REPO_NAME="Distribution_Senhor"
@@ -368,24 +368,28 @@ download_file() {
         return 0
     fi
 
-    # Special handling for MRA files in delete mode
-    if [[ "$DELETE_OLD_FILES" = true && "$file" == *.mra && -f "$local_file" ]]; then
+    # Special handling for MRA and MGL files in delete mode - compare file sizes
+    if [[ "$DELETE_OLD_FILES" = true && ( "$file" =~ \.mra$ || "$file" =~ \.mgl$ ) && -f "$local_file" ]]; then
         # Compare file sizes instead of timestamps
         if remote_size=$(wget --spider --server-response "$BASE_URL/$folder/$file" 2>&1 | \
            grep -E '^Length:' | awk '{print $2}'); then
             local_size=$(stat -c %s "$local_file" 2>/dev/null || echo 0)
             
             if [[ "$remote_size" -eq "$local_size" ]]; then
-                log "MRA file sizes match, skipping download: $folder/$file"
+                local file_type="MRA"
+                [[ "$file" == *.mgl ]] && file_type="MGL"
+                log "$file_type file sizes match, skipping download: $folder/$file"
                 return 0
             fi
         else
-            log "Couldn't verify remote MRA file, proceeding with download..."
+            local file_type="MRA"
+            [[ "$file" =~ \.mgl$ ]] && file_type="MGL"
+            log "Couldn't verify remote $file_type file, proceeding with download..."
         fi
     fi
 
     # For RBF files, always respect the existing skip logic
-    if [[ "$file" == *.rbf && -f "$local_file" ]]; then
+    if [[ "$file" =~ \.rbf$ && -f "$local_file" ]]; then
         log "Skipping existing RBF file: $folder/$file"
         return 0
     fi
