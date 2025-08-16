@@ -1,4 +1,9 @@
 # News
+16/8/2025
+
+Updates: Atari 800
+
+___
 15/8/2025
 
 Updates: C64, PSX-2xCPU, N64-Turbo
