@@ -40,7 +40,7 @@ echo
 ###############################################
 SCRIPT_NAME="update_senhor.sh"
 SCRIPT_URL="https://raw.githubusercontent.com/turri21/Senhor/main/Scripts/$SCRIPT_NAME"
-CURRENT_VERSION="1.1"  # Update this when you release new versions
+CURRENT_VERSION="1.2"  # Update this when you release new versions
 
 REPO_OWNER="turri21"
 REPO_NAME="Distribution_Senhor"
@@ -1074,6 +1074,10 @@ download_cheats() {
     download_and_extract "Cheats" "https://github.com/turri21/Distribution_Senhor/raw/main/Cheats.zip" true
 }
 
+download_docs() {
+    download_and_extract "Docs" "https://github.com/turri21/Distribution_Senhor/raw/main/Docs.zip" false
+}
+
 download_filters() {
     download_and_extract "Filters" "https://github.com/turri21/Distribution_Senhor/raw/main/Filters.zip" false
 }
@@ -1083,11 +1087,15 @@ download_filtersaudio() {
 }
 
 download_font() {
-    download_and_extract "font" "https://github.com/turri21/Distribution_Senhor/raw/main/font.zip" false
+    download_and_extract "Font" "https://github.com/turri21/Distribution_Senhor/raw/main/Font.zip" false
 }
 
 download_gamma() {
     download_and_extract "Gamma" "https://github.com/turri21/Distribution_Senhor/raw/main/Gamma.zip" false
+}
+
+download_linux() {
+    download_and_extract "Linux" "https://github.com/turri21/Distribution_Senhor/raw/main/Linux.zip" true
 }
 
 download_presets() {
@@ -1118,15 +1126,17 @@ main() {
 
      # Menu using whiptail with update indicators
     CHOICES=$(whiptail --title "Senhor Downloader" --checklist \
-        "Choose what you want to download (use space to select):" 25 74 17 \
+        "Choose what you want to download (use space to select):" 27 74 19 \
         "RBF_MGL" "Download RBF/MGL files$(show_update_info "RBF_MGL")" ON \
         "MRA" "Download MRA files$(show_update_info "MRA")" OFF \
         "Menu" "Download Menu$(show_update_info "Menu")" OFF \
         "MiSTer_binary" "Download MiSTer bin for Senhor$(show_update_info "MiSTer_binary")" OFF \
+        "Linux" "Download various files for Linux$(show_update_info "Linux")" OFF \
         "Alternatives" "Download Alternative MRA files$(show_update_info "Alternatives")" OFF \
         "ArcadeROMs" "Download Arcade ROMs [SLOW]$(show_update_info "ArcadeROMs")" OFF \
         "BIOS" "Download BIOS files [SLOW]$(show_update_info "BIOS")" OFF \
         "Cheats" "Download Cheats$(show_update_info "Cheats")" OFF \
+        "Docs" "Download Docs$(show_update_info "Docs")" OFF \
         "Filters" "Download Filters$(show_update_info "Filters")" OFF \
         "Filters_Audio" "Download Filters_Audio$(show_update_info "Filters_Audio")" OFF \
         "Fonts" "Download Fonts$(show_update_info "Fonts")" OFF \
@@ -1153,11 +1163,13 @@ main() {
     run_roms=false
     run_bios=false
     run_cheats=false
+    run_docs=false
     run_filters=false
     run_filtersaudio=false
     run_font=false
     run_gamma=false
     run_gbaborders=false
+    run_linux=false
     run_presets=false
     run_scripts=false
     run_shadowmasks=false
@@ -1189,6 +1201,9 @@ main() {
             "\"Cheats\"")
                 run_cheats=true
                 ;;
+            "\"Docs\"")
+                run_docs=true
+                ;;
             "\"Filters\"")
                 run_filters=true
                 ;;
@@ -1197,6 +1212,9 @@ main() {
                 ;;
             "\"Fonts\"")
                 run_font=true
+                ;;
+            "\"Linux\"")
+                run_linux=true
                 ;;
             "\"Gamma\"")
                 run_gamma=true
@@ -1294,6 +1312,10 @@ main() {
         download_cheats
     fi
 
+    if $run_docs; then
+        download_docs
+    fi
+
     if $run_filters; then
         download_filters
     fi
@@ -1304,6 +1326,10 @@ main() {
 
     if $run_font; then
         download_font
+    fi
+    
+    if $run_linux; then
+        download_linux
     fi
 
     if $run_gamma; then
