@@ -1,4 +1,9 @@
 # News
+20/8/2025
+
+Updates: NeoGeoPocket
+
+___
 18/8/2025
 
 Updates: SNES
