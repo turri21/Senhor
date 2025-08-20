@@ -1,4 +1,9 @@
 # News
+21/8/2025
+
+New Cores: Jotego The FairyLand Story
+
+___
 20/8/2025
 
 New Cores: Jotego Ajax (BETA), Jotego Devil World
