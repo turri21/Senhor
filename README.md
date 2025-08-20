@@ -1,7 +1,7 @@
 # News
 21/8/2025
 
-Updates: Jotego WWF Superstars (Europe)
+Updates: Jotego WWF Superstars
 
 New Cores: Jotego The FairyLand Story, Jotego Shadow Warriors (Ninja Gaiden)
 
