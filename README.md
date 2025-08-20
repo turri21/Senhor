@@ -1,6 +1,8 @@
 # News
 20/8/2025
 
+New Cores: Jotego Ajax
+
 Updates: NeoGeoPocket
 
 ___
