@@ -1,7 +1,7 @@
 # News
 20/8/2025
 
-New Cores: Jotego Ajax
+New Cores: Jotego Ajax (BETA), Jotego Devil World
 
 Updates: NeoGeoPocket
 
