@@ -1,7 +1,7 @@
 # News
 21/8/2025
 
-New Cores: Jotego The FairyLand Story
+New Cores: Jotego The FairyLand Story, Jotego Shadow Warriors (Ninja Gaiden)
 
 ___
 20/8/2025
