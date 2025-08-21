@@ -3,7 +3,7 @@
 
 Updates: Jotego WWF Superstars
 
-New Cores: Jotego The FairyLand Story, Jotego Shadow Warriors (Ninja Gaiden)
+New Cores: Jotego The FairyLand Story, Jotego Shadow Warriors (Ninja Gaiden), Jotego Tehkan World Cup
 
 ___
 20/8/2025
