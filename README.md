@@ -1,4 +1,9 @@
 # News
+24/8/2025
+
+Updates: TRS-80
+
+___
 21/8/2025
 
 Updates: Jotego WWF Superstars
