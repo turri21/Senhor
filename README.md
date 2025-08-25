@@ -1,4 +1,9 @@
 # News
+25/8/2025
+
+Updates: Arduboy
+
+___
 24/8/2025
 
 Updates: TRS-80
