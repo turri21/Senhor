@@ -1,4 +1,9 @@
 # News
+28/8/2025
+
+Updates: C64
+
+___
 25/8/2025
 
 Updates: Arduboy
