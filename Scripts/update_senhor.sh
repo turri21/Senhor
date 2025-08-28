@@ -40,7 +40,7 @@ echo
 ###############################################
 SCRIPT_NAME="update_senhor.sh"
 SCRIPT_URL="https://raw.githubusercontent.com/turri21/Senhor/main/Scripts/$SCRIPT_NAME"
-CURRENT_VERSION="1.2"  # Update this when you release new versions
+CURRENT_VERSION="1.3"  # Update this when you release new versions
 
 REPO_OWNER="turri21"
 REPO_NAME="Distribution_Senhor"
@@ -85,13 +85,49 @@ log() {
 
 check_internet() {
     log "Checking internet connection..."
-    if ! ping -4 -q -c 1 -W 3 1.1.1.1 >/dev/null; then
+    
+    # Try HTTPS first (more reliable), fallback to ping
+    local connected=false
+    local timeout=5
+    
+    # Test multiple endpoints with HTTPS
+    local endpoints=("https://1.1.1.1" "https://8.8.8.8" "https://google.com")
+    
+    for endpoint in "${endpoints[@]}"; do
+        if command -v curl >/dev/null 2>&1; then
+            if curl --connect-timeout "$timeout" --max-time "$timeout" --fail --silent --head "$endpoint" >/dev/null 2>&1; then
+                connected=true
+                break
+            fi
+        elif command -v wget >/dev/null 2>&1; then
+            if wget --timeout="$timeout" --tries=1 --quiet --spider "$endpoint" >/dev/null 2>&1; then
+                connected=true
+                break
+            fi
+        fi
+    done
+    
+    # Fallback to ping if HTTPS tests failed
+    if [ "$connected" = false ]; then
+        if ping -4 -q -c 1 -W 3 1.1.1.1 >/dev/null 2>&1; then
+            connected=true
+        fi
+    fi
+    
+    # Handle results
+    if [ "$connected" = true ]; then
+        log "Internet connection is available."
+    else
         log "ERROR: No internet connection. Please check your network and try again."
+        echo -e "\e[33mTroubleshooting tips:\e[0m"
+        echo -e "[*] Check your WiFi/Ethernet connection"
+        echo -e "[*] Verify DNS settings (try 8.8.8.8 or 1.1.1.1)"
+        echo -e "[*] Check if you're behind a corporate firewall"
+        echo -e "[*] Try accessing a website in your browser"
         echo -e "\e[1;31mNo internet connection. Exiting.\e[0m"
         read -p "Press enter to exit..."
         exit 1
     fi
-    log "Internet connection is available."
 }
 
 check_for_updates() {
