@@ -1,4 +1,9 @@
 # News
+30/8/2025
+
+Updates: CD-i
+
+___
 28/8/2025
 
 Updates: C64
