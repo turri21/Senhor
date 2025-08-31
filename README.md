@@ -1,4 +1,9 @@
 # News
+31/8/2025
+
+Updates: Atari 800
+
+___
 30/8/2025
 
 Updates: CD-i
