@@ -1,4 +1,9 @@
 # News
+2/9/2025
+
+Updates: X68000
+
+___
 1/9/2025
 
 New Cores: ABC80, Ascal Test
