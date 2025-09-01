@@ -1,7 +1,7 @@
 # News
 1/9/2025
 
-New Cores: Ascal Test
+New Cores: ABC80, Ascal Test
 
 ___
 31/8/2025
