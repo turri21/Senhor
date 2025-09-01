@@ -1,4 +1,9 @@
 # News
+1/9/2025
+
+New Cores: Ascal Test
+
+___
 31/8/2025
 
 Updates: Atari 800
