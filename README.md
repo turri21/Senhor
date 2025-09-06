@@ -1,4 +1,9 @@
 # News
+6/9/2025
+
+Updates: EDSAC
+
+___
 5/9/2025
 
 Updates: ABC80
