@@ -1,7 +1,7 @@
 # News
 7/9/2025
 
-Updates: ABC80
+Updates: Atari ST, ABC80
 
 ___
 6/9/2025
