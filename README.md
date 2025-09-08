@@ -1,7 +1,7 @@
 # News
 8/9/2025
 
-Updates: Super Cassette Vision (SCV)
+Updates: C64, Super Cassette Vision (SCV)
 
 ___
 7/9/2025
