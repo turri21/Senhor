@@ -1,4 +1,9 @@
 # News
+8/9/2025
+
+Updates: Super Cassette Vision (SCV)
+
+___
 7/9/2025
 
 Updates: Atari ST, ABC80
