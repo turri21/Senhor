@@ -1,4 +1,9 @@
 # News
+9/9/2025
+
+Updates: ZX81
+
+___
 8/9/2025
 
 Updates: C64, Super Cassette Vision (SCV)
