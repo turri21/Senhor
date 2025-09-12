@@ -1,7 +1,7 @@
 # News
 12/9/2025
 
-Updates: NES, Saturn, PSX-2xCPU
+Updates: NES, Saturn, PSX-2xCPU, N64
 
 ___
 9/9/2025
