@@ -1,7 +1,7 @@
 # News
 12/9/2025
 
-Updates: NES, Saturn, PSX-2xCPU, N64, TSConf
+Updates: NES, Saturn, PSX-2xCPU, N64, TSConf, NeoGeo
 
 ___
 9/9/2025
