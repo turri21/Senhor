@@ -1,7 +1,7 @@
 # News
 12/9/2025
 
-Updates: NES
+Updates: NES, Saturn
 
 ___
 9/9/2025
