@@ -1,7 +1,7 @@
 # News
 13/9/2025
 
-Updates: SEGASYS1
+Updates: SEGASYS1, ExpressRaider
 
 ___
 12/9/2025
