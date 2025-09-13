@@ -1,4 +1,9 @@
 # News
+13/9/2025
+
+Updates: SEGASYS1
+
+___
 12/9/2025
 
 Updates: NES, Saturn, PSX-2xCPU, N64, TSConf, NeoGeo
