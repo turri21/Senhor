@@ -1,4 +1,9 @@
 # News
+14/9/2025
+
+Updates: TaitoSJ
+
+___
 13/9/2025
 
 Updates: SEGASYS1, ExpressRaider
