@@ -40,7 +40,7 @@ echo
 ###############################################
 SCRIPT_NAME="update_senhor.sh"
 SCRIPT_URL="https://raw.githubusercontent.com/turri21/Senhor/main/Scripts/$SCRIPT_NAME"
-CURRENT_VERSION="1.3"  # Update this when you release new versions
+CURRENT_VERSION="1.4"  # Update this when you release new versions
 
 REPO_OWNER="turri21"
 REPO_NAME="Distribution_Senhor"
@@ -317,17 +317,17 @@ delete_old_versions() {
     local download_dir="${FOLDERS[$folder]}"
     local full_path_new="$download_dir/$new_file"
 
-    # For MRA files - delete any older files with same base name
-    if [[ "$new_file" == *.mra ]]; then
-        local base_name="${new_file%.*}"
-        # Find and log all files that will be deleted
-        find "$download_dir" -maxdepth 1 -name "${base_name}*.mra" ! -name "$new_file" | while read -r existing; do
-            existing_file=$(basename "$existing")
-            log "\e[31mDeleting older MRA: \e[0m\e[1;33m$existing_file\e[0m"
-            rm -f "$existing"
-        done
-        return $?
-    fi
+    ## For MRA files - delete any older files with same base name
+    #if [[ "$new_file" == *.mra ]]; then
+    #    local base_name="${new_file%.*}"
+    #    # Find and log all files that will be deleted
+    #    find "$download_dir" -maxdepth 1 -name "${base_name}*.mra" ! -name "$new_file" | while read -r existing; do
+    #        existing_file=$(basename "$existing")
+    #        log "\e[31mDeleting older MRA: \e[0m\e[1;33m$existing_file\e[0m"
+    #        rm -f "$existing"
+    #    done
+    #    return $?
+    #fi
     
     # Original MGL version handling
     if [[ "$new_file" == *.mgl ]]; then
