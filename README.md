@@ -1,7 +1,7 @@
 # News
 15/9/2025
 
-Updates: SNES
+Updates: SNES, Astrocade
 
 ___
 14/9/2025
