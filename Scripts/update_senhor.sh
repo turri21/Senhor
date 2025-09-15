@@ -318,6 +318,7 @@ delete_old_versions() {
     local full_path_new="$download_dir/$new_file"
 
     ## For MRA files - delete any older files with same base name
+    ## DISABLED -- It also deletes new files of the same base name and that's not needed atm.
     #if [[ "$new_file" == *.mra ]]; then
     #    local base_name="${new_file%.*}"
     #    # Find and log all files that will be deleted
