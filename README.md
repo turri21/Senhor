@@ -1,4 +1,9 @@
 # News
+15/9/2025
+
+Updates: SNES
+
+___
 14/9/2025
 
 Updates: TaitoSJ
