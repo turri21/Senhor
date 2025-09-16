@@ -1,7 +1,7 @@
 # News
 16/9/2025
 
-Updates: NES, ST-V, Starforce
+Updates: NES, ST-V, Starforce, TaitoF2
 
 ___
 15/9/2025
