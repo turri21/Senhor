@@ -1,7 +1,7 @@
 # News
 16/9/2025
 
-Updates: NES, ST-V
+Updates: NES, ST-V, Starforce
 
 ___
 15/9/2025
