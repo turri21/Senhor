@@ -1,7 +1,7 @@
 # News
 16/9/2025
 
-Updates: NES
+Updates: NES, ST-V
 
 ___
 15/9/2025
