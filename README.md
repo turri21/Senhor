@@ -1,7 +1,7 @@
 # News
 18/9/2025
 
-Updates: AY-3-8500
+Updates: AY-3-8500, Ti994a
 
 ___
 16/9/2025
