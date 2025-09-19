@@ -1,7 +1,7 @@
 # News
 19/9/2025
 
-Updates: PC88
+Updates: PC88, SordM5
 
 ___
 18/9/2025
