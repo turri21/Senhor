@@ -1,7 +1,7 @@
 # News
 19/9/2025
 
-Updates: PC88, SordM5, Pokemon_Mini, Chip8
+Updates: PC88, SordM5, Pokemon_Mini, Chip8, Intv
 
 ___
 18/9/2025
