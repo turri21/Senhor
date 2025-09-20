@@ -1,7 +1,7 @@
 # News
 21/9/2025
 
-Updates: Lynx48
+Updates: Lynx48, ChannelF
 
 ___
 20/9/2025
