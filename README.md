@@ -1,7 +1,7 @@
 # News
 20/9/2025
 
-Updates: Homelab
+Updates: Homelab, Chip8
 
 ___
 19/9/2025
