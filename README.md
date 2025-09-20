@@ -1,7 +1,7 @@
 # News
 20/9/2025
 
-Updates: Homelab, Chip8
+Updates: Homelab, Chip8, EG2000
 
 ___
 19/9/2025
