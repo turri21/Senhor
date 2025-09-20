@@ -1,4 +1,9 @@
 # News
+21/9/2025
+
+Updates: Lynx48
+
+___
 20/9/2025
 
 Updates: Homelab, Chip8, EG2000, Laser310, TRS-80
