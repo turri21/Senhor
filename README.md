@@ -1,7 +1,7 @@
 # News
 21/9/2025
 
-Updates: Lynx48, ChannelF, VC4000, Saturn, ST-V
+Updates: Lynx48, ChannelF, VC4000, Saturn, ST-V, TomyTutor
 
 ___
 20/9/2025
