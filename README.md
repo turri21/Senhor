@@ -1,7 +1,7 @@
 # News
 21/9/2025
 
-Updates: Lynx48, ChannelF
+Updates: Lynx48, ChannelF, VC4000
 
 ___
 20/9/2025
