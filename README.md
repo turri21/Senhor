@@ -6,7 +6,7 @@ Updates: Lynx48, ChannelF, VC4000
 ___
 20/9/2025
 
-Updates: Homelab, Chip8, EG2000, Laser310, TRS-80, ColecoAdam
+Updates: Homelab, Chip8, EG2000, Laser310, TRS-80, ColecoAdam, TatungEinstein
 
 ___
 19/9/2025
