@@ -1,7 +1,7 @@
 # News
 22/9/2025
 
-Updates: jt1942, jts16b, jtkarnov
+Updates: jt1942, jt1943, jts16b, jtkarnov
 
 ___
 21/9/2025
