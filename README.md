@@ -1,4 +1,9 @@
 # News
+22/9/2025
+
+Updates: jt1942, jts16b
+
+___
 21/9/2025
 
 Updates: Lynx48, ChannelF, VC4000, Saturn, ST-V, TomyTutor, jtajax
