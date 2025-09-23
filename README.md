@@ -1,7 +1,7 @@
 # News
 23/9/2025
 
-New Cores: Groovy_Senhor
+New Cores: Groovy_Senhor, InputTest
 
 ___
 22/9/2025
