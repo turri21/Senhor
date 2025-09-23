@@ -1,4 +1,9 @@
 # News
+23/9/2025
+
+New Cores: Groovy_Senhor
+
+___
 22/9/2025
 
 Updates: jt1942, jt1943, jts16b, jtkarnov, jttrojan, TaitoF2
