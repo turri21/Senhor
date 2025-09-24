@@ -1,4 +1,9 @@
 # News
+25/9/2025
+
+Updates: CDi
+
+___
 23/9/2025
 
 New Cores: Groovy_Senhor, InputTest
