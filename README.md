@@ -1,7 +1,7 @@
 # News
 4/10/2025
 
-Update: AcornAtom
+Update: AcornElectron, AcornAtom
 
 ___
 29/9/2025
