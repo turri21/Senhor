@@ -1,4 +1,9 @@
 # News
+4/10/2025
+
+Update: AcornAtom
+
+___
 29/9/2025
 
 Updates: SNES
