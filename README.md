@@ -1,7 +1,7 @@
 # News
 6/10/2025
 
-Updates: Interact
+Updates: Interact, Jupiter, Apple-I
 
 ___
 4/10/2025
