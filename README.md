@@ -1,7 +1,12 @@
 # News
+6/10/2025
+
+Updates: Interact
+
+___
 4/10/2025
 
-Update: AcornElectron, AcornAtom
+Updates: AcornElectron, AcornAtom
 
 ___
 29/9/2025
