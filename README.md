@@ -1,4 +1,9 @@
 # News
+7/10/2025
+
+Updates: NES
+
+___
 6/10/2025
 
 Updates: Interact, Jupiter, Apple-I
