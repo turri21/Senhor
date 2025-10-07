@@ -1,7 +1,7 @@
 # News
 7/10/2025
 
-Updates: NES
+Updates: NES, Ondra_SPO186
 
 ___
 6/10/2025
