@@ -1,4 +1,9 @@
 # News
+10/10/2025
+
+Updates: NES
+
+___
 9/10/2025
 
 Updates: SNES
