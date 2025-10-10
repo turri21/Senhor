@@ -1,7 +1,7 @@
 # News
 10/10/2025
 
-Updates: NES
+Updates: TaitoF2, NES
 
 ___
 9/10/2025
