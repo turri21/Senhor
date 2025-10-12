@@ -1,4 +1,9 @@
 # News
+12/10/2025
+
+Updates: C64
+
+___
 10/10/2025
 
 Updates: TaitoF2, NES
