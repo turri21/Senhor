@@ -1,4 +1,9 @@
 # News
+13/10/2025
+
+Updates: S32X
+
+___
 12/10/2025
 
 Updates: C64
