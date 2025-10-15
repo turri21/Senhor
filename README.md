@@ -1,7 +1,7 @@
 # News
 15/10/2025
 
-Updates: SNES
+Updates: SNES, C64
 
 ___
 13/10/2025
