@@ -1,7 +1,7 @@
 # News
 16/10/2025
 
-Updates: NES
+Updates: CDi, NES
 
 ___
 15/10/2025
