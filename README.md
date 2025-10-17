@@ -1,4 +1,9 @@
 # News
+17/10/2025
+
+Updates: Amstrad CPC
+
+___
 16/10/2025
 
 Updates: CDi, NES
