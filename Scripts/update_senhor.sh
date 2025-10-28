@@ -40,12 +40,19 @@ echo
 ###############################################
 SCRIPT_NAME="update_senhor.sh"
 SCRIPT_URL="https://raw.githubusercontent.com/turri21/Senhor/main/Scripts/$SCRIPT_NAME"
-CURRENT_VERSION="1.4"  # Update this when you release new versions
+CURRENT_VERSION="1.5"  # Update this when you release new versions
 
 REPO_OWNER="turri21"
 REPO_NAME="Distribution_Senhor"
 BASE_URL="https://raw.githubusercontent.com/$REPO_OWNER/$REPO_NAME/main"
 VERSION_FILE="version_flags.txt"
+
+# --- Proxy Fail-over Configuration ---
+# Set to 'true' to use the proxy if direct download fails.
+USE_PROXY_ON_FAIL=true
+# Your Nginx cache server address. Ex: "http://192.168.1.100:8080"
+PROXY_SERVER="http://proxy.andi.com.br"
+PROXY_MODE_ACTIVE=false
 
 declare -A FOLDERS=(
     ["_Arcade"]="/media/fat/_Arcade"
@@ -62,7 +69,7 @@ declare -A FOLDERS=(
 
 FILE_LIST_EXT="file_list.txt"
 TEMP_DIR="/tmp/senhor_download"
-LOG_FILE="/media/fat/scripts/senhor_download.log"
+LOG_FILE="/media/fat/Scripts/senhor_download.log"
 DELETE_OLD_FILES=false
 
 mkdir -p "$TEMP_DIR"
@@ -76,6 +83,59 @@ touch "$LOG_FILE"
 # Functions
 ###############################################
 
+download_wrapper() {
+    local url="$1"
+    local output_file="$2"
+    local wget_options="-q --tries=3 --timeout=5"
+
+    # If proxy mode is already active, go directly to the proxy.
+    if [[ "$PROXY_MODE_ACTIVE" = true && "$USE_PROXY_ON_FAIL" = true && -n "$PROXY_SERVER" ]]; then
+        local proxy_base_url=${PROXY_SERVER%/}
+        local proxied_url="${proxy_base_url}/${url}"
+        log "Proxy mode active. Trying download of $url via proxy..."
+        if wget $wget_options "$proxied_url" -O "$output_file" && [ -s "$output_file" ]; then
+            log "Download via proxy successful."
+            return 0
+        else
+            log "Download via proxy failed even in active proxy mode."
+            rm -f "$output_file"
+            log "ERROR: All download attempts failed for: $url"
+            return 1
+        fi
+    fi
+
+    # Attempt 1: Direct Download
+    log "Trying direct download: $url"
+    if wget $wget_options "$url" -O "$output_file" && [ -s "$output_file" ]; then
+        log "Direct download successful."
+        return 0
+    fi
+    
+    # If direct download fails...
+    log "Direct download failed. Checking for proxy fail-over..."
+    rm -f "$output_file" # Clean up empty/failed file
+
+    # Attempt 2: Use Proxy (if enabled and configured)
+    if [[ "$USE_PROXY_ON_FAIL" = true && -n "$PROXY_SERVER" ]]; then
+        log "Switching to proxy mode for all subsequent downloads."
+        PROXY_MODE_ACTIVE=true # Activate proxy mode globally
+
+        local proxy_base_url=${PROXY_SERVER%/}
+        local proxied_url="${proxy_base_url}/${url}"
+        log "Trying download of $url via proxy..."
+        
+        if wget $wget_options "$proxied_url" -O "$output_file" && [ -s "$output_file" ]; then
+            log "Download via proxy successful."
+            return 0
+        else
+            log "Download via proxy also failed."
+            rm -f "$output_file"
+        fi
+    fi
+    
+    log "ERROR: All download attempts failed for: $url"
+    return 1
+}
 log() {
     local msg="$(date "+%d-%m-%Y %H:%M:%S") - $1"
     echo "$msg" >> "$LOG_FILE"
@@ -135,7 +195,7 @@ check_for_updates() {
     
     # Download the latest version to compare
     local temp_script="$TEMP_DIR/$SCRIPT_NAME.tmp"
-    if ! wget -q --tries=3 --timeout=15 "$SCRIPT_URL" -O "$temp_script"; then
+    if ! download_wrapper "$SCRIPT_URL" "$temp_script"; then
         log "Failed to check for updates. Continuing with current version."
         return 1
     fi
@@ -178,7 +238,7 @@ check_version_flags() {
     declare -gA UPDATE_DATES
     
     # Download version file
-    if wget -q --tries=3 --timeout=15 "$version_url" -O "$version_file"; then
+    if download_wrapper "$version_url" "$version_file"; then
         while IFS='=' read -r key value; do
             # Skip comments and empty lines
             [[ "$key" =~ ^# ]] && continue
@@ -221,7 +281,7 @@ display_news() {
 
     # Download the news file
     echo "Downloading news..."
-    if ! wget -q "$NEWS_URL" -O "$TEMP_FILE"; then
+    if ! download_wrapper "$NEWS_URL" "$TEMP_FILE"; then
         echo "Failed to download news file."
         return 1
     fi
@@ -281,7 +341,7 @@ fetch_file_list() {
 
     mkdir -p "$(dirname "$list_file")"
 
-    if ! wget -q --tries=3 --timeout=15 "$file_list_url" -O "$list_file"; then
+    if ! download_wrapper "$file_list_url" "$list_file"; then
         log "\e[31mWARNING: No file list found for $folder\e[0m"
         FILES=()
         return 1
@@ -369,9 +429,7 @@ download_arcadealt() {
     echo "Deleting old _alternatives folder..."
     rm -rf "/media/fat/_Arcade/_alternatives"
     echo "Downloading Arcade mra _alternatives.zip with wget..."
-    wget -O "$TEMP_ZIP" "$ZIP_URL"
-
-    if [ $? -ne 0 ]; then
+    if ! download_wrapper "$ZIP_URL" "$TEMP_ZIP"; then
         echo "Download failed."
         exit 1
     fi
@@ -434,7 +492,7 @@ download_file() {
     # Download with retry logic
     for ((i=1; i<=max_retries; i++)); do
         log "Download attempt $i for $folder/$file..."
-        if wget -q --tries=3 --timeout=15 "$BASE_URL/$folder/$file" -O "$temp_file"; then
+        if download_wrapper "$BASE_URL/$folder/$file" "$temp_file"; then
             if [ -s "$temp_file" ]; then
                 if $DELETE_OLD_FILES; then
                     delete_old_versions "$folder" "$file"
@@ -462,9 +520,7 @@ download_arcaderoms() {
     BASE_DIR="/media/fat"
 
     echo "Downloading..."
-    wget -O "$BASE_DIR/arcade_roms_db.json.zip" "https://raw.githubusercontent.com/zakk4223/ArcadeROMsDB_MiSTer/db/arcade_roms_db.json.zip"
-
-    if [ $? -ne 0 ]; then
+    if ! download_wrapper "https://raw.githubusercontent.com/zakk4223/ArcadeROMsDB_MiSTer/db/arcade_roms_db.json.zip" "$BASE_DIR/arcade_roms_db.json.zip"; then
         echo "Download failed."
         return 1
     fi
@@ -493,7 +549,9 @@ download_arcaderoms() {
         # Download file if it doesn't exist
         if [ ! -f "$full_path" ]; then
             echo "Downloading $relative_path..."
-            wget -q -O "$full_path" "$url"
+            if ! download_wrapper "$url" "$full_path"; then
+                echo "Failed to download $relative_path"
+            fi
         else
             echo "File $relative_path already exists. Skipping."
         fi
@@ -516,7 +574,7 @@ download_bios() {
     local SUCCESS=true
 
     echo "Downloading BIOS database..."
-    if ! wget -q --show-progress -O "$JSON_ZIP" "https://raw.githubusercontent.com/ajgowans/BiosDB_MiSTer/db/bios_db.json.zip"; then
+    if ! download_wrapper "https://raw.githubusercontent.com/ajgowans/BiosDB_MiSTer/db/bios_db.json.zip" "$JSON_ZIP"; then
         echo "Download failed."
         return 1
     fi
@@ -547,7 +605,7 @@ download_bios() {
             # Download file if it doesn't exist
             if [ ! -f "$full_path" ]; then
                 echo "Downloading $relative_path..."
-                if ! wget -q --show-progress -O "$full_path" "$url"; then
+                if ! download_wrapper "$url" "$full_path"; then
                     echo "Failed to download $relative_path"
                     SUCCESS=false
                 fi
@@ -587,7 +645,7 @@ download_gbaborders() {
     mkdir -p "$JSON_DIR"
 
     echo "Downloading database..."
-    if ! wget -O "$DB_ZIP" "https://raw.githubusercontent.com/Dinierto/MiSTer-GBA-Borders/db/db.json.zip"; then
+    if ! download_wrapper "https://raw.githubusercontent.com/Dinierto/MiSTer-GBA-Borders/db/db.json.zip" "$DB_ZIP"; then
         echo "Database download failed."
         return 1
     fi
@@ -667,7 +725,7 @@ download_gbaborders() {
             # Construct proper GitHub raw content URL
             download_url="https://raw.githubusercontent.com/Dinierto/MiSTer-GBA-Borders/$COMMIT_HASH/$relative_path"
             
-            if wget -q -O "$full_path.tmp" "$download_url"; then
+            if download_wrapper "$download_url" "$full_path.tmp"; then
                 # Verify download
                 current_size=$(stat -c%s "$full_path.tmp" 2>/dev/null || echo 0)
                 if [ "$current_size" -eq "$size" ]; then
@@ -756,7 +814,7 @@ download_wallpapers() {
         JSON_FILE="$TEMP_DIR/db.json"
 
         echo "Downloading database..."
-        if ! wget -q -O "$DB_ZIP" "https://raw.githubusercontent.com/$REPO/db/db.json.zip"; then
+        if ! download_wrapper "https://raw.githubusercontent.com/$REPO/db/db.json.zip" "$DB_ZIP"; then
             echo "Database download failed for $REPO."
             continue
         fi
@@ -846,7 +904,7 @@ download_wallpapers() {
                 # Construct proper GitHub raw content URL
                 download_url="https://raw.githubusercontent.com/$REPO/$COMMIT_HASH/$relative_path"
                 
-                if wget -q -O "$full_path.tmp" "$download_url"; then
+                if download_wrapper "$download_url" "$full_path.tmp"; then
                     # Verify download
                     current_size=$(stat -c%s "$full_path.tmp" 2>/dev/null || echo 0)
                     if [ "$current_size" -eq "$size" ]; then
@@ -931,13 +989,13 @@ download_and_extract() {
     if [ "$IS_SPLIT" = true ]; then
         echo "Downloading split archive parts..."
         echo "Downloading ${ZIP_Z01}..."
-        if ! wget --show-progress -q "${ZIP_URL_BASE}/${ZIP_Z01}" -O "${ZIP_Z01}"; then
+        if ! download_wrapper "${ZIP_URL_BASE}/${ZIP_Z01}" "${ZIP_Z01}"; then
             echo "Failed to download ${ZIP_Z01}"
             DOWNLOAD_SUCCESS=false
         fi
 
         echo "Downloading ${ZIP_BASE}..."
-        if ! wget --show-progress -q "${ZIP_URL_BASE}/${ZIP_BASE}" -O "${ZIP_BASE}"; then
+        if ! download_wrapper "${ZIP_URL_BASE}/${ZIP_BASE}" "${ZIP_BASE}"; then
             echo "Failed to download ${ZIP_BASE}"
             DOWNLOAD_SUCCESS=false
         fi
@@ -952,7 +1010,7 @@ download_and_extract() {
         fi
     else
         echo "Downloading ${ZIP_BASE}..."
-        if ! wget --show-progress -q "${ZIP_URL_BASE}/${ZIP_BASE}" -O "${ZIP_BASE}"; then
+        if ! download_wrapper "${ZIP_URL_BASE}/${ZIP_BASE}" "${ZIP_BASE}"; then
             echo "Failed to download ${ZIP_BASE}"
             DOWNLOAD_SUCCESS=false
         else
