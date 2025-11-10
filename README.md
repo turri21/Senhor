@@ -1,4 +1,9 @@
 # News
+10/11/2025
+
+Updates: Enterprise
+
+___
 4/11/2025
 
 Updates: Atari800, Atari5200
