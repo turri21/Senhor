@@ -1,4 +1,9 @@
 # News
+20/11/2025
+
+Updates: SNES
+
+___
 16/11/2025
 
 Updates: CDi
