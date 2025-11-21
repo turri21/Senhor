@@ -1,6 +1,8 @@
 # 3D Printed case for Senhor by Herbert K.
 
 It consists of 4 Main parts plus 4 Bolts to use the switches. A Standard 40x40 Fan ist mountable. Can be screwed together with 4x M3x50mm.
+____
+
 ![photo_2025-11-15_23-10-21 (2)](https://github.com/user-attachments/assets/bdf2aa1e-ea32-459b-967e-27f0cd454aa2)
 ![photo_2025-11-15_23-10-21](https://github.com/user-attachments/assets/290fc247-eef9-4bc9-86ab-fab3289a586b)
 ![photo_2025-11-15_23-16-46 (2)](https://github.com/user-attachments/assets/4b563ddd-71c3-4afd-9bda-9835fde21b7c)
