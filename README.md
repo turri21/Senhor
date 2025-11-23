@@ -1,4 +1,9 @@
 # News
+23/11/2025
+
+Updates: PSX
+
+___
 21/11/2025
 
 Updates: PSX
