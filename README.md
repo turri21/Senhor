@@ -1,4 +1,9 @@
 # News
+25/11/2025
+
+New Cores: TK2000
+
+___
 23/11/2025
 
 Updates: PSX
