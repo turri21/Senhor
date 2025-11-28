@@ -1,4 +1,9 @@
 # News
+28/11/2025
+
+Update: Minimig
+
+___
 27/11/2025
 
 Updates: Enterprise
