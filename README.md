@@ -21,7 +21,6 @@ Updates: PSX
 ___
 # Raw binary files for Senhor FPGA board.
 ![photo_github](https://github.com/user-attachments/assets/1f032576-412e-4b5e-9090-e6818393007a)
-
 **What is the Senhor board?**
 
 It is the first attempt of a MiSTer [(DE10-Nano)](https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&No=1046) FPGA board clone by [QMTECH](https://qmtechchina.aliexpress.com/store/4486047) released in 2024.
