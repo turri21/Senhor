@@ -20,7 +20,7 @@ Updates: PSX
 
 ___
 # Raw binary files for Senhor FPGA board.
-![photo_2025-11-28_01-05-10](https://github.com/user-attachments/assets/21515ab9-cc94-4a3b-a8a5-38cf9f33d3b0)
+![photo_github](https://github.com/user-attachments/assets/ee3c3922-e190-4e77-9e89-ad372b33a6eb)
 
 **What is the Senhor board?**
 
