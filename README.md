@@ -102,7 +102,7 @@ Gerson Pedro -> for his great all-in-one Gerson's archive.
 
 Herbert K. -> for his design of a 3D printed case for Senhor & for spreading the word about the board in Vintage Computer Festival - Munich.
 
-Ron -> for his all purpose valuable assistance about Home micros and his throughout testing.
+Ron -> for his all purpose valuable assistance about Home micros, his throughout testing and his Retrocrypta live shows on Twitch!
 
 
 Everyone in the Senhor community for their suggestions as well as their help on testing and reporting issues.
