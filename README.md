@@ -83,7 +83,8 @@ Enjoy the ride!
 Join us on Telegram: https://t.me/+fmIT1ovaOGkwNDQ0
 
 ___
-**Community** 
+**Community:**
+
 **Contributors in alphabetical order**
 
 Anderson Vulczak -> for his update_senhor.sh network fix for people from Brazil. You have saved the day!
