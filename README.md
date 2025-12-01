@@ -83,6 +83,30 @@ Enjoy the ride!
 Join us on Telegram: https://t.me/+fmIT1ovaOGkwNDQ0
 
 ___
+**Community** 
+**Contributors in alphabetical order**
+
+Anderson Vulczak -> for his update_senhor.sh network fix for people from Brazil. You have saved the day!
+
+Edson & Gerson Pedro -> for their enjoyable to watch youtube videos about Senhor (and not only).
+
+Fred Chrono Plays -> for his project's mascot editing. Now it is looking even more cooler ;)
+
+Gerson Pedro -> for his great all-in-one Gerson's archive. 
+
+Herbert K. -> for his design of a 3D printed case for Senhor & for spreading the word about the board in Vintage Computer Festival - Munich.
+
+Ron -> for his all purpose valuable assistance about Home micros and his throughout testing.
+
+
+Everyone in the Senhor community for their valuable help on testing and reporting issues.
+
+Last but not least Sorgelig the creator of MiSTer FPGA project, you are the firestarter!
+
+Thank you!
+
+The Senhor team: Luis & turri21
+___
 
 -=(Extra notes)=-
 
