@@ -99,7 +99,7 @@ Herbert K. -> for his design of a 3D printed case for Senhor & for spreading the
 Ron -> for his all purpose valuable assistance about Home micros and his throughout testing.
 
 
-Everyone in the Senhor community for their valuable help on testing and reporting issues.
+Everyone in the Senhor community for their suggestions as well as their help on testing and reporting issues.
 
 Last but not least Sorgelig the creator of MiSTer FPGA project, you are the firestarter!
 
