@@ -1,4 +1,9 @@
 # News
+8/12/2025
+
+Updates: FlappyBird
+
+___
 7/12/2025
 
 Updates: PSX
