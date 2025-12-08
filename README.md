@@ -1,7 +1,7 @@
 # News
 8/12/2025
 
-Updates: FlappyBird
+Updates: AliceMC10, FlappyBird
 
 ___
 7/12/2025
