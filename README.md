@@ -1,4 +1,9 @@
 # News
+9/12/2025
+
+Updates: SNES
+
+___
 8/12/2025
 
 Updates: PC88, CDi, AliceMC10, FlappyBird
