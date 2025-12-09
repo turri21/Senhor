@@ -1,4 +1,9 @@
 # News
+10/12/2025
+
+Updates: Minimig
+
+___
 9/12/2025
 
 Updates: SNES
