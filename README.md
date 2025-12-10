@@ -1,7 +1,7 @@
 # News
 10/12/2025
 
-Updates: IremM92, Minimig
+Updates: C64, IremM92, Minimig
 
 ___
 9/12/2025
