@@ -1,7 +1,7 @@
 # News
 10/12/2025
 
-Updates: Minimig
+Updates: IremM92, Minimig
 
 ___
 9/12/2025
