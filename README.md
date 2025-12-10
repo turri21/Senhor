@@ -1,7 +1,7 @@
 # News
 10/12/2025
 
-Updates: C64, IremM92, Minimig
+Updates: Amstrad CPC, C64, IremM92, Minimig
 
 ___
 9/12/2025
