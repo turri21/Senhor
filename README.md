@@ -1,7 +1,7 @@
 # News
 11/12/2025
 
-Updates: MacPlus
+Updates: ZX-Spectrum, MacPlus
 
 ___
 10/12/2025
