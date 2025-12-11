@@ -1,7 +1,7 @@
 # News
 11/12/2025
 
-Updates: ZX-Spectrum, MacPlus
+Updates: MegaCD, ZX-Spectrum, MacPlus
 
 ___
 10/12/2025
