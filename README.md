@@ -1,4 +1,9 @@
 # News
+13/12/2025
+
+Updates: MacPlus
+
+___
 12/12/2025
 
 New Cores: mc-2g-1024, TeleStrat
