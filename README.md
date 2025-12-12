@@ -1,7 +1,9 @@
 # News
 12/12/2025
 
-Updates: TeleStrat, PMD85, ao486
+New Cores: mc-2g-1024, TeleStrat
+
+Updates: PMD85, ao486
 
 ___
 11/12/2025
