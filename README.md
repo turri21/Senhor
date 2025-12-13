@@ -1,4 +1,9 @@
 # News
+14/12/2025
+
+Updates: SMS
+
+___
 13/12/2025
 
 Updates: S32X, GBA, PSX, Atari5200, Atari800, TRS-80, MacPlus
