@@ -1,7 +1,7 @@
 # News
 13/12/2025
 
-Updates: Atari5200, Atari800, TRS-80, MacPlus
+Updates: PSX, Atari5200, Atari800, TRS-80, MacPlus
 
 ___
 12/12/2025
