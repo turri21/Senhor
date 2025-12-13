@@ -1,7 +1,7 @@
 # News
 13/12/2025
 
-Updates: MacPlus
+Updates: TRS-80, MacPlus
 
 ___
 12/12/2025
