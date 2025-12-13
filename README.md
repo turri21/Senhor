@@ -1,7 +1,7 @@
 # News
 13/12/2025
 
-Updates: TRS-80, MacPlus
+Updates: Atari800, TRS-80, MacPlus
 
 ___
 12/12/2025
