@@ -1,7 +1,7 @@
 # News
 14/12/2025
 
-Updates: Ti994a, Jupiter, S32X, SMS
+Updates: Chip8, Ti994a, Jupiter, S32X, SMS
 
 ___
 13/12/2025
