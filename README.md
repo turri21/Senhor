@@ -1,6 +1,8 @@
 # News
 14/12/2025
 
+New Cores: Sorcerer
+
 Updates: Laser310, Arduboy, AY-3-8500, Chip8, Ti994a, Jupiter, S32X, SMS
 
 ___
