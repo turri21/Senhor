@@ -1,7 +1,7 @@
 # News
 14/12/2025
 
-Updates: Arduboy, AY-3-8500, Chip8, Ti994a, Jupiter, S32X, SMS
+Updates: Laser310, Arduboy, AY-3-8500, Chip8, Ti994a, Jupiter, S32X, SMS
 
 ___
 13/12/2025
