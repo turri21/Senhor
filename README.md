@@ -1,7 +1,7 @@
 # News
 15/12/2025
 
-Updates: N64
+Updates: AcornAtom, N64
 
 ___
 14/12/2025
