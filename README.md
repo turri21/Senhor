@@ -1,4 +1,9 @@
 # News
+15/12/2025
+
+Updates: N64
+
+___
 14/12/2025
 
 New Cores: Laser500, Sorcerer
