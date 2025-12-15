@@ -1,7 +1,7 @@
 # News
 15/12/2025
 
-Updates: AcornAtom, N64
+Updates: NeoGeo, AcornAtom, N64
 
 ___
 14/12/2025
