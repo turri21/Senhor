@@ -1,7 +1,7 @@
 # News
 16/12/2025
 
-Updates: TomyTutor, Lynx48, AcornElectron
+Updates: ColecoAdam, TomyTutor, Lynx48, AcornElectron
 
 ___
 15/12/2025
