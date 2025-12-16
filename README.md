@@ -1,4 +1,9 @@
 # News
+16/12/2025
+
+Updates: AcornElectron
+
+___
 15/12/2025
 
 Updates: Interact, NeoGeo, AcornAtom, N64
