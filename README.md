@@ -1,5 +1,5 @@
 # News
-18/12/2025
+19/12/2025
 
 Updates: Casio_PV-1000, Casio_PV-2000
 
