@@ -1,7 +1,7 @@
 # News
 19/12/2025
 
-Updates: Casio_PV-1000, Casio_PV-2000
+Updates: Super_Vision_8000, Casio_PV-1000, Casio_PV-2000
 
 ___
 16/12/2025
