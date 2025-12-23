@@ -1,4 +1,9 @@
 # News
+23/12/2025
+
+Updates: S32X
+
+___
 19/12/2025
 
 Updates: Super_Vision_8000, Casio_PV-1000, Casio_PV-2000
