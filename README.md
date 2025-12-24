@@ -1,4 +1,9 @@
 # News
+25/12/2025
+
+Updates: SNES
+
+___
 23/12/2025
 
 Updates: S32X
