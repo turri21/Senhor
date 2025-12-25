@@ -6,7 +6,7 @@ Updates: PMD85, SNES
 ___
 23/12/2025
 
-Updates: S32X
+Updates: NES, S32X
 
 ___
 19/12/2025
