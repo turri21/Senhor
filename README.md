@@ -1,7 +1,7 @@
 # News
 25/12/2025
 
-Updates: SNES
+Updates: PMD85, SNES
 
 ___
 23/12/2025
