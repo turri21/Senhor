@@ -1,4 +1,9 @@
 # News
+27/12/2025
+
+Updates: Homelab
+
+___
 25/12/2025
 
 Updates: MyVision, PMD85, SNES
