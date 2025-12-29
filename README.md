@@ -1,7 +1,7 @@
 # News
 29/12/2025
 
-Updates: Apogee
+Updates: CDi, Apogee
 
 ___
 27/12/2025
