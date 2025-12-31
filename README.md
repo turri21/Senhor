@@ -1,4 +1,9 @@
 # News
+31/12/2025
+
+Updates: Vector-06C
+
+___
 29/12/2025
 
 Updates: PCXT, Saturn, CDi, Apogee
