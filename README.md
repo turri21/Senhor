@@ -1,7 +1,7 @@
 # News
 29/12/2025
 
-Updates: Saturn, CDi, Apogee
+Updates: PCXT, Saturn, CDi, Apogee
 
 ___
 27/12/2025
