@@ -1,4 +1,8 @@
 # News
+01/01/2026
+
+Updates: Minimig
+___
 31/12/2025
 
 Updates: Vector-06C
