@@ -1,5 +1,5 @@
 # News
-01/01/2026
+1/1/2026
 
 Updates: Minimig
 ___
