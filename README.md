@@ -1,7 +1,7 @@
 # News
 1/1/2026
 
-Updates: Minimig
+Updates: SAMCoupe, Minimig
 ___
 31/12/2025
 
