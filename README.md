@@ -1,7 +1,7 @@
 # News
 3/1/2026
 
-Updates: Specialist
+Updates: MSX, Specialist
 
 ___
 2/1/2026
