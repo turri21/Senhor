@@ -1,6 +1,8 @@
 # News
 3/1/2026
 
+New Cores: IIgs
+
 Updates: MSX, Specialist
 
 ___
