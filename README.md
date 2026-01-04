@@ -1,7 +1,7 @@
 # News
 4/1/2026
 
-Updates: PET2001, Archie, QL, IIgs
+Updates: Aquarius, PET2001, Archie, QL, IIgs
 
 ___
 3/1/2026
