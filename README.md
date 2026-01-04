@@ -1,7 +1,7 @@
 # News
 4/1/2026
 
-Updates: Vectrex, Aquarius, PET2001, Archie, QL, IIgs
+Updates: SNES, Vectrex, Aquarius, PET2001, Archie, QL, IIgs
 
 ___
 3/1/2026
