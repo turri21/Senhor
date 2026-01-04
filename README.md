@@ -1,7 +1,7 @@
 # News
 4/1/2026
 
-Updates: Archie, QL, IIgs
+Updates: CDi, Archie, QL, IIgs
 
 ___
 3/1/2026
