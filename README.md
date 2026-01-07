@@ -1,4 +1,9 @@
 # News
+7/1/2026
+
+Updates: VIC20
+
+___
 6/1/2026
 
 Updates: PCXT
