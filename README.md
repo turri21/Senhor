@@ -1,7 +1,7 @@
 # News
 7/1/2026
 
-Updates: C16, ZX81, PCW, VIC20
+Updates: TSConf, C16, ZX81, PCW, VIC20
 
 ___
 6/1/2026
