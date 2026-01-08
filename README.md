@@ -1,7 +1,7 @@
 # News
 8/1/2026
 
-Updates: ORAO, Oric
+Updates: AtariST, ORAO, Oric
 
 ___
 7/1/2026
