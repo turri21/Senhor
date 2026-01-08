@@ -1,4 +1,9 @@
 # News
+8/1/2026
+
+Updates: Oric
+
+___
 7/1/2026
 
 Updates: Altair8800, TSConf, C16, ZX81, PCW, VIC20
