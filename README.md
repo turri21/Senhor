@@ -1,4 +1,9 @@
 # News
+13/1/2026
+
+Updates: ZXNext
+
+___
 12/1/2026
 
 Updates: CoCo3, VT52
