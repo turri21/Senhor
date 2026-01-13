@@ -1,7 +1,7 @@
 # News
 13/1/2026
 
-Updates: PokemonMini, SGB, ZXNext
+Updates: Donut, PokemonMini, SGB, ZXNext
 
 ___
 12/1/2026
