@@ -1,7 +1,7 @@
 # News
 12/1/2026
 
-Updates: VT52
+Updates: CoCo3, VT52
 ___
 10/1/2026
 
