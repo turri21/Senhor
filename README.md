@@ -1,7 +1,7 @@
 # News
 14/1/2026
 
-Updates: TatungEinstein
+Updates: RX78, TatungEinstein
 
 ___
 13/1/2026
