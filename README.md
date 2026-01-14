@@ -1,4 +1,9 @@
 # News
+14/1/2026
+
+Updates: TatungEinstein
+
+___
 13/1/2026
 
 Updates: BBCBridgeCompanion, Donut, PokemonMini, SGB, ZXNext
