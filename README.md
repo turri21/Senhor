@@ -1,7 +1,7 @@
 # News
 15/1/2026
 
-Updates: MegaDrive
+Updates: GnW, MegaDrive
 
 ___
 14/1/2026
