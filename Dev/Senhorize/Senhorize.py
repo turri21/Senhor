@@ -15,6 +15,7 @@ from pathlib import Path
 def edit_qsf(file_path, backup=True):
     """
     Edit .qsf file to change MAX_CORE_JUNCTION_TEMP from 100 to 125
+    and remove entries between 'source sys/sys.tcl' and 'source files.qip'
     
     Args:
         file_path: Path to .qsf file
@@ -47,6 +48,50 @@ def edit_qsf(file_path, backup=True):
             changes_made.append("⊙ MAX_CORE_JUNCTION_TEMP already set to 125")
         else:
             changes_made.append("✗ MAX_CORE_JUNCTION_TEMP 100 not found")
+    
+    # Remove everything between 'source sys/sys.tcl' and 'source files.qip'
+    # EXCEPT keep 'source sys/sys_analog.tcl'
+    pattern = r'(source sys/sys\.tcl\s*\n)(.*?)(source files\.qip)'
+    
+    match = re.search(pattern, content, re.DOTALL)
+    if match:
+        # Get the content between the two source lines
+        between_content = match.group(2)
+        
+        # Look for source sys/sys_analog.tcl
+        analog_source = None
+        for line in between_content.split('\n'):
+            if 'source sys/sys_analog.tcl' in line:
+                analog_source = line
+                break
+        
+        # Count non-empty lines being removed
+        lines_to_remove = [line for line in between_content.split('\n') if line.strip()]
+        num_lines = len(lines_to_remove)
+        
+        if num_lines > 0:
+            # Replace with just sys_analog.tcl source line if it exists, otherwise empty
+            if analog_source:
+                new_between = analog_source + '\n'
+                changes_made.append(f"✓ Removed {num_lines} line(s) between 'source sys/sys.tcl' and 'source files.qip'")
+                changes_made.append("✓ Preserved 'source sys/sys_analog.tcl'")
+            else:
+                new_between = ''
+                changes_made.append(f"✓ Removed {num_lines} line(s) between 'source sys/sys.tcl' and 'source files.qip'")
+            
+            # Reconstruct the content
+            new_content = match.group(1) + new_between + match.group(3)
+            content = content[:match.start()] + new_content + content[match.end():]
+        else:
+            changes_made.append("⊙ No entries found between 'source sys/sys.tcl' and 'source files.qip'")
+    else:
+        # Check if both markers exist separately
+        if 'source sys/sys.tcl' in content and 'source files.qip' in content:
+            changes_made.append("⊙ Found both source lines but in unexpected format")
+        elif 'source sys/sys.tcl' not in content:
+            changes_made.append("⊙ 'source sys/sys.tcl' not found in file")
+        elif 'source files.qip' not in content:
+            changes_made.append("⊙ 'source files.qip' not found in file")
     
     # Check if any changes were made
     if content == original_content:
@@ -540,7 +585,7 @@ Examples:
         
         results = process_directory(args.directory, args.recursive, backup=backup, 
                                     sys_only=args.sys_only, qsf_only=args.qsf_only,
-                                    sys_zip=args.sys_zip)
+                                    sys_zip=sys_zip_path if sys_zip_exists else None)
         
         # Summary
         total = len(results)
