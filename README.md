@@ -1,4 +1,9 @@
 # News
+16/1/2026
+
+Updates: SNES
+
+___
 15/1/2026
 
 Updates: Gameboy, GnW, MegaDrive
