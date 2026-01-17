@@ -1,7 +1,7 @@
 # News
 16/1/2026
 
-Updates: CDi, SNES
+Updates: TaitoSJ, CDi, SNES
 
 ___
 15/1/2026
