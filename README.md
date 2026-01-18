@@ -4,9 +4,14 @@
 Updates: SVI328
 
 ___
+17/1/2026
+
+Updates: TraverseUSA, TaitoSJ
+
+___
 16/1/2026
 
-Updates: TraverseUSA, TaitoSJ, CDi, SNES
+Updates: CDi, SNES
 
 ___
 15/1/2026
