@@ -1,7 +1,7 @@
 # News
 18/1/2026
 
-Updates: MrJong, Pacman, IkariWarriors, Performan, SVI328
+Updates: SegaVICZ80, MrJong, Pacman, IkariWarriors, Performan, SVI328
 
 ___
 17/1/2026
