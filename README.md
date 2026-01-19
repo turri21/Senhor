@@ -1,7 +1,7 @@
 # News
 19/1/2026
 
-Updates: IremM92, IremM107
+Updates: SNK_TripleZ80, IremM92, IremM107
 ___
 18/1/2026
 
