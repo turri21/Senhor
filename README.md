@@ -1,7 +1,7 @@
 # News
 19/1/2026
 
-Updates: BankPanic, PSX, Cave, SNK_TripleZ80, IremM92, IremM107
+Updates: Joust2, BankPanic, PSX, Cave, SNK_TripleZ80, IremM92, IremM107
 ___
 18/1/2026
 
