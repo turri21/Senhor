@@ -1,4 +1,9 @@
 # News
+21/1/2026
+
+Updates: SlapFight
+
+___
 20/1/2026
 
 New Cores: SegaChannelRevival
