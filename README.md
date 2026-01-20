@@ -1,7 +1,7 @@
 # News
 20/1/2026
 
-Updates: S32X, N64, Joust2
+Updates: Inferno, S32X, N64, Joust2
 
 ___
 19/1/2026
