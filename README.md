@@ -1,7 +1,9 @@
 # News
 20/1/2026
 
-Updates: SegaChannelRevival, Inferno, S32X, N64, Joust2
+New Cores: SegaChannelRevival
+
+Updates: Inferno, S32X, N64, Joust2
 
 ___
 19/1/2026
