@@ -3,7 +3,7 @@
 
 New Cores: SegaChannelRevival
 
-Updates: Inferno, S32X, N64, Joust2
+Updates: TropicalAngel, Inferno, S32X, N64, Joust2
 
 ___
 19/1/2026
