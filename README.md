@@ -1,8 +1,7 @@
 # News
 21/1/2026
 
-Updates: SlapFight
-
+Updates: CrazyBalloon, SlapFight
 ___
 20/1/2026
 
