@@ -1,7 +1,7 @@
 # News
 21/1/2026
 
-Updates: CrazyBalloon, SlapFight
+Updates: CosmicGuerilla, CrazyBalloon, SlapFight
 ___
 20/1/2026
 
