@@ -1,7 +1,7 @@
 # News
 21/1/2026
 
-Updates: EpochGalaxyII, CosmicGuerilla, CrazyBalloon, SlapFight
+Updates: Odyssey2, EpochGalaxyII, CosmicGuerilla, CrazyBalloon, SlapFight
 ___
 20/1/2026
 
