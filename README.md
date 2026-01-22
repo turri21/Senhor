@@ -1,4 +1,8 @@
 # News
+22/1/2026
+
+Updates: Arkanoid
+___
 21/1/2026
 
 Updates: Odyssey2, EpochGalaxyII, CosmicGuerilla, CrazyBalloon, SlapFight
