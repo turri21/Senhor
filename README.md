@@ -1,7 +1,7 @@
 # News
 23/1/2026
 
-Updates: CDi, SNES
+Updates: Bagman, CDi, SNES
 
 ___
 22/1/2026
