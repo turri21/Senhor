@@ -1,4 +1,9 @@
 # News
+23/1/2026
+
+Updates: SNES
+
+___
 22/1/2026
 
 Updates: Arkanoid
