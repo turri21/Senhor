@@ -6,7 +6,7 @@ Updates: SNES
 ___
 22/1/2026
 
-Updates: Astrocade, Arkanoid
+Updates: Atarisys1, Astrocade, Arkanoid
 ___
 21/1/2026
 
