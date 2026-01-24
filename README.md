@@ -1,7 +1,7 @@
 # News
 24/1/2026
 
-Updates: BombJack, Berzerk, BattleZone, Athena
+Updates: BurningRubber, BombJack, Berzerk, BattleZone, Athena
 
 ___
 23/1/2026
