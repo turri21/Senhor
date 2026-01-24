@@ -1,7 +1,7 @@
 # News
 24/1/2026
 
-Updates: Athena
+Updates: BattleZone, Athena
 
 ___
 23/1/2026
