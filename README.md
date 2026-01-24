@@ -1,4 +1,9 @@
 # News
+24/1/2026
+
+Updates: Athena
+
+___
 23/1/2026
 
 Updates: IIgs, AtariTetris, Bagman, CDi, SNES
