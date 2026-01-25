@@ -1,7 +1,12 @@
 # News
+25/1/2026
+
+Updates: BurgerTime
+
+___
 24/1/2026
 
-Updates: BurgerTime, Bosconian, BurningRubber, BombJack, Berzerk, BattleZone, Athena
+Updates: Bosconian, BurningRubber, BombJack, Berzerk, BattleZone, Athena
 
 ___
 23/1/2026
