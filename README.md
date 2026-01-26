@@ -1,7 +1,7 @@
 # News
 26/1/2026
 
-Updates: ComputerSpace, CongoBongo, Chameleon
+Updates: PSX, ComputerSpace, CongoBongo, Chameleon
 
 ___
 25/1/2026
