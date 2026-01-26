@@ -1,7 +1,7 @@
 # News
 26/1/2026
 
-Updates: Chameleon
+Updates: CongoBongo, Chameleon
 
 ___
 25/1/2026
