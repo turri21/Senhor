@@ -1,4 +1,9 @@
 # News
+28/1/2026
+
+Updates: Atari800
+
+___
 26/1/2026
 
 Updates: MSX, PSX, ComputerSpace, CongoBongo, Chameleon
