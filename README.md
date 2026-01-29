@@ -6,7 +6,7 @@ Updates: SlapFight, Atari800VBXE, Atari800
 ___
 26/1/2026
 
-Updates: MSX, PSX, ComputerSpace, CongoBongo, Chameleon
+Updates: Cosmic, MSX, PSX, ComputerSpace, CongoBongo, Chameleon
 
 ___
 25/1/2026
