@@ -1,7 +1,7 @@
 # News
 28/1/2026
 
-Updates: Atari800
+Updates: Atari800VBXE, Atari800
 
 ___
 26/1/2026
