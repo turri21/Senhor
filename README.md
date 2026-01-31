@@ -1,7 +1,7 @@
 # News
 31/1/2026
 
-Updates: CDi_Senhor_20260131.rbf
+Updates: CDi
 
 ___
 28/1/2026
