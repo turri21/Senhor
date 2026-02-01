@@ -1,4 +1,9 @@
 # News
+1/2/2026
+
+Updates: PSX
+
+___
 31/1/2026
 
 Updates: CDi
