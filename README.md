@@ -1,7 +1,7 @@
 # News
 3/2/2026
 
-Updates: Druaga, DonkeyKong3, DonkeyKong, DonkeyKongJunior, Dominos
+Updates: Exidy2, Druaga, DonkeyKong3, DonkeyKong, DonkeyKongJunior, Dominos
 
 ___
 1/2/2026
