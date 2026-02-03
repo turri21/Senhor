@@ -16,7 +16,7 @@ Updates: SlapFight, Atari800VBXE, Atari800
 ___
 26/1/2026
 
-Updates: CrazyKong, CrazyClimber, Cosmic, MSX, PSX, ComputerSpace, CongoBongo, Chameleon
+Updates: Defender, CrazyKong, CrazyClimber, Cosmic, MSX, PSX, ComputerSpace, CongoBongo, Chameleon
 
 ___
 25/1/2026
