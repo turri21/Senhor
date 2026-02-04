@@ -1,7 +1,7 @@
 # News
 4/2/2026
 
-Updates: Galaxian, Freeze
+Updates: Gyruss, Galaxian, Freeze
 ___
 3/2/2026
 
