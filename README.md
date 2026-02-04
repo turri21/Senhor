@@ -1,7 +1,7 @@
 # News
 4/2/2026
 
-Updates: IremM72, IremM62, Gyruss, Galaxian, Freeze
+Updates: IremM90, IremM72, IremM62, Gyruss, Galaxian, Freeze
 ___
 3/2/2026
 
