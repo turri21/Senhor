@@ -1,4 +1,8 @@
 # News
+4/2/2026
+
+Updates: Freeze
+___
 3/2/2026
 
 Updates: Galaga, Finalizer, ExpressRaider, Exidy2, Druaga, DonkeyKong3, DonkeyKong, DonkeyKongJunior, Dominos
