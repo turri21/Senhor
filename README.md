@@ -1,4 +1,8 @@
 # News
+5/2/2026
+
+Updates: MCR2
+___
 4/2/2026
 
 Updates: Jailbreak, LadyBug, Jackal, IremM90, IremM72, IremM62, Gyruss, Galaxian, Freeze
