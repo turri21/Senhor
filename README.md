@@ -1,4 +1,9 @@
 # News
+7/2/2026
+
+Updates: Pleiads
+
+___
 6/2/2026
 
 Updates: MoonPatrol
