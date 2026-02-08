@@ -1,7 +1,7 @@
 # News
 7/2/2026
 
-Updates: Pleiads
+Updates: NinjaKun, Pleiads
 
 ___
 6/2/2026
