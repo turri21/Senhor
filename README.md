@@ -10,7 +10,7 @@ Updates: MoonPatrol
 ___
 5/2/2026
 
-Updates: Pong, Phoenix, Pengo, MysticMarathon, MrDo, MCR3Mono, fMCR3, MissileCommand, MCR2
+Updates: Salamander, Pong, Phoenix, Pengo, MysticMarathon, MrDo, MCR3Mono, fMCR3, MissileCommand, MCR2
 ___
 4/2/2026
 
