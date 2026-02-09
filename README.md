@@ -1,7 +1,7 @@
 # News
 9/2/2026
 
-Updates: C128, XSleena, TOWNS
+Updates: Tecmo, C128, XSleena, TOWNS
 ___
 7/2/2026
 
