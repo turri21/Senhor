@@ -1,7 +1,7 @@
 # News
 9/2/2026
 
-Updates: TOWNS
+Updates: XSleena, TOWNS
 ___
 7/2/2026
 
