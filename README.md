@@ -1,4 +1,8 @@
 # News
+9/2/2026
+
+Updates: TOWNS
+___
 7/2/2026
 
 Updates: NinjaKun, Pleiads
