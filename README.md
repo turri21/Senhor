@@ -1,7 +1,7 @@
 # News
 10/2/2026
 
-Updates: TaitoF2, SlapFight, Subs, SolomonsKey, Tutankham, SilverLand, C128
+Updates: TimePilot84, TaitoF2, SlapFight, Subs, SolomonsKey, Tutankham, SilverLand, C128
 ___
 9/2/2026
 
