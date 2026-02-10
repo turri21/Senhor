@@ -1,4 +1,8 @@
 # News
+10/2/2026
+
+Updates: C128
+___
 9/2/2026
 
 Updates: NeoGeo, Tecmo, C128, XSleena, TOWNS
