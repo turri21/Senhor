@@ -18,7 +18,7 @@ Updates: MoonPatrol
 ___
 5/2/2026
 
-Updates: Psychic5, Pooyan, SpaceInvaders, Salamander, Pong, Phoenix, Pengo, MysticMarathon, MrDo, MCR3Mono, fMCR3, MissileCommand, MCR2
+Updates: QBert, Psychic5, Pooyan, SpaceInvaders, Salamander, Pong, Phoenix, Pengo, MysticMarathon, MrDo, MCR3Mono, fMCR3, MissileCommand, MCR2
 ___
 4/2/2026
 
@@ -167,130 +167,6 @@ ___
 1/1/2026
 
 Updates: SAMCoupe, Minimig
-___
-31/12/2025
-
-Updates: Vector-06C
-
-___
-29/12/2025
-
-Updates: PCXT, Saturn, CDi, Apogee
-
-___
-27/12/2025
-
-Updates: Homelab
-
-___
-25/12/2025
-
-Updates: MyVision, PMD85, SNES
-
-___
-23/12/2025
-
-Updates: NES, S32X
-
-___
-19/12/2025
-
-Updates: Super_Vision_8000, Casio_PV-1000, Casio_PV-2000
-
-___
-16/12/2025
-
-Updates: ColecoAdam, TomyTutor, Lynx48, AcornElectron
-
-___
-15/12/2025
-
-Updates: Interact, NeoGeo, AcornAtom, N64
-
-___
-14/12/2025
-
-New Cores: Laser500, Sorcerer
-
-Updates: Laser310, Arduboy, AY-3-8500, Chip8, Ti994a, Jupiter, S32X, SMS
-
-___
-13/12/2025
-
-Updates: GBA, PSX, Atari5200, Atari800, TRS-80, MacPlus
-
-___
-12/12/2025
-
-New Cores: mc-2g-1024, TeleStrat
-
-Updates: PMD85, ao486
-
-___
-11/12/2025
-
-Updates: MegaCD, ZX-Spectrum, MacPlus
-
-___
-10/12/2025
-
-Updates: X68000, Amstrad CPC, C64, IremM92, Minimig
-
-___
-9/12/2025
-
-Updates: SNES
-
-___
-8/12/2025
-
-Updates: PC88, CDi, AliceMC10, FlappyBird
-
-___
-7/12/2025
-
-Updates: PSX
-
-___
-5/12/2025
-
-Updates: Ti994a
-
-___
-4/12/2025
-
-Updates: Jaguar
-
-___
-1/12/2025
-
-Updates: PSX
-
-___
-30/11/2025
-
-Updates: ao486
-
-___
-28/11/2025
-
-Update: Minimig
-
-___
-27/11/2025
-
-Updates: Enterprise
-
-___
-25/11/2025
-
-New Cores: TK2000
-
-___
-23/11/2025
-
-Updates: PSX
-
 ___
 # Raw binary files for Senhor FPGA board.
 ![photo_github](https://github.com/user-attachments/assets/1f032576-412e-4b5e-9090-e6818393007a)
