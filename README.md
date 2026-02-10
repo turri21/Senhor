@@ -14,11 +14,11 @@ Updates: NinjaKun, Pleiads
 ___
 6/2/2026
 
-Updates: MoonPatrol
+Updates: SuperBreakout, MoonPatrol
 ___
 5/2/2026
 
-Updates: ScooterShooter, RiverPatrol, RallyX, QBert, Psychic5, Pooyan, SpaceInvaders, Salamander, Pong, Phoenix, Pengo, MysticMarathon, MrDo, MCR3Mono, fMCR3, MissileCommand, MCR2
+Updates: Scramble, ScooterShooter, RiverPatrol, RallyX, QBert, Psychic5, Pooyan, SpaceInvaders, Salamander, Pong, Phoenix, Pengo, MysticMarathon, MrDo, MCR3Mono, fMCR3, MissileCommand, MCR2
 ___
 4/2/2026
 
