@@ -262,7 +262,4 @@ IremM90: Bomber Man World - New Dyna Blaster - Global Quest - If "ROM PO CHECK E
 Alternatively, you can try to reset the core several times until it passes the check.
 
 IremM92: A not good "NG" message is displayed on the initial ROM checking. Some games are stuck at the RAM/ROM verification screen such as R-Type Leo. Possible fix: Reset the core several times.
-         
-TimePilot84: Barely seen pixel artifacts on title screen. Gameplay is not affected.
 
-On some cores the onboard buttons (OSD and RESET) have been disabled for stability purposes.
