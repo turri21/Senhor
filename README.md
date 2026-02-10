@@ -1,7 +1,7 @@
 # News
 10/2/2026
 
-Updates: Tutankham, SilverLand, C128
+Updates: SolomonsKey, Tutankham, SilverLand, C128
 ___
 9/2/2026
 
