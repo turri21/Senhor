@@ -14,7 +14,7 @@ Updates: NinjaKun, Pleiads
 ___
 6/2/2026
 
-Updates: SuprLoco, Sprint1, Sprint2, SuperBreakout, MoonPatrol
+Updates: TimePilot, SuprLoco, Sprint1, Sprint2, SuperBreakout, MoonPatrol
 ___
 5/2/2026
 
