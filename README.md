@@ -1,7 +1,7 @@
 # News
 11/2/2026
 
-Updates: C128
+Updates: TankBattalion, C128
 
 ___
 10/2/2026
