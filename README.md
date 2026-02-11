@@ -1,4 +1,9 @@
 # News
+11/2/2026
+
+Updates: C128
+
+___
 10/2/2026
 
 Updates: TimePilot84, TaitoF2, SlapFight, Subs, SolomonsKey, Tutankham, SilverLand, C128
