@@ -1,7 +1,7 @@
 # News
 11/2/2026
 
-Updates: PSX, TankBattalion, C128
+Updates: N64, PSX, TankBattalion, C128
 
 ___
 10/2/2026
