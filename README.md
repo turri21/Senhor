@@ -1,12 +1,12 @@
 # News
 11/2/2026
 
-Updates: Tutankham, N64, PSX, TankBattalion, C128
+Updates: TurkeyShoot, Tutankham, N64, PSX, TankBattalion, C128
 
 ___
 10/2/2026
 
-Updates: TNKIII, TimePilot84, TaitoF2, SlapFight, Subs, SolomonsKey, Tutankham, SilverLand, C128
+Updates: VBall, TNKIII, TimePilot84, TaitoF2, SlapFight, Subs, SolomonsKey, Tutankham, SilverLand, C128
 ___
 9/2/2026
 
