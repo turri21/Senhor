@@ -1,12 +1,18 @@
 # News
+12/2/2026
+
+Updates: TurkeyShoot
+
+___
 11/2/2026
 
-Updates: TurkeyShoot, Tutankham, N64, PSX, TankBattalion, C128
+Updates: Tutankham, N64, PSX, TankBattalion, C128
 
 ___
 10/2/2026
 
-Updates: VBall, TNKIII, TimePilot84, TaitoF2, SlapFight, Subs, SolomonsKey, Tutankham, SilverLand, C128
+New Cores: Tutankham
+Updates: VBall, TNKIII, TimePilot84, TaitoF2, SlapFight, Subs, SolomonsKey, SilverLand, C128
 ___
 9/2/2026
 
