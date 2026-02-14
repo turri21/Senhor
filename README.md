@@ -1,7 +1,7 @@
 # News
 14/2/2026
 
-Updates: Tutankham
+Updates: PSX, Tutankham
 
 ___
 12/2/2026
