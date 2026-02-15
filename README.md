@@ -1,4 +1,9 @@
 # News
+15/2/2026
+
+Updates: Atari7800
+
+___
 14/2/2026
 
 Updates: PSX, Tutankham
