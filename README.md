@@ -1,4 +1,9 @@
 # News
+16/2/2026
+
+Updates: SNES
+
+___
 15/2/2026
 
 Updates: Atari7800
