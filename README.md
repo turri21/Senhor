@@ -1,7 +1,7 @@
 # News
 16/2/2026
 
-Updates: SNES
+Updates: Saturn, SNES
 
 ___
 15/2/2026
