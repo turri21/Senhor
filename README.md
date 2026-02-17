@@ -1,4 +1,9 @@
 # News
+17/2/2026
+
+Updates: Amstrad CPC
+
+___
 16/2/2026
 
 Updates: Saturn, SNES
