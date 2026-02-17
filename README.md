@@ -1,7 +1,7 @@
 # News
 17/2/2026
 
-Updates: Amstrad CPC
+Updates: MSX, Amstrad CPC
 
 ___
 16/2/2026
