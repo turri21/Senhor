@@ -1,4 +1,9 @@
 # News
+18/2/2026
+
+Updates: Gameboy
+
+___
 17/2/2026
 
 Updates: MSX, Amstrad CPC
