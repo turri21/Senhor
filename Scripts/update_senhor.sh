@@ -497,29 +497,31 @@ download_file() {
         return 0
     fi
 
+    # For MRA files - always skip if exists (treat like RBF/MGL)
+    if [[ "$file" =~ \.mra$ && -f "$local_file" ]]; then
+        log "Skipping (exists): $folder/$file"
+        return 0
+    fi
+
     # Skip if file exists and we're not in delete mode
     if [ ! "$DELETE_OLD_FILES" = true ] && [ -f "$local_file" ]; then
         log "Skipping (exists): $folder/$file"
         return 0
     fi
 
-    # Special handling for MRA and MGL files in delete mode - compare file sizes
-    if [[ "$DELETE_OLD_FILES" = true && ( "$file" =~ \.mra$ || "$file" =~ \.mgl$ ) && -f "$local_file" ]]; then
+    # Special handling for MGL files in delete mode - compare file sizes (MRA handled above)
+    if [[ "$DELETE_OLD_FILES" = true && "$file" =~ \.mgl$ && -f "$local_file" ]]; then
         # Compare file sizes instead of timestamps
         if remote_size=$(wget --spider --server-response "$BASE_URL/$folder/$file" 2>/dev/null | \
            grep -E '^Length:' | awk '{print $2}'); then
             local_size=$(stat -c %s "$local_file" 2>/dev/null || echo 0)
             
             if [[ "$remote_size" -eq "$local_size" ]]; then
-                local file_type="MRA"
-                [[ "$file" == *.mgl ]] && file_type="MGL"
                 log "Skipping (unchanged): $folder/$file"
                 return 0
             fi
         else
-            local file_type="MRA"
-            [[ "$file" =~ \.mgl$ ]] && file_type="MGL"
-            log "Couldn't verify remote $file_type size, proceeding with download..." WARN
+            log "Couldn't verify remote MGL size, proceeding with download..." WARN
         fi
     fi
 
