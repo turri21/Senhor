@@ -1,4 +1,9 @@
 # News
+19/2/2026
+
+Updates: MegaDrive
+
+___
 18/2/2026
 
 Updates: Gameboy
