@@ -17,30 +17,24 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ###############################################
-# ASCII Art Logo
+# Color & Style Constants
 ###############################################
-echo -e "\e[1;36m"
-cat << "EOF"                                                              
- ██████╗███████╗███╗   ██╗██╗  ██╗ ██████╗ █████╗            __           
-██╔════╝██╔════╝████╗  ██║██║  ██║██╔═══██╗██╔══██╗         (  ) 
-███████╗█████╗  ██╔██╗ ██║███████║██║   ██║██████╔╝          ||
-╚════██║██╔══╝  ██║╚██╗██║██╔══██║██║   ██║██╔══██╗          ||
-███████ ███████╗██║ ╚████║██║  ██║╚██████╔╝██║  ██║  __..___|""|_  
-╚══════╝╚══════╝╚═╝  ╚═══╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝ /____________\ 
-.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\____________/
-EOF
-echo -e "\e[0m"
-echo "=================================================================="
-echo "          Update Script for Senhor FPGA                           "
-echo "=================================================================="
-echo 
+C_RESET="\e[0m"
+C_BOLD="\e[1m"
+C_CYAN="\e[1;36m"
+C_BLUE="\e[1;34m"
+C_GREEN="\e[1;32m"
+C_YELLOW="\e[1;33m"
+C_MAGENTA="\e[1;35m"
+C_RED="\e[1;31m"
+C_DIM="\e[2m"
 
 ###############################################
 # Configuration
 ###############################################
 SCRIPT_NAME="update_senhor.sh"
+CURRENT_VERSION="1.6"  # Update this when you release new versions
 SCRIPT_URL="https://raw.githubusercontent.com/turri21/Senhor/main/Scripts/$SCRIPT_NAME"
-CURRENT_VERSION="1.5"  # Update this when you release new versions
 
 REPO_OWNER="turri21"
 REPO_NAME="Distribution_Senhor"
@@ -53,6 +47,26 @@ USE_PROXY_ON_FAIL=true
 # Your Nginx cache server address. Ex: "http://192.168.1.100:8080"
 PROXY_SERVER="http://proxy.andi.com.br"
 PROXY_MODE_ACTIVE=false
+
+###############################################
+# ASCII Art Logo
+###############################################
+clear
+echo -e "${C_CYAN}"
+cat << "EOF"
+ ██████╗███████╗███╗   ██╗██╗  ██╗ ██████╗ ██████╗           __
+██╔════╝██╔════╝████╗  ██║██║  ██║██╔═══██╗██╔══██╗         (  )
+███████╗█████╗  ██╔██╗ ██║███████║██║   ██║███████║          ||
+╚════██║██╔══╝  ██║╚██╗██║██╔══██║██║   ██║██╔══██║          ||
+███████ ███████╗██║ ╚████║██║  ██║╚██████╔╝██║  ██║  __..___|""|_
+╚══════╝╚══════╝╚═╝  ╚═══╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝ /____________\
+.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\____________/
+EOF
+echo -e "${C_RESET}"
+echo -e "${C_MAGENTA}==================================================================${C_RESET}"
+echo -e "${C_BOLD}         Update Script for Senhor FPGA  --  v${CURRENT_VERSION}${C_RESET}"
+echo -e "${C_MAGENTA}==================================================================${C_RESET}"
+echo
 
 declare -A FOLDERS=(
     ["_Arcade"]="/media/fat/_Arcade"
@@ -80,6 +94,66 @@ done
 touch "$LOG_FILE"
 
 ###############################################
+# Progress Bar 
+###############################################
+# Usage: draw_progress_bar <current> <total> <label>
+SPINNER_FRAMES=('|' '/' '-' '\' '|' '/' '-' '\' '|' '/')
+_SPINNER_IDX=0
+
+# Call before a download loop to suppress log() terminal output
+start_progress_bar() {
+    PROGRESS_BAR_ACTIVE=true
+}
+
+# Call after a download loop to restore log() output and move past the bar line
+finish_progress_bar() {
+    PROGRESS_BAR_ACTIVE=false
+    echo
+}
+
+draw_progress_bar() {
+    local current="$1"
+    local total="$2"
+    local label="${3:- }"
+    label="${label:0:32}"
+
+    local bar_width=28
+    local pct=0
+    local filled=0
+
+    if [[ "$total" -gt 0 ]]; then
+        pct=$(( current * 100 / total ))
+        filled=$(( current * bar_width / total ))
+    fi
+
+    local empty=$(( bar_width - filled ))
+    local bar_fill="" bar_empty=""
+    for ((i=0; i<filled; i++));  do bar_fill+="█"; done
+    for ((i=0; i<empty; i++));   do bar_empty+="░"; done
+
+    local spinner="${SPINNER_FRAMES[$_SPINNER_IDX]}"
+    _SPINNER_IDX=$(( (_SPINNER_IDX + 1) % ${#SPINNER_FRAMES[@]} ))
+
+    local bar_colour="${C_CYAN}"
+    local status_colour="${C_CYAN}"
+    if [[ "$current" -ge "$total" && "$total" -gt 0 ]]; then
+        bar_colour="${C_GREEN}"
+        status_colour="${C_GREEN}"
+        spinner="+"
+    fi
+
+    local tag=""
+    case "${4:-}" in
+        DL)   tag="${C_GREEN}[DL]${C_RESET}" ;;
+        SKIP) tag="${C_DIM}[--]${C_RESET}" ;;
+        ERR)  tag="${C_RED}[!!]${C_RESET}" ;;
+        *)    tag="    " ;;
+    esac
+    printf "\r  ${status_colour}%s${C_RESET} [${bar_colour}%s${C_DIM}%s${C_RESET}] ${C_BOLD}%3d%%${C_RESET} %s/%s  ${C_DIM}%-32s${C_RESET}  %b  " \
+        "$spinner" "$bar_fill" "$bar_empty" "$pct" "$current" "$total" "$label" "$tag"
+}
+
+###############################################
 # Functions
 ###############################################
 
@@ -92,100 +166,93 @@ download_wrapper() {
     if [[ "$PROXY_MODE_ACTIVE" = true && "$USE_PROXY_ON_FAIL" = true && -n "$PROXY_SERVER" ]]; then
         local proxy_base_url=${PROXY_SERVER%/}
         local proxied_url="${proxy_base_url}/${url}"
-        log "Proxy mode active. Trying download of $url via proxy..."
         if wget $wget_options "$proxied_url" -O "$output_file" && [ -s "$output_file" ]; then
-            log "Download via proxy successful."
             return 0
         else
-            log "Download via proxy failed even in active proxy mode."
             rm -f "$output_file"
-            log "ERROR: All download attempts failed for: $url"
             return 1
         fi
     fi
 
     # Attempt 1: Direct Download
-    log "Trying direct download: $url"
     if wget $wget_options "$url" -O "$output_file" && [ -s "$output_file" ]; then
-        log "Direct download successful."
         return 0
     fi
     
-    # If direct download fails...
-    log "Direct download failed. Checking for proxy fail-over..."
-    rm -f "$output_file" # Clean up empty/failed file
+    rm -f "$output_file"
 
     # Attempt 2: Use Proxy (if enabled and configured)
     if [[ "$USE_PROXY_ON_FAIL" = true && -n "$PROXY_SERVER" ]]; then
-        log "Switching to proxy mode for all subsequent downloads."
-        PROXY_MODE_ACTIVE=true # Activate proxy mode globally
+        PROXY_MODE_ACTIVE=true
 
         local proxy_base_url=${PROXY_SERVER%/}
         local proxied_url="${proxy_base_url}/${url}"
-        log "Trying download of $url via proxy..."
         
         if wget $wget_options "$proxied_url" -O "$output_file" && [ -s "$output_file" ]; then
-            log "Download via proxy successful."
             return 0
         else
-            log "Download via proxy also failed."
             rm -f "$output_file"
         fi
     fi
     
-    log "ERROR: All download attempts failed for: $url"
     return 1
 }
+PROGRESS_BAR_ACTIVE=false
+
 log() {
-    local msg="$(date "+%d-%m-%Y %H:%M:%S") - $1"
-    echo "$msg" >> "$LOG_FILE"
-    echo "$msg" > /dev/tty1
-    echo -e "\e[1;34m$msg\e[0m"
+    local timestamp="$(date "+%d-%m-%Y %H:%M:%S")"
+    local msg="$1"
+    local level="${2:-INFO}"
+    local full_msg="[$timestamp] $msg"
+    echo "$full_msg" >> "$LOG_FILE"
+    # Suppress terminal output while the progress bar is on screen
+    [[ "$PROGRESS_BAR_ACTIVE" == true ]] && return 0
+    echo "$full_msg" > /dev/tty1 2>/dev/null || true
+    case "$level" in
+        ERROR)   echo -e "${C_RED}[X] $msg${C_RESET}" ;;
+        WARN)    echo -e "${C_YELLOW}[!] $msg${C_RESET}" ;;
+        SUCCESS) echo -e "${C_GREEN}[+] $msg${C_RESET}" ;;
+        *)       echo -e "${C_BLUE}[.] $msg${C_RESET}" ;;
+    esac
 }
 
 check_internet() {
     log "Checking internet connection..."
     
-    # Try HTTPS first (more reliable), fallback to ping
     local connected=false
     local timeout=5
-    
-    # Test multiple endpoints with HTTPS
     local endpoints=("https://1.1.1.1" "https://8.8.8.8" "https://google.com")
     
     for endpoint in "${endpoints[@]}"; do
         if command -v curl >/dev/null 2>&1; then
             if curl --connect-timeout "$timeout" --max-time "$timeout" --fail --silent --head "$endpoint" >/dev/null 2>&1; then
-                connected=true
-                break
+                connected=true; break
             fi
         elif command -v wget >/dev/null 2>&1; then
             if wget --timeout="$timeout" --tries=1 --quiet --spider "$endpoint" >/dev/null 2>&1; then
-                connected=true
-                break
+                connected=true; break
             fi
         fi
     done
     
-    # Fallback to ping if HTTPS tests failed
     if [ "$connected" = false ]; then
         if ping -4 -q -c 1 -W 3 1.1.1.1 >/dev/null 2>&1; then
             connected=true
         fi
     fi
     
-    # Handle results
     if [ "$connected" = true ]; then
-        log "Internet connection is available."
+        log "Internet connection is available." SUCCESS
     else
-        log "ERROR: No internet connection. Please check your network and try again."
-        echo -e "\e[33mTroubleshooting tips:\e[0m"
-        echo -e "[*] Check your WiFi/Ethernet connection"
-        echo -e "[*] Verify DNS settings (try 8.8.8.8 or 1.1.1.1)"
-        echo -e "[*] Check if you're behind a corporate firewall"
-        echo -e "[*] Try accessing a website in your browser"
-        echo -e "\e[1;31mNo internet connection. Exiting.\e[0m"
-        read -p "Press enter to exit..."
+        log "No internet connection detected." ERROR
+        echo
+        echo -e "${C_YELLOW}  Troubleshooting tips:${C_RESET}"
+        echo -e "  ${C_DIM}*${C_RESET} Check your WiFi/Ethernet connection"
+        echo -e "  ${C_DIM}*${C_RESET} Verify DNS settings (try 8.8.8.8 or 1.1.1.1)"
+        echo -e "  ${C_DIM}*${C_RESET} Check if you're behind a corporate firewall"
+        echo -e "  ${C_DIM}*${C_RESET} Try accessing a website in your browser"
+        echo
+        read -p "  Press Enter to exit..."
         exit 1
     fi
 }
@@ -193,37 +260,35 @@ check_internet() {
 check_for_updates() {
     log "Checking for script updates..."
     
-    # Download the latest version to compare
     local temp_script="$TEMP_DIR/$SCRIPT_NAME.tmp"
     if ! download_wrapper "$SCRIPT_URL" "$temp_script"; then
-        log "Failed to check for updates. Continuing with current version."
+        log "Failed to check for updates. Continuing with current version." WARN
         return 1
     fi
 
-    # Extract version from the downloaded script
-    local latest_version=$(grep -m1 '^CURRENT_VERSION=' "$temp_script" | cut -d'"' -f2)
+    local latest_version
+    latest_version=$(grep -m1 '^CURRENT_VERSION=' "$temp_script" | cut -d'"' -f2)
     
     if [[ "$latest_version" != "$CURRENT_VERSION" ]]; then
-        log "New version available ($latest_version). Current version is $CURRENT_VERSION."
-        if whiptail --title "Update Available" --yesno "A new update_senhor version ($latest_version) is available. Update now?" 8 78; then
-            # Backup current script
-            cp "$0" "$0old"
-            
-            # Replace with new version
+        log "New version available: v$latest_version (current: v$CURRENT_VERSION)" SUCCESS
+        if whiptail --title "Script Update Available" \
+            --yesno "A new version of update_senhor is available!\n\nCurrent:  v${CURRENT_VERSION}\nLatest:   v${latest_version}\n\nUpdate now?" 12 60; then
+            # Backup current script (fixed: was $0old, should be $0.bak)
+            cp "$0" "$0.bak"
             if mv "$temp_script" "$0" && chmod +x "$0"; then
-                log "Successfully updated to version $latest_version. Please restart the script."
+                log "Successfully updated to v$latest_version. Please restart the script." SUCCESS
                 exit 0
             else
-                log "Update failed. Restoring backup."
+                log "Update failed. Restoring backup." ERROR
                 mv "$0.bak" "$0"
                 return 1
             fi
         else
-            log "User chose not to update."
+        log "User chose to skip update."
             rm -f "$temp_script"
         fi
     else
-        log "Script is up to date (v$CURRENT_VERSION)."
+        log "Script is up to date (v$CURRENT_VERSION)." SUCCESS
         rm -f "$temp_script"
     fi
 }
@@ -252,7 +317,7 @@ check_version_flags() {
             UPDATE_DATES["$key"]="$date"
         done < "$version_file"
     else
-        log "No version flags file found or couldn't download it."
+        log "No version flags file found or couldn't download it." WARN
     fi
 }
 
@@ -274,60 +339,51 @@ show_update_info() {
 
 # Function to display news and wait for key press
 display_news() {
+    local NEWS_URL="https://github.com/turri21/Distribution_Senhor/raw/main/news.txt"
+    local TEMP_FILE="/tmp/Senhor_news.txt"
 
-    # Configuration
-    NEWS_URL="https://github.com/turri21/Distribution_Senhor/raw/main/news.txt"
-    TEMP_FILE="/tmp/Senhor_news.txt"
-
-    # Download the news file
-    echo "Downloading news..."
+    log "Fetching latest news..."
     if ! download_wrapper "$NEWS_URL" "$TEMP_FILE"; then
-        echo "Failed to download news file."
+        log "Could not download news file." WARN
         return 1
     fi
 
-    # Check if the file has content
     if [ ! -s "$TEMP_FILE" ]; then
-        echo "News file is empty."
+        log "News file is empty." WARN
         return 1
     fi
 
-    # Clear screen before showing news
-    # clear
+    echo
+    echo -e "${C_YELLOW}==================== Senhor News =================================${C_RESET}"
+    echo
 
-    # Display header
-    echo -e "\n\033[1;33m================= Senhor News ====================================\033[0m\n"
-
-    # Process and display the news with colors
     while IFS= read -r line; do
-        # Replace tags with color codes
-        line="${line//\[TITLE\]/$'\033[0;36m[*] '}"
+        line="${line//\[TITLE\]/$'\033[1;36m>> '}"
         line="${line//\[\/TITLE\]/$'\033[0m'}"
-        line="${line//\[INFO\]/$'\033[0;32m[i] '}"
+        line="${line//\[INFO\]/$'\033[0;32m  i '}"
         line="${line//\[\/INFO\]/$'\033[0m'}"
-        line="${line//\[WARNING\]/$'\033[0;31m[!] '}"
+        line="${line//\[WARNING\]/$'\033[1;31m  ! '}"
         line="${line//\[\/WARNING\]/$'\033[0m'}"
         echo -e "$line"
     done < "$TEMP_FILE"
 
-    # Display footer
-    echo -e "\n\033[1;33m==================================================================\033[0m\n"
-    
-    # Wait for any key press
-    echo -e "\033[0;35mPress any key to continue...\033[0m"
+    echo
+    echo -e "${C_YELLOW}==================================================================${C_RESET}"
+    echo
+    echo -e "${C_MAGENTA}  Press any key to continue...${C_RESET}"
     read -n 1 -s -r
     echo
-
-    # Exit cleanly
     return 0
 }
 
 prompt_delete_mode() {
-    if whiptail --title "Do you want to delete older versions of RBF/MGL/MRA files?" --yesno "Enable deletion of old RBF/MGL/MRA files?" 8 78; then
-       DELETE_OLD_FILES=true
-       echo "Old RBF/MGL/MRA files will BE deleted!"
+    if whiptail --title "File Cleanup Mode" \
+        --yesno "Delete older versions of RBF/MGL/MRA files after downloading?\n\nThis will remove superseded core versions to save space." 10 60; then
+        DELETE_OLD_FILES=true
+        log "Cleanup mode enabled: old RBF/MGL/MRA files will be removed." WARN
     else
-       echo "Old RBF/MGL/MRA files will NOT be deleted."
+        DELETE_OLD_FILES=false
+        log "Cleanup mode disabled: existing files will be kept."
     fi
 }
 
@@ -337,12 +393,9 @@ fetch_file_list() {
     local list_file="$TEMP_DIR/${folder}_$FILE_LIST_EXT"
     local file_list_url="$BASE_URL/$folder/$FILE_LIST_EXT"
 
-    log "Fetching file list for $folder..."
-
     mkdir -p "$(dirname "$list_file")"
 
-    if ! download_wrapper "$file_list_url" "$list_file"; then
-        log "\e[31mWARNING: No file list found for $folder\e[0m"
+    if ! download_wrapper "$file_list_url" "$list_file" >/dev/null 2>&1; then
         FILES=()
         return 1
     fi
@@ -353,7 +406,6 @@ fetch_file_list() {
         line="${line##*/}"
         line="${line//[$'\t\r\n']}"
         
-        # Filter based on requested file type
         if [[ "$file_type" == "rbf_mgl" && "$line" =~ \.(rbf|mgl)$ ]]; then
             FILES+=("$line")
         elif [[ "$file_type" == "mra" && "$line" =~ \.mra$ ]]; then
@@ -363,11 +415,9 @@ fetch_file_list() {
 
     local count=${#FILES[@]}
     if [ "$count" -eq 0 ]; then
-        log "WARNING: No valid $file_type files found in $folder list"
         return 1
     fi
 
-    log "Found $count $file_type files in $folder"
     return 0
 }
 
@@ -377,19 +427,6 @@ delete_old_versions() {
     local download_dir="${FOLDERS[$folder]}"
     local full_path_new="$download_dir/$new_file"
 
-    ## For MRA files - delete any older files with same base name
-    ## DISABLED -- It also deletes new files of the same base name and that's not needed atm.
-    #if [[ "$new_file" == *.mra ]]; then
-    #    local base_name="${new_file%.*}"
-    #    # Find and log all files that will be deleted
-    #    find "$download_dir" -maxdepth 1 -name "${base_name}*.mra" ! -name "$new_file" | while read -r existing; do
-    #        existing_file=$(basename "$existing")
-    #        log "\e[31mDeleting older MRA: \e[0m\e[1;33m$existing_file\e[0m"
-    #        rm -f "$existing"
-    #    done
-    #    return $?
-    #fi
-    
     # Original MGL version handling
     if [[ "$new_file" == *.mgl ]]; then
         local base_prefix=$(echo "$new_file" | cut -d'_' -f1-2)
@@ -422,30 +459,27 @@ delete_old_versions() {
 }
 
 download_arcadealt() {
-    ZIP_URL="https://github.com/turri21/Distribution_Senhor/raw/main/_Arcade/_alternatives.zip"
-    DEST_DIR="/media/fat/_Arcade"
-    TEMP_ZIP="/tmp/_alternatives.zip"
+    local ZIP_URL="https://github.com/turri21/Distribution_Senhor/raw/main/_Arcade/_alternatives.zip"
+    local DEST_DIR="/media/fat/_Arcade"
+    local TEMP_ZIP="/tmp/_alternatives.zip"
 
-    echo "Deleting old _alternatives folder..."
+    log "Removing old _alternatives folder..."
     rm -rf "/media/fat/_Arcade/_alternatives"
-    echo "Downloading Arcade mra _alternatives.zip with wget..."
+
+    log "Downloading Arcade MRA alternatives..."
     if ! download_wrapper "$ZIP_URL" "$TEMP_ZIP"; then
-        echo "Download failed."
+        log "Download failed." ERROR
         exit 1
     fi
 
-    echo "Extracting ZIP to $DEST_DIR..."
-    unzip -o "$TEMP_ZIP" -d "$DEST_DIR"
-
-    if [ $? -ne 0 ]; then
-        echo "Extraction failed."
+    log "Extracting to $DEST_DIR..."
+    if ! unzip -o "$TEMP_ZIP" -d "$DEST_DIR"; then
+        log "Extraction failed." ERROR
         exit 1
     fi
 
-    echo "Cleaning up..."
-    rm "$TEMP_ZIP"
-
-    echo "Done."
+    rm -f "$TEMP_ZIP"
+    log "Arcade alternatives installed successfully." SUCCESS
 }
 
 download_file() {
@@ -457,36 +491,36 @@ download_file() {
     local local_file="$download_dir/$file"
     local temp_file="$TEMP_DIR/$file"
 
+    # For RBF and MGL files, always respect the existing skip logic
+    if [[ ( "$file" =~ \.rbf$ || "$file" =~ \.mgl$ ) && -f "$local_file" ]]; then
+        log "Skipping (exists): $folder/$file"
+        return 0
+    fi
+
     # Skip if file exists and we're not in delete mode
     if [ ! "$DELETE_OLD_FILES" = true ] && [ -f "$local_file" ]; then
-        log "Skipping existing file: $folder/$file"
+        log "Skipping (exists): $folder/$file"
         return 0
     fi
 
     # Special handling for MRA and MGL files in delete mode - compare file sizes
     if [[ "$DELETE_OLD_FILES" = true && ( "$file" =~ \.mra$ || "$file" =~ \.mgl$ ) && -f "$local_file" ]]; then
         # Compare file sizes instead of timestamps
-        if remote_size=$(wget --spider --server-response "$BASE_URL/$folder/$file" 2>&1 | \
+        if remote_size=$(wget --spider --server-response "$BASE_URL/$folder/$file" 2>/dev/null | \
            grep -E '^Length:' | awk '{print $2}'); then
             local_size=$(stat -c %s "$local_file" 2>/dev/null || echo 0)
             
             if [[ "$remote_size" -eq "$local_size" ]]; then
                 local file_type="MRA"
                 [[ "$file" == *.mgl ]] && file_type="MGL"
-                log "$file_type file sizes match, skipping download: $folder/$file"
+                log "Skipping (unchanged): $folder/$file"
                 return 0
             fi
         else
             local file_type="MRA"
             [[ "$file" =~ \.mgl$ ]] && file_type="MGL"
-            log "Couldn't verify remote $file_type file, proceeding with download..."
+            log "Couldn't verify remote $file_type size, proceeding with download..." WARN
         fi
-    fi
-
-    # For RBF files, always respect the existing skip logic
-    if [[ "$file" =~ \.rbf$ && -f "$local_file" ]]; then
-        log "Skipping existing RBF file: $folder/$file"
-        return 0
     fi
 
     # Download with retry logic
@@ -498,8 +532,8 @@ download_file() {
                     delete_old_versions "$folder" "$file"
                 fi
                 mv "$temp_file" "$local_file"
-                log "Successfully downloaded: \e[1;32m$folder/$file\e[0m"
-                return 0
+                log "Downloaded: $folder/$file" SUCCESS
+                return 2
             else
                 log "Attempt $i: Downloaded empty file"
                 rm -f "$temp_file"
@@ -508,56 +542,61 @@ download_file() {
         sleep $retry_delay
     done
 
-    log "ERROR: Failed to download after $max_retries attempts: \e[1;31m$folder/$file\e[0m"
+    log "Failed to download after $max_retries attempts: $folder/$file" ERROR
     return 1
+}
+
+###############################################
+# Dependency Helpers
+###############################################
+require_jq() {
+    if ! command -v jq &>/dev/null; then
+        log "Required tool 'jq' is not installed. Install it with: apt install jq" ERROR
+        return 1
+    fi
+    return 0
 }
 
 ###############################################
 # Arcade ROMs
 ###############################################
 download_arcaderoms() {
-    # Base target directory
-    BASE_DIR="/media/fat"
+    local BASE_DIR="/media/fat"
 
-    echo "Downloading..."
+    require_jq || return 1
+
+    log "Downloading Arcade ROMs database..."
     if ! download_wrapper "https://raw.githubusercontent.com/zakk4223/ArcadeROMsDB_MiSTer/db/arcade_roms_db.json.zip" "$BASE_DIR/arcade_roms_db.json.zip"; then
-        echo "Download failed."
+        log "Failed to download Arcade ROMs database." ERROR
         return 1
     fi
 
-    echo "Extracting JSON file..."
+    log "Extracting database..."
     unzip -o "$BASE_DIR/arcade_roms_db.json.zip" -d "$BASE_DIR"
 
-    echo "Processing JSON..."
-
-    # Check if jq is installed
-    if ! command -v jq &> /dev/null; then
-        echo "This script requires 'jq'. Please install it (e.g., 'sudo apt install jq')."
-        return 1
-    fi
+    log "Processing Arcade ROMs..."
+    local total=0 downloaded=0 skipped=0 failed=0
 
     jq -r '.files | to_entries[] | "\(.key) \(.value.url)"' "$BASE_DIR/arcade_roms_db.json" | while read -r path url; do
-        # Remove leading pipe character
-        relative_path="${path#|}"
-
-        # Compute full output path
-        full_path="$BASE_DIR/$relative_path"
-
-        # Create directory if needed
+        local relative_path="${path#|}"
+        local full_path="$BASE_DIR/$relative_path"
         mkdir -p "$(dirname "$full_path")"
-
-        # Download file if it doesn't exist
+        ((total++))
         if [ ! -f "$full_path" ]; then
-            echo "Downloading $relative_path..."
-            if ! download_wrapper "$url" "$full_path"; then
-                echo "Failed to download $relative_path"
+            if download_wrapper "$url" "$full_path"; then
+                log "Downloaded: $relative_path" SUCCESS
+                ((downloaded++))
+            else
+                log "Failed: $relative_path" ERROR
+                ((failed++))
             fi
         else
-            echo "File $relative_path already exists. Skipping."
+            log "Skipping (exists): $relative_path"
+            ((skipped++))
         fi
     done
 
-    echo "All files processed and saved under $BASE_DIR."
+    log "Arcade ROMs complete. Downloaded: $downloaded  Skipped: $skipped  Failed: $failed" SUCCESS
 }
 
 ###############################################
@@ -565,66 +604,51 @@ download_arcaderoms() {
 ###############################################
 
 download_bios() {
-    # Base target directory
-    BASE_DIR="/media/fat"
+    local BASE_DIR="/media/fat"
     local JSON_ZIP="$BASE_DIR/bios_db.json.zip"
     local JSON_FILE="$BASE_DIR/bios_db.json"
-    
-    # Initialize success flag
     local SUCCESS=true
 
-    echo "Downloading BIOS database..."
+    require_jq || return 1
+
+    log "Downloading BIOS database..."
     if ! download_wrapper "https://raw.githubusercontent.com/ajgowans/BiosDB_MiSTer/db/bios_db.json.zip" "$JSON_ZIP"; then
-        echo "Download failed."
+        log "Failed to download BIOS database." ERROR
         return 1
     fi
 
-    echo "Extracting JSON file..."
+    log "Extracting database..."
     if ! unzip -o "$JSON_ZIP" -d "$BASE_DIR"; then
-        echo "Extraction failed."
+        log "Extraction failed." ERROR
         SUCCESS=false
     fi
 
-    echo "Processing JSON..."
-
-    # Check if jq is installed
-    if ! command -v jq &> /dev/null; then
-        echo "This script requires 'jq'. Please install it (e.g., 'sudo apt install jq')."
-        SUCCESS=false
-    else
+    if [ "$SUCCESS" = true ]; then
+        log "Processing BIOS files..."
         jq -r '.files | to_entries[] | "\(.key) \(.value.url)"' "$JSON_FILE" | while read -r path url; do
-            # Remove leading pipe character
-            relative_path="${path#|}"
-
-            # Compute full output path
-            full_path="$BASE_DIR/$relative_path"
-
-            # Create directory if needed
+            local relative_path="${path#|}"
+            local full_path="$BASE_DIR/$relative_path"
             mkdir -p "$(dirname "$full_path")"
-
-            # Download file if it doesn't exist
             if [ ! -f "$full_path" ]; then
-                echo "Downloading $relative_path..."
                 if ! download_wrapper "$url" "$full_path"; then
-                    echo "Failed to download $relative_path"
+                    log "Failed to download: $relative_path" ERROR
                     SUCCESS=false
+                else
+                    log "Downloaded: $relative_path" SUCCESS
                 fi
             else
-                echo "File $relative_path already exists. Skipping."
+                log "Skipping (exists): $relative_path"
             fi
         done
     fi
 
-    # Cleanup temporary files
-    echo "Cleaning up temporary files..."
+    log "Cleaning up temporary files..."
     rm -f "$JSON_ZIP" "$JSON_FILE"
-    [ -f "$JSON_ZIP" ] && echo "Warning: Failed to remove $JSON_ZIP"
-    [ -f "$JSON_FILE" ] && echo "Warning: Failed to remove $JSON_FILE"
 
     if [ "$SUCCESS" = true ]; then
-        echo "BIOS files successfully processed and saved under $BASE_DIR/games/."
+        log "BIOS files installed successfully under $BASE_DIR/games/" SUCCESS
     else
-        echo "BIOS files processed with some errors."
+        log "BIOS download completed with some errors." WARN
     fi
 
     return $([ "$SUCCESS" = true ] && echo 0 || echo 1)
@@ -644,89 +668,82 @@ download_gbaborders() {
     # Create directories if they don't exist
     mkdir -p "$JSON_DIR"
 
-    echo "Downloading database..."
+    log "Downloading GBA Borders database..."
     if ! download_wrapper "https://raw.githubusercontent.com/Dinierto/MiSTer-GBA-Borders/db/db.json.zip" "$DB_ZIP"; then
-        echo "Database download failed."
+        log "Database download failed." ERROR
         return 1
     fi
 
-    echo "Extracting JSON file..."
+    log "Extracting database..."
     if ! unzip -o "$DB_ZIP" -d "$JSON_DIR"; then
-        echo "Extraction failed."
+        log "Extraction failed." ERROR
         rm -f "$DB_ZIP"
         return 1
     fi
 
     if [ ! -f "$JSON_FILE" ]; then
-        echo "JSON file not found after extraction."
+        log "JSON file not found after extraction." ERROR
         rm -f "$DB_ZIP"
         return 1
     fi
 
-    echo "Processing JSON..."
+    log "Processing GBA Borders..."
 
-    # Check if jq is installed
-    if ! command -v jq &> /dev/null; then
-        echo "This script requires 'jq'. Please install it (e.g., 'sudo apt install jq')."
-        rm -f "$DB_ZIP" "$JSON_FILE"
-        return 1
-    fi
+    require_jq || { rm -f "$DB_ZIP" "$JSON_FILE"; return 1; }
 
     # Get the commit hash from base_files_url
     COMMIT_HASH=$(jq -r '.base_files_url' "$JSON_FILE" | cut -d'/' -f6)
     if [ -z "$COMMIT_HASH" ]; then
-        echo "Could not determine commit hash from JSON."
+        log "Could not determine commit hash from JSON." ERROR
         rm -f "$DB_ZIP" "$JSON_FILE"
         return 1
     fi
 
-    # Create temporary file for counters
-    COUNTER_FILE=$(mktemp)
-    echo "0 0 0 0" > "$COUNTER_FILE" # TOTAL SKIPPED DOWNLOADED FAILED
+    # Collect all file entries first so we know the total for the progress bar
+    local GBA_DATA_FILE
+    GBA_DATA_FILE=$(mktemp)
+    jq -r '.files | to_entries[] | "\(.key)\t\(.value.hash)\t\(.value.size)"' "$JSON_FILE" > "$GBA_DATA_FILE"
+    local TOTAL_FILES=0 SKIPPED_FILES=0 DOWNLOADED_FILES=0 FAILED_FILES=0
+    local GBA_TOTAL
+    GBA_TOTAL=$(wc -l < "$GBA_DATA_FILE")
+    log "Found $GBA_TOTAL GBA Border file(s)."
+    echo
+    echo -e "${C_CYAN}  [ GBA Borders ]${C_RESET}"
+    start_progress_bar
+    draw_progress_bar 0 "$GBA_TOTAL" "Starting..."
 
-    # Process files
-    jq -r '.files | to_entries[] | "\(.key)\t\(.value.hash)\t\(.value.size)"' "$JSON_FILE" | while IFS=$'\t' read -r path hash size; do
-        # Read current counters
-        read TOTAL_FILES SKIPPED_FILES DOWNLOADED_FILES FAILED_FILES < "$COUNTER_FILE"
+    local current_idx=0
+    local _tag=""
+    while IFS=$'\t' read -r path hash size; do
         TOTAL_FILES=$((TOTAL_FILES + 1))
-        
-        # Remove leading pipe character from path
+        _tag=""
+
         relative_path="${path#|}"
         filename=$(basename "$relative_path")
-        
-        # Compute full output path
         full_path="$BASE_DIR/$relative_path"
-        
-        # Create directory if needed
         mkdir -p "$(dirname "$full_path")"
 
-        # Check if file exists and has correct hash and size
         if [ -f "$full_path" ]; then
             current_size=$(stat -c%s "$full_path" 2>/dev/null || echo 0)
             if [ "$current_size" -eq "$size" ]; then
                 current_hash=$(md5sum "$full_path" | cut -d' ' -f1)
                 if [ "$current_hash" = "$hash" ]; then
-                    echo "[*] $filename already correct. Skipping."
                     SKIPPED_FILES=$((SKIPPED_FILES + 1))
-                    echo "$TOTAL_FILES $SKIPPED_FILES $DOWNLOADED_FILES $FAILED_FILES" > "$COUNTER_FILE"
+                    _tag="SKIP"
+                    ((current_idx++))
+                    draw_progress_bar "$current_idx" "$GBA_TOTAL" "$filename" "$_tag"
                     continue
                 fi
             fi
         fi
 
-        # Download with retry logic
         max_retries=3
         retry_count=0
         success=0
-        
+        download_url="https://raw.githubusercontent.com/Dinierto/MiSTer-GBA-Borders/$COMMIT_HASH/$relative_path"
+
         while [ $retry_count -lt $max_retries ] && [ $success -eq 0 ]; do
-            echo "↓ Downloading $filename (attempt $((retry_count+1)))..."
-            
-            # Construct proper GitHub raw content URL
-            download_url="https://raw.githubusercontent.com/Dinierto/MiSTer-GBA-Borders/$COMMIT_HASH/$relative_path"
-            
             if download_wrapper "$download_url" "$full_path.tmp"; then
-                # Verify download
                 current_size=$(stat -c%s "$full_path.tmp" 2>/dev/null || echo 0)
                 if [ "$current_size" -eq "$size" ]; then
                     current_hash=$(md5sum "$full_path.tmp" | cut -d' ' -f1)
@@ -734,52 +751,38 @@ download_gbaborders() {
                         mv "$full_path.tmp" "$full_path"
                         success=1
                         DOWNLOADED_FILES=$((DOWNLOADED_FILES + 1))
-                        echo "[*] Success: $filename"
-                    else
-                        echo "[X] Hash mismatch: $filename"
                     fi
-                else
-                    echo "[X] Size mismatch: $filename (got $current_size, expected $size)"
                 fi
-            else
-                echo "[X] Download failed: $filename"
             fi
-            
-            # Clean up temp file if failed
             [ -f "$full_path.tmp" ] && rm -f "$full_path.tmp"
             retry_count=$((retry_count+1))
         done
 
         if [ $success -eq 0 ]; then
-            echo "[!] Failed to download $filename after $max_retries attempts"
             FAILED_FILES=$((FAILED_FILES + 1))
+            _tag="ERR"
+            log "Failed: $filename" ERROR
+        else
+            _tag="DL"
         fi
+        ((current_idx++))
+        draw_progress_bar "$current_idx" "$GBA_TOTAL" "$filename" "$_tag"
+    done < "$GBA_DATA_FILE"
+    finish_progress_bar
 
-        # Update counters
-        echo "$TOTAL_FILES $SKIPPED_FILES $DOWNLOADED_FILES $FAILED_FILES" > "$COUNTER_FILE"
-    done
+    rm -f "$GBA_DATA_FILE" "$DB_ZIP" "$JSON_FILE"
 
-    # Read final counters
-    read TOTAL_FILES SKIPPED_FILES DOWNLOADED_FILES FAILED_FILES < "$COUNTER_FILE"
-    rm -f "$COUNTER_FILE"
-
-    # Complete cleanup
-    echo "Performing complete cleanup..."
-    rm -f "$DB_ZIP" "$JSON_FILE"
-    echo "Verified removal:"
-    [ ! -f "$DB_ZIP" ] && echo " - Removed $DB_ZIP"
-    [ ! -f "$JSON_FILE" ] && echo " - Removed $JSON_FILE"
-
-    # Print summary
-    echo ""
-    echo "===== Download Summary ====="
-    echo "Total files processed: $TOTAL_FILES"
-    echo "Successfully downloaded: $DOWNLOADED_FILES"
-    echo "Already up-to-date: $SKIPPED_FILES"
-    echo "Failed downloads: $FAILED_FILES"
-    echo ""
-    echo "Borders are in: $BASE_DIR/games/GBA/Borders/"
-    echo "Cleanup complete - all temporary files removed."
+    echo
+    echo -e "${C_CYAN}  +------------------------------+${C_RESET}"
+    echo -e "${C_CYAN}  |    GBA Borders  Summary      |${C_RESET}"
+    echo -e "${C_CYAN}  +------------------------------+${C_RESET}"
+    echo -e "${C_CYAN}  |${C_RESET}  Total processed : ${C_BOLD}$TOTAL_FILES${C_RESET}"
+    echo -e "${C_CYAN}  |${C_RESET}  Downloaded      : ${C_GREEN}$DOWNLOADED_FILES${C_RESET}"
+    echo -e "${C_CYAN}  |${C_RESET}  Already current : ${C_DIM}$SKIPPED_FILES${C_RESET}"
+    echo -e "${C_CYAN}  |${C_RESET}  Failed          : ${C_RED}$FAILED_FILES${C_RESET}"
+    echo -e "${C_CYAN}  +------------------------------+${C_RESET}"
+    echo -e "  Borders installed in: ${C_YELLOW}$BASE_DIR/games/GBA/Borders/${C_RESET}"
+    echo
 }
 
 ###############################################
@@ -808,104 +811,92 @@ download_wallpapers() {
     FAILED_FILES=0
 
     for REPO in "${REPOS[@]}"; do
-        echo "Processing repository: $REPO"
+        log "Processing repository: $REPO"
         
         DB_ZIP="$TEMP_DIR/${REPO##*/}.json.zip"
         JSON_FILE="$TEMP_DIR/db.json"
 
-        echo "Downloading database..."
+        log "Downloading wallpaper database from $REPO..."
         if ! download_wrapper "https://raw.githubusercontent.com/$REPO/db/db.json.zip" "$DB_ZIP"; then
-            echo "Database download failed for $REPO."
+            log "Database download failed for $REPO." ERROR
             continue
         fi
 
-        echo "Extracting JSON file..."
+        log "Extracting database..."
         if ! unzip -q -o "$DB_ZIP" -d "$TEMP_DIR"; then
-            echo "Extraction failed for $REPO."
+            log "Extraction failed for $REPO." ERROR
             rm -f "$DB_ZIP"
             continue
         fi
 
-        # Look for the JSON file
         if [ ! -f "$JSON_FILE" ]; then
-            echo "JSON file not found after extraction for $REPO."
-            echo "Checking for alternative locations..."
+            log "JSON file not found after extraction for $REPO. Searching..." WARN
             FOUND_JSON=$(find "$TEMP_DIR" -name "*.json" -type f | head -n 1)
             if [ -f "$FOUND_JSON" ]; then
                 JSON_FILE="$FOUND_JSON"
-                echo "Using found JSON file: $JSON_FILE"
+                log "Found JSON at: $JSON_FILE"
             else
-                echo "No JSON file found in the archive for $REPO."
+                log "No JSON file found in the archive for $REPO." ERROR
                 rm -f "$DB_ZIP"
                 continue
             fi
         fi
 
-        echo "Processing JSON..."
+        log "Processing wallpapers from $REPO..."
 
-        # Check if jq is installed
-        if ! command -v jq &> /dev/null; then
-            echo "This script requires 'jq'. Please install it (e.g., 'sudo apt install jq')."
-            rm -f "$DB_ZIP" "$JSON_FILE"
-            return 1
-        fi
+        require_jq || { rm -f "$DB_ZIP" "$JSON_FILE"; return 1; }
 
-        # Get the commit hash or use main as fallback
         COMMIT_HASH=$(jq -r '.base_files_url' "$JSON_FILE" | cut -d'/' -f6 2>/dev/null)
         if [ -z "$COMMIT_HASH" ] || [ "$COMMIT_HASH" = "null" ]; then
-            echo "Could not determine commit hash from JSON for $REPO, using 'main' as fallback."
+            log "Could not determine commit hash for $REPO - using 'main'." WARN
             COMMIT_HASH="main"
         fi
 
-        # Process files using a temporary file to avoid subshell
+        # Dump file list to temp file for progress bar (need total count upfront)
         PROCESS_FILE=$(mktemp)
         jq -r '.files | to_entries[] | "\(.key)\t\(.value.hash)\t\(.value.size)"' "$JSON_FILE" > "$PROCESS_FILE"
-        
-        while IFS=$'\t' read -r path hash size; do
-            # Skip if we didn't get valid data
-            if [ -z "$path" ] || [ -z "$hash" ] || [ -z "$size" ]; then
-                continue
-            fi
+        local REPO_TOTAL
+        REPO_TOTAL=$(grep -c . "$PROCESS_FILE" || echo 0)
+        log "Found $REPO_TOTAL wallpaper file(s) in $REPO."
+        echo
+        echo -e "${C_CYAN}  [ Wallpapers - $REPO ]${C_RESET}"
+        start_progress_bar
+        draw_progress_bar 0 "$REPO_TOTAL" "Starting..."
 
-            # Remove leading pipe character from path if present
+        local repo_idx=0
+        local _tag=""
+        while IFS=$'\t' read -r path hash size; do
+            [ -z "$path" ] || [ -z "$hash" ] || [ -z "$size" ] && continue
+            _tag=""
+
             relative_path="${path#|}"
             filename=$(basename "$relative_path")
-            
-            # Skip if no filename could be determined
-            if [ -z "$filename" ]; then
-                continue
-            fi
-            
-            # Compute full output path
-            full_path="$WALLPAPER_DIR/$filename"
+            [ -z "$filename" ] && continue
 
-            # Check if file exists and has correct hash and size
+            full_path="$WALLPAPER_DIR/$filename"
+            TOTAL_FILES=$((TOTAL_FILES + 1))
+
             if [ -f "$full_path" ]; then
                 current_size=$(stat -c%s "$full_path" 2>/dev/null || echo 0)
                 if [ "$current_size" -eq "$size" ]; then
                     current_hash=$(md5sum "$full_path" | cut -d' ' -f1)
                     if [ "$current_hash" = "$hash" ]; then
-                        echo "[*] $filename already correct. Skipping."
                         SKIPPED_FILES=$((SKIPPED_FILES + 1))
-                        TOTAL_FILES=$((TOTAL_FILES + 1))
+                        _tag="SKIP"
+                        ((repo_idx++))
+                        draw_progress_bar "$repo_idx" "$REPO_TOTAL" "$filename" "$_tag"
                         continue
                     fi
                 fi
             fi
 
-            # Download with retry logic
             max_retries=3
             retry_count=0
             success=0
-            
+            download_url="https://raw.githubusercontent.com/$REPO/$COMMIT_HASH/$relative_path"
+
             while [ $retry_count -lt $max_retries ] && [ $success -eq 0 ]; do
-                echo "↓ Downloading $filename (attempt $((retry_count+1))) from $REPO..."
-                
-                # Construct proper GitHub raw content URL
-                download_url="https://raw.githubusercontent.com/$REPO/$COMMIT_HASH/$relative_path"
-                
                 if download_wrapper "$download_url" "$full_path.tmp"; then
-                    # Verify download
                     current_size=$(stat -c%s "$full_path.tmp" 2>/dev/null || echo 0)
                     if [ "$current_size" -eq "$size" ]; then
                         current_hash=$(md5sum "$full_path.tmp" | cut -d' ' -f1)
@@ -913,48 +904,40 @@ download_wallpapers() {
                             mv "$full_path.tmp" "$full_path"
                             success=1
                             DOWNLOADED_FILES=$((DOWNLOADED_FILES + 1))
-                            TOTAL_FILES=$((TOTAL_FILES + 1))
-                            echo "[*] Success: $filename"
-                        else
-                            echo "[X] Hash mismatch: $filename"
                         fi
-                    else
-                        echo "[X] Size mismatch: $filename (got $current_size, expected $size)"
                     fi
-                else
-                    echo "[X] Download failed: $filename"
                 fi
-                
-                # Clean up temp file if failed
                 [ -f "$full_path.tmp" ] && rm -f "$full_path.tmp"
                 retry_count=$((retry_count + 1))
             done
 
             if [ $success -eq 0 ]; then
-                echo "[!] Failed to download $filename after $max_retries attempts"
                 FAILED_FILES=$((FAILED_FILES + 1))
-                TOTAL_FILES=$((TOTAL_FILES + 1))
+                _tag="ERR"
+                log "Failed: $filename" ERROR
+            else
+                _tag="DL"
             fi
+            ((repo_idx++))
+            draw_progress_bar "$repo_idx" "$REPO_TOTAL" "$filename" "$_tag"
         done < "$PROCESS_FILE"
-        rm -f "$PROCESS_FILE"
-
-        # Clean up repo files
-        rm -f "$DB_ZIP" "$JSON_FILE"
+        finish_progress_bar
+        rm -f "$PROCESS_FILE" "$DB_ZIP" "$JSON_FILE"
     done
 
-    # Clean up temp directory
     rm -rf "$TEMP_DIR"
 
-    # Print summary
-    echo ""
-    echo "===== Download Summary ====="
-    echo "Total files processed: $TOTAL_FILES"
-    echo "Successfully downloaded: $DOWNLOADED_FILES"
-    echo "Already up-to-date: $SKIPPED_FILES"
-    echo "Failed downloads: $FAILED_FILES"
-    echo ""
-    echo "All wallpapers are in: $WALLPAPER_DIR/"
-    echo "Cleanup complete - all temporary files removed."
+    echo
+    echo -e "${C_CYAN}  +------------------------------+${C_RESET}"
+    echo -e "${C_CYAN}  |    Wallpapers  Summary       |${C_RESET}"
+    echo -e "${C_CYAN}  +------------------------------+${C_RESET}"
+    echo -e "${C_CYAN}  |${C_RESET}  Total processed : ${C_BOLD}$TOTAL_FILES${C_RESET}"
+    echo -e "${C_CYAN}  |${C_RESET}  Downloaded      : ${C_GREEN}$DOWNLOADED_FILES${C_RESET}"
+    echo -e "${C_CYAN}  |${C_RESET}  Already current : ${C_DIM}$SKIPPED_FILES${C_RESET}"
+    echo -e "${C_CYAN}  |${C_RESET}  Failed          : ${C_RED}$FAILED_FILES${C_RESET}"
+    echo -e "${C_CYAN}  +------------------------------+${C_RESET}"
+    echo -e "  Wallpapers installed in: ${C_YELLOW}$WALLPAPER_DIR/${C_RESET}"
+    echo
 }
 
 ###############################################
@@ -987,31 +970,30 @@ download_and_extract() {
 
     # Download phase
     if [ "$IS_SPLIT" = true ]; then
-        echo "Downloading split archive parts..."
-        echo "Downloading ${ZIP_Z01}..."
+        log "Downloading split archive: ${ZIP_Z01} + ${ZIP_BASE}..."
         if ! download_wrapper "${ZIP_URL_BASE}/${ZIP_Z01}" "${ZIP_Z01}"; then
-            echo "Failed to download ${ZIP_Z01}"
+            log "Failed to download ${ZIP_Z01}" ERROR
             DOWNLOAD_SUCCESS=false
         fi
 
-        echo "Downloading ${ZIP_BASE}..."
+        log "Downloading ${ZIP_BASE}..."
         if ! download_wrapper "${ZIP_URL_BASE}/${ZIP_BASE}" "${ZIP_BASE}"; then
-            echo "Failed to download ${ZIP_BASE}"
+            log "Failed to download ${ZIP_BASE}" ERROR
             DOWNLOAD_SUCCESS=false
         fi
 
         if [ "$DOWNLOAD_SUCCESS" = true ]; then
             DOWNLOAD_SIZE=$(( $(stat -c%s "${ZIP_Z01}" 2>/dev/null || echo 0) + $(stat -c%s "${ZIP_BASE}" 2>/dev/null || echo 0) ))
-            echo "Joining parts..."
+            log "Joining split archive parts..."
             if ! zip -s 0 "${ZIP_BASE}" --out "joined_${ZIP_BASE}"; then
-                echo "Failed to join split archive parts"
+                log "Failed to join split archive parts." ERROR
                 EXTRACT_SUCCESS=false
             fi
         fi
     else
-        echo "Downloading ${ZIP_BASE}..."
+        log "Downloading ${ZIP_BASE}..."
         if ! download_wrapper "${ZIP_URL_BASE}/${ZIP_BASE}" "${ZIP_BASE}"; then
-            echo "Failed to download ${ZIP_BASE}"
+            log "Failed to download ${ZIP_BASE}." ERROR
             DOWNLOAD_SUCCESS=false
         else
             DOWNLOAD_SIZE=$(stat -c%s "${ZIP_BASE}" 2>/dev/null || echo 0)
@@ -1020,7 +1002,7 @@ download_and_extract() {
 
     # Extraction phase
     if [ "$DOWNLOAD_SUCCESS" = true ]; then
-        echo "Extracting to ${OUTPUT_DIR}..."
+        log "Extracting ${ZIP_NAME} to ${OUTPUT_DIR}..."
         
         if [ "$IS_SPLIT" = true ]; then
             ZIP_TO_EXTRACT="joined_${ZIP_BASE}"
@@ -1028,17 +1010,14 @@ download_and_extract() {
             ZIP_TO_EXTRACT="${ZIP_BASE}"
         fi
 
-        # Get list of files in the zip and save sample
         unzip -Z1 "${ZIP_TO_EXTRACT}" 2>/dev/null | grep -v '/$' > "$TEMP_LIST"
         TOTAL_FILES=$(wc -l < "$TEMP_LIST")
         head -n 5 "$TEMP_LIST" > "$TEMP_SAMPLE"
 
-        # Extract files
         if ! unzip -o "${ZIP_TO_EXTRACT}" -d "${OUTPUT_DIR}"; then
-            echo "Extraction failed"
+            log "Extraction failed." ERROR
             EXTRACT_SUCCESS=false
         else
-            # Calculate size of only the extracted files
             OUTPUT_SIZE=0
             while IFS= read -r file; do
                 if [[ -f "${OUTPUT_DIR}/${file}" ]]; then
@@ -1048,37 +1027,35 @@ download_and_extract() {
         fi
     fi
 
-    # Calculate duration
     local END_TIME=$(date +%s)
     local DURATION=$((END_TIME - START_TIME))
+    local STATUS_COLOR="${C_GREEN}"
+    local STATUS_TEXT="SUCCESS"
+    if [ "$DOWNLOAD_SUCCESS" != true ] || [ "$EXTRACT_SUCCESS" != true ]; then
+        STATUS_COLOR="${C_RED}"; STATUS_TEXT="FAILED"
+    fi
 
-    # Print summary
-    echo ""
-    echo "===== Operation Summary ====="
-    echo "Archive: ${ZIP_NAME}"
-    echo "Status: $([ "$DOWNLOAD_SUCCESS" = true ] && [ "$EXTRACT_SUCCESS" = true ] && echo "SUCCESS" || echo "FAILED")"
-    echo "Download Size: $(numfmt --to=iec --format="%.2f" $DOWNLOAD_SIZE 2>/dev/null || echo "$DOWNLOAD_SIZE B")"
-    
+    echo
+    echo -e "${C_CYAN}  +---------------------------------------------+${C_RESET}"
+    echo -e "${C_CYAN}  |${C_RESET}  ${C_BOLD}${ZIP_NAME}${C_RESET} - ${STATUS_COLOR}${STATUS_TEXT}${C_RESET}"
+    echo -e "${C_CYAN}  +---------------------------------------------+${C_RESET}"
+    echo -e "${C_CYAN}  |${C_RESET}  Download size : $(numfmt --to=iec --format="%.2f" $DOWNLOAD_SIZE 2>/dev/null || echo "${DOWNLOAD_SIZE} B")"
     if [ "$DOWNLOAD_SUCCESS" = true ] && [ "$EXTRACT_SUCCESS" = true ]; then
-        echo "Extracted Files: ${TOTAL_FILES}"
-        echo "Output Size: $(numfmt --to=iec --format="%.2f" $OUTPUT_SIZE 2>/dev/null || echo "$OUTPUT_SIZE B")"
-        echo "Extracted to: ${OUTPUT_DIR}/"
-        
-        # Show sample files from the saved temp file
-        if [ $TOTAL_FILES -gt 0 ]; then
-            echo "Sample Files:"
+        echo -e "${C_CYAN}  |${C_RESET}  Files extracted: ${C_GREEN}${TOTAL_FILES}${C_RESET}"
+        echo -e "${C_CYAN}  |${C_RESET}  Output size   : $(numfmt --to=iec --format="%.2f" $OUTPUT_SIZE 2>/dev/null || echo "${OUTPUT_SIZE} B")"
+        echo -e "${C_CYAN}  |${C_RESET}  Installed in  : ${C_YELLOW}${OUTPUT_DIR}/${C_RESET}"
+        if [ "$TOTAL_FILES" -gt 0 ]; then
+            echo -e "${C_CYAN}  |${C_RESET}  Sample files  :"
             while IFS= read -r file; do
-                echo "  - ${file}"
+                echo -e "${C_CYAN}  |${C_RESET}    ${C_DIM}- ${file}${C_RESET}"
             done < "$TEMP_SAMPLE"
-            [ $TOTAL_FILES -gt 5 ] && echo "  (... plus $((TOTAL_FILES - 5)) more files)"
+            [ "$TOTAL_FILES" -gt 5 ] && echo -e "${C_CYAN}  |${C_RESET}    ${C_DIM}(... and $((TOTAL_FILES - 5)) more)${C_RESET}"
         fi
     fi
-    
-    echo "Time Taken: ${DURATION} seconds"
-    echo "============================"
-    echo ""
+    echo -e "${C_CYAN}  |${C_RESET}  Time taken    : ${DURATION}s"
+    echo -e "${C_CYAN}  +---------------------------------------------+${C_RESET}"
+    echo
 
-    # Cleanup
     rm -f "$TEMP_LIST" "$TEMP_SAMPLE"
     rm -rf "$ZIP_DIR"
 
@@ -1097,33 +1074,27 @@ download_menu() {
     local MENU_FILE="/media/fat/menu.rbf"
     local MENU_BACKUP="/media/fat/menu.rbfold"
     
-    # Create backup if menu.rbf exists
     if [ -f "$MENU_FILE" ]; then
-        echo "Creating backup of current menu.rbf..."
+        log "Backing up current menu.rbf..."
         if ! cp "$MENU_FILE" "$MENU_BACKUP"; then
-            echo "Warning: Failed to create backup of menu.rbf"
+            log "Warning: Could not back up menu.rbf" WARN
         else
-            echo "Backup created: $MENU_BACKUP"
+            log "Backup saved: $MENU_BACKUP" SUCCESS
         fi
     fi
 
-    # Proceed with download and extraction
     download_and_extract "Menu" "https://github.com/turri21/Distribution_Senhor/raw/main/Menu.zip" false
 
-    # Verify if new menu.rbf was installed
     if [ -f "$MENU_FILE" ]; then
-        echo "Menu update completed successfully."
-        echo "Original menu.rbf saved as menu.rbfold"
+        log "Menu updated successfully. Previous version saved as menu.rbfold" SUCCESS
     else
-        echo "Warning: No menu.rbf found after extraction!"
-        
-        # Restore backup if available
+        log "Warning: menu.rbf not found after extraction!" WARN
         if [ -f "$MENU_BACKUP" ]; then
-            echo "Attempting to restore backup..."
+            log "Restoring backup..."
             if cp "$MENU_BACKUP" "$MENU_FILE"; then
-                echo "Backup restored successfully."
+                log "Backup restored." SUCCESS
             else
-                echo "Error: Failed to restore backup!"
+                log "Failed to restore backup!" ERROR
             fi
         fi
     fi
@@ -1133,33 +1104,27 @@ download_MiSTer_binary() {
     local MiSTer_binary_FILE="/media/fat/MiSTer"
     local MiSTer_binary_BACKUP="/media/fat/MiSTerold"
     
-    # Create backup if menu.rbf exists
     if [ -f "$MiSTer_binary_FILE" ]; then
-        echo "Creating backup of current MiSTer binary..."
+        log "Backing up current MiSTer binary..."
         if ! cp "$MiSTer_binary_FILE" "$MiSTer_binary_BACKUP"; then
-            echo "Warning: Failed to create backup of MiSTer binary"
+            log "Warning: Could not back up MiSTer binary" WARN
         else
-            echo "Backup created: $MiSTer_binary_BACKUP"
+            log "Backup saved: $MiSTer_binary_BACKUP" SUCCESS
         fi
     fi
 
-    # Proceed with download and extraction
     download_and_extract "MiSTer" "https://github.com/turri21/Distribution_Senhor/raw/main/MiSTer.zip" false
 
-    # Verify if new menu.rbf was installed
     if [ -f "$MiSTer_binary_FILE" ]; then
-        echo "MiSTer binary update completed successfully."
-        echo "Original MiSTer binary saved as MiSTerold"
+        log "MiSTer binary updated successfully. Previous version saved as MiSTerold" SUCCESS
     else
-        echo "Warning: No MiSTer binary found after extraction!"
-        
-        # Restore backup if available
+        log "Warning: MiSTer binary not found after extraction!" WARN
         if [ -f "$MiSTer_binary_BACKUP" ]; then
-            echo "Attempting to restore backup..."
+            log "Restoring backup..."
             if cp "$MiSTer_binary_BACKUP" "$MiSTer_binary_FILE"; then
-                echo "Backup restored successfully."
+                log "Backup restored." SUCCESS
             else
-                echo "Error: Failed to restore backup!"
+                log "Failed to restore backup!" ERROR
             fi
         fi
     fi
@@ -1249,6 +1214,29 @@ main() {
         exit 1
     fi
 
+    # Clear screen after menu selection
+    clear
+
+echo -e "${C_CYAN}"
+cat << "EOF"
+ ██████╗███████╗███╗   ██╗██╗  ██╗ ██████╗ ██████╗           __
+██╔════╝██╔════╝████╗  ██║██║  ██║██╔═══██╗██╔══██╗         (  )
+███████╗█████╗  ██╔██╗ ██║███████║██║   ██║███████║          ||
+╚════██║██╔══╝  ██║╚██╗██║██╔══██║██║   ██║██╔══██║          ||
+███████ ███████╗██║ ╚████║██║  ██║╚██████╔╝██║  ██║  __..___|""|_
+╚══════╝╚══════╝╚═╝  ╚═══╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝ /____________\
+.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\____________/
+             Downloading in progress...
+EOF
+echo -e "${C_RESET}"
+echo -e "${C_BLUE}"
+cat << "EOF"
+██░░██░░██░░██░░██░░██░░██░░██░░██░░██░░██░░██░░██░░██░░██░░██░░██
+░░██░░██░░██░░██░░██░░██░░██░░██░░██░░██░░██░░██░░██░░██░░██░░██░░
+
+EOF
+echo -e "${C_RESET}"
+
     # Flags
     run_rbf_mgl=false
     run_mra=false
@@ -1334,53 +1322,99 @@ main() {
 
     # Execute choices
     if $run_rbf_mgl; then
-        log "=== Starting RBF/MGL download ==="
-        local total_success=0
-        local total_files=0
-
+        echo
+        echo -e "${C_CYAN}  [ RBF/MGL Cores ]${C_RESET}"
+        # Pass 1: collect all files across all folders
+        declare -a ALL_RBF_FOLDERS ALL_RBF_FILES
+        
+        # Start suppression early - only show progress bar
+        start_progress_bar
+        draw_progress_bar 0 1 "Scanning folders..."
+        
         for folder in "${!FOLDERS[@]}"; do
-            log "Processing folder: \e[1;35m$folder\e[0m"
-
             if fetch_file_list "$folder" "rbf_mgl"; then
-                ((total_files += ${#FILES[@]}))
-            else
-                continue
+                for file in "${FILES[@]}"; do
+                    [[ -z "$file" ]] && continue
+                    ALL_RBF_FOLDERS+=("$folder")
+                    ALL_RBF_FILES+=("$file")
+                done
             fi
-
-            for file in "${FILES[@]}"; do
-                [[ -z "$file" ]] && continue
-                if download_file "$folder" "$file"; then
-                    ((total_success++))
-                fi
-            done
         done
-
-        log "RBF/MGL complete: \e[1;32m$total_success\e[0m of \e[1;33m$total_files\e[0m files"
+        
+        local total_files=${#ALL_RBF_FILES[@]}
+        local total_success=0
+        local current_file=0
+        
+        # Reset progress bar for actual downloads
+        draw_progress_bar 0 "$total_files" "Starting..."
+        
+        # Pass 2: download with progress bar
+        for idx in "${!ALL_RBF_FILES[@]}"; do
+            local folder="${ALL_RBF_FOLDERS[$idx]}"
+            local file="${ALL_RBF_FILES[$idx]}"
+            download_file "$folder" "$file"
+            _rc=$?
+            if [[ $_rc -eq 2 ]]; then
+                total_success=$((total_success + 1))
+                _tag="DL"
+            elif [[ $_rc -eq 1 ]]; then
+                _tag="ERR"
+            else
+                _tag="SKIP"
+            fi
+            current_file=$((current_file + 1))
+            draw_progress_bar "$current_file" "$total_files" "$file" "$_tag"
+        done
+        finish_progress_bar
+        unset ALL_RBF_FOLDERS ALL_RBF_FILES
+        log "RBF/MGL complete: $total_success of $total_files files downloaded." SUCCESS
     fi
     
     if $run_mra; then
-        log "=== Starting MRA download ==="
-        local total_success=0
-        local total_files=0
-
+        echo
+        echo -e "${C_CYAN}  [ MRA Files ]${C_RESET}"
+        # Pass 1: collect all files across all folders
+        declare -a ALL_MRA_FOLDERS ALL_MRA_FILES
+        
+        start_progress_bar
+        draw_progress_bar 0 1 "Scanning folders..."
+        
         for folder in "${!FOLDERS[@]}"; do
-            log "Processing folder: \e[1;35m$folder\e[0m"
-
             if fetch_file_list "$folder" "mra"; then
-                ((total_files += ${#FILES[@]}))
-            else
-                continue
+                for file in "${FILES[@]}"; do
+                    [[ -z "$file" ]] && continue
+                    ALL_MRA_FOLDERS+=("$folder")
+                    ALL_MRA_FILES+=("$file")
+                done
             fi
-
-            for file in "${FILES[@]}"; do
-                [[ -z "$file" ]] && continue
-                if download_file "$folder" "$file"; then
-                    ((total_success++))
-                fi
-            done
         done
-
-        log "MRA complete: \e[1;32m$total_success\e[0m of \e[1;33m$total_files\e[0m files"
+        
+        local total_files=${#ALL_MRA_FILES[@]}
+        local total_success=0
+        local current_file=0
+        
+        draw_progress_bar 0 "$total_files" "Starting..."
+        
+        # Pass 2: download with progress bar
+        for idx in "${!ALL_MRA_FILES[@]}"; do
+            local folder="${ALL_MRA_FOLDERS[$idx]}"
+            local file="${ALL_MRA_FILES[$idx]}"
+            download_file "$folder" "$file"
+            _rc=$?
+            if [[ $_rc -eq 2 ]]; then
+                total_success=$((total_success + 1))
+                _tag="DL"
+            elif [[ $_rc -eq 1 ]]; then
+                _tag="ERR"
+            else
+                _tag="SKIP"
+            fi
+            ((current_file++))
+            draw_progress_bar "$current_file" "$total_files" "$file" "$_tag"
+        done
+        finish_progress_bar
+        unset ALL_MRA_FOLDERS ALL_MRA_FILES
+        log "MRA complete: $total_success of $total_files files downloaded." SUCCESS
     fi
     
     if $run_menu; then
@@ -1452,10 +1486,13 @@ main() {
     fi
 
     rm -rf "$TEMP_DIR"
-    sync  # Sync to ensure all pending writes are flushed
-    echo -e "\e[1;35m=================================================================\e[0m"
-    echo "All operations completed successfully. Safe to power off."
-    echo -e "\e[1;35m=================================================================\e[0m"
+    sync  # Flush all pending writes to disk
+    echo
+    echo -e "${C_MAGENTA}==================================================================${C_RESET}"
+    echo -e "${C_GREEN}${C_BOLD}  *  All operations completed successfully.${C_RESET}"
+    echo -e "     Safe to power off your Senhor FPGA."
+    echo -e "${C_MAGENTA}==================================================================${C_RESET}"
+    echo
 #   read -p "Press enter to continue..."
 }
 
