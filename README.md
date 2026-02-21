@@ -1,4 +1,8 @@
 # News
+20/2/2026
+
+Updates: Minimig
+___
 19/2/2026
 
 Updates: MegaDrive
