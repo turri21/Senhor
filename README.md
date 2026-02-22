@@ -1,4 +1,9 @@
 # News
+22/2/2026
+
+New Cores: BluePrint
+
+___
 20/2/2026
 
 Updates: Minimig
