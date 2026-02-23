@@ -1,4 +1,9 @@
 # News
+23/2/2026
+
+Updates: Galaxian
+
+___
 22/2/2026
 
 New Cores: BluePrint
