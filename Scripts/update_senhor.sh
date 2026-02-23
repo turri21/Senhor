@@ -105,7 +105,7 @@ trap restore_console_font EXIT
 # ║                        Configuration                             ║
 # ╚══════════════════════════════════════════════════════════════════╝
 SCRIPT_NAME="update_senhor.sh"
-CURRENT_VERSION="1.7"  # Update this when you release new versions
+CURRENT_VERSION="1.8"  # Update this when you release new versions
 SCRIPT_URL="https://raw.githubusercontent.com/turri21/Senhor/main/Scripts/$SCRIPT_NAME"
 
 REPO_OWNER="turri21"
@@ -208,16 +208,51 @@ finish_progress_bar() {
     echo
 }
 
+# Print up to 5 recently downloaded filenames after a progress bar
+# Usage: print_dl_summary "${DL_FILES[@]}"
+print_dl_summary() {
+    local files=("$@")
+    local count=${#files[@]}
+    [ "$count" -eq 0 ] && return
+    local show=$(( count < 5 ? count : 5 ))
+    local start=$(( count - show ))
+    echo -e "${C_DIM}  Downloaded:${C_RESET}"
+    for (( i=start; i<count; i++ )); do
+        echo -e "  ${C_GREEN}↓${C_RESET}  ${C_DIM}${files[$i]}${C_RESET}"
+    done
+    [ "$count" -gt 5 ] && echo -e "  ${C_DIM}  ... and $(( count - 5 )) more${C_RESET}"
+    echo
+}
+
 draw_progress_bar() {
     local current="$1"
     local total="$2"
     local label="${3:- }"
-    label="${label:0:32}"
+    local tag_key="${4:-}"
 
-    local bar_width=28
+    # Use cached terminal width — tput cols fluctuates on MiSTer framebuffer
+    local term_width="$_TERM_WIDTH"
+
+    # Fixed overhead (visible chars, no ANSI):
+    #   "  S [" + bar + "] PPP% CCC/TTT  " + label + "  [TAGTAG]"
+    #   2 + 1 + 2 + bar + 2 + 5 + 1 + cur/tot + 2 + label + 2 + 6 + 2 = ~26 + bar + label + cur/tot
+    local cur_tot_len=$(( ${#current} + 1 + ${#total} ))
+    local overhead=$(( 2 + 1 + 2 + 2 + 5 + 1 + cur_tot_len + 2 + 2 + 6 + 2 ))
+    local available=$(( term_width - overhead ))
+
+    # Allocate: bar gets 40% of available, label gets the rest (min bar=8, min label=8)
+    local bar_width=$(( available * 40 / 100 ))
+    local label_width=$(( available - bar_width ))
+    [ "$bar_width" -lt 8 ]   && bar_width=8
+    [ "$label_width" -lt 8 ] && label_width=8
+    # Cap at sensible maxes to avoid ugly stretching on wide terminals
+    [ "$bar_width" -gt 28 ]   && bar_width=28
+    [ "$label_width" -gt 32 ] && label_width=32
+
+    label="${label:0:$label_width}"
+
     local pct=0
     local filled=0
-
     if [[ "$total" -gt 0 ]]; then
         pct=$(( current * 100 / total ))
         filled=$(( current * bar_width / total ))
@@ -240,14 +275,14 @@ draw_progress_bar() {
     fi
 
     local tag=""
-    case "${4:-}" in
+    case "$tag_key" in
         DL)   tag="${C_GREEN}[↓ DL]${C_RESET}" ;;
         EX)   tag="${C_CYAN}[◈ EX]${C_RESET}" ;;
         SKIP) tag="${C_DIM}[── ]${C_RESET}" ;;
         ERR)  tag="${C_RED}[✖ !!]${C_RESET}" ;;
         *)    tag="      " ;;
     esac
-    printf "\r  ${status_colour}%s${C_RESET} [${bar_colour}%s${C_DIM}%s${C_RESET}] ${C_BOLD}%3d%%${C_RESET} %s/%s  ${C_DIM}%-32s${C_RESET}  %b  " \
+    printf "\r  ${status_colour}%s${C_RESET} [${bar_colour}%s${C_DIM}%s${C_RESET}] ${C_BOLD}%3d%%${C_RESET} %s/%s  ${C_DIM}%-${label_width}s${C_RESET}  %b\033[K" \
         "$spinner" "$bar_fill" "$bar_empty" "$pct" "$current" "$total" "$label" "$tag"
 }
 
@@ -296,6 +331,43 @@ download_wrapper() {
     return 1
 }
 PROGRESS_BAR_ACTIVE=false
+# Cache terminal width once at startup — calling tput cols on every bar draw
+# causes fluctuating widths on MiSTer's framebuffer console
+_TERM_WIDTH=$(tput cols 2>/dev/null)
+[[ "$_TERM_WIDTH" =~ ^[0-9]+$ ]] && [ "$_TERM_WIDTH" -ge 40 ] && [ "$_TERM_WIDTH" -le 400 ] || _TERM_WIDTH=80
+# ╚══════════════════════════════════════════════════════════════════╝
+SESSION_TOTAL_DL=0
+SESSION_TOTAL_CORES=0
+SESSION_TOTAL_ERR=0
+SESSION_START_TIME=$(date +%s)
+declare -a SESSION_ERRORS=()
+
+session_error() {
+    SESSION_ERRORS+=("$1")
+    SESSION_TOTAL_ERR=$(( SESSION_TOTAL_ERR + 1 ))
+}
+
+check_disk_space() {
+    local target="/media/fat"
+    local min_mb=200
+    local avail_mb
+    avail_mb=$(df -m "$target" 2>/dev/null | awk 'NR==2{print $4}')
+    if [ -n "$avail_mb" ] && [ "$avail_mb" -lt "$min_mb" ]; then
+        echo
+        echo -e "${C_YELLOW}  ╔══════════════════════════════════════════════╗${C_RESET}"
+        echo -e "${C_YELLOW}  ║  ⚠  Low Disk Space Warning                   ║${C_RESET}"
+        echo -e "${C_YELLOW}  ╠══════════════════════════════════════════════╣${C_RESET}"
+        echo -e "${C_YELLOW}  ║  Only ${avail_mb}MB free on $target            ${C_RESET}"
+        echo -e "${C_YELLOW}  ║  Recommended: ${min_mb}MB+ free                     ${C_RESET}"
+        echo -e "${C_YELLOW}  ║  Downloads may fail or be incomplete.        ║${C_RESET}"
+        echo -e "${C_YELLOW}  ╚══════════════════════════════════════════════╝${C_RESET}"
+        echo
+        read -n 1 -s -r -p "  Press any key to continue anyway, or Ctrl+C to abort..."
+        echo
+    else
+        log "Disk space OK: ${avail_mb}MB free on $target." SUCCESS
+    fi
+}
 
 log() {
     local timestamp="$(date "+%d-%m-%Y %H:%M:%S")"
@@ -342,11 +414,10 @@ check_internet() {
     if [ "$connected" = true ]; then
         log "Internet connection is available." SUCCESS
     else
-        log "No internet connection detected." ERROR
+#        log "No internet connection detected." ERROR
 echo
 echo -e "                  ████████████████████                                         "
 echo -e "                  ████  ██████████████████                                     "
-echo -e "                  ████████████████████████                                     "
 echo -e "                  ████████████████████████                                     "
 echo -e "                  ████████████████████████                                     "
 echo -e "                  ████████████████████████                                     "
@@ -368,7 +439,6 @@ echo -e "            ████      ██                                   
 echo -e "      ████  ██        ██                                          ████         "        
 echo -e "████        ████      ████        ████                                         "            
 echo -e "                                                  ██          ████      ████   "   
-        echo
         echo -e "${C_RED}  ╔════════════════════════════════════════╗${C_RESET}"
         echo -e "${C_RED}  ║      ✖  No Internet Connection         ║${C_RESET}"
         echo -e "${C_RED}  ╠════════════════════════════════════════╣${C_RESET}"
@@ -377,7 +447,7 @@ echo -e "                                                  ██          █�
         echo -e "${C_RED}  ║${C_RESET}  ${C_YELLOW}▸${C_RESET} Check for a corporate firewall      ${C_RED}║${C_RESET}"
         echo -e "${C_RED}  ║${C_RESET}  ${C_YELLOW}▸${C_RESET} Try loading a webpage in a browser  ${C_RED}║${C_RESET}"
         echo -e "${C_RED}  ╚════════════════════════════════════════╝${C_RESET}"
-        echo
+#       echo
         read -p "  Press Enter to exit..."
         exit 1
     fi
@@ -643,9 +713,12 @@ download_arcadealt() {
     log "Removing old _alternatives folder..."
     rm -rf "/media/fat/_Arcade/_alternatives"
 
+    local _alt_name="Alternatives"
+    local _alt_pad=$(( (27 - ${#_alt_name}) / 2 ))
+    printf -v _alt_spaces '%*s' "$_alt_pad" ''
     echo
     echo -e "${C_CYAN}  ═══════════════════════════${C_RESET}"
-    echo -e "${C_CYAN}       Alternatives          ${C_RESET}"
+    echo -e "${C_CYAN}  ${_alt_spaces}${_alt_name}${C_RESET}"
     echo -e "${C_CYAN}  ═══════════════════════════${C_RESET}"
 
     log "Downloading Arcade MRA alternatives..."
@@ -984,6 +1057,7 @@ download_gbaborders() {
 
     local current_idx=0
     local _tag=""
+    local -a DL_FILES=()
     while IFS=$'\t' read -r path hash size; do
         TOTAL_FILES=$((TOTAL_FILES + 1))
         _tag=""
@@ -1034,11 +1108,13 @@ download_gbaborders() {
             log "Failed: $filename" ERROR
         else
             _tag="DL"
+            DL_FILES+=("$filename")
         fi
         ((current_idx++))
         draw_progress_bar "$current_idx" "$GBA_TOTAL" "$filename" "$_tag"
     done < "$GBA_DATA_FILE"
     finish_progress_bar
+    print_dl_summary "${DL_FILES[@]}"
 
     rm -f "$GBA_DATA_FILE" "$DB_ZIP" "$JSON_FILE"
 
@@ -1141,6 +1217,7 @@ download_wallpapers() {
 
         local repo_idx=0
         local _tag=""
+        local -a DL_FILES=()
         while IFS=$'\t' read -r path hash size; do
             [ -z "$path" ] || [ -z "$hash" ] || [ -z "$size" ] && continue
             _tag=""
@@ -1193,11 +1270,13 @@ download_wallpapers() {
                 log "Failed: $filename" ERROR
             else
                 _tag="DL"
+                DL_FILES+=("$filename")
             fi
             ((repo_idx++))
             draw_progress_bar "$repo_idx" "$REPO_TOTAL" "$filename" "$_tag"
         done < "$PROCESS_FILE"
         finish_progress_bar
+        print_dl_summary "${DL_FILES[@]}"
         rm -f "$PROCESS_FILE" "$DB_ZIP" "$JSON_FILE"
     done
 
@@ -1484,6 +1563,7 @@ download_MiSTer_binary() {
     download_and_extract "MiSTer" "https://github.com/turri21/Distribution_Senhor/raw/main/MiSTer.zip" false
 
     if [ -f "$MiSTer_binary_FILE" ]; then
+        chmod +x "$MiSTer_binary_FILE"
         log "MiSTer binary updated successfully. Previous version saved as MiSTerold" SUCCESS
     else
         log "Warning: MiSTer binary not found after extraction!" WARN
@@ -1657,6 +1737,8 @@ download_gamma() {
 
 download_linux() {
     download_and_extract "Linux" "https://github.com/turri21/Distribution_Senhor/raw/main/Linux.zip" true
+    chmod +x /media/fat/linux/glow 2>/dev/null && log "Set executable: linux/glow" SUCCESS
+    chmod +x /media/fat/linux/pdfviewer 2>/dev/null && log "Set executable: linux/pdfviewer" SUCCESS
 }
 
 download_presets() {
@@ -1677,6 +1759,7 @@ download_shadowmasks() {
 
 main() {
     check_internet
+    check_disk_space
     check_for_updates
     display_news
 
@@ -1842,6 +1925,7 @@ echo -e "${C_WHITE}  ═══════════════════�
         local total_files=${#ALL_RBF_FILES[@]}
         local total_success=0
         local current_file=0
+        local -a DL_FILES=()
         
         # Reset progress bar for actual downloads
         draw_progress_bar 0 "$total_files" "Starting..."
@@ -1854,9 +1938,12 @@ echo -e "${C_WHITE}  ═══════════════════�
             _rc=$?
             if [[ $_rc -eq 2 ]]; then
                 total_success=$((total_success + 1))
+                SESSION_TOTAL_CORES=$(( SESSION_TOTAL_CORES + 1 ))
                 _tag="DL"
+                DL_FILES+=("$file")
             elif [[ $_rc -eq 1 ]]; then
                 _tag="ERR"
+                session_error "$folder/$file"
             else
                 _tag="SKIP"
             fi
@@ -1864,7 +1951,8 @@ echo -e "${C_WHITE}  ═══════════════════�
             draw_progress_bar "$current_file" "$total_files" "$file" "$_tag"
         done
         finish_progress_bar
-        unset ALL_RBF_FOLDERS ALL_RBF_FILES
+        print_dl_summary "${DL_FILES[@]}"
+        unset ALL_RBF_FOLDERS ALL_RBF_FILES DL_FILES
         log "RBF/MGL complete: $total_success of $total_files files downloaded." SUCCESS
     fi
     
@@ -1892,6 +1980,7 @@ echo -e "${C_WHITE}  ═══════════════════�
         local total_files=${#ALL_MRA_FILES[@]}
         local total_success=0
         local current_file=0
+        local -a DL_FILES=()
         
         draw_progress_bar 0 "$total_files" "Starting..."
         
@@ -1903,9 +1992,12 @@ echo -e "${C_WHITE}  ═══════════════════�
             _rc=$?
             if [[ $_rc -eq 2 ]]; then
                 total_success=$((total_success + 1))
+                SESSION_TOTAL_DL=$(( SESSION_TOTAL_DL + 1 ))
                 _tag="DL"
+                DL_FILES+=("$file")
             elif [[ $_rc -eq 1 ]]; then
                 _tag="ERR"
+                session_error "$folder/$file"
             else
                 _tag="SKIP"
             fi
@@ -1913,7 +2005,8 @@ echo -e "${C_WHITE}  ═══════════════════�
             draw_progress_bar "$current_file" "$total_files" "$file" "$_tag"
         done
         finish_progress_bar
-        unset ALL_MRA_FOLDERS ALL_MRA_FILES
+        print_dl_summary "${DL_FILES[@]}"
+        unset ALL_MRA_FOLDERS ALL_MRA_FILES DL_FILES
         log "MRA complete: $total_success of $total_files files downloaded." SUCCESS
     fi
     
@@ -1987,6 +2080,12 @@ echo -e "${C_WHITE}  ═══════════════════�
 
     rm -rf "$TEMP_DIR"
     sync  # Flush all pending writes to disk
+
+    local SESSION_END_TIME=$(date +%s)
+    local SESSION_DURATION=$(( SESSION_END_TIME - SESSION_START_TIME ))
+    local SESSION_MINS=$(( SESSION_DURATION / 60 ))
+    local SESSION_SECS=$(( SESSION_DURATION % 60 ))
+
     echo -e "${C_GREEN}"
     cat << "DONE"
   ╔═══════════════════════════════════════════════╗
@@ -1998,14 +2097,50 @@ echo -e "${C_WHITE}  ═══════════════════�
   ║   ██████╔╝╚██████╔╝██║ ╚████║███████╗         ║
   ║   ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚══════╝         ║
   ║                                               ║
-  ║   +  All operations completed successfully.   ║
-  ║   +  Safe to power off your Senhor FPGA.      ║
-  ║                                               ║
   ╚═══════════════════════════════════════════════╝
 DONE
     echo -e "${C_RESET}"
+
+    # Session summary box
+    local _summary_status _summary_color
+    if [ "${#SESSION_ERRORS[@]}" -gt 0 ]; then
+        _summary_status="Completed with errors"
+        _summary_color="${C_YELLOW}"
+    else
+        _summary_status="All operations successful"
+        _summary_color="${C_GREEN}"
+    fi
+
+    # Session summary box (inner width = 47)
+    local _sw=47
+    _sline() {
+        local plain="$1" styled="$2"
+        local pad=$(( _sw - ${#plain} ))
+        [[ $pad -lt 0 ]] && pad=0
+        printf -v _sp '%*s' "$pad" ''
+        echo -e "${_summary_color}  ║${C_RESET}  ${styled}${_sp}${_summary_color}║${C_RESET}"
+    }
+
+    echo -e "${_summary_color}  ╔═══════════════════════════════════════════════╗${C_RESET}"
+    echo -e "${_summary_color}  ║              Session Summary                  ║${C_RESET}"
+    echo -e "${_summary_color}  ╠═══════════════════════════════════════════════╣${C_RESET}"
+    _sline "  Status    :  ${_summary_status}"     "Status    :  ${_summary_color}${_summary_status}${C_RESET}"
+    _sline "  New Cores :  ${SESSION_TOTAL_CORES} core(s)" "New Cores :  ${C_GREEN}${SESSION_TOTAL_CORES} core(s)${C_RESET}"
+    _sline "  Errors    :  ${SESSION_TOTAL_ERR}"   "Errors    :  ${C_RED}${SESSION_TOTAL_ERR}${C_RESET}"
+    _sline "  Duration  :  ${SESSION_MINS}m ${SESSION_SECS}s" "Duration  :  ${SESSION_MINS}m ${SESSION_SECS}s"
+    echo -e "${_summary_color}  ╠═══════════════════════════════════════════════╣${C_RESET}"
+    echo -e "${_summary_color}  ║  Safe to power off your Senhor FPGA.          ║${C_RESET}"
+    echo -e "${_summary_color}  ╚═══════════════════════════════════════════════╝${C_RESET}"
+
+    # Error report
+    if [ "${#SESSION_ERRORS[@]}" -gt 0 ]; then
+        echo
+        echo -e "${C_RED}  Failed downloads:${C_RESET}"
+        for err in "${SESSION_ERRORS[@]}"; do
+            echo -e "  ${C_RED}✖${C_RESET}  ${C_DIM}${err}${C_RESET}"
+        done
+    fi
     echo
-#   read -p "Press enter to continue..."
 }
 
 main
