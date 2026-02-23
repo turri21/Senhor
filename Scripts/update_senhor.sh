@@ -518,10 +518,10 @@ display_news() {
                 local first=true
                 echo "$quote_text" | fold -s -w 61 | while IFS= read -r qline; do
                     if [ "$first" = true ]; then
-                        echo -e "  \"  ${C_ITALIC}${qline}${C_RESET}"
+                        echo -e "  \"  ${C_WHITE}${qline}${C_RESET}"
                         first=false
                     else
-                        echo -e "     ${C_ITALIC}${qline}${C_RESET}"
+                        echo -e "     ${C_WHITE}${qline}${C_RESET}"
                     fi
                 done
                 [ -n "$quote_author" ] && echo -e "     -- ${C_DIM}${quote_author}${C_RESET}"
@@ -645,7 +645,7 @@ download_arcadealt() {
 
     echo
     echo -e "${C_CYAN}  ═══════════════════════════${C_RESET}"
-    echo -e "${C_CYAN}         Alternatives        ${C_RESET}"
+    echo -e "${C_CYAN}       Alternatives          ${C_RESET}"
     echo -e "${C_CYAN}  ═══════════════════════════${C_RESET}"
 
     log "Downloading Arcade MRA alternatives..."
