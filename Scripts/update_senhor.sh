@@ -524,7 +524,7 @@ display_news() {
                         echo -e "     ${C_WHITE}${qline}${C_RESET}"
                     fi
                 done
-                [ -n "$quote_author" ] && echo -e "     -- ${C_DIM}${quote_author}${C_RESET}"
+                [ -n "$quote_author" ] && echo -e "     -- ${quote_author}${C_RESET}"
             fi
         fi
         rm -f "$QUOTES_TMP"
