@@ -476,7 +476,7 @@ check_for_updates() {
                 exit 0
             else
                 log "Update failed. Restoring backup." ERROR
-                mv "$0.bak" "$0"
+                mv "$0.bak" "$0" && chmod +x "$0"
                 return 1
             fi
         else
@@ -1747,6 +1747,13 @@ download_presets() {
 
 download_scripts() {
     download_and_extract "Scripts" "https://github.com/turri21/Distribution_Senhor/raw/main/Scripts.zip" false
+    # Make all extracted scripts executable
+    if [ -d "/media/fat/Scripts" ]; then
+        find /media/fat/Scripts -type f | while read -r f; do
+            chmod +x "$f"
+        done
+        log "Set executable permissions on all Scripts." SUCCESS
+    fi
 }
 
 download_shadowmasks() {
