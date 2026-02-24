@@ -11,7 +11,7 @@ New Cores: BluePrint
 ___
 20/2/2026
 
-Updates: Minimig
+Updates: BlackWidow, Minimig
 ___
 19/2/2026
 
