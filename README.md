@@ -313,8 +313,12 @@ ___
 
 Known issues:
 
-IremM90: Bomber Man World - New Dyna Blaster - Global Quest - If "ROM PO CHECK ERROR" is displayed load the "Bomber Man - Dyna Blaster" first and then while it runs load the "Bomber Man World - New Dyna Blaster - Global Quest" afterwards.
-Alternatively, you can try to reset the core several times until it passes the check.
+Lunar Battle: No Controls https://github.com/MiSTer-devel/Arcade-BlackWidow_MiSTer/issues/7
 
-IremM92: A not good "NG" message is displayed on the initial ROM checking. Some games are stuck at the RAM/ROM verification screen such as R-Type Leo. Possible fix: Reset the core several times.
+Space Encounters: No Controls
+
+IremM90: Bomber Man World - New Dyna Blaster - Global Quest - If "ROM PO CHECK ERROR" is displayed load the "Bomber Man - Dyna Blaster" first and then while it runs load the "Bomber Man World - New Dyna Blaster - Global Quest" afterwards.
+Alternatively, you can try to reset the core several times until it passes the check. Issue present in BGA SDRAM modules.
+
+IremM92: A not good "NG" message is displayed on the initial ROM checking. Some games are stuck at the RAM/ROM verification screen such as R-Type Leo. Possible fix: Reset the core several times. Issue present in BGA SDRAM modules.
 
