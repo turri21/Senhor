@@ -1,4 +1,9 @@
 # News
+24/2/2026
+
+Updates: AtariLynx
+
+___
 23/2/2026
 
 Updates: Galaxian
