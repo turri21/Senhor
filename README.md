@@ -3,7 +3,7 @@
 
 New Cores: JunoFirst
 
-Updates: AtariLynx
+Updates: Atari800, AtariLynx
 
 ___
 23/2/2026
