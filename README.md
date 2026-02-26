@@ -1,4 +1,9 @@
 # News
+26/2/2026
+
+Updates: Jaguar
+
+___
 24/2/2026
 
 New Cores: JunoFirst
