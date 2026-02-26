@@ -55,29 +55,29 @@ setup_console_font() {
     # byte values directly as glyph slot indices -- no unicode lookup needed.
     local font_file="/tmp/senhor_console.psf.gz"
     base64 -d << 'FONTEOF' > "$font_file"
-H4sIAPh1mWkC/+3WWXTUVBjA8SmFUDWWUVGjVgoIBfeqWANGBPddUBRE0djBCBK1bnXUOOWJw4Mv
-Hp98UZ/ddxG3oaNxG3FHdOqIW3HFumHVOvF/k5ttQI8vvs1Hf6f9cvfcm4Su0aOymUY0IhWaYRia
-pmX4EZHL5SanK3R19fk/QW3NcfuLjqKsch3ZItPvqlqn6a4KMt229d6BcrncKxtonanuqOuHpgY5
-f/iRqJab3Tc7F09Q0zwtHCt5NW7gbW9dUYtRiphfcWWQGVapVKmUSpYh6+mLND8KQe64QXW3FuWK
-oSiK68j5txl2ucaEJwR5rVgsjiTKdZPcJWReo32w5rA/ihLl4u8C7dV8auaJBcs8XK4/Pe6aElUo
-+D9h+GWiTtS/mthf/0K1Wh0oyvGzuu26NTGhIB+xLMuBNRLer35WWOwP79ewbflhD8v1Wd3L8svM
-bquWyk1zKNG+6rrWrCAXI/nDyfEMTYbsf4J/Gjg/8n4MMlQ+z6CDQT5k+hGNV9rseWwnIfsf3Fqr
-ro/79+914n776zPj+cnyDVVHbY3KxRoHo3JTV5WovVe5MzVft67/UhCWoSXySsWzrDCnSBOnMCq3
-jER/XmmV2Lx1JXmojU4ZsjyzsujvcHOTLFdlGOFu/sOD7smnbduSvOpEz2tmk2nm/S12onLH5QCE
-62tjJLsc1/fLa3G5bi81hxL3l+gV1cuO6m8p/du9Vnx/OZd68n4qSqZV8cPyjxz1gwMg6+t150Uc
-Ea8iIsoHghOamF9if6JyJ5piOL/wkR7otVLzd8QJCNtnOztHxHZ0tUXlfvPE/Ujtf5CLAxDlrq3r
-yX0Kzk9BUcNHqizep/J8t7LUHrHeVvnaCx7m4DchykQdrcdfysB/eulHL8xsXcjL7XX5cIuM8Hq7
-LAivD6d7j/qfUhey975U/8MttVT/lGeS/VOemm+ifVgetg/HTw2amI9XF6sz6X8impqV2zb2TIx2
-Z4uj684WN/5eWhavnPB9OsfsyTsFJ99jzsnEV+Ks7mNE+wLjFqLj0dLm8blbMTf+rvG9S5SLE2fy
-yGeT+9WeWr+4A8n1/2vYdsY007mqbpPHl4KkPqdW4pNel9N/nJNsJ4+nEMwnNaVGNKIRjWjE/xCe
-14RRaMZojIGCsWjBDtgRO0HFzmjFOGSxC3bFbhiP3bEH9oSGvbA39kEb9sUEtGMiJmEy9sMUTEUH
-pmE69scBOBAH4WAcgkPRicNwOI7ADByJLhwFHTMxC0fDwDGYjWMxB3NxHI7HCTgRJ+FknIJTcRpO
-xxk4E2fhbMzDfJyDc7EA5+F8LMQiXIDFuBAXYQkuxiUwcSm6kcNSXAYLl2MZluMKrICNK3EVrkYP
-rsG1uA7X4wb04kbkcRNuxi1wcCsK6ENmKnsPFVmMh4Z5mI8FWIjFWAITOVhYjtW4XbSbxp7jng7P
-W0u+Bk/R/yv8HsO1OyaxBxPZf/IpuIuyu8WZms75wEzoMDADHZiGsRiHe6l7H+7HA3gQD+FhPIJH
-8RgexxN4MhOMvwZPYy2ewbN4Ds/jBRSxDv0o4UW8BBcvi/njVbyG11HGG1iPN/EW3sY7eBfv4X1s
-wAfYiA/xESoYwMeo4hNswqf4DJ/jC3yJQWzGV/ga3+BbfIfvsQU/YAg/4if8jF/wK7biNwzjd/yB
-PzGCv1AT//PF32KGcFgEFAAA
+H4sIAAAAAAAC/+3WWXTUVBjA8ZRCQI1lVNSolRYsFPeqWAPGFtx3QVEQRSODESRq3eqoceCJwwMv
+Hp98UZ/ddxG3oaNxG3FHdOqIW3HFumHVceI/yc024NEX3+ajv9N+uXvuTUL36FEZqRGNSIWq67qq
+qhI/XmSz2cnpCt3dK/yfoLZqOwMFW5ZXObZoIQ04itplOKuCTLMsrX+wVCr1iwZqV6o76vqhKkHO
+H34kqmV7VvRk4wmqqquGYyWvxg3cHa0rajFK9uZXWBlkulkslsvFoqmLetoC1Y98kNtOUN2pRbms
+y7Ls2GL+rbpVqjHhiUFeKxQK1US5ZpA7hMhrtA/WHPZHUaLc+ztPeyWXmnliwSIPl+tPj7smRxXy
+/k8YfplXJ+pfSeyvf6FSqQwWxPgZzXKcmjehIK+apmnDrIb3a4AVFgbC+zVimX5YI2J95uKluaXG
+YrOWyg1jONG+4jjmzCD3RvKHE+PpqgjR/0T/NHB+xP0YYqhcjkGHgnzY8CMar7jFddlOQvQ/tK1W
+2RD379/rxP3212fE8xPlGyu20hKVe2scisoNTZGj9m75ztR8nbr+i0GYuprIy2XXNMOcItU7hVG5
+qSf6c4urvM1bXxSHWu8SIcqllQV/h5ubRLkiQg938x8edFc8bduX5BQ7el6lzYaR87fYjspthwMQ
+rq+VkaxSXN8vr8XlmrXEGE7cX6Lfq16yFX9L6d/qN+P7y7nUkvdTlqUW2Q/TP3LUDw6AqK/VnRfv
+iLhlL6J8MDihifkl9icqt6MphvMLH+nBfjM1f9s7AWH7TFdX1duO7tao3G+euB+p/Q9y7wBEuWNp
+WnKfgvOTl5XwkSp571NxvltYap+33hbx2gse5uA34ZV5ddQ+fymD/+mlH70wM3UhLrfV5SPjRITX
+20RBeH0k3XvUf0dd+Bd7pd5UXpWqqUqUp9pTnsp7O3pT9asd1VR/jJ8qT8zHrYvVUvqfF03N8ppN
+fe3R7my1Nc3e6sTfS9PklRO+T2cZfTk7b+f6jFlSfCXO6j5GtM8zbj46HuNaXT53y2fH3zW+d4ly
+78QZPPKZ5H5F+xPe/nAf/n3rLUsyjHSuKNvl8aUgqc+plfik1+X0H+ckO8jjKQTzSU2pEY1oRCMa
+8T+E6zZhFJoxGmMgYyzGYSfsjF2gYFe0YDwy2A27Yw9MwJ7YC3tDxT7YF/uhFftjItrQjkmYjAPQ
+gSmYik5Mw4E4CAfjEByKw3A4unAEjsRRmI6j0Y1joGEGZuJY6DgOPejFLMzG8TgBJ+IknIxTcCpO
+w+k4A2fiLJyNczAHc3EuzsM8nI8LMB8LcCEW4iJcjEW4BJfCwGVYjCyW4HKYuAJLsQxXYjksXIWr
+cQ36cC2uw/W4ATeiHzchh5txC26FjduQxwpIU9h7KMhgAlTMwVzMw3wsxCIYyMLEMqzG7V67TvYc
+90x13XXka/EU/b/C7zFcu2MSe9DO/pN34C7K7vbO1DTOB2ZAg47pmIpOjMV43Evd+3A/HsCDeAgP
+4xE8isfwOJ7Ak1Iw/lo8jXV4Bs/iOTyPF1DAegygiBfxEhy87M0fr+I1vI4S3sAGvIm38Dbewbt4
+D+9jIz7AJnyIj1DGID5GBZ9gMz7FZ/gcX+BLDGELvsLX+Abf4jt8j634AcP4ET/hZ/yCX7ENv2EE
+v+MP/Ikq/kLN+58v/gY5b67WBBQAAA==
 FONTEOF
 
     # Stay in LEGACY byte mode (do NOT send \033%G).
@@ -105,7 +105,7 @@ trap restore_console_font EXIT
 # ║                        Configuration                             ║
 # ╚══════════════════════════════════════════════════════════════════╝
 SCRIPT_NAME="update_senhor.sh"
-CURRENT_VERSION="1.8"  # Update this when you release new versions
+CURRENT_VERSION="1.9"  # Update this when you release new versions
 SCRIPT_URL="https://raw.githubusercontent.com/turri21/Senhor/main/Scripts/$SCRIPT_NAME"
 
 REPO_OWNER="turri21"
@@ -569,7 +569,7 @@ display_news() {
     echo -e "${C_WHITE}  ════════════════════════════════════════════════════════════════${C_RESET}"
 
     # Random quote
-    local QUOTES_URL="https://raw.githubusercontent.com/JamesFT/Database-Quotes-JSON/master/quotes.json"
+    local QUOTES_URL="https://raw.githubusercontent.com/turri21/Database-Quotes-JSON/master/quotes.json"
     local QUOTES_TMP="/tmp/senhor_quotes.json"
     if download_wrapper "$QUOTES_URL" "$QUOTES_TMP" && [ -s "$QUOTES_TMP" ]; then
         # Count total quotes (one "quoteText" per quote)
@@ -966,21 +966,67 @@ download_bios() {
 
     if [ "$SUCCESS" = true ]; then
         log "Processing BIOS files..."
-        jq -r '.files | to_entries[] | "\(.key) \(.value.url)"' "$JSON_FILE" | while read -r path url; do
+
+        # Pass 1: collect all entries (SGB overrides + JSON) into parallel arrays
+        declare -a BIOS_RELS BIOS_URLS
+
+        # SGB BIOS: fixed working URLs (archive.org links in the JSON are broken)
+        local sgb_dest
+        for sgb_dest in \
+            "games/SGB/Super Game Boy.sfc:https://raw.githubusercontent.com/BatoceraPLUS/Batocera.PLUS-bios/main/SGB1.sfc" \
+            "games/SGB/Super Game Boy 2.sfc:https://raw.githubusercontent.com/BatoceraPLUS/Batocera.PLUS-bios/main/SGB2.sfc"
+        do
+            BIOS_RELS+=("${sgb_dest%%:*}")
+            BIOS_URLS+=("${sgb_dest#*:}")
+        done
+
+        # All remaining BIOS files from JSON (skip SGB .sfc — handled above)
+        while IFS=$'\t' read -r path url; do
             local relative_path="${path#|}"
-            local full_path="$BASE_DIR/$relative_path"
+            case "$relative_path" in
+                *SGB*.sfc|*SGB*.SFC) continue ;;
+            esac
+            BIOS_RELS+=("$relative_path")
+            BIOS_URLS+=("$url")
+        done < <(jq -r '.files | to_entries[] | "\(.key)\t\(.value.url)"' "$JSON_FILE")
+
+        # Pass 2: download with progress bar
+        local total_files=${#BIOS_RELS[@]}
+        local total_success=0
+        local current_file=0
+        local -a DL_FILES=()
+
+        start_progress_bar
+        draw_progress_bar 0 "$total_files" "Starting..."
+
+        for idx in "${!BIOS_RELS[@]}"; do
+            local rel="${BIOS_RELS[$idx]}"
+            local url="${BIOS_URLS[$idx]}"
+            local full_path="$BASE_DIR/$rel"
             mkdir -p "$(dirname "$full_path")"
+            local _tag
             if [ ! -f "$full_path" ]; then
-                if ! download_wrapper "$url" "$full_path"; then
-                    log "Failed to download: $relative_path" ERROR
-                    SUCCESS=false
+                if download_wrapper "$url" "$full_path"; then
+                    total_success=$((total_success + 1))
+                    SESSION_TOTAL_DL=$((SESSION_TOTAL_DL + 1))
+                    _tag="DL"
+                    DL_FILES+=("$(basename "$rel")")
                 else
-                    log "Downloaded: $relative_path" SUCCESS
+                    _tag="ERR"
+                    session_error "$rel"
+                    SUCCESS=false
                 fi
             else
-                log "Skipping (exists): $relative_path"
+                _tag="SKIP"
             fi
+            current_file=$((current_file + 1))
+            draw_progress_bar "$current_file" "$total_files" "$(basename "$rel")" "$_tag"
         done
+
+        finish_progress_bar
+        print_dl_summary "${DL_FILES[@]}"
+        unset BIOS_RELS BIOS_URLS DL_FILES
+        log "BIOS complete: $total_success of $total_files files downloaded." SUCCESS
     fi
 
     log "Cleaning up temporary files..."
@@ -1626,7 +1672,7 @@ download_cheats() {
                 local elapsed=$((now - start_time))
                 
                 # Estimate: ~30 seconds per 1000 files
-                local estimated_total=$(( (total_a / 1000) * 44 ))
+                local estimated_total=$(( (total_a / 1000) * 10 ))
                 [ "$estimated_total" -lt 10 ] && estimated_total=10
                 
                 current=$(( (elapsed * total_a) / estimated_total ))
@@ -1681,7 +1727,7 @@ download_cheats() {
                 local now=$(date +%s)
                 local elapsed=$((now - start_time))
                 
-                local estimated_total=$(( (total_b / 1000) * 44 ))
+                local estimated_total=$(( (total_b / 1000) * 11 ))
                 [ "$estimated_total" -lt 10 ] && estimated_total=10
                 
                 current=$(( (elapsed * total_b) / estimated_total ))
@@ -1739,6 +1785,7 @@ download_linux() {
     download_and_extract "Linux" "https://github.com/turri21/Distribution_Senhor/raw/main/Linux.zip" true
     chmod +x /media/fat/linux/glow 2>/dev/null && log "Set executable: linux/glow" SUCCESS
     chmod +x /media/fat/linux/pdfviewer 2>/dev/null && log "Set executable: linux/pdfviewer" SUCCESS
+    chmod +x /media/fat/linux/7zz 2>/dev/null && log "Set executable: linux/7zz" SUCCESS
 }
 
 download_presets() {
@@ -1810,18 +1857,18 @@ main() {
 
 echo -e "${C_CYAN}"
 cat << "EOF"
- ██████╗███████╗███╗   ██╗██╗  ██╗ ██████╗ █████╗            __           
-██╔════╝██╔════╝████╗  ██║██║  ██║██╔═══██╗██╔══██╗         (  ) 
-███████╗█████╗  ██╔██╗ ██║███████║██║   ██║██████╔╝          ||
-╚════██║██╔══╝  ██║╚██╗██║██╔══██║██║   ██║██╔══██╗          ||
-███████ ███████╗██║ ╚████║██║  ██║╚██████╔╝██║  ██║  __..___|""|_  
-╚══════╝╚══════╝╚═╝  ╚═══╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝ /____________\ 
-.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\____________/
+  ██████╗███████╗███╗   ██╗██╗  ██╗ ██████╗ █████╗            __           
+ ██╔════╝██╔════╝████╗  ██║██║  ██║██╔═══██╗██╔══██╗         (  ) 
+ ███████╗█████╗  ██╔██╗ ██║███████║██║   ██║██████╔╝          ||
+ ╚════██║██╔══╝  ██║╚██╗██║██╔══██║██║   ██║██╔══██╗          ||
+ ███████ ███████╗██║ ╚████║██║  ██║╚██████╔╝██║  ██║  __..___|""|_  
+ ╚══════╝╚══════╝╚═╝  ╚═══╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝ /____________\ 
+ .~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\____________/
 EOF
 echo -e "${C_RESET}"
-echo -e "${C_WHITE}  ════════════════════════════════════════════════════════════════${C_RESET}"
-echo -e "${C_WHITE}     ↓  Download session started  ·  please wait                  ${C_RESET}"
-echo -e "${C_WHITE}  ════════════════════════════════════════════════════════════════${C_RESET}"
+echo -e "${C_WHITE}  ═════════════════════════════════════════════════════════════════${C_RESET}"
+echo -e "${C_WHITE}     ↓  Download session started  ·  please wait                   ${C_RESET}"
+echo -e "${C_WHITE}  ═════════════════════════════════════════════════════════════════${C_RESET}"
 
     # Flags
     run_rbf_mgl=false
