@@ -1,7 +1,7 @@
 # News
 26/2/2026
 
-Updates: Jaguar
+Updates: WonderSwan, PocketChallengeV2, Jaguar
 
 ___
 24/2/2026
