@@ -20,7 +20,7 @@ You can provide custom WiFi and Samba configuration which Mr. Fusion will instal
 
 ### Step 1
 
-Download the latest version from the [releases](https://github.com/CoreRasurae/mr-fusion_Senhor/releases) page.
+Download the latest version from the [MrFusion](https://github.com/turri21/Senhor/tree/main/MrFusion) page.
 
 ### Step 2
 
