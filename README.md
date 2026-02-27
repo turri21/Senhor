@@ -1,4 +1,9 @@
 # News
+27/2/2026
+
+Updates: SNES
+
+___
 26/2/2026
 
 Updates: WonderSwan, PocketChallengeV2, Jaguar
