@@ -51,7 +51,7 @@ If you have a Bluetooth USB dongle, you can pair a Bluetooth controller by holdi
 
 Through the Scripts section you can configure WiFi and update your Senhor. Please refer to the [MiSTer documentation](https://mister-devel.github.io/MkDocs_MiSTer/setup/software/) for more information.
 
-_Note: From powering on the QMTech Cyclone V and getting to the Senhor menu should not take more than 90 seconds. If you don't see the Senhor menu appear after two minutes, power off the QMTech CycloneV SoC, remove the SD card and start over._
+_Note: From powering on the QMTech Cyclone V and getting to the Senhor menu should not take more than 90 seconds. If the Senhor menu does not appear after two minutes, power off the QMTech CycloneV SoC, remove the SD card and start over._
 
 ## Senhor scripts support
 
