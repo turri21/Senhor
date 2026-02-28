@@ -1,7 +1,7 @@
 # News
 28/2/2026
 
-Updates: Robotron, CanyonBomber
+Updates: Defender, Robotron, CanyonBomber
 
 ___
 27/2/2026
