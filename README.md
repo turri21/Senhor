@@ -1,4 +1,9 @@
 # News
+28/2/2026
+
+Updates: CanyonBomber
+
+___
 27/2/2026
 
 Updates: SNES
