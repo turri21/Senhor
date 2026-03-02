@@ -1,4 +1,9 @@
 # News
+2/3/2026
+
+New Cores: BubbleUniverse
+
+___
 1/3/2026
 
 Updates: Astrocade, ST-V
