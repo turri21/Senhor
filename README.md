@@ -1,7 +1,7 @@
 # News
 1/3/2026
 
-Updates: ST-V
+Updates: Astrocade, ST-V
 
 ___
 28/2/2026
