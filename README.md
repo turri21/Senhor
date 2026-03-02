@@ -3,6 +3,8 @@
 
 New Cores: Battletoads, BubbleUniverse
 
+Updates: jtcps1
+
 ___
 1/3/2026
 
