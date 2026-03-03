@@ -1,14 +1,14 @@
 # News
 3/3/2026
 
-Updates: Jaguar, jtoutrun
+Updates: jtoutrun
 
 ___
 2/3/2026
 
 New Cores: Battletoads, BubbleUniverse
 
-Updates: jtcps1
+Updates: Jaguar, jtcps1
 
 ___
 1/3/2026
