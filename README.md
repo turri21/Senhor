@@ -1,7 +1,7 @@
 # News
 3/3/2026
 
-Updates: jtoutrun
+Updates: Jaguar, jtoutrun
 
 ___
 2/3/2026
