@@ -1,7 +1,7 @@
 # News
 9/3/2026
 
-Updates: Tecmo
+Updates: QBert, Tecmo
 
 ___
 4/3/2026
