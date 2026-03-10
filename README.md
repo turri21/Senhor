@@ -1,4 +1,9 @@
 # News
+10/3/2026
+
+Updates: NES
+
+___
 9/3/2026
 
 Updates: QBert, Tecmo
