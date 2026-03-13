@@ -1,4 +1,9 @@
 # News
+13/3/2026
+
+Updates: Galaxian
+
+___
 10/3/2026
 
 Updates: NES
