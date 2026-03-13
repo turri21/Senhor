@@ -1,7 +1,7 @@
 # News
 13/3/2026
 
-Updates: Galaxian
+Updates: Atari800, Galaxian
 
 ___
 10/3/2026
