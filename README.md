@@ -1,4 +1,9 @@
 # News
+20/3/2026
+
+New Cores: PCjr
+
+___
 19/3/2026
 
 Updates: PCXT
