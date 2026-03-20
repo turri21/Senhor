@@ -6,7 +6,7 @@ New Cores: PCjr
 ___
 20/3/2026
 
-Updates: Astrocade
+Updates: PC88, Astrocade
 
 ___
 19/3/2026
