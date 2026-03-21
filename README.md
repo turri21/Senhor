@@ -1,7 +1,7 @@
 # News
 21/3/2026
 
-New Cores: PCjr
+New Cores: PC88, PCjr
 
 ___
 20/3/2026
