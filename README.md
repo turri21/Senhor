@@ -1,7 +1,7 @@
 # News
 23/3/2026
 
-Updates: Jaguar
+Updates: QBert, Jaguar
 ___
 21/3/2026
 
