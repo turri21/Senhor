@@ -1,7 +1,7 @@
 # News
 25/3/2026
 
-Updates: CreatiVision, Atari800, PSX
+Updates: Atari5200, CreatiVision, Atari800, PSX
 ___
 23/3/2026
 
