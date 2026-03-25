@@ -1,4 +1,8 @@
 # News
+25/3/2026
+
+Updates: PSX
+___
 23/3/2026
 
 Updates: Saturn, QBert, Jaguar
