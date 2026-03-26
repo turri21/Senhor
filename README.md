@@ -3,7 +3,7 @@
 
 New Cores: Vastar
 
-Updates: JunoFirst
+Updates: Gameboy, JunoFirst
 ___
 25/3/2026
 
