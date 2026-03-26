@@ -1,4 +1,10 @@
 # News
+26/3/2026
+
+New Cores: Vastar
+
+Updates: JunoFirst
+___
 25/3/2026
 
 Updates: Atari5200, CreatiVision, Atari800, PSX
