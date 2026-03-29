@@ -1,4 +1,8 @@
 # News
+27/3/2026
+
+Updates: MegaCD
+___
 26/3/2026
 
 New Cores: Vastar
