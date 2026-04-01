@@ -1,7 +1,7 @@
 # News
 31/3/2026
 
-Updates: MegaDrive
+Updates: PCXT, MegaDrive
 
 ___
 27/3/2026
