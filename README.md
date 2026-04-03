@@ -1,7 +1,7 @@
 # News
 3/4/2026
 
-Updates: SNES, SpaceInvaders
+Updates: X68000, SNES, SpaceInvaders
 ___
 2/4/2026
 
