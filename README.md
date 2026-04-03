@@ -1,7 +1,7 @@
 # News
 3/4/2026
 
-Updates: Pokemon Mini, X68000, SNES, SpaceInvaders
+Updates: C64, Pokemon Mini, X68000, SNES, SpaceInvaders
 ___
 2/4/2026
 
