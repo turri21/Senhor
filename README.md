@@ -5,7 +5,7 @@ Updates: SNES, SpaceInvaders
 ___
 2/4/2026
 
-Updates: X68000
+Updates: Gameboy, X68000
 ___
 31/3/2026
 
