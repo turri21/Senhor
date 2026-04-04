@@ -1,4 +1,8 @@
 # News
+4/4/2026
+
+Updates: BluePrint, Tutankham
+___
 3/4/2026
 
 Updates: Saturn, C64, Pokemon Mini, X68000, SNES, SpaceInvaders
