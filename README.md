@@ -1,7 +1,7 @@
 # News
 7/4/2026
 
-New Cores: jts18
+New Cores: jtpaclan, jts18
 
 Updates: jts16, jtcps1, jtajax, jt1943, jt1942
 ___
