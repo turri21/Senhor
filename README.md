@@ -1,4 +1,9 @@
 # News
+8/4/2026
+
+Updates: jttwin16
+
+___
 7/4/2026
 
 New Cores: jtpaclan, jts18
