@@ -1,6 +1,8 @@
 # News
 8/4/2026
 
+New Cores: 3DO
+
 Updates: jttwin16
 
 ___
