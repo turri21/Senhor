@@ -1,7 +1,7 @@
 # News
 7/4/2026
 
-Updates: jtcps1, jtajax, jt1943, jt1942
+Updates: jts16, jtcps1, jtajax, jt1943, jt1942
 ___
 4/4/2026
 
