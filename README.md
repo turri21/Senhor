@@ -10,7 +10,7 @@ ___
 
 New Cores: jtpaclan, jts18
 
-Updates: jts16b, jtparoda, jts16, jtcps1, jtajax, jt1943, jt1942
+Updates: jtshouse, jts16b, jtparoda, jts16, jtcps1, jtajax, jt1943, jt1942
 ___
 4/4/2026
 
