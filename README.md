@@ -3,7 +3,7 @@
 
 New Cores: 3DO
 
-Updates: Pooyan, jttwin16
+Updates: C128, Pooyan, jttwin16
 
 ___
 7/4/2026
