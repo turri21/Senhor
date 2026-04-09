@@ -1,4 +1,9 @@
 # News
+9/4/2026
+
+Updates: Scramble
+
+___
 8/4/2026
 
 New Cores: 3DO
