@@ -1,7 +1,7 @@
 # News
 9/4/2026
 
-Updates: Scramble
+Updates: C64, Jotego Cores (major update), Scramble
 
 ___
 8/4/2026
