@@ -242,6 +242,8 @@ ___
 
 Known issues:
 
+jtgng: Diamond Run (broken)
+
 Lunar Battle: No Controls https://github.com/MiSTer-devel/Arcade-BlackWidow_MiSTer/issues/7
 
 Space Encounters: No Controls
