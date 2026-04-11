@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-MiSTer sys_top.v Editor
+MiSTer sys_top.v Editor v1.0
 Automates editing of sys_top.v files in MiSTer cores
 """
 
@@ -93,6 +93,33 @@ def edit_qsf(file_path, backup=True):
         elif 'source files.qip' not in content:
             changes_made.append("⊙ 'source files.qip' not found in file")
     
+    # Remove PIN_ assignment block and everything up to (but not including) PARTITION_HIERARCHY
+    # Triggered only if set_location_assignment PIN_ lines exist in the file
+    if re.search(r'^set_location_assignment PIN_', content, re.MULTILINE):
+        pre_flow_marker = 'set_global_assignment -name PRE_FLOW_SCRIPT_FILE "quartus_sh:sys/build_id.tcl"'
+        partition_line = 'set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top'
+
+        if pre_flow_marker in content and partition_line in content:
+            # Find the start of the PRE_FLOW line and the start of the PARTITION_HIERARCHY line
+            pre_flow_idx = content.index(pre_flow_marker)
+            partition_idx = content.index(partition_line)
+
+            if pre_flow_idx < partition_idx:
+                # Count non-empty lines being removed (everything between the two markers)
+                removed_block = content[pre_flow_idx:partition_idx]
+                lines_removed = len([l for l in removed_block.splitlines() if l.strip()])
+                # Reconstruct: keep everything before PRE_FLOW, then jump straight to PARTITION_HIERARCHY
+                content = content[:pre_flow_idx] + partition_line
+                changes_made.append(f"✓ Removed PRE_FLOW_SCRIPT_FILE line and {lines_removed - 1} subsequent line(s) (PIN_ assignments and extras), kept PARTITION_HIERARCHY")
+            else:
+                changes_made.append("⊙ PRE_FLOW_SCRIPT_FILE appears after PARTITION_HIERARCHY — skipping removal")
+        elif pre_flow_marker not in content:
+            changes_made.append("⊙ PIN_ assignments found but PRE_FLOW_SCRIPT_FILE line not present — nothing to remove")
+        elif partition_line not in content:
+            changes_made.append("⊙ PIN_ assignments found but PARTITION_HIERARCHY line not present — skipping removal")
+    else:
+        changes_made.append("⊙ No set_location_assignment PIN_ lines found — skipping block removal")
+
     # Check if any changes were made
     if content == original_content:
         return False, "\n".join(changes_made)
