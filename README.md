@@ -1,4 +1,9 @@
 # News
+11/4/2026
+
+Updates: X68000
+
+___
 9/4/2026
 
 Updates: C64, Jotego Cores (major update), Scramble
