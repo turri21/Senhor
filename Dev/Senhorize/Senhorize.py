@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-MiSTer sys_top.v Editor v1.0
+MiSTer sys_top.v Editor v1.1
 Automates editing of sys_top.v files in MiSTer cores
 """
 
@@ -276,6 +276,7 @@ def edit_sys_top(file_path, backup=True):
 );
 
 ///////////////////////// Senhor: Initializations ////////////////////////
+
 wire [5:0] VGA_R;
 wire [5:0] VGA_G;
 wire [5:0] VGA_B;
@@ -287,6 +288,28 @@ wire SDIO_CMD = 1'b1;
 wire [6:0] USER_IO;
 wire SD_SPI_MISO = 1'b1;
 wire BTN_RESET = 1'b1, BTN_OSD = 1'b1, BTN_USER = 1'b1;
+
+wire SD_SPI_CS = 1'b1;
+wire SD_SPI_CLK = 1'b1;
+wire SD_SPI_MOSI = 1'b1;
+wire SDIO_CLK = 1'b1;
+wire IO_SCL;
+wire IO_SDA;
+wire LED_POWER = 1'b1;
+wire LED_HDD = 1'b1;
+wire LED_USER = 1'b1;
+wire SDCD_SPDIF;
+wire AUDIO_SPDIF = 1'b1;
+wire AUDIO_R = 1'b1;
+wire AUDIO_L = 1'b1;
+wire ADC_SCK = 1'b1;
+wire ADC_SDO = 1'b1;
+wire ADC_SDI = 1'b1;
+wire ADC_CONVST = 1'b1;
+wire SDRAM_DQML;
+wire SDRAM_DQMH;
+wire SDRAM_CKE;
+
 /////////////////////////////////////////////////////////////////////////
 
 //////////////////////  Secondary SD  ///////////////////////////////////"""
