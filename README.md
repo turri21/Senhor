@@ -3,6 +3,10 @@
 
 Updates: C128
 ___
+13/4/2026
+
+New Cores: Darius
+___
 12/4/2026
 
 Updates: SMS
