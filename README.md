@@ -1,4 +1,8 @@
 # News
+19/4/2026
+
+Updates: MacPlus
+___
 15/4/2026
 
 Updates: Gameboy
