@@ -1,7 +1,7 @@
 # News
 21/4/2026
 
-Updates: Starforce
+Updates: MacPlus, Starforce
 ___
 19/4/2026
 
