@@ -1954,6 +1954,9 @@ echo -e "${C_WHITE}  ═══════════════════�
         esac
     done
 
+    # Reset timer here so Duration only counts actual download time, not menu interaction
+    SESSION_START_TIME=$(date +%s)
+
     # Execute choices
     if $run_rbf_mgl; then
         echo
