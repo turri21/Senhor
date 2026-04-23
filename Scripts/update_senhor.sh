@@ -1786,6 +1786,7 @@ download_linux() {
     chmod +x /media/fat/linux/glow 2>/dev/null && log "Set executable: linux/glow" SUCCESS
     chmod +x /media/fat/linux/pdfviewer 2>/dev/null && log "Set executable: linux/pdfviewer" SUCCESS
     chmod +x /media/fat/linux/7zz 2>/dev/null && log "Set executable: linux/7zz" SUCCESS
+    chmod +x /media/fat/linux/user-startup.sh 2>/dev/null && log "Set executable: linux/user-startup.sh" SUCCESS
 }
 
 download_presets() {
