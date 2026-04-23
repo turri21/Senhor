@@ -137,7 +137,7 @@ cat << "EOF"
 EOF
 echo -e "${C_RESET}"
 echo -e "${C_CYAN}      [${C_RESET}  ${C_WHITE}${C_BOLD}Update Senhor Script${C_RESET}  *** ${C_YELLOW}v${CURRENT_VERSION}${C_RESET} ***  ${C_CYAN}]${C_RESET}"
-echo -e "${C_DIM}      ════════════════════════════════════════${C_RESET}"
+echo -e "${C_DIM}      ═════════════════════════════════════════${C_RESET}"
 echo
 
 declare -A FOLDERS=(
@@ -903,6 +903,10 @@ download_arcaderoms() {
     echo -e "${C_CYAN}  ═══════════════════════════${C_RESET}"
     echo -e "${C_CYAN}          Arcade ROMs        ${C_RESET}"
     echo -e "${C_CYAN}  ═══════════════════════════${C_RESET}"
+    
+    local downloaded=0 skipped=0 failed=0 current=0
+    local -a DL_FILES=()  
+    
     start_progress_bar
     draw_progress_bar 0 "$total" "Starting..."
 
@@ -919,6 +923,7 @@ download_arcaderoms() {
             if download_wrapper "$url" "$full_path"; then
                 log "Downloaded: $relative_path" SUCCESS
                 ((downloaded++))
+                DL_FILES+=("$label")
                 draw_progress_bar "$current" "$total" "$label" "DL"
             else
                 log "Failed: $relative_path" ERROR
@@ -933,7 +938,8 @@ download_arcaderoms() {
     done
 
     finish_progress_bar
-    unset ROM_PATHS ROM_URLS
+    print_dl_summary "${DL_FILES[@]}"
+    unset ROM_PATHS ROM_URLS DL_FILES
     log "Arcade ROMs complete. Downloaded: $downloaded  Skipped: $skipped  Failed: $failed" SUCCESS
 
     log "Cleaning up database files..."
