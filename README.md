@@ -1,7 +1,7 @@
 # News
 23/4/2026
 
-Updates: SMS
+Updates: Atari800, SMS
 ___
 21/4/2026
 
