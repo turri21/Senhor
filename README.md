@@ -1,7 +1,7 @@
 # News
 28/4/2026
 
-Updates: PSX
+Updates: SNES, PSX
 
 ___
 27/4/2026
