@@ -1,7 +1,7 @@
 # News
 28/4/2026
 
-Updates: C64, SNES, PSX
+Updates: BurningRubber, C64, SNES, PSX
 
 ___
 27/4/2026
