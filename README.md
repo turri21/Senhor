@@ -1,7 +1,7 @@
 # News
 28/4/2026
 
-Updates: BurningRubber, C64, SNES, PSX
+Updates: AdventureVision, BurningRubber, C64, SNES, PSX
 
 ___
 27/4/2026
