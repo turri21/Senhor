@@ -1,4 +1,9 @@
 # News
+29/4/2026
+
+Updates: MCR2_Senhor_20260428.rbf
+
+___
 28/4/2026
 
 Updates: AdventureVision, BurningRubber, C64, SNES, PSX
