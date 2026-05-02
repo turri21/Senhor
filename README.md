@@ -1,7 +1,7 @@
 # News
 2/5/2026
 
-New Core: SNK6502
+New Cores: SNK6502
 ___
 1/5/2026
 
