@@ -1,4 +1,4 @@
-Retroachievements by odelot: https://github.com/odelot
+Retroachievements by [odelot](https://github.com/odelot).
 
 How to Test
 Edit retroachievements.cfg with your RetroAchievements credentials (username and password).
