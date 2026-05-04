@@ -1,6 +1,8 @@
 # News
 4/5/2026
 
+New Cores: CityConnection
+
 Updates: Qix
 ___
 3/5/2026
