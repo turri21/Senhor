@@ -3,7 +3,7 @@
 
 New Cores: CityConnection
 
-Updates: BubSys, Darius, Qix
+Updates: NeoGeo, BubSys, Darius, Qix
 ___
 3/5/2026
 
