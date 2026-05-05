@@ -12,7 +12,7 @@ Updates: SMS
 ___
 2/5/2026
 
-New Cores: SNK6502
+New Cores: PSX, SNK6502
 ___
 1/5/2026
 
