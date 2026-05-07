@@ -1,4 +1,9 @@
 # News
+7/5/2026
+
+New Cores: ChinaGate
+
+___
 4/5/2026
 
 New Cores: CityConnection
