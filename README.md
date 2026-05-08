@@ -1,7 +1,7 @@
 # News
 8/5/2026
 
-Updates: IIgs
+Updates: Apple-IIgs
 
 ___
 7/5/2026
