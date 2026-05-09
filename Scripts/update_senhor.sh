@@ -105,7 +105,7 @@ trap restore_console_font EXIT
 # ║                        Configuration                             ║
 # ╚══════════════════════════════════════════════════════════════════╝
 SCRIPT_NAME="update_senhor.sh"
-CURRENT_VERSION="1.96"  # Update this when you release new versions
+CURRENT_VERSION="1.97"  # Update this when you release new versions
 SCRIPT_URL="https://raw.githubusercontent.com/turri21/Senhor/main/Scripts/$SCRIPT_NAME"
 
 REPO_OWNER="turri21"
@@ -1191,7 +1191,7 @@ download_gbaborders() {
 download_wallpapers() {
     # Base target directory
     BASE_DIR="/media/fat"
-    WALLPAPER_DIR="$BASE_DIR/Wallpapers"
+    WALLPAPER_DIR="$BASE_DIR/wallpapers"
     TEMP_DIR=$(mktemp -d)
     
     # Repositories to process
