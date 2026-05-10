@@ -1,4 +1,9 @@
 # News
+10/5/2026
+
+Updates: Amstrad
+
+___
 9/5/2026
 
 Updates: IkariWarriors
