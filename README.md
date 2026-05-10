@@ -1,7 +1,7 @@
 # News
 10/5/2026
 
-Updates: Amstrad
+Updates: NES, Amstrad
 
 ___
 9/5/2026
