@@ -1,7 +1,7 @@
 # News
 11/5/2026
 
-Updates: Oric
+Updates: C64, Oric
 ___
 10/5/2026
 
