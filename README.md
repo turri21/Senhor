@@ -1,4 +1,8 @@
 # News
+11/5/2026
+
+Updates: Oric
+___
 10/5/2026
 
 Updates: NES, Amstrad
