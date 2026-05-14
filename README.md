@@ -1,7 +1,7 @@
 # News
 14/5/2026
 
-Updates: NeoGeo
+Updates: SDGundamPS, NeoGeo
 ___
 13/5/2026
 
