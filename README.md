@@ -1,7 +1,13 @@
 # News
+16/5/2026
+
+Updates: Tamagotchi_Senhor_20260516
+___
 14/5/2026
 
-Updates: SDGundamPS, NeoGeo
+New Core: SDGundamPS
+
+Updates: NeoGeo
 ___
 13/5/2026
 
