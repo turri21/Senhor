@@ -1,4 +1,8 @@
 # News
+18/5/2026
+
+New Cores: SpaceFirebird
+___
 16/5/2026
 
 Updates: Tamagotchi
