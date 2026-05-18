@@ -6,7 +6,7 @@
 # core from the console menu.
 #
 
-REPO="turri21/Senhor/ARM/PICO-8"
+REPO="turri21/Senhor"
 BRANCH="main"
 BASE_URL="https://raw.githubusercontent.com/$REPO/$BRANCH"
 
@@ -37,26 +37,26 @@ FAIL=0
 echo "  Downloading FPGA core..."
 rm -f /media/fat/_Console/PICO-8_*.rbf /media/fat/_Console/PICO-8.rbf
 rm -f /media/fat/_Other/PICO-8_*.rbf /media/fat/_Other/PICO-8.rbf
-RBF_NAME=$(wget -q -O - "https://api.github.com/repos/$REPO/contents/_Other" | grep -o '"PICO-8_Senhor_[0-9]*.rbf"' | tr -d '"')
+RBF_NAME=$(wget -q -O - "https://api.github.com/repos/$REPO/contents/ARM/PICO-8/_Other" | grep -o '"PICO-8_Senhor_[0-9]*.rbf"' | tr -d '"')
 if [ -z "$RBF_NAME" ]; then
     RBF_NAME="PICO-8.rbf"
 fi
-wget -q --show-progress -O "/media/fat/_Other/$RBF_NAME" "$BASE_URL/_Other/$RBF_NAME" || FAIL=1
+wget -q --show-progress -O "/media/fat/_Other/$RBF_NAME" "$BASE_URL/ARM/PICO-8/_Other/$RBF_NAME" || FAIL=1
 
 echo "  Downloading ARM binary..."
-wget -q --show-progress -O /media/fat/games/PICO-8/PICO-8 "$BASE_URL/games/PICO-8/PICO-8" || FAIL=1
+wget -q --show-progress -O /media/fat/games/PICO-8/PICO-8 "$BASE_URL/ARM/PICO-8/games/PICO-8/PICO-8" || FAIL=1
 
 echo "  Downloading BIOS..."
-wget -q --show-progress -O /media/fat/games/PICO-8/bios.p8 "$BASE_URL/games/PICO-8/bios.p8" || FAIL=1
+wget -q --show-progress -O /media/fat/games/PICO-8/bios.p8 "$BASE_URL/ARM/PICO-8/games/PICO-8/bios.p8" || FAIL=1
 
 echo "  Downloading daemon..."
-wget -q --show-progress -O /media/fat/games/PICO-8/_handler.sh "$BASE_URL/games/PICO-8/_handler.sh" || FAIL=1
+wget -q --show-progress -O /media/fat/games/PICO-8/_handler.sh "$BASE_URL/ARM/PICO-8/games/PICO-8/_handler.sh" || FAIL=1
 
 echo "  Downloading controller map..."
-wget -q --show-progress -O /media/fat/config/inputs/PICO-8_input_045e_0b12_v3.map "$BASE_URL/config/inputs/PICO-8_input_045e_0b12_v3.map" || FAIL=1
+wget -q --show-progress -O /media/fat/config/inputs/PICO-8_input_045e_0b12_v3.map "$BASE_URL/ARM/PICO-8/config/inputs/PICO-8_input_045e_0b12_v3.map" || FAIL=1
 
 echo "  Downloading README..."
-wget -q --show-progress -O /media/fat/docs/PICO-8/README.md "$BASE_URL/docs/PICO-8/README.md" || FAIL=1
+wget -q --show-progress -O /media/fat/docs/PICO-8/README.md "$BASE_URL/ARM/PICO-8/docs/PICO-8/README.md" || FAIL=1
 
 if [ "$FAIL" -ne 0 ]; then
     echo ""
