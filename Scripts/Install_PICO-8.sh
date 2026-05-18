@@ -92,12 +92,13 @@ if [ -f "$STARTUP" ]; then
     sed -i '/pico8_autolaunch/,/^) \&$/d' "$STARTUP"
     # Remove old daemon launcher lines
     sed -i '/pico8_daemon\.sh/d' "$STARTUP"
+    sed -i '/_handler\.sh/d' "$STARTUP"
     # Remove old comment lines
     sed -i '/PICO-8 auto-launch/d' "$STARTUP"
 fi
 
 # Add single launcher line
-echo "" >> "$STARTUP"
+# echo "" >> "$STARTUP"
 echo "# PICO-8 auto-launch daemon" >> "$STARTUP"
 echo "/media/fat/games/PICO-8/_handler.sh &" >> "$STARTUP"
 
