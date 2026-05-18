@@ -6,7 +6,7 @@
 # core from the console menu.
 #
 
-REPO="turri21/PICO-8_Senhor"
+REPO="turri21/Senhor/ARM/PICO-8"
 BRANCH="main"
 BASE_URL="https://raw.githubusercontent.com/$REPO/$BRANCH"
 
@@ -36,11 +36,12 @@ FAIL=0
 
 echo "  Downloading FPGA core..."
 rm -f /media/fat/_Console/PICO-8_*.rbf /media/fat/_Console/PICO-8.rbf
-RBF_NAME=$(wget -q -O - "https://api.github.com/repos/$REPO/contents/_Console" | grep -o '"PICO-8_Senhor_[0-9]*.rbf"' | tr -d '"')
+rm -f /media/fat/_Other/PICO-8_*.rbf /media/fat/_Other/PICO-8.rbf
+RBF_NAME=$(wget -q -O - "https://api.github.com/repos/$REPO/contents/_Other" | grep -o '"PICO-8_Senhor_[0-9]*.rbf"' | tr -d '"')
 if [ -z "$RBF_NAME" ]; then
     RBF_NAME="PICO-8.rbf"
 fi
-wget -q --show-progress -O "/media/fat/_Console/$RBF_NAME" "$BASE_URL/_Console/$RBF_NAME" || FAIL=1
+wget -q --show-progress -O "/media/fat/_Other/$RBF_NAME" "$BASE_URL/_Other/$RBF_NAME" || FAIL=1
 
 echo "  Downloading ARM binary..."
 wget -q --show-progress -O /media/fat/games/PICO-8/PICO-8 "$BASE_URL/games/PICO-8/PICO-8" || FAIL=1
@@ -108,7 +109,7 @@ echo "Auto-launcher installed."
 echo ""
 echo "=== PICO-8 installed successfully! ==="
 echo ""
-echo "Load the PICO-8 core from the console menu to play."
+echo "Load the PICO-8 core from the Other menu to play."
 echo "Use the Senhor OSD to load carts."
 echo "Place .p8 and .p8.png carts in: games/PICO-8/Carts/"
 echo ""
