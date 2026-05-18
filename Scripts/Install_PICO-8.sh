@@ -10,7 +10,7 @@ REPO="turri21/PICO-8_Senhor"
 BRANCH="main"
 BASE_URL="https://raw.githubusercontent.com/$REPO/$BRANCH"
 
-echo "=== PICO-8 Installer for MiSTer ==="
+echo "=== PICO-8 Installer for Senhor ==="
 echo ""
 
 # ── Kill ALL existing PICO-8 processes and daemons ─────────────────
@@ -28,6 +28,7 @@ echo "Downloading PICO-8..."
 mkdir -p /media/fat/_Console
 mkdir -p /media/fat/games/PICO-8/Carts
 mkdir -p /media/fat/saves/PICO-8
+mkdir -p /media/fat/savestates/PICO-8
 mkdir -p /media/fat/config/inputs
 mkdir -p /media/fat/docs/PICO-8
 
@@ -45,10 +46,10 @@ echo "  Downloading ARM binary..."
 wget -q --show-progress -O /media/fat/games/PICO-8/PICO-8 "$BASE_URL/games/PICO-8/PICO-8" || FAIL=1
 
 echo "  Downloading BIOS..."
-wget -q --show-progress -O /media/fat/games/PICO-8/boot.rom "$BASE_URL/games/PICO-8/boot.rom" || FAIL=1
+wget -q --show-progress -O /media/fat/games/PICO-8/bios.p8 "$BASE_URL/games/PICO-8/bios.p8" || FAIL=1
 
 echo "  Downloading daemon..."
-wget -q --show-progress -O /media/fat/games/PICO-8/pico8_daemon.sh "$BASE_URL/games/PICO-8/pico8_daemon.sh" || FAIL=1
+wget -q --show-progress -O /media/fat/games/PICO-8/_handler.sh "$BASE_URL/games/PICO-8/_handler.sh" || FAIL=1
 
 echo "  Downloading controller map..."
 wget -q --show-progress -O /media/fat/config/inputs/PICO-8_input_045e_0b12_v3.map "$BASE_URL/config/inputs/PICO-8_input_045e_0b12_v3.map" || FAIL=1
@@ -64,7 +65,7 @@ fi
 
 # Make files executable
 chmod +x /media/fat/games/PICO-8/PICO-8
-chmod +x /media/fat/games/PICO-8/pico8_daemon.sh
+chmod +x /media/fat/games/PICO-8/_handler.sh
 
 # Remove old binary location if it exists
 rm -rf /media/fat/PICO-8
@@ -97,17 +98,17 @@ fi
 # Add single launcher line
 echo "" >> "$STARTUP"
 echo "# PICO-8 auto-launch daemon" >> "$STARTUP"
-echo "/media/fat/games/PICO-8/pico8_daemon.sh &" >> "$STARTUP"
+echo "/media/fat/games/PICO-8/_handler.sh &" >> "$STARTUP"
 
 echo "Auto-launcher installed."
 
 # ── Start daemon now ──────────────────────────────────────────────
-/media/fat/games/PICO-8/pico8_daemon.sh &
+/media/fat/games/PICO-8/_handler.sh &
 
 echo ""
 echo "=== PICO-8 installed successfully! ==="
 echo ""
 echo "Load the PICO-8 core from the console menu to play."
-echo "Use the MiSTer OSD to load carts."
+echo "Use the Senhor OSD to load carts."
 echo "Place .p8 and .p8.png carts in: games/PICO-8/Carts/"
 echo ""
