@@ -1,4 +1,9 @@
 # News
+24/5/2026
+
+New CoreS: Darius2NinjaWarriors
+
+___
 21/5/2026
 
 Updates: CrazyClimber
