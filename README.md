@@ -1,7 +1,12 @@
 # News
+6/6/2026
+
+New Cores: StarWars
+
+___
 24/5/2026
 
-New CoreS: Darius2NinjaWarriors
+New Cores: Darius2NinjaWarriors
 
 ___
 21/5/2026
