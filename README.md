@@ -1,4 +1,9 @@
 # News
+9/6/2026
+
+New Cores: SkySmasher
+
+___
 6/6/2026
 
 New Cores: StarWars
