@@ -4,7 +4,9 @@ This is a an OSD per-game preview.
 Based on MiSTer binary, modified by Renan.
 
 How to use:
+
 Back up your current MiSTer Main first.
+Copy the CapaCore MiSTer binary from MiSTer.zip to /media/fat/
 Add the following line to your mister.ini file:
 
 ; [Senhor FPGA BEGIN] - game wallpapers (OSD per-game preview)
