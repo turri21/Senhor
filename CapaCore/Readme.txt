@@ -1,7 +1,7 @@
 -=(CapaCore)=-
 
 This is a an OSD per-game preview.
-Based on MiSTer binary modified by Renan.
+Based on MiSTer binary, modified by Renan.
 
 How to use:
 Back up your current MiSTer Main first.
