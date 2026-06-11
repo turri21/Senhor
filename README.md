@@ -1,7 +1,7 @@
 # News
 11/6/2026
 
-New Cores: Apple-IIgs, DCon
+New Cores: PSX, Apple-IIgs, DCon
 
 ___
 10/6/2026
