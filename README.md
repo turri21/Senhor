@@ -1,4 +1,9 @@
 # News
+11/6/2026
+
+New Cores: DCon
+
+___
 10/6/2026
 
 New Cores: BloodBros
