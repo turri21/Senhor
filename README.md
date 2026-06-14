@@ -1,7 +1,7 @@
 # News
 14/6/2026
 
-Updates: C128
+Updates: SMS, C128
 ___
 13/6/2026
 
