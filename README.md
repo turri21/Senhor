@@ -1,4 +1,8 @@
 # News
+13/4/2026
+
+Updates: Oric
+___
 11/6/2026
 
 New Cores: PSX, Apple-IIgs, DCon
