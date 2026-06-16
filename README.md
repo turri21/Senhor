@@ -1,4 +1,9 @@
 # News
+16/6/2026
+
+New Cores: ActFancer
+
+___
 14/6/2026
 
 Updates: CaveBanpresto, SMS, C128
