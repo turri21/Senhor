@@ -1,4 +1,8 @@
 # News
+17/6/2026
+
+New Cores: Deco16
+___
 16/6/2026
 
 New Cores: ActFancer
