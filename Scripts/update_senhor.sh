@@ -135,14 +135,14 @@ PROXY_MODE_ACTIVE=false
 # ║                      CRT Detection                               ║
 # ╠══════════════════════════════════════════════════════════════════╣
 # ║  Priority order:                                                 ║
-# ║   1. SENHOR_CRT=1 env var  (manual override, highest priority)  ║
-# ║   2. MiSTer.ini  vga_scaler=1 in [menu] section                 ║
-# ║      (authoritative: means the scaler is routed to VGA/CRT)     ║
-# ║   3. Physical tty + _TERM_WIDTH ≤ 76  (framebuffer fallback)    ║
+# ║   1. SENHOR_CRT=1 env var  (manual override, highest priority)   ║
+# ║   2. MiSTer.ini  vga_scaler=1 in [menu] section                  ║
+# ║      (authoritative: means the scaler is routed to VGA/CRT)      ║
+# ║   3. Physical tty + _TERM_WIDTH ≤ 76  (framebuffer fallback)     ║
 # ║                                                                  ║
-# ║  fb_size in MiSTer.ini controls hardware pixel-doubling of the  ║
-# ║  framebuffer. At fb_size=2 the terminal renders at ~40 cols;    ║
-# ║  we use this to set CRT_MAX_WIDTH and CRT_MARGIN accordingly.   ║
+# ║  fb_size in MiSTer.ini controls hardware pixel-doubling of the   ║
+# ║  framebuffer. At fb_size=2 the terminal renders at ~40 cols;     ║
+# ║  we use this to set CRT_MAX_WIDTH and CRT_MARGIN accordingly.    ║
 # ╚══════════════════════════════════════════════════════════════════╝
 
 # Read vga_scaler and fb_size from the active MiSTer.ini (or any MiSTer_*.ini)
