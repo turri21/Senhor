@@ -1,4 +1,9 @@
 # News
+19/6/2026
+
+Updates: Atari7800
+
+___
 17/6/2026
 
 New Cores: Deco16
