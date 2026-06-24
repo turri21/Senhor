@@ -1,4 +1,8 @@
 # News
+24/6/2026
+
+Updates: Atari7800
+___
 22/6/2026
 
 Updates: 3DO
