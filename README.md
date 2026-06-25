@@ -1,7 +1,7 @@
 # News
 25/6/2026
 
-New Cores: Squash, Thunder Hoop, wrally, Kangaroo
+New Cores: Squash, Thunder Hoop, World Rally, Kangaroo
 
 ___
 24/6/2026
