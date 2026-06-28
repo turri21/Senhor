@@ -1,7 +1,8 @@
 # News
 28/6/2026
 
-New Cores: Tempest
+New Cores: Tempest, IGSPGM
+
 ___
 27/6/2026
 
