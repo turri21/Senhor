@@ -1,4 +1,8 @@
 # News
+28/6/2026
+
+New Cores: Tempest
+___
 27/6/2026
 
 Updates: Cave
