@@ -1,4 +1,8 @@
 # News
+29/6/2026
+
+New Cores: Major Havoc
+___
 28/6/2026
 
 New Cores: Tempest, IGSPGM
