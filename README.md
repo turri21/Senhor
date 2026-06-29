@@ -1,7 +1,7 @@
 # News
 29/6/2026
 
-New Cores: C64, Major Havoc
+New Cores: PSX, C64, Major Havoc
 ___
 28/6/2026
 
