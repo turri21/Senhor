@@ -1,4 +1,9 @@
 # News
+30/6/2026
+
+New Cores: TH Strikes Back
+
+___
 29/6/2026
 
 New Cores: PSX, C64, Major Havoc
