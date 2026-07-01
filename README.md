@@ -1,7 +1,7 @@
 # News
 1/7/2026
 
-Updates: PSX
+Updates: DECOCassette, PSX
 ___
 30/6/2026
 
