@@ -116,7 +116,7 @@ trap restore_console_font EXIT
 # ║                        Configuration                             ║
 # ╚══════════════════════════════════════════════════════════════════╝
 SCRIPT_NAME="update_senhor.sh"
-CURRENT_VERSION="1.98"  # Update this when you release new versions
+CURRENT_VERSION="1.99"  # Update this when you release new versions
 SCRIPT_URL="https://raw.githubusercontent.com/turri21/Senhor/main/Scripts/$SCRIPT_NAME"
 
 REPO_OWNER="turri21"
@@ -297,6 +297,7 @@ declare -A FOLDERS=(
     ["_Arcade/_ST-V"]="/media/fat/_Arcade/_ST-V"
     ["_Arcade/_ST-V/_JP Bios"]="/media/fat/_Arcade/_ST-V/_JP Bios"
     ["_Arcade/_jotego"]="/media/fat/_Arcade/_jotego"
+    ["_Arcade/_DECOCassette"]="/media/fat/_Arcade/_DECOCassette"
     ["_Arcade/cores"]="/media/fat/_Arcade/cores"
     ["_Computer"]="/media/fat/_Computer"
     ["_Console"]="/media/fat/_Console"
@@ -541,8 +542,8 @@ check_disk_space() {
             echo -e "${C_YELLOW}  ╔══════════════════════════════════════════════╗${C_RESET}"
             echo -e "${C_YELLOW}  ║  ${ICO_WARN}  Low Disk Space Warning                   ║${C_RESET}"
             echo -e "${C_YELLOW}  ╠══════════════════════════════════════════════╣${C_RESET}"
-            echo -e "${C_YELLOW}  ║  Only ${avail_mb}MB free on $target            ${C_RESET}"
-            echo -e "${C_YELLOW}  ║  Recommended: ${min_mb}MB+ free                     ${C_RESET}"
+            echo -e "${C_YELLOW}  ║  Only ${avail_mb}MB free on $target                 ║${C_RESET}"
+            echo -e "${C_YELLOW}  ║  Recommended: ${min_mb}MB+ free                    ║${C_RESET}"
             echo -e "${C_YELLOW}  ║  Downloads may fail or be incomplete.        ║${C_RESET}"
             echo -e "${C_YELLOW}  ╚══════════════════════════════════════════════╝${C_RESET}"
         fi
@@ -2005,6 +2006,7 @@ download_linux() {
     download_and_extract "Linux" "https://github.com/turri21/Distribution_Senhor/raw/main/Linux.zip" true
     chmod +x /media/fat/linux/glow 2>/dev/null && log "Set executable: linux/glow" SUCCESS
     chmod +x /media/fat/linux/pdfviewer 2>/dev/null && log "Set executable: linux/pdfviewer" SUCCESS
+    chmod +x /media/fat/linux/fb_image 2>/dev/null && log "Set executable: linux/fb_image" SUCCESS
     chmod +x /media/fat/linux/7zz 2>/dev/null && log "Set executable: linux/7zz" SUCCESS
     chmod +x /media/fat/linux/user-startup.sh 2>/dev/null && log "Set executable: linux/user-startup.sh" SUCCESS
 }
