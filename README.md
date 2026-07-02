@@ -1,4 +1,9 @@
 # News
+3/7/2026
+
+Updates: C64
+
+___
 1/7/2026
 
 Updates: DECOCassette, PSX
