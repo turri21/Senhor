@@ -1,7 +1,7 @@
 # News
 3/7/2026
 
-Updates: C64
+Updates: Game of Life, C64
 
 ___
 1/7/2026
