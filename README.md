@@ -1,4 +1,8 @@
 # News
+5/7/2026
+
+New Cores: Boogie Wings
+___
 3/7/2026
 
 Updates: Game of Life, C64
