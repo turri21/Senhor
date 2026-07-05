@@ -1,7 +1,7 @@
 # News
 5/7/2026
 
-New Cores: Boogie Wings
+New Cores: Night Slashers, Boogie Wings
 ___
 3/7/2026
 
