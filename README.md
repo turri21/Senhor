@@ -24,7 +24,9 @@ New Cores: TH Strikes Back
 ___
 29/6/2026
 
-New Cores: C64, Major Havoc
+Updates: C64
+
+New Cores: Major Havoc
 ___
 28/6/2026
 
