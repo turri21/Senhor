@@ -15,7 +15,9 @@ Updates: Game of Life, C64
 ___
 1/7/2026
 
-Updates: DECOCassette, PSX
+Updates: PSX
+
+New Cores: DECOCassette
 ___
 30/6/2026
 
