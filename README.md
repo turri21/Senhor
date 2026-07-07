@@ -1,4 +1,9 @@
 # News
+7/7/2026
+
+New Cores: World Rally 2, Biomechanical Toy
+
+___
 6/7/2026
 
 New Cores: Big Karnak
