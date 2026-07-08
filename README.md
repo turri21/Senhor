@@ -1,7 +1,7 @@
 # News
 8/7/2026
 
-Updates: IGSPGM
+Updates: EpochGalaxyII, IGSPGM
 
 ___
 7/7/2026
