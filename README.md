@@ -1,4 +1,9 @@
 # News
+8/7/2026
+
+Updates: IGSPGM
+
+___
 7/7/2026
 
 New Cores: World Rally 2, Biomechanical Toy
