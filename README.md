@@ -1,7 +1,7 @@
 # News
 8/7/2026
 
-Updates: Apple-IIgs, EpochGalaxyII, IGSPGM
+Updates: BasicMasterJr, Apple-IIgs, EpochGalaxyII, IGSPGM
 
 ___
 7/7/2026
