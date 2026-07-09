@@ -1,7 +1,7 @@
 # News
 9/7/2026
 
-New Cores: Trio The Punch
+New Cores: BreakThru, Trio The Punch
 
 ___
 8/7/2026
