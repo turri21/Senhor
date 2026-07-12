@@ -1,4 +1,8 @@
 # News
+12/7/2026
+
+Updates: Kangaroo
+___
 9/7/2026
 
 New Cores: QBert, BreakThru, Trio The Punch
