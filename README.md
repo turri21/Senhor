@@ -3,6 +3,8 @@
 
 New Core: Lisa
 
+Updates: ZX-Spectrum
+
 ___
 12/7/2026
 
