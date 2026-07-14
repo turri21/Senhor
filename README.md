@@ -1,7 +1,7 @@
 # News
 14/7/2026
 
-Updates: Pacman
+Updates: X16, Pacman
 ___
 13/7/2026
 
