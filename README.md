@@ -1,4 +1,8 @@
 # News
+14/7/2026
+
+Updates: Pacman
+___
 13/7/2026
 
 New Core: Lisa
