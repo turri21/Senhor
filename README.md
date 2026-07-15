@@ -1,7 +1,7 @@
 # News
 15/7/2026
 
-New Cores: Legionnaire
+New Cores: Heated Barrel, Legionnaire
 
 Updates: SD Gundam, 3DO
 ___
