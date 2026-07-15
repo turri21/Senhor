@@ -1,7 +1,11 @@
 # News
+15/7/2026
+
+Updates: 3DO
+___
 14/7/2026
 
-Updates: X16, Pacman
+Updates: mo, X16, Pacman
 ___
 13/7/2026
 
