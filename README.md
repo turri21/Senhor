@@ -1,6 +1,8 @@
 # News
 15/7/2026
 
+New Cores: Legionnaire
+
 Updates: 3DO
 ___
 14/7/2026
@@ -9,7 +11,7 @@ Updates: mo, X16, Pacman
 ___
 13/7/2026
 
-New Core: Lisa
+New Cores: Lisa
 
 Updates: ZX-Spectrum
 
