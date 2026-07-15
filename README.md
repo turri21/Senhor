@@ -3,7 +3,7 @@
 
 New Cores: Legionnaire
 
-Updates: 3DO
+Updates: SD Gundam, 3DO
 ___
 14/7/2026
 
