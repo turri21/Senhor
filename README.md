@@ -1,4 +1,9 @@
 # News
+16/7/2026
+
+Updates: SharpMZ
+
+___
 15/7/2026
 
 New Cores: Heated Barrel, Legionnaire
