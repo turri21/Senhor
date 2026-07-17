@@ -1,4 +1,8 @@
 # News
+18/7/2026
+
+Updates: PSX
+___
 17/7/2026
 
 Updates: ColecoAdam, SNES, BlackWidow, CDi, ao486
