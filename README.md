@@ -1,7 +1,7 @@
 # News
 17/7/2026
 
-Updates: BlackWidow, CDi, ao486
+Updates: SNES, BlackWidow, CDi, ao486
 
 ___
 16/7/2026
