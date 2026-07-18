@@ -1,7 +1,7 @@
 # News
 18/7/2026
 
-Updates: PSX
+Updates: BlackWidow, PSX
 ___
 17/7/2026
 
