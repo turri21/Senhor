@@ -1,4 +1,8 @@
 # News
+19/7/2026
+
+New Cores: Batsugun
+___
 18/7/2026
 
 Updates: BlackWidow, PSX
