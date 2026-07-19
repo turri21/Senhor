@@ -1,7 +1,7 @@
 # News
 19/7/2026
 
-New Cores: Batsugun
+New Cores: Operation Wolf, Batsugun
 ___
 18/7/2026
 
