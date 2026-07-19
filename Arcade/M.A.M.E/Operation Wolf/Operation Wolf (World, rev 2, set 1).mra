@@ -1,0 +1,97 @@
+<misterromdescription>
+    <rbf>opwolf</rbf>
+    <name>Operation Wolf (World, rev 2, set 1)</name>
+    <setname>opwolf</setname>
+    <year>1987</year>
+    <manufacturer>Taito</manufacturer>
+    <players>1</players>
+    <buttons>2</buttons>
+    <rotation>horizontal</rotation>
+
+    <!-- ⭐ EL SET ORIGINAL. Estuvo BLOQUEADO todo el proyecto porque su proteccion es el C-Chip
+         (TC0030CMD = uPD78C11) y jtframe NO TENIA CORE DE ESA CPU. Ahora si: upd7810.v corre
+         LAS ROM REALES del chip (LLE). Ver research/CCHIP-LLE-PLAN.md.
+
+         ⚠ El bootleg 'opwolfb' NO es el mismo juego: sus autores implementaron solo lo generico
+           entre niveles y se dejaron fuera la logica especifica de cada nivel. ESTE es el original.
+
+         Reparto = cfg/macros.def:
+           0x000000 maincpu  256K  (BA0)
+           0x040000 audiocpu  64K  (BA1_START)
+           0x050000 adpcm    512K  (PCM_START)
+           0x0d0000 sub       32K  (SUB_START)  <- el Z80 del bootleg; AQUI no se usa -> relleno
+           0x0d8000 scr gfx  512K  (BA2_START)
+           0x158000 obj gfx  512K  (BA3_START)
+           0x1d8000 cchip     16K  (PROM_START) <- ROM INTERNA (4K) + hueco (4K) + EPROM (8K)
+
+         ⚠⚠ ORDEN DE BYTES — las dos reglas que hay que tener claras (GOTCHAS §H22, §J):
+           1) A SDRAM la descarga manda PALABRAS -> el stream va INVERTIDO respecto al contenido:
+                prog 68000 : el chip PAR al byte 1 (map="10"), el impar al byte 0 (map="01")
+                ROM de 8 bits (sonido, ADPCM) : TAL CUAL, sin swap
+                ROM de gfx (32 bits)          : CON byteswap -> <interleave> map="12"
+           2) ⭐ A PROM la descarga manda BYTES SUELTOS (jtframe_dwnld: prog_addr = part_addr,
+              sin emparejar) -> la zona PROM va **CRUDA, SIN SWAP NI INTERLEAVE**. Es la EXCEPCION.
+
+         ✅ Verificar SIEMPRE con los DOS pasos (GOTCHAS §J5):
+              _opwolf_mra2rom.sh opwolf     -> la .mra == el rom.bin del sim
+              jtsim -load                   -> y esa imagen, POR EL CAMINO DE LA PLACA, es correcta -->
+    <rom index="0" zip="opwolf.zip" type="merged" md5="none">
+        <!-- 0x000000: programa 68000 (256 KB) -->
+        <interleave output="16">
+            <part name="b20-05-02.40" crc="3ffbfe3a" map="10"/>
+            <part name="b20-03-02.30" crc="fdabd8a5" map="01"/>
+        </interleave>
+        <interleave output="16">
+            <part name="b20-04.39"    crc="216b4838" map="10"/>
+            <part name="b20-20.29"    crc="d244431a" map="01"/>
+        </interleave>
+
+        <!-- 0x040000: Z80 de sonido (64 KB) — bus de 8 bits, SIN swap -->
+        <part name="b20-07.10" crc="45c7ace3"/>
+
+        <!-- 0x050000: muestras ADPCM (512 KB), compartidas por los dos MSM5205 — SIN swap -->
+        <part name="b20-08.21" crc="f3e19c64"/>
+
+        <!-- 0x0d0000: hueco del bus 'sub' (32 KB). El original NO tiene Z80 sustituto: ese bus solo
+             lo usa el bootleg. Hay que RELLENAR o todo lo que va detras se desplaza (GOTCHAS §B3). -->
+        <part repeat="32768">FF</part>
+
+        <!-- 0x0d8000: tiles del PC080SN (512 KB) — bus de 32 bits: CON byteswap -->
+        <interleave output="16">
+            <part name="b20-13.13" crc="f6acdab1" map="12"/>
+        </interleave>
+
+        <!-- 0x158000: sprites del PC090OJ (512 KB) — CON byteswap -->
+        <interleave output="16">
+            <part name="b20-14.72" crc="89f889e5" map="12"/>
+        </interleave>
+
+        <!-- 0x1d8000: ROM DEL C-CHIP (16 KB) — ⭐ zona PROM: CRUDA, sin swap ni interleave.
+             Se mapea EN LAS MISMAS DIRECCIONES QUE VE LA CPU del uPD78C11:
+                +0x0000  ROM INTERNA  (cchip_upd78c11.bin, 4 KB) — bootstrap comun de Taito
+                +0x1000  hueco (4 KB)
+                +0x2000  EPROM EXTERNA (b20-18.73, 8 KB)        — el codigo de Operation Wolf
+             ⚠ La ROM interna es una ROM DE DEVICE de MAME, pero VIENE DENTRO de opwolf.zip
+               (GAPS-REPORT §G-10). Sin ella el C-Chip no arranca. -->
+        <part name="cchip_upd78c11.bin" crc="43021521"/>
+        <part repeat="4096">FF</part>
+        <part name="b20-18.73" crc="5987b4e9"/>
+    </rom>
+
+    <!-- Del INPUT_PORTS de opwolf.cpp (DSWA=SW1, DSWB=SW2; activo-bajo) -->
+    <switches default="ff,ff" base="16">
+        <!-- DSWA -->
+        <dip name="Allow Continue" bits="1" ids="Yes,No"/>
+        <dip name="Service Mode" bits="2" ids="On,Off"/>
+        <dip name="Demo Sounds" bits="3" ids="Off,On"/>
+        <dip name="Coin A" bits="4,5" ids="4C 1C,3C 1C,2C 1C,1C 1C"/>
+        <dip name="Coin B" bits="6,7" ids="1C 2C,1C 3C,1C 4C,1C 6C"/>
+        <!-- DSWB -->
+        <dip name="Difficulty" bits="8,9" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Ammo Magazines at Start" bits="10,11" ids="4,5,7,6"/>
+        <dip name="Discount When Continuing" bits="14" ids="Yes,No"/>
+        <dip name="Language" bits="15" ids="English,Japanese"/>
+    </switches>
+
+    <buttons names="Fire,Grenade,Start,Coin,Pause" default="A,B,Start,Select,R" count="2"/>
+</misterromdescription>
