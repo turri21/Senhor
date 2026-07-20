@@ -1,8 +1,9 @@
 # News
 20/7/2026
 
-Updates: NightSlashers
 New Cores: Cowboys
+
+Updates: NightSlashers
 ___
 19/7/2026
 
