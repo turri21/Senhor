@@ -1,4 +1,9 @@
 # News
+20/7/2026
+
+Updates: NightSlashers
+New Cores: Cowboys
+___
 19/7/2026
 
 New Cores: Operation Wolf, Batsugun
