@@ -1,7 +1,7 @@
 # News
 20/7/2026
 
-New Cores: Cowboys
+New Cores: Destroyer, Empire City, Cowboys
 
 Updates: NightSlashers
 ___
