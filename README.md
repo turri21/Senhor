@@ -1,4 +1,8 @@
 # News
+25/7/2026
+
+Updates: PCFX
+___
 24/7/2026
 
 Updates: Apple-Lisa
