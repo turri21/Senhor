@@ -3,6 +3,10 @@
 
 Updates: Apple-Lisa
 ___
+22/7/2026
+
+Updates: Jaguar
+___
 20/7/2026
 
 New Cores: Aleck64, Magical Error, Hyper Duel, Destroyer, Empire City, Cowboys
