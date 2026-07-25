@@ -3,7 +3,7 @@
 
 New Cores: JR100
 
-Updates: PCFX
+Updates: X16, PCFX
 ___
 24/7/2026
 
