@@ -1,4 +1,8 @@
 # News
+26/7/2026
+
+Updates: UK101_Senhor_20260726.rbf
+___
 25/7/2026
 
 New Cores: JR100
