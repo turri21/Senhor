@@ -1,7 +1,7 @@
 # News
 26/7/2026
 
-Updates: RX78, UK101
+Updates: Arduboy, RX78, UK101
 ___
 25/7/2026
 
