@@ -1,4 +1,9 @@
 # News
+27/7/2026
+
+Updates: Minimig
+
+___
 26/7/2026
 
 Updates: Arduboy, RX78, UK101
