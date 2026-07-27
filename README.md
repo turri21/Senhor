@@ -1,4 +1,8 @@
 # News
+28/7/2026
+
+Updates: Arduboy
+___
 27/7/2026
 
 Updates: Minimig
