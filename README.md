@@ -1,4 +1,8 @@
 # News
+29/7/2026
+
+Updates: Aleck64
+___
 28/7/2026
 
 Updates: MacLC, Arduboy
