@@ -1,4 +1,9 @@
 # News
+30/7/2026
+
+New Cores: Universal_DoCastle
+
+___
 29/7/2026
 
 Updates: Aleck64
