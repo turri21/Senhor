@@ -1,7 +1,7 @@
 # News
 30/7/2026
 
-New Cores: Asterix, Marble Madness II, Universal_DoCastle
+New Cores: PinballAction, Asterix, Marble Madness II, Universal_DoCastle
 
 Updates: moomesa
 
