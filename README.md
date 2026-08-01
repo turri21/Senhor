@@ -1,4 +1,8 @@
 # News
+1/8/2026
+
+Updates: MacLC
+___
 30/7/2026
 
 New Cores: Kyugo, PinballAction, Asterix, Marble Madness II, Universal_DoCastle
