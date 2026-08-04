@@ -1,4 +1,8 @@
 # News
+4/8/2026
+
+New Core: VirtualBoy
+___
 3/8/2026
 
 Updates: Minimig030
