@@ -1,4 +1,8 @@
 # News
+5/8/2026
+
+New Core: AmstradNC
+___
 4/8/2026
 
 New Core: VirtualBoy
