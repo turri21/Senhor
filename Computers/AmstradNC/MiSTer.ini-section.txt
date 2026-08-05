@@ -1,0 +1,36 @@
+Amstrad NC - recommended MiSTer.ini section
+==========================================
+
+Paste the block below at the END of /media/fat/MiSTer.ini, after the main
+[MiSTer] section. It applies to this core only; every other core is untouched.
+The section name is the core's .rbf base name.
+
+The NC frame is 128 lines tall and very wide. With MiSTer's default integer
+scaler (vscale_mode=4) the on-screen display is squashed on it. vscale_mode=0
+scales to fit the height while honouring the aspect ratio the core reports,
+which fixes the OSD and suits the wide, short panel. Integer scaling is not
+recommended here for the same reason: it is the OSD that suffers, not the
+picture.
+
+vfilter_default is optional. The Game Boy DMG uses the same reflective STN
+panel technology as the NC, so its scaler filter suits this core; it can also
+be chosen live from the OSD under Video Processing. hfilter_default takes the
+same file and is worth setting too.
+
+Both need the in-core LCD Grid left Off. With the grid on the core doubles its
+pixels to give the grid a sub-cell to darken, which halves the scale factor the
+scaler is left to apply and moves a phase-space filter off the phases where it
+does anything. The two effects are alternatives, not layers; docs/lcd-look.md
+has the phase arithmetic.
+
+    [AmstradNC]
+
+    video_mode_ntsc=8       ; 1920x1080@60 (the NC runs at 60 Hz)
+    video_mode_pal=9        ; 1920x1080@50
+    vscale_mode=0           ; scale to fit height, honouring the core aspect
+
+    vfilter_default=LCD Monochrome (Gameboy)_HV.txt
+    hfilter_default=LCD Monochrome (Gameboy)_HV.txt
+
+LCD Ghosting and LCD Colour are drawn inside the core, before the scaler sees
+the frame, and are unaffected by any of this.
