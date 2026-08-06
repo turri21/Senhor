@@ -11,6 +11,8 @@ ___
 4/8/2026
 
 New Core: VirtualBoy
+
+Updates: X68000
 ___
 3/8/2026
 
