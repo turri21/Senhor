@@ -1,7 +1,7 @@
 # News
 6/8/2026
 
-New Core: Gladiator
+New Core: SegaSystem24, Gladiator
 
 ___
 5/8/2026
