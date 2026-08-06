@@ -1,4 +1,9 @@
 # News
+6/8/2026
+
+New Core: Gladiator
+
+___
 5/8/2026
 
 New Core: AmstradNC
