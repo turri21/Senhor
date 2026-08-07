@@ -1,4 +1,9 @@
 # News
+7/8/2026
+
+Updates: MacLC
+
+___
 6/8/2026
 
 New Core: MicroBee, SegaSystem24, Gladiator
