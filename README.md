@@ -1,7 +1,7 @@
 # News
 6/8/2026
 
-New Core: SegaSystem24, Gladiator
+New Core: MicroBee, SegaSystem24, Gladiator
 
 ___
 5/8/2026
