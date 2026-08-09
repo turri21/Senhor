@@ -1,4 +1,9 @@
 # News
+9/8/2026
+
+Updates: PSX, ZX Spectrum
+
+___
 7/8/2026
 
 Updates: MacLC
