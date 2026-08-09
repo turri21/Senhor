@@ -1,7 +1,7 @@
 # News
 9/8/2026
 
-Updates: Godzilla, PSX, ZX Spectrum
+Updates: C128, Godzilla, PSX, ZX Spectrum
 
 ___
 7/8/2026
