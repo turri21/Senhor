@@ -1,7 +1,7 @@
 # News
 11/8/2026
 
-New Cores: Raiden 2
+New Cores: TVC, Raiden 2
 
 Updates: MacLC
 ___
