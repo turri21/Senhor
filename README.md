@@ -2,6 +2,8 @@
 11/8/2026
 
 New Cores: Raiden 2
+
+Updates: MacLC
 ___
 9/8/2026
 
