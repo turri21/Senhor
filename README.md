@@ -1,7 +1,7 @@
 # News
 11/8/2026
 
-New Cores: TVC, Raiden 2
+New Cores: SDGundamRainbow, TVC, Raiden 2
 
 Updates: FM-7, MacLC
 ___
