@@ -1,7 +1,13 @@
 # News
+11/8/2026
+
+New Cores: Raiden2
+___
 9/8/2026
 
-Updates: C128, Godzilla, PSX, ZX Spectrum
+New Cores: Godzilla
+
+Updates: C128, PSX, ZX Spectrum
 
 ___
 7/8/2026
