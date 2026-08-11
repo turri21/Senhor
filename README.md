@@ -3,7 +3,7 @@
 
 New Cores: TVC, Raiden 2
 
-Updates: MacLC
+Updates: FM-7, MacLC
 ___
 9/8/2026
 
