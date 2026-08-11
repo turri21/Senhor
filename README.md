@@ -1,7 +1,7 @@
 # News
 11/8/2026
 
-New Cores: Raiden2
+New Cores: Raiden 2
 ___
 9/8/2026
 
