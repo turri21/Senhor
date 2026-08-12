@@ -1,7 +1,7 @@
 # News
 12/8/2026
 
-New Cores: Klax
+New Cores: Bucky, Klax
 
 Updates: VirtualBoy, MultiComp, GameAndWatch, BasicMasterJr
 ___
