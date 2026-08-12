@@ -1,4 +1,8 @@
 # News
+13/8/2026
+
+Updates: Atari800
+___
 12/8/2026
 
 New Cores: Bucky, Klax
