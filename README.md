@@ -1,4 +1,8 @@
 # News
+12/8/2026
+
+Updates: BasicMasterJr
+___
 11/8/2026
 
 New Cores: SDGundamRainbow, TVC, Raiden 2
