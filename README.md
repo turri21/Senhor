@@ -1,7 +1,7 @@
 # News
 12/8/2026
 
-Updates: BasicMasterJr
+Updates: GameAndWatch, BasicMasterJr
 ___
 11/8/2026
 
