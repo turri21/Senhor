@@ -1,6 +1,8 @@
 # News
 12/8/2026
 
+New Cores: Klax
+
 Updates: VirtualBoy, MultiComp, GameAndWatch, BasicMasterJr
 ___
 11/8/2026
