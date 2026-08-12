@@ -1,7 +1,7 @@
 # News
 12/8/2026
 
-Updates: GameAndWatch, BasicMasterJr
+Updates: MultiComp, GameAndWatch, BasicMasterJr
 ___
 11/8/2026
 
