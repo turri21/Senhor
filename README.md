@@ -1,7 +1,7 @@
 # News
 13/8/2026
 
-Updates: Atari800
+Updates: SegaSystem24, Atari800
 ___
 12/8/2026
 
