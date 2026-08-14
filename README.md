@@ -1,4 +1,8 @@
 # News
+14/8/2026
+
+Updates: FM-7
+___
 13/8/2026
 
 Updates: SegaSystem24, Atari800
