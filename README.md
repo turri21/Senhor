@@ -3,7 +3,7 @@
 
 New Cores: SegaG80V
 
-Updates: SNES, FM-7
+Updates: IremM72, SNES, FM-7
 ___
 13/8/2026
 
