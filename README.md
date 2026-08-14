@@ -1,6 +1,8 @@
 # News
 14/8/2026
 
+New Cores: SegaG80V
+
 Updates: SNES, FM-7
 ___
 13/8/2026
