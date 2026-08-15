@@ -1,4 +1,9 @@
 # News
+15/8/2026
+
+Updates: SMS
+
+___
 14/8/2026
 
 New Cores: SegaG80V
