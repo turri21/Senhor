@@ -1,7 +1,7 @@
 # News
 15/8/2026
 
-Updates: SMS
+Updates: N64, SMS
 
 ___
 14/8/2026
