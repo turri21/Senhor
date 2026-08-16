@@ -1,4 +1,9 @@
 # News
+16/8/2026
+
+Updates: StarWars
+
+___
 15/8/2026
 
 Updates: N64, SMS
