@@ -1,4 +1,8 @@
 # News
+19/8/2026
+
+New Cores: Toobin
+___
 16/8/2026
 
 Updates: StarWars
