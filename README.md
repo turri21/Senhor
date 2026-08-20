@@ -1,4 +1,8 @@
 # News
+20/8/2026
+
+New Cores: Denjin Makai
+___
 19/8/2026
 
 New Cores: Toobin
