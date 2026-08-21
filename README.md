@@ -1,7 +1,7 @@
 # News
 21/8/2026
 
-New Cores: ts2068
+New Cores: Atari SYSTEM2, ts2068
 ___
 20/8/2026
 
