@@ -1,4 +1,9 @@
 # News
+22/8/2026
+
+Updates: PSX
+
+___
 21/8/2026
 
 New Cores: Atari SYSTEM2, ts2068
