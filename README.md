@@ -1,7 +1,7 @@
 # News
 22/8/2026
 
-Updates: SMS, PSX
+Updates: Apple II, SMS, PSX
 
 ___
 21/8/2026
