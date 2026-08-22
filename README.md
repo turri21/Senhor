@@ -1,7 +1,7 @@
 # News
 22/8/2026
 
-Updates: PSX
+Updates: SMS, PSX
 
 ___
 21/8/2026
