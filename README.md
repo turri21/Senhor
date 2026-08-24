@@ -1,4 +1,9 @@
 # News
+24/8/2026
+
+Updates: Arcadia
+
+___
 22/8/2026
 
 Updates: Apple II, SMS, PSX
