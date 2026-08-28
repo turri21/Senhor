@@ -11,7 +11,7 @@ New Cores: Killer Instinct
 ___
 26/8/2026
 
-New Cores: Sunset Riders, NeoGeoPocket-Color
+New Cores: SegaSystem32Multi, Sunset Riders, NeoGeoPocket-Color
 
 ___
 24/8/2026
