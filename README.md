@@ -1,7 +1,7 @@
 # News
 28/8/2026
 
-New Cores: SegaXBoard
+New Cores: IGSPGM, SegaXBoard
 
 ___
 27/8/2026
