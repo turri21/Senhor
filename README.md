@@ -1,4 +1,14 @@
 # News
+28/8/2026
+
+New Cores: SegaXBoard
+
+___
+27/8/2026
+
+New Cores: Killer Instinct
+
+___
 26/8/2026
 
 New Cores: Sunset Riders, NeoGeoPocket-Color
