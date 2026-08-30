@@ -1,4 +1,8 @@
 # News
+29/8/2026
+
+New Cores: X-Men
+___
 28/8/2026
 
 New Cores: X68000, IGSPGM, SegaXBoard
