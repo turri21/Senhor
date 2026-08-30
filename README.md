@@ -1,4 +1,9 @@
 # News
+30/8/2026
+
+Updates: CDi
+
+___
 29/8/2026
 
 New Cores: X-Men
