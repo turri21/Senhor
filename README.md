@@ -1,7 +1,7 @@
 # News
 30/8/2026
 
-Updates: CDi
+Updates: SYSTEM11, CDi
 
 ___
 29/8/2026
