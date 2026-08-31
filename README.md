@@ -1,7 +1,7 @@
 # News
 30/8/2026
 
-Updates: SYSTEM11, ZN1, ZN2, CDi
+Updates: Apple-II, SYSTEM11, ZN1, ZN2, CDi
 
 ___
 29/8/2026
