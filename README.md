@@ -1,4 +1,8 @@
 # News
+31/8/2026
+
+Updates: Killer Instinct
+___
 30/8/2026
 
 Updates: Apple-II, SYSTEM11, ZN1, ZN2, CDi
