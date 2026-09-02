@@ -1,4 +1,9 @@
 # News
+2/9/2026
+
+New Cores: NGPC
+
+___
 31/8/2026
 
 Updates: Killer Instinct
