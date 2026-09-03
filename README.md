@@ -1,4 +1,8 @@
 # News
+3/9/2026
+
+New Cores: Escape from the Planet of the Robot Monsters
+___
 2/9/2026
 
 New Cores: NGPC
