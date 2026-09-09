@@ -1,0 +1,34 @@
+<misterromdescription>
+	<name>Makai-Mura (Japan)</name>
+	<mameversion>0220</mameversion>
+	<setname>makaimur</setname>
+	<mratimestamp>20200430143028</mratimestamp>
+	<year>1985</year>
+	<manufacturer>Capcom</manufacturer>
+	<category>Adventure / Knights</category>
+	<category>Fighter / Warriors</category>
+	<rbf>gng</rbf>
+	<rom index="0" zip="gng.zip|makaimur.zip" md5="f80a619acf3e03db0b5c38e1559d9932">
+		<part crc="9612d66c" name="8n.rom"/>
+		<part crc="81e567e0" name="10n.rom"/>
+		<part crc="65a6a97b" name="12n.rom"/>
+		<part crc="ecfccf07" name="gg1.bin"/>
+		<part crc="615f5b6f" name="gg2.bin"/>
+		<part crc="20035bda" name="gg9.bin"/>
+		<part crc="f12ba271" name="gg8.bin"/>
+		<part crc="e525207d" name="gg7.bin"/>
+		<part crc="2d77e9b2" name="gg6.bin"/>
+		<part crc="ddd56fa9" name="gg11.bin"/>
+		<part crc="7302529d" name="gg10.bin"/>
+		<part crc="ddd56fa9" name="gg11.bin"/>
+		<part crc="7302529d" name="gg10.bin"/>
+		<part crc="4613afdc" name="gng13.n4"/>
+		<part crc="06d7e5ca" name="gg16.bin"/>
+		<part crc="bc1fe02d" name="gg15.bin"/>
+		<part crc="bc1fe02d" name="gg15.bin"/>
+		<part crc="608d68d5" name="gng16.l4"/>
+		<part crc="e80c3fca" name="gg13.bin"/>
+		<part crc="7780a925" name="gg12.bin"/>
+		<part crc="7780a925" name="gg12.bin"/>
+	</rom>
+</misterromdescription>
