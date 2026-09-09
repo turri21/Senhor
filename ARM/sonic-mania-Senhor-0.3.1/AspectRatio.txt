@@ -1,0 +1,23 @@
+**16:9 is actually the default** as of Phase 10c. You don't need to pass any flag to get it. But if you want to be explicit, use `--aspect 16:9`:
+
+```bash
+tools/mister-wrapper/build-core.sh --aspect 16:9
+```
+
+To build 4:3 instead, pass `--aspect 4:3`:
+
+```bash
+tools/mister-wrapper/build-core.sh --aspect 4:3
+```
+
+You can also set the aspect via environment variable instead of the flag:
+
+```bash
+MISTER_WRAPPER_CORE_ASPECT=16:9 tools/mister-wrapper/build-core.sh
+```
+
+**Output filenames:**
+- `16:9` → `Sonic_Mania.rbf` (no suffix, it's the default)
+- `4:3` → `Sonic_Mania_43.rbf`
+
+One note from the script: the Quartus license is single-instance, so if you're building both variants, you need to run them sequentially, not in parallel.
