@@ -1,0 +1,71 @@
+<misterromdescription>
+    <about author="konami-fpga" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://jotego/jtcores"/>
+    <rotation>horizontal</rotation>
+    <name>Wild West C.O.W.-Boys of Moo Mesa (FF, Konami, 1992)</name>
+    <setname>moomesa</setname>
+    <mameversion>0282</mameversion>
+    <year>1992</year>
+    <manufacturer>Konami</manufacturer>
+    <players>4</players>
+    <rbf>moomesa</rbf>
+    <joystick>8</joystick>
+    <region>World</region>
+    <rom index="0" zip="moomesa.zip" type="merged" md5="None" address="0x30000000">
+        <!-- Offsets for each ROM region. -->
+        <part>
+            00 00 80 01 C0 03 C0 05
+            FF FF 00 00 00 00 00 00
+        </part>
+        <!-- maincpu - starts at 0x0 - length 0x180000 (21 bits) -->
+        <interleave output="16">
+            <part name="151eab02.q6" crc="37b30c01" map="01"/>
+            <part name="151b01.q5" crc="fb2fa298" map="10"/>
+        </interleave>
+        <part repeat="0x80000"> FF</part>
+        <interleave output="16">
+            <part name="151a04.t6" crc="3b24706a" map="01"/>
+            <part name="151a03.t5" crc="c896d3ea" map="10"/>
+        </interleave>
+        <!-- soundcpu - starts at 0x180000 - length 0x40000 (18 bits) -->
+        <part name="151a07.f5" crc="cde247fc"/>
+        <!-- pcm - starts at 0x1C0000 - length 0x200000 (21 bits) -->
+        <part name="151a08.b6" crc="962251d7"/>
+        <!-- k056832 - starts at 0x3C0000 - length 0x200000 (21 bits) -->
+        <interleave output="32">
+            <part name="151a05.t8" crc="bc616249" map="0021"/>
+            <part name="151a06.t10" crc="38dbcac1" map="2100"/>
+        </interleave>
+        <!-- obj - starts at 0x5C0000 - length 0x800000 (23 bits) -->
+        <interleave output="64">
+            <part name="151a10.b8" crc="376c64f1" map="00000021"/>
+            <part name="151a11.a8" crc="e7f49225" map="00002100"/>
+            <part name="151a12.b10" crc="4978555f" map="00210000"/>
+            <part name="151a13.a10" crc="4771f525" map="21000000"/>
+        </interleave>
+        <!-- Total 0xDC0000 bytes - 14080 kBytes -->
+    </rom>
+    <rom index="2">
+        <part>
+00 00 03 00 03 01 00 00 00 1E 01 01 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 27
+</part>
+    </rom>
+    <nvram index="2" size="128"/>
+    <!--  8-pxl black frame on sides. -->
+    <rom index="1">
+        <part>20 80</part>
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="af">
+        <IN1/>
+        <dip name="Sound Output" bits="4" ids="Stereo,Mono"/>
+        <dip name="Coin Mechanism" bits="5" ids="Independent,Common"/>
+        <dip name="Number of Players" bits="6,7" ids="-,3,4,2"/>
+    </switches>
+    <buttons names="Shoot,Jump,Start,Coin,Core credits" default="A,B,Start,Select,-" count="2"/>
+</misterromdescription>
