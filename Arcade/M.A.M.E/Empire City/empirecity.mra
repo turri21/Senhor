@@ -1,0 +1,142 @@
+<misterromdescription>
+    <!-- ⭐ .mra DEFINITIVA (Fase 5 §5.1) — 2026-07-16. Sustituye al ESQUELETO de Fase 1, que nunca se
+         terminó y que hizo que la placa saliera NEGRA (HANDOFF §6-B). Mapa AUTORITATIVO = ROM_START(empcity)
+         de seibu/stfight.cpp + cfg/mem.yaml + cfg/macros.def. NO fiarse de comentarios: verificar.
+         ⭐ SET = empcity (Seibu Kaihatsu ORIGINAL), no empcityu (Taito US). Cambiado 2026-07-17 a peticion
+            del usuario: quiere la marca Seibu. vs empcityu solo cambian 3 ROMs (ec_01/ec_02/17.2n); el resto
+            (sonido, adpcm, gfx, 7 PROMs CLUT, MCU) es IDENTICO -> mapa de memoria SIN cambios. El color de
+            balas Rojo/Azul NO depende del set: es el DIP "Bullet Colour" (SW1:8), default Rojo (0x80=0 en 3f).
+
+         ⚠️ REGLA DE ORO (lo que costó el negro): **la SDRAM/PROM solo puede contener lo que hay
+         LITERALMENTE en el zip.** Un .mra CONCATENA bytes: no descifra, no combina nibbles, no calcula.
+         Toda transformación que MAME hace al cargar va en el RTL, o la placa NO puede reproducirla:
+           · Cifrado del main  -> lo descifra empirecity_main.v al vuelo (dec_opc/dec_opr). Aquí va
+             ec_01.rom **CRUDO**.  (Antes: 2 imágenes descifradas por Python = imposible en HW.)
+           · CLUTs con NIBBLES -> las combina empirecity_video.v ({hi[3:0],lo[3:0]}). Aquí van las 7
+             PROMs 82s129 **CRUDAS**. (Antes: 4 CLUT ya fundidas por MAME = imposible en HW.)
+
+         Reparto = cfg/macros.def (offsets tras la cabecera de 16 B):
+           0x00000 BA0 main   ec_01.rom@0 (cifrado) + ec_02.rom@0x10000 (banco) -> pad a 0x30000
+           0x30000 BA1_START  ec_04.rom (Z80 sonido)                        -> pad a 0x40000
+           0x40000 ADPCM_START 5j (muestras MSM5205, 0x8000)                -> acaba en 0x48000
+           0x48000 BA2_START  hueco 0x2000 (era tx_gfx; hoy 17.2n es PROM)  -> pad a 0x4A000
+           0x4A000 FGMAP  0x5A000 BGMAP  0x6A000 FGGFX  0x8A000 BGGFX  0xAA000 SPRGFX
+           0xCA000 PROM_START  mcu(0x800) | 17.2n(0x2000) | 7x 82s129(0x100) = 0x2F00
+         ⚠️ El ORDEN de la región PROM lo fija cfg/mem.yaml (bram:) y DEBE casar con los offsets de
+            empirecity_video.v (+0x800 txgfx, +0x2800 txclut, +0x2900 fgclut_hi, ...).
+         ⚠️ 82s129.015 (region "proms" de MAME) es de TIMING y el driver NO lo usa -> NO se incluye.
+         VERIFICACIÓN OBLIGATORIA antes de la placa (§5.1 / §H22):
+           1) jtframe mra2rom + cmp contra el rom.bin del builder  -> deben ser IDÉNTICOS
+           2) scripts/_empirecity_loadtest.sh con ESE .rom         -> frame con contenido == MAME 0.0000%
+    -->
+    <rbf>empirecity</rbf>
+    <name>Empire City: 1931 (Seibu, 1986)</name>
+    <setname>empcity</setname>
+    <year>1986</year>
+    <manufacturer>Seibu Kaihatsu</manufacturer>
+    <players>2</players>
+    <buttons>2</buttons>
+    <rotation>horizontal</rotation>
+
+    <rom index="0" zip="empcity.zip" type="merged" md5="none">
+        <!-- ===== cabecera JTFRAME_HEADER=16 (a cero: el core no la usa hoy) ===== -->
+        <part repeat="16">00</part>
+
+        <!-- ⚠ TODOS los <part> llevan `crc` = el del ROM_START de stfight.cpp. Es la convención de las
+             .mra que FUNCIONAN en esta placa (cmp. cores/opwolf/*.mra) y protege contra el fallo clásico
+             de "definición de las ROMs en el .mra". OJO: `jtframe mra2rom` resuelve por NOMBRE, pero el
+             que interpreta la .mra en la PLACA es el firmware de MiSTer -> validar con mra2rom NO prueba
+             que la placa cargue lo mismo. Ver HANDOFF §6-C.
+             Reparto del zip: empcity.zip (parent, Seibu) = ec_01/ec_02/17.2n + gfx + 7 PROMs + ec_04.rom
+                              + 5j + empcityu_68705.3j. TODO en el zip del parent (set no-merged). -->
+
+        <!-- ===== BA0 0x00000 — Z80 principal (0x30000) ===== -->
+        <!-- ec_01.rom va CIFRADO tal cual: lo descifra el RTL (empirecity_main.v). NO precomputar aquí. -->
+        <part name="ec_01.rom" crc="fe01d9b1"/>      <!-- 0x00000, 0x8000 -->
+        <part repeat="32768">00</part>               <!-- pad -> 0x10000 -->
+        <part name="ec_02.rom" crc="b3cf1ef7"/>      <!-- 0x10000, 0x8000 (banco, NO cifrado) -->
+        <part repeat="98304">00</part>               <!-- pad -> 0x30000 = JTFRAME_BA1_START -->
+
+        <!-- ===== BA1 0x30000 — Z80 de sonido ===== -->
+        <part name="ec_04.rom" crc="aa3e7d1e"/>      <!-- 0x30000, 0x8000 -->
+        <part repeat="32768">00</part>               <!-- pad -> 0x40000 = ADPCM_START -->
+
+        <!-- ===== ADPCM 0x40000 — muestras del MSM5205 ===== -->
+        <part name="5j" crc="1b8d0c07"/>             <!-- 0x40000, 0x8000 -> 0x48000 = BA2_START -->
+
+        <!-- ===== BA2 0x48000 — gráficos ===== -->
+        <part repeat="8192">00</part>                <!-- hueco 0x2000: era tx_gfx; hoy 17.2n es PROM -->
+        <!-- FGMAP 0x4A000 (0x10000) -->
+        <part name="9.7c"  crc="8ceaf4fe"/> <part name="10.8c" crc="5a1a227a"/>
+        <!-- BGMAP 0x5A000 (0x10000) -->
+        <part name="15.7j" crc="27a310bc"/> <part name="16.8j" crc="3d19ce18"/>
+        <!-- FGGFX 0x6A000 (0x20000) — orden = ROM_START: 5.2c@0, 6.3c@0x8000, 7.4c@0x10000, 8.5c@0x18000 -->
+        <part name="5.2c"  crc="0c099a31"/> <part name="6.3c"  crc="3cc77c31"/>
+        <part name="7.4c"  crc="2c6caa5f"/> <part name="8.5c"  crc="e11ded31"/>
+        <!-- BGGFX 0x8A000 (0x20000) — 11.2j@0, 12.3j@0x8000, 13.4c@0x10000, 14.5j@0x18000 -->
+        <part name="11.2j" crc="8261ecfe"/> <part name="12.3j" crc="71137301"/>
+        <part name="13.4c" crc="0ae48dd3"/> <part name="14.5j" crc="debf5d76"/>
+        <!-- SPRGFX 0xAA000 (0x20000) — 18.6w@0, 19.7w@0x8000, 20.8w@0x10000, 21.9w@0x18000 -->
+        <part name="18.6w" crc="68acd627"/> <part name="19.7w" crc="5170a057"/>
+        <part name="20.8w" crc="8299f247"/> <part name="21.9w" crc="b57dc037"/>
+
+        <!-- ===== PROM 0xCA000 — BRAM. ORDEN = cfg/mem.yaml (bram:) ===== -->
+        <part name="empcityu_68705.3j" crc="182f7616"/> <!-- +0x0000 mcu 0x800 (firmware 68705, mismo dump que empcityu) -->
+        <part name="17.2n" crc="1b3706b5"/>          <!-- +0x0800 txrom  0x2000 (gfx de texto; empcity trae el logo Seibu) -->
+        <part name="82s129.006" crc="f9424b5b"/>     <!-- +0x2800 txclut        (byte entero) -->
+        <!-- fg/bg/spr_clut = DOS 82s129 de 256x4 c/u (ROM_LOAD_NIB_HIGH/LOW). Van CRUDAS: el vídeo
+             combina {hi[3:0],lo[3:0]}. Un .mra NO sabe hacer nibbles. -->
+        <part name="82s129.002" crc="c883d49b"/>     <!-- +0x2900 fgclut_hi -->
+        <part name="82s129.003" crc="af81882a"/>     <!-- +0x2A00 fgclut_lo -->
+        <part name="82s129.004" crc="1831ce7c"/>     <!-- +0x2B00 bgclut_hi -->
+        <part name="82s129.005" crc="96cb6293"/>     <!-- +0x2C00 bgclut_lo -->
+        <part name="82s129.052" crc="3d915ffc"/>     <!-- +0x2D00 sprclut_hi -->
+        <part name="82s129.066" crc="51e8832f"/>     <!-- +0x2E00 sprclut_lo -->
+    </rom>
+
+    <!-- ⭐ SWITCHES = COPIA FIEL de INPUT_PORTS_START(stfight) de seibu/stfight.cpp.
+         Los bits 0-7 = DSW0 (0xc203, "DIP-SW 1"); los bits 8-15 = DSW1 (0xc204, "DIP-SW 2").
+         ⚠ La versión ANTERIOR (esqueleto de Fase 1) estaba INVENTADA: ponía Difficulty en los bits 0,1
+         y un "Service Mode" en el bit 9 que NO EXISTE -> en placa los DIP no hacían NADA y el service
+         mode daba igual on que off (reportado por el usuario, 2026-07-16). El real es DSW0 0x20 = bit 5.
+         Los `ids` van del valor 0 al máximo EN ORDEN; `default="ff,ff"` = todo a 1 (activo-bajo). -->
+    <!-- ⭐ DEFAULTS = los REALES de MAME (el 2º parámetro de cada PORT_DIPNAME), NO "ff,ff":
+         DSW0 = 0x07(Coin_A 1C_1C) | 0x18(Coin_B 1C_1C) | 0x20(Service OFF)             = 0x3f
+         DSW1 = 0x01(Upright) | 0x04(Difficulty Normal) | 0x08(3 vidas) | 0x40(Bonus 20k/40k) = 0x4d
+         ⛔ Con el "ff,ff" anterior salía: **Demo Sounds = OFF** (0x80 de DSW1; en MAME 0x00=On)
+         -> **NO SONABA LA MÚSICA DEL ATTRACT** (reportado en placa 2026-07-16; el sim lo reproducía:
+         el Z80 de sonido corría pero el main solo mandaba 1 comando al latch). Y además: 1 VIDA,
+         Difficulty Easy, Allow Continue = No, balas azules. -->
+    <switches default="3f,4d" base="16">
+        <!-- ===== DSW0 (0xc203) = "DIP-SW 1" / Bank B ===== -->
+        <!-- 0x07 Coin_A: 0=5C_1C 1=1C_5C 2=3C_1C 3=1C_2C 4=4C_1C 5=1C_3C 6=2C_1C 7=1C_1C -->
+        <!-- ⭐⭐ `bits` es un RANGO "lsb,msb", **NO una lista** (bug arreglado 2026-07-17).
+             AUTORIDAD: el generador de jtframe, `mra/dipsw.go:165` `dip_add_node(...,lsb,msb,...)`:
+                 bitstr := strconv.Itoa(lsb); if lsb != msb { bitstr += fmt.Sprintf(",%d", msb) }
+             => 1 bit -> "5" ; 3 bits (0..2) -> "0,2". Ref: opwolf `bits="4,5"` = rango 4..5 = 4 ids.
+             ⛔ Aquí ponía "0,1,2" (con el comentario "es una LISTA, no un rango" = FALSO). MiSTer lo lee
+             como rango 0..1 => SOLO 2 BITS => **el OSD ofrecía 4 de las 8 opciones, con etiquetas
+             equivocadas**, y el juego leía un coinage que no era el elegido ("4 COIN(S) 1 CREDIT(S)"
+             con el default 3f, que es 1C_1C). Lo delató el usuario al ver el OSD incompleto.
+             Los demás campos son de 1 o 2 bits -> lista y rango COINCIDEN por casualidad: por eso este
+             era el ÚNICO roto. Verificado contra MAME (`0x07`=1C_1C) y contra el MANUAL del mueble
+             (`sources/empire-city-1931.pdf` p.6, Bank B: 1C1C = SW1,2,3 = off,off,off; y sus "Factory
+             Settings" = off,off,off,off,off,off,on,on = **0x3f** = nuestro default). -->
+        <dip name="Coin A"          bits="0,2" ids="5C_1C,1C_5C,3C_1C,1C_2C,4C_1C,1C_3C,2C_1C,1C_1C"/>
+        <!-- 0x18 Coin_B: 0=2C_3C 1=1C_2C 2=2C_1C 3=1C_1C -->
+        <dip name="Coin B"          bits="3,4" ids="2C_3C,1C_2C,2C_1C,1C_1C"/>
+        <dip name="Service Mode"    bits="5"   ids="On,Off"/>          <!-- 0x20, PORT_SERVICE_DIPLOC SW1:6 -->
+        <dip name="Allow Continue"  bits="6"   ids="Yes,No"/>          <!-- 0x40: 0=Yes 1=No -->
+        <dip name="Bullet Colour"   bits="7"   ids="Red,Blue"/>        <!-- 0x80: 0=Red 1=Blue -->
+        <!-- ===== DSW1 (0xc204) = "DIP-SW 2" / Bank A ===== -->
+        <dip name="Cabinet"         bits="8"   ids="Cocktail,Upright"/><!-- 0x01: 0=Cocktail 1=Upright -->
+        <!-- 0x06 Difficulty: 0=Hardest 1=Hard 2=Normal 3=Easy -->
+        <dip name="Difficulty"      bits="9,10"  ids="Hardest,Hard,Normal,Easy"/>
+        <!-- 0x18 Lives: 0=4 1=3 2=2 3=1 -->
+        <dip name="Lives"           bits="11,12" ids="4,3,2,1"/>
+        <!-- 0x60 Bonus_Life: 0=40000 80000  1=30000 60000  2=20000 40000  3=10000 30000 -->
+        <dip name="Bonus Life"      bits="13,14" ids="40000 80000,30000 60000,20000 40000,10000 30000"/>
+        <dip name="Demo Sounds"     bits="15"  ids="On,Off"/>          <!-- 0x80: 0=On 1=Off -->
+    </switches>
+    <buttons names="Shot,Jump,Start,Coin,Pause" default="A,B,Start,Select,R" count="2"/>
+</misterromdescription>

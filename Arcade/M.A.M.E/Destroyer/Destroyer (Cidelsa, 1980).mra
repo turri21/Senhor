@@ -1,0 +1,28 @@
+<misterromdescription>
+	<about author="cidelsa-fpga"/>
+	<name>Destroyer (Cidelsa, 1980)</name>
+	<setname>destryer</setname>
+	<rbf>destroyer</rbf>
+	<manufacturer>Cidelsa</manufacturer>
+	<year>1980</year>
+	<category>Shooter</category>
+
+	<!-- ROM de programa 8KB (4x2KB) -> índice 0, cargada por ioctl a la `rom` del core. -->
+	<rom index="0" zip="destryer.zip" md5="none">
+		<part name="des a 2.ic4" crc="63749870"/>
+		<part name="des b 2.ic5" crc="60604f40"/>
+		<part name="des c 2.ic6" crc="a7cdeb7b"/>
+		<part name="des d 2.ic7" crc="dbec0aea"/>
+	</rom>
+
+	<!-- DIP switches. El juego lee IN1 (INP2) DIRECTAMENTE, así que el byte va tal cual a
+	     sw[0] en el core (ioctl 254). ids en orden de VALOR de bits (0,1,2,3) según MAME
+	     cidelsa.cpp destryer. default 0xd6 = Diff Easy(0x02) + Bonus 10000(0x04) +
+	     Lives 3(0x10) + Coinage A1/B2(0xc0), IDÉNTICO al default de MAME. -->
+	<switches default="0xd6" base="16">
+		<dip name="Difficulty" bits="0,1" ids="Very Hard,Hard,Easy,Very Easy"/>
+		<dip name="Bonus Life" bits="2,3" ids="14000,10000,7000,5000"/>
+		<dip name="Lives" bits="4,5" ids="4,3,2,1"/>
+		<dip name="Coinage" bits="6,7" ids="A2.5/B5,A2/B4,A1.5/B3,A1/B2"/>
+	</switches>
+</misterromdescription>

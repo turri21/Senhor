@@ -1,0 +1,58 @@
+<misterromdescription>
+  <name>Ougon no Shiro (Japan)</name>
+  <mameversion>0280</mameversion>
+  <setname>ogonsiro</setname>
+  <year>1986</year>
+  <manufacturer>Taito Corporation</manufacturer>
+  <category>Fighter</category>
+  <rotation>horizontal</rotation>
+  <rbf>Gladiator</rbf>
+
+  <!--
+    Physical-ROM stream. No executable or MCU bytes are patched here.
+    The optional bad-dump repair is an observable board-side adapter.
+  -->
+  <rom index="0" zip="ogonsiro.zip" md5="none">
+    <part name="qb0-5" crc="25b19efb" />
+    <part name="qb0-4" crc="347ec794" />
+    <part name="qb0-1" crc="040c9839" />
+    <part name="qb0_3" crc="d6a342e7" />
+    <part name="qb0-17" crc="e78be010" />
+    <part name="qb0-20" crc="15916eda" />
+    <part name="qb0-19" crc="79caa7ed" />
+    <part name="qb0-18" crc="e9591260" />
+    <part name="qb0-12" crc="0585d9ac" />
+    <part name="qb0-13" crc="a6bb797b" />
+    <part name="qb0-14" crc="85b71211" />
+    <part name="qb0_6" crc="651e6e44" />
+    <part name="qb0_7" crc="c992c4f7" />
+    <part name="qc0-8" crc="1c7ffdad" />
+    <part name="qb0_9" crc="01043e03" />
+    <part name="qb0_10" crc="364cdb58" />
+    <part name="qb0_11" crc="c9fecfff" />
+    <part name="qb0_15" crc="a7efa340" />
+    <part name="q3.2b" crc="6a7c3c60" />
+    <part name="q4.5s" crc="e325808e" />
+  </rom>
+
+  <nvram index="2" size="2048" />
+
+  <buttons names="Attack 1,Attack 2,Attack 3,-,Start,Coin,Service"
+           default="A,B,X,R,L,Start" />
+
+  <switches default="5a,bf,ff">
+    <dip name="Difficulty" bits="0,1" ids="Hardest,Hard,Medium,Easy" />
+    <dip name="After 4 Stages" bits="2" ids="Continues,Ends" />
+    <dip name="Bonus Life" bits="3" ids="Every 100000,Only at 100000" />
+    <dip name="Lives" bits="4,5" ids="4,3,2,1" />
+    <dip name="Allow Continue" bits="6" ids="No,Yes" />
+    <dip name="Demo Sounds" bits="7" ids="On,Off" />
+    <dip name="Coin A" bits="8,9" ids="1C/5C,1C/4C,1C/2C,1C/1C" />
+    <dip name="Coin B" bits="10,11" ids="5C/1C,4C/1C,3C/1C,2C/1C" />
+    <dip name="Free Play" bits="12" ids="On,Off" />
+    <dip name="Cabinet" bits="14" ids="Upright,Cocktail" />
+    <dip name="Invulnerability (Cheat)" bits="16" ids="On,Off" />
+    <dip name="Memory Backup" bits="17" ids="Clear,Normal" />
+    <dip name="Starting Stage" bits="18,19" ids="4,3,2,1" />
+  </switches>
+</misterromdescription>
