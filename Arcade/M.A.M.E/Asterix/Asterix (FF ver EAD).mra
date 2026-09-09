@@ -1,0 +1,84 @@
+<!--          Asterix -- FPGA arcade core (konami-fpga, independent project)
+
+              This core is available for hardware compatible with MiST and MiSTer.
+              This work is not maintained by the MiSTer project. Please contact the
+              core author (konami-fpga) for issues and updates:
+              https://github.com/jlrh/konami-fpga
+
+              Built on the GPLv3 JTFRAME framework by Jose Tejada (jotego, patreon.com/jotego).
+              This is NOT an official jotego core.
+
+              The author does not endorse or participate in illegal distribution
+              of copyrighted material. This work can be used with compatible
+              software. This software can be homebrew projects or legally
+              obtained memory dumps of compatible games.
+
+              This file license is GNU GPLv2.
+              You can read the whole license file in
+              https://opensource.org/licenses/gpl-2.0.php
+
+-->
+
+<misterromdescription>
+    <about author="konami-fpga" webpage="https://github.com/jlrh/konami-fpga" source="https://github.com/jlrh/konami-fpga"/>
+    <rotation>horizontal</rotation>
+    <name>Asterix (FF ver EAD)</name>
+    <setname>asterix</setname>
+    <mameversion>0282</mameversion>
+    <year>1992</year>
+    <manufacturer>Konami</manufacturer>
+    <players>2</players>
+    <rbf>asterix</rbf>
+    <joystick>8</joystick>
+    <region>World</region>
+    <rom index="0" zip="asterix.zip" type="merged" md5="None" address="0x30000000">
+        <!-- Offsets for each ROM region. -->
+        <part>
+            00 00 C0 00 D0 02 D0 03
+            FF FF 00 00 00 00 00 00
+        </part>
+        <!-- maincpu - starts at 0x0 - length 0xC0000 (20 bits) -->
+        <interleave output="16">
+            <part name="068_ea_d02.8d" crc="53aac057" map="01"/>
+            <part name="068_ea_d01.8c" crc="61d6621d" map="10"/>
+        </interleave>
+        <part repeat="0x40000"> FF</part>
+        <interleave output="16">
+            <part name="068a04.7d" crc="9f351828" map="01"/>
+            <part name="068a03.7c" crc="8223ebdc" map="10"/>
+        </interleave>
+        <!-- audiocpu - starts at 0xC0000 - length 0x10000 (16 bits) -->
+        <part name="068_a05.5f" crc="d3d0d77b"/>
+        <!-- pcm - starts at 0xD0000 - length 0x200000 (21 bits) -->
+        <part name="068a06.1e" crc="6df9ec0e"/>
+        <!-- k056832 - starts at 0x2D0000 - length 0x100000 (20 bits) -->
+        <interleave output="32">
+            <part name="068a12.16k" crc="b9da8e9c" map="0021"/>
+            <part name="068a11.12k" crc="7eb07a81" map="2100"/>
+        </interleave>
+        <!-- obj - starts at 0x3D0000 - length 0x400000 (22 bits) -->
+        <interleave output="32">
+            <part name="068a08.7k" crc="c41278fe" map="0021"/>
+            <part name="068a07.3k" crc="32efdbc4" map="2100"/>
+        </interleave>
+        <!-- Total 0x7D0000 bytes - 8000 kBytes -->
+    </rom>
+    <rom index="2">
+        <part>
+00 28 FF D7 90 68 65 61 63 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 02 04 00 01 01 00 01 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+</part>
+    </rom>
+    <nvram index="2" size="128"/>
+    <!--  8-pxl black frame on sides. -->
+    <rom index="1">
+        <part>20 80</part>
+    </rom>
+    <buttons names="Punch,Jump,Start,Coin,Core credits" default="A,B,Start,Select,-" count="2"/>
+</misterromdescription>
