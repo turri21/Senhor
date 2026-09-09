@@ -1,0 +1,359 @@
+# News
+7/9/2026
+
+Updates: RingKing, X68000
+___
+6/9/2026
+
+Updates: FM-7, Killer Instinct
+___
+5/9/2026
+
+New Cores: NeXT, SGIIndy, MacQuadra800
+___
+3/9/2026
+
+New Cores: Escape from the Planet of the Robot Monsters
+___
+2/9/2026
+
+New Cores: NGPC
+
+___
+31/8/2026
+
+Updates: Killer Instinct
+___
+30/8/2026
+
+Updates: Apple-II, SYSTEM11, ZN1, ZN2, CDi
+
+___
+29/8/2026
+
+New Cores: X-Men
+___
+28/8/2026
+
+New Cores: X68000, IGSPGM, SegaXBoard
+
+___
+27/8/2026
+
+New Cores: Killer Instinct
+
+___
+26/8/2026
+
+New Cores: SegaSystem32Multi, Sunset Riders, NeoGeoPocket-Color
+
+___
+24/8/2026
+
+Updates: Arcadia
+
+___
+22/8/2026
+
+Updates: Apple II, SMS, PSX
+
+___
+21/8/2026
+
+New Cores: Atari SYSTEM2, ts2068
+___
+20/8/2026
+
+New Cores: Denjin Makai
+___
+19/8/2026
+
+New Cores: Toobin
+___
+16/8/2026
+
+Updates: StarWars
+
+___
+15/8/2026
+
+Updates: N64, SMS
+
+___
+14/8/2026
+
+New Cores: SegaG80V
+
+Updates: IremM72, SNES, FM-7
+___
+13/8/2026
+
+Updates: SegaSystem24, Atari800
+___
+12/8/2026
+
+New Cores: Bucky, Klax
+
+Updates: VirtualBoy, MultiComp, GameAndWatch, BasicMasterJr
+___
+11/8/2026
+
+New Cores: SDGundamRainbow, TVC, Raiden 2
+
+Updates: FM-7, MacLC
+___
+9/8/2026
+
+New Cores: Godzilla
+
+Updates: C128, PSX, ZX Spectrum
+
+___
+7/8/2026
+
+Updates: MacLC
+
+___
+6/8/2026
+
+New Core: MicroBee, SegaSystem24, Gladiator
+
+___
+5/8/2026
+
+New Core: AmstradNC
+___
+4/8/2026
+
+New Core: VirtualBoy
+
+Updates: X68000
+___
+3/8/2026
+
+Updates: Minimig030
+___
+1/8/2026
+
+Updates: MacLC
+___
+30/7/2026
+
+New Cores: Kyugo, PinballAction, Asterix, Marble Madness II, Universal_DoCastle
+
+Updates: Darius, moomesa
+
+___
+29/7/2026
+
+Updates: Aleck64
+___
+28/7/2026
+
+Updates: MacLC, Arduboy
+___
+27/7/2026
+
+Updates: Minimig
+
+___
+26/7/2026
+
+Updates: Arduboy, RX78, UK101
+___
+25/7/2026
+
+New Cores: JR100
+
+Updates: ZX-Spectrum, X16, PCFX
+___
+24/7/2026
+
+Updates: Apple-Lisa
+___
+22/7/2026
+
+Updates: Jaguar
+___
+20/7/2026
+
+New Cores: Aleck64, Magical Error, Hyper Duel, Destroyer, Empire City, Cowboys
+
+Updates: NightSlashers
+___
+19/7/2026
+
+New Cores: Operation Wolf, Batsugun
+___
+18/7/2026
+
+Updates: BlackWidow, PSX
+___
+17/7/2026
+
+Updates: ColecoAdam, SNES, BlackWidow, CDi, ao486
+
+___
+16/7/2026
+
+Updates: SharpMZ
+
+___
+15/7/2026
+
+New Cores: Heated Barrel, Legionnaire
+
+Updates: SD Gundam, 3DO
+___
+14/7/2026
+
+Updates: mo, X16, Pacman
+___
+13/7/2026
+
+New Cores: Lisa
+
+Updates: ZX-Spectrum
+
+___
+12/7/2026
+
+Updates: Kangaroo
+___
+9/7/2026
+
+New Cores: QBert, BreakThru, Trio The Punch
+
+___
+8/7/2026
+
+Updates: BasicMasterJr, Apple-IIgs, EpochGalaxyII, IGSPGM
+
+___
+7/7/2026
+
+New Cores: World Rally 2, Biomechanical Toy
+
+___
+6/7/2026
+
+New Cores: Big Karnak
+
+___
+5/7/2026
+
+New Cores: Alligator Hunt, Night Slashers, Boogie Wings
+___
+3/7/2026
+
+Updates: Game of Life, C64
+
+___
+1/7/2026
+
+Updates: PSX
+
+New Cores: DECOCassette
+
+___
+# Raw binary files for Senhor FPGA board.
+![photo_github](https://github.com/user-attachments/assets/1f032576-412e-4b5e-9090-e6818393007a)
+
+**What is the Senhor board?**
+
+It is the first attempt of a MiSTer [(DE10-Nano)](https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&No=1046) FPGA board clone by [QMTECH](https://qmtechchina.aliexpress.com/store/4486047) released in 2024.
+We have named it "Senhor" as a joke, but it turned out to become a full project to port cores to it from the [MiSTer project](https://mister-devel.github.io/MkDocs_MiSTer/).
+
+**Is it fully compatible?**
+
+Yes and no! 
+
+The pins where the memory module is connected are shuffled, therefore a remapping is needed and every core using the SDRAM module should be resynthesized in order to work. Although, quite often just a remap is not enough to get a stable core and more changes need to be made in the verilog code. That's where the Senhor team takes over, to fill that gap and convert this wonderful board into a cheap alternative to MiSTer. 
+
+Hardware wise, except of the SDRAM memory modules designed for MiSTer, none of the existing MiSTer addons work on this board, since it has a different layout.
+
+**Where can I buy it?**
+
+https://www.aliexpress.com/item/1005006584384421.html
+
+At the time of writing there is a new QMTECH board which is 100% core-compatible to MiSTer, therefore if you are not willing to experiment with Senhor, it is better to buy the new board instead.
+
+https://www.aliexpress.com/item/1005007370471764.html
+
+Another upcoming MiSTer clone is about to be released by [Taki Udon](https://twitter.com/takiudon_).
+
+**I want to modify the cores on my own. Where are the sources?**
+
+You can find all the forked [sources](https://github.com/turri21?tab=repositories&q=senhor&type=&language=&sort=) having the CoreName_Senhor naming scheme. For example: Minimig-AGA_Senhor, N64_Senhor, Saturn_Senhor etc
+
+**Are you related to QMTECH?**
+
+Absolutely not! We have bought our boards from the QMTECH store on Aliexpress for this purpose (as a cheap alternative to MiSTer).
+
+---
+
+**Requirements:** 
+
+A single 32MB or higher SDRAM memory module compatible with MiSTer is required for most cores to work. (Recommended 128MB)
+
+Dual SDRAM is not supported on Senhor (at least for the time being).
+
+**WARNING: The memory module MUST BE connected to the inner slot, the one closer to the FPGA chip.**
+
+**The outward side should be facing as the word describes, outwards. Please be extremely cautious about the correct orientation and proper installation of the memory module, otherwise you are risking to harm both the module and the board!!!**
+
+![Clipboard01](https://github.com/user-attachments/assets/5d5292ab-acc2-4b75-9715-01001581ac89)
+
+**WARNING #2: A heatsink AND a fan are required (there are demanding cores such as the Minimig, ao486 etc where the chip is getting VERY hot).**
+
+A USB hub, so you can connect a keyboard, a mouse and a gamepad to the board's only USB port for peripherals.
+
+Finally, you are going to need a Micro SD card of minimum 2 GB and a custom Linux distribution flashed to it, such as [Mr. Fusion for Senhor](https://github.com/turri21/Senhor/tree/main/MrFusion) in order to be able to boot the system, browse the menu and load the cores.
+
+Enjoy the ride!
+
+Join us on Telegram: https://t.me/+fmIT1ovaOGkwNDQ0
+
+___
+**Community:**
+
+**Contributors in alphabetical order**
+
+Anderson Vulczak -> for his update_senhor.sh network fix for people from Brazil. You have saved the day!
+
+Edson & Gerson Pedro -> for their enjoyable to watch youtube videos about Senhor (and not only).
+
+Fred Chrono Plays -> for his project's mascot editing. Now it is looking even more cooler ;)
+
+Gerson Pedro -> for his great all-in-one Gerson's archive. 
+
+Herbert K. -> for his design of a 3D printed case for Senhor & for spreading the word about the board in Vintage Computer Festival - Munich.
+
+Renan -> for his assistance on setting up Retroarch for ARM!
+
+Ron -> for his all purpose valuable assistance about Home micros, his throughout testing and his Retrocrypta live shows on Twitch!
+
+Everyone in the Senhor community for their suggestions as well as their help in testing and reporting issues.
+
+Last but not least Sorgelig the creator of MiSTer FPGA project, you are the firestarter!
+
+Thank you!
+
+The Senhor team: Luis & turri21
+___
+
+-=(Extra notes)=-
+
+Known issues:
+
+jtgng: Diamond Run (broken)
+
+Lunar Battle: No Controls https://github.com/MiSTer-devel/Arcade-BlackWidow_MiSTer/issues/7
+
+Space Encounters: No Controls
+
+IremM90: Bomber Man World - New Dyna Blaster - Global Quest - If "ROM PO CHECK ERROR" is displayed load the "Bomber Man - Dyna Blaster" first and then while it runs load the "Bomber Man World - New Dyna Blaster - Global Quest" afterwards.
+Alternatively, you can try to reset the core several times until it passes the check. Issue present in BGA SDRAM modules.
+
+IremM92: A not good "NG" message is displayed on the initial ROM checking. Some games are stuck at the RAM/ROM verification screen such as R-Type Leo. Possible fix: Reset the core several times. Issue present in BGA SDRAM modules.
+
