@@ -1,4 +1,8 @@
 # News
+11/9/2026
+
+Updates: MacPlus
+___
 10/9/2026
 
 Updates: Minimig
