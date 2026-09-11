@@ -1,0 +1,1 @@
+This has been superseded by a new version of Asteroids.
