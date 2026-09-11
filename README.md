@@ -1,4 +1,8 @@
 # News
+10/9/2026
+
+Updates: Minimig
+___
 7/9/2026
 
 Updates: RingKing, X68000
