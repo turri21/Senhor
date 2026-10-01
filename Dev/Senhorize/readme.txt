@@ -1,8 +1,8 @@
-With these 2 files (Senhorize.py, sys.zip) you can convert any MiSTer core source to Senhor. 
+With these 3 files (Senhorize.py, sys.zip, senhor_constraints.sdc) you can convert any MiSTer core source to Senhor. 
 It should work in most cases as long as the sources from MiSTer are having the proper layout of the framework.
 
 For example, let's say that you have this core:  Amstrad_MiSTer-master.zip downloaded from git manually or if you clone it with the git clone command.
-You will have to place these 2 files [Senhorize.py & sys.zip] in the extracted source folder and all you have to do is to type the following:
+You will have to place these 3 files [Senhorize.py, sys.zip, senhor_constraints.sdc] in the extracted source folder and all you have to do is to type the following:
 
 python Senhorize.py
 
