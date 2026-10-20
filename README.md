@@ -18,12 +18,6 @@ Hardware wise, except of the SDRAM memory modules designed for MiSTer, none of t
 
 https://www.aliexpress.com/item/1005006584384421.html
 
-At the time of writing there is a new QMTECH board which is 100% core-compatible to MiSTer, therefore if you are not willing to experiment with Senhor, it is better to buy the new board instead.
-
-https://www.aliexpress.com/item/1005007370471764.html
-
-Another upcoming MiSTer clone is about to be released by [Taki Udon](https://twitter.com/takiudon_).
-
 **I want to modify the cores on my own. Where are the sources?**
 
 You can find all the forked [sources](https://github.com/turri21?tab=repositories&q=senhor&type=&language=&sort=) having the CoreName_Senhor naming scheme. For example: Minimig-AGA_Senhor, N64_Senhor, Saturn_Senhor etc
