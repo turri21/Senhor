@@ -16,7 +16,7 @@ Hardware wise, except of the SDRAM memory modules designed for MiSTer, none of t
 
 **Where can I buy it?**
 
-Currently it is out of stock but you may try your luck by sending a message to the official QMTECH store in Aliexpress.
+Currently it is out of stock, but you may try your luck by sending a message to the official QMTECH store in Aliexpress.
 Ask them if they have any available. 
 https://www.aliexpress.com/store/4486047
 
