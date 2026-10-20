@@ -16,6 +16,11 @@ Hardware wise, except of the SDRAM memory modules designed for MiSTer, none of t
 
 **Where can I buy it?**
 
+Currently it is out of stock but you may try your luck by sending a message to the official QMTECH store in Aliexpress.
+Ask them if they have any available. 
+https://www.aliexpress.com/store/4486047
+
+Old link: [Not working]
 https://www.aliexpress.com/item/1005006584384421.html
 
 **I want to modify the cores on my own. Where are the sources?**
