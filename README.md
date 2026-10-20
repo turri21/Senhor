@@ -20,8 +20,10 @@ Currently it is out of stock, but you may try your luck by sending a message to 
 Ask them if they have any available. 
 https://www.aliexpress.com/store/4486047
 
-Old link: [Not working]
+Old Aliexpress link: [Not working]
 https://www.aliexpress.com/item/1005006584384421.html
+
+Github Link: https://github.com/ChinaQMTECH/QMTECH_CycloneV_SoC_Board
 
 **I want to modify the cores on my own. Where are the sources?**
 
