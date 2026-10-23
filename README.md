@@ -89,7 +89,7 @@ ___
 
 Known issues:
 
-jtgng: Diamond Run (broken)
+jtgng: Diamond Run (broken) -- Removed by Jotego
 
 Lunar Battle: No Controls https://github.com/MiSTer-devel/Arcade-BlackWidow_MiSTer/issues/7
 
