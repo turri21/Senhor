@@ -1,5 +1,8 @@
 # Raw binary files for Senhor FPGA board.
-![photo_github](https://github.com/user-attachments/assets/1f032576-412e-4b5e-9090-e6818393007a)
+
+<img width="1672" height="941" alt="Senhor_FPGA_retromag" src="https://github.com/user-attachments/assets/f92bf40b-6e4f-41b2-a943-46c2d1cecfc2" />
+
+___
 
 **What is the Senhor board?**
 
@@ -83,6 +86,8 @@ Last but not least Sorgelig the creator of MiSTer FPGA project, you are the fire
 Thank you!
 
 The Senhor team: Luis & turri21
+
+![photo_github](https://github.com/user-attachments/assets/1f032576-412e-4b5e-9090-e6818393007a)
 ___
 
 -=(Extra notes)=-
