@@ -1,0 +1,2 @@
+Copy Evil Night (ver UBA).nvm to /media/fat/config/nvram
+Copy Total Vice (ver EBA).nvm to /media/fat/config/nvram
